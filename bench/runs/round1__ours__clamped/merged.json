@@ -1,0 +1,1320 @@
+[
+  {
+    "full_name": "Alexander Varzari",
+    "title": "Physical Medicine & Rehabilitation",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "910-332-3800",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1023647112",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Benjamin Cameransi",
+    "title": "Anesthesiology, Pain Medicine",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "615-824-3737",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1275629933",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Brian Yee",
+    "title": "Anesthesiology, Pain Medicine",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-652-8260",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1881891059",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Bryan Lee",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-692-4544",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1891323259",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Candace Mcalpine",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-692-1063",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1245491174",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Casmir Kielar",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-347-9587",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1326260167",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Chad Skidmore",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-347-8134",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1922749274",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Christopher Brann",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "910-721-1477",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1679583835",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Donna Turner",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-692-1000",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1679710685",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "E J Collins",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-692-1595",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1124026240",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Edward Wallace",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-669-5162",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1255486452",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Frank Humbles",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-669-5162",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1902958572",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Ian Peace",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-780-8346",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1124655691",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "James Brannon",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-692-1000",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1841270485",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Jawanza Jabari",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "910-642-8011",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1144294943",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "John Schultz",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "910-642-8011",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1982788865",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Jon Bennett",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-449-3381",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1366427841",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Jon Halling",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-497-6348",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1831103944",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Jonathan Ward",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "704-749-5800",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1245670066",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Josef Mueksch",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "910-721-1477",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1487643581",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Joseph Maggioncalda",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-692-1595",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1134626294",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Joseph Metz",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-497-8340",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1295485035",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Joshua Gore",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-353-3460",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1891015061",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Keeland Williams",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-848-4670",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1487115937",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Kenneth Wenz",
+    "title": "Pain Medicine, Interventional Pain Medicine",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-353-3460",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1003924093",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Kent Homnick",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-446-0937",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1427155241",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Kevin Armstrong",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "276-698-8151",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1063489870",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Lawrence Montalto",
+    "title": null,
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "910-332-3800",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1669891206",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Lloyd Meeks",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "704-749-5800",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1801094156",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Michael Alvarado",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-545-5927",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1750801841",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Michael Ford",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "720-762-0699",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1457402513",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Michelle Lee",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-390-8100",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1275689861",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Miller Van Vliet",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "704-749-5800",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1891790622",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Nicholas Buskill",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-497-8340",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1184373565",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Nicholas Gentry",
+    "title": "Anesthesiology, Pain Medicine",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-839-7246",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1629538954",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Olga Chrisman",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-545-5927",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1881120764",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Otto Czechner",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-527-7000",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1316927056",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Patricia Grant",
+    "title": "Anesthesiology, Pain Medicine",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-894-0978",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1508841156",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Peter Fischer",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "910-386-9106",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1164462396",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Ramiro Godines",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-716-7000",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1073596631",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Raymond Collins",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-716-7000",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1831172493",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Richard Kline",
+    "title": "Anesthesiology, Pain Medicine",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-438-8470",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1902824378",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Robin Dimitrious",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "910-642-6427",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1518091081",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Ryan Smith",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-504-7194",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1861479974",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Scott Thomas",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "303-579-8759",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1063664894",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Stephen Boatwright",
+    "title": "Anesthesiology, Pain Medicine",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-231-2039",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1538157334",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Stephen Goerz",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-527-7000",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1215917448",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Steven Petersen",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "920-217-9708",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1619997798",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Susan Barbieri",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-692-2100",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1891745279",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Susan Haskin",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-669-5162",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1871645440",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "William Myers",
+    "title": "Physician Assistant",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-903-6650",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1235788753",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "William Obrecht",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "910-642-6427",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1669506150",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "William Wall",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "843-692-4544",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1093392607",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Zechariah Harris",
+    "title": "Anesthesiology",
+    "org": null,
+    "org_domain": null,
+    "email": null,
+    "phone": "910-721-1000",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1669121786",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 2
+  },
+  {
+    "full_name": "Farayi Mbuvah",
+    "title": "Anesthesiology, Pain Medicine",
+    "org": "Conway Medical Center",
+    "org_domain": "conwaymedicalcenter.com",
+    "email": "farayi.mbuvah@cmc-sc.com",
+    "phone": "843-839-4598",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1306198841",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "https://www.conwaymedicalcenter.com/providers/farayi-mbuvah-md/",
+      "leadkit emails --domain cmc-sc.com : pattern first.last, pattern_confirmed from 2 published addresses (sandy.moore@cmc-sc.com https://www.conwaymedicalcenter.com/contact-us/ ; Sydney.Causey@cmc-sc.com https://www.conwaymedicalcenter.com/careers/)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "org": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "org_domain": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "email": "leadkit emails --domain cmc-sc.com : pattern first.last, pattern_confirmed from 2 published addresses (sandy.moore@cmc-sc.com https://www.conwaymedicalcenter.com/contact-us/ ; Sydney.Causey@cmc-sc.com https://www.conwaymedicalcenter.com/careers/)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 4
+  },
+  {
+    "full_name": "Frederick Bellamy",
+    "title": "Anesthesiology",
+    "org": "Conway Medical Center",
+    "org_domain": "conwaymedicalcenter.com",
+    "email": "frederick.bellamy@cmc-sc.com",
+    "phone": "843-716-7000",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1972587012",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "https://www.conwaymedicalcenter.com/providers/frederick-w-bellamy-md/",
+      "leadkit emails --domain cmc-sc.com : pattern first.last, pattern_confirmed from 2 published addresses (sandy.moore@cmc-sc.com https://www.conwaymedicalcenter.com/contact-us/ ; Sydney.Causey@cmc-sc.com https://www.conwaymedicalcenter.com/careers/)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "org": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "org_domain": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "email": "leadkit emails --domain cmc-sc.com : pattern first.last, pattern_confirmed from 2 published addresses (sandy.moore@cmc-sc.com https://www.conwaymedicalcenter.com/contact-us/ ; Sydney.Causey@cmc-sc.com https://www.conwaymedicalcenter.com/careers/)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 4
+  },
+  {
+    "full_name": "Ihor Melnytskyy",
+    "title": "Anesthesiology",
+    "org": "Conway Medical Center",
+    "org_domain": "conwaymedicalcenter.com",
+    "email": "ihor.melnytskyy@cmc-sc.com",
+    "phone": "843-347-7111",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1184882789",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "https://www.conwaymedicalcenter.com/providers/ihor-melnytskyy-md/",
+      "leadkit emails --domain cmc-sc.com : pattern first.last, pattern_confirmed from 2 published addresses (sandy.moore@cmc-sc.com https://www.conwaymedicalcenter.com/contact-us/ ; Sydney.Causey@cmc-sc.com https://www.conwaymedicalcenter.com/careers/)",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "org": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "org_domain": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "email": "leadkit emails --domain cmc-sc.com : pattern first.last, pattern_confirmed from 2 published addresses (sandy.moore@cmc-sc.com https://www.conwaymedicalcenter.com/contact-us/ ; Sydney.Causey@cmc-sc.com https://www.conwaymedicalcenter.com/careers/)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 4
+  },
+  {
+    "full_name": "Derek Horstemeyer",
+    "title": "Anesthesiology",
+    "org": "Grand Strand Medical Center (HCA)",
+    "org_domain": "mygrandstrandhealth.com",
+    "email": null,
+    "phone": "843-692-1000",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1225018849",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Derek-L-Horstemeyer-MD",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "org": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "org_domain": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 3
+  },
+  {
+    "full_name": "Dwayne Livigni",
+    "title": "Anesthesiology",
+    "org": "Grand Strand Medical Center (HCA)",
+    "org_domain": "mygrandstrandhealth.com",
+    "email": null,
+    "phone": "843-661-6215",
+    "linkedin": null,
+    "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1982655262",
+    "_sources": [
+      "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Dwayne-LiVigni-DO",
+      "OpenAlex + ORCID public APIs"
+    ],
+    "_field_sources": {
+      "full_name": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "title": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "org": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "org_domain": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "phone": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)",
+      "profile_url": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*)"
+    },
+    "_confidence": "corroborated",
+    "_source_count": 3
+  }
+]

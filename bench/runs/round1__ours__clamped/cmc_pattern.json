@@ -1,0 +1,61 @@
+{
+  "domain": "cmc-sc.com",
+  "pattern": "first.last",
+  "confidence": "pattern_confirmed",
+  "evidence_count": 2,
+  "candidates_considered": {
+    "first.last": 2
+  },
+  "resolved": [
+    {
+      "name": "Ihor Melnytskyy",
+      "email": "ihor.melnytskyy@cmc-sc.com",
+      "pattern": "first.last",
+      "confidence": "pattern_confirmed",
+      "source": "inferred_from_known_addresses"
+    },
+    {
+      "name": "Susan Haskin",
+      "email": "susan.haskin@cmc-sc.com",
+      "pattern": "first.last",
+      "confidence": "pattern_confirmed",
+      "source": "inferred_from_known_addresses"
+    },
+    {
+      "name": "Frank Humbles",
+      "email": "frank.humbles@cmc-sc.com",
+      "pattern": "first.last",
+      "confidence": "pattern_confirmed",
+      "source": "inferred_from_known_addresses"
+    },
+    {
+      "name": "Casmir Kielar",
+      "email": "casmir.kielar@cmc-sc.com",
+      "pattern": "first.last",
+      "confidence": "pattern_confirmed",
+      "source": "inferred_from_known_addresses"
+    },
+    {
+      "name": "Chad Skidmore",
+      "email": "chad.skidmore@cmc-sc.com",
+      "pattern": "first.last",
+      "confidence": "pattern_confirmed",
+      "source": "inferred_from_known_addresses"
+    },
+    {
+      "name": "Edward Wallace",
+      "email": "edward.wallace@cmc-sc.com",
+      "pattern": "first.last",
+      "confidence": "pattern_confirmed",
+      "source": "inferred_from_known_addresses"
+    },
+    {
+      "name": "Richard Kline",
+      "email": "richard.kline@cmc-sc.com",
+      "pattern": "first.last",
+      "confidence": "pattern_confirmed",
+      "source": "inferred_from_known_addresses"
+    }
+  ],
+  "unresolved": []
+}

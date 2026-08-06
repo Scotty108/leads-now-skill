@@ -1,0 +1,36 @@
+{
+  "skill": "skillit",
+  "condition": "clamped",
+  "subagents": 0,
+  "tool_calls": 24,
+  "wall_clock_s": 526,
+  "people_found": 777,
+  "in_radius": 72,
+  "reachable": 72,
+  "peds_signal_strong": 0,
+  "peds_signal_moderate": 0,
+  "blocked_sources": [
+    {
+      "host": "(WebSearch tool)",
+      "reason": "session-wide WebSearch budget exhausted 200/200 before this run; no search-based org/domain/LinkedIn discovery possible"
+    },
+    {
+      "host": "tidelandshealth.org",
+      "reason": "HTTP 403 bot fingerprinting; rung 4 browser prohibited under clamped condition"
+    },
+    {
+      "host": "mygrandstrandhealth.com",
+      "reason": "200 JavaScript shell, 'Loading doctors', zero names; rung 3 endpoint discovery not attempted (timebox)"
+    },
+    {
+      "host": "ambulatorycareanesthesia.com",
+      "reason": "DNS ENOTFOUND; real domain for the 20-row Ambulatory Care Anesthesia cluster undiscoverable without WebSearch"
+    },
+    {
+      "host": "conwaymedicalcenter.com/find-a-provider",
+      "reason": "404 retired page; fell back to /providers/ which was readable"
+    }
+  ],
+  "truncation_detected": true,
+  "notes": "Registry (people) sweep completed cleanly: npi_query.py parse exit 0 after 3 paging rounds, 777 distinct providers, no ceiling truncation. Truncation WAS hit on the NPI-2 organization sweep (parse exit 4, ceiling ~1200/query at 3556 orgs); re-partitioned across the 16 exact 5-digit ZIPs in the filtered roster and re-fetched to exit 0 / 2961 orgs, so no truncated count is reported anywhere. 0 of 72 rows carry an email: zero observed addresses were found at any employer domain, so email_pattern.py learn/apply was deliberately not run and no derived address was emitted (email-tradecraft.md: stop guessing below two observations). 8 candidate emails surfaced by a PubMed sweep were rejected as author-name collisions (uscupstate.edu, charlotte.edu, lsuhsc.edu, utoronto.ca, iastate.edu, clin.au.dk, gmail). PubMed pediatric keyword hits for 30 names were also rejected because the author query was not affiliation-locked. All 72 carry a published NPI practice phone, which is the reachable channel. 0 carry a pediatric taxonomy - the exact zero the skill predicts for a subspecialty-only query, which is why the parent classification was queried. Territory: all 72 to Myrtle Beach (max 46.2mi); nearest provider to Greenville is 184.3mi. 14 location rows dropped as unplaceable ZIPs. No LinkedIn URL found (search unavailable); no LinkedIn automation attempted. audit_list.py PASS."
+}

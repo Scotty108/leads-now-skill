@@ -1,0 +1,11 @@
+=== COVERAGE ===
+retrieved from source:   777  (searched area, wider than the target)
+matched the target:      72  <- THIS is the denominator for the brief
+delivered rows:          72
+with an email:           0 (0%)
+with a phone:            72 (100%)
+confidence:              unconfirmed=72
+email_status:            none_no_observed_address=72
+unreadable sources:      Tidelands Health: 403; Grand Strand Health: JS shell; Ambulatory Care Anesthesia PC: no findable domain; WebSearch: session budget exhausted
+
+PASS: every row is sourced, tiered, and unique.

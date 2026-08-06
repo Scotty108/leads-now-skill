@@ -1,0 +1,33 @@
+{
+  "domain": "cmc-sc.com",
+  "pattern": "first.last",
+  "confidence": "pattern_confirmed",
+  "evidence_count": 2,
+  "candidates_considered": {
+    "first.last": 2
+  },
+  "resolved": [
+    {
+      "name": "Frederick Bellamy",
+      "email": "frederick.bellamy@cmc-sc.com",
+      "pattern": "first.last",
+      "confidence": "pattern_confirmed",
+      "source": "inferred_from_known_addresses"
+    },
+    {
+      "name": "Ihor Melnytskyy",
+      "email": "ihor.melnytskyy@cmc-sc.com",
+      "pattern": "first.last",
+      "confidence": "pattern_confirmed",
+      "source": "inferred_from_known_addresses"
+    },
+    {
+      "name": "Farayi Mbuvah",
+      "email": "farayi.mbuvah@cmc-sc.com",
+      "pattern": "first.last",
+      "confidence": "pattern_confirmed",
+      "source": "inferred_from_known_addresses"
+    }
+  ],
+  "unresolved": []
+}

@@ -67,22 +67,34 @@ def _read_rows(d):
 def _provenance_ratio(rows):
     """Share of populated value fields that carry a source.
 
-    A row full of values with no sources is the failure this metric exists to
-    catch — it looks complete and cannot be audited.
+    Skills use different provenance conventions — per-field `<field>_source`
+    columns, a row-level `source_url`, or an `evidence` string. All are valid,
+    so all count; recognising only one would score a convention rather than a
+    property. Label and derived columns are excluded: `confidence` is a
+    judgement, `dist_to_*_mi` is arithmetic, and neither is a sourceable claim.
     """
     if not rows:
         return 0.0
+
+    ROW_LEVEL = ("source_url", "evidence", "all_sources", "source",
+                 "source_rung", "external_id")
+    SKIP_EXACT = {"confidence", "source_count", "record_type", "territory",
+                  "email_status", "email_risk", "last_verified_note"}
+
+    def is_meta(k):
+        kl = k.lower()
+        return (kl in SKIP_EXACT or kl in ROW_LEVEL
+                or kl.endswith("_source") or kl.startswith("source_")
+                or kl.startswith("dist_to_") or kl.endswith("_note"))
+
     populated = sourced = 0
     for r in rows:
+        row_prov = any((r.get(c) or "").strip() for c in ROW_LEVEL)
         for k, v in r.items():
-            if k.endswith("_source") or k in ("confidence", "source_count",
-                                              "all_sources", "record_type"):
-                continue
-            if not (v or "").strip():
+            if is_meta(k) or not (v or "").strip():
                 continue
             populated += 1
-            src = r.get(f"{k}_source") or r.get("all_sources") or r.get("source")
-            if (src or "").strip():
+            if (r.get(f"{k}_source") or "").strip() or row_prov:
                 sourced += 1
     return (sourced / populated) if populated else 0.0
 
