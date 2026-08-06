@@ -26,8 +26,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SKILLS = {
     "ours": {
-        "dir": os.path.join(ROOT, "skill", "leads-now"),
-        "kit": os.path.join(ROOT, "skill", "leads-now", "scripts", "leadkit.py"),
+        "dir": os.path.join(ROOT, "skills", "leads-now"),
+        "kit": os.path.join(ROOT, "skills", "leads-now", "scripts", "leadkit.py"),
         "emails": lambda kit, a: [sys.executable, kit, "emails"] + a,
     },
     "skillit": {
