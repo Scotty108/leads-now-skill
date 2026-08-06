@@ -145,3 +145,45 @@ Give the channel breakdown, not a single reachability number:
 
 A reader can act on that. "59 reachable" invites them to think they have 59
 people's contact details, which is not what happened.
+
+
+## The registry zero is not the answer
+
+Round 1, measured. Querying the parent taxonomy is **necessary and not
+sufficient**.
+
+The registry said **0 pediatric anesthesiologists** within 50 miles of Myrtle
+Beach. That was an honest read of NPI and a wrong answer to the question. A
+browser-enabled run found **Michelle D. Lee, MD — a registered pediatric
+anesthesiologist 25 miles out at McLeod Loris**. Her NPI record carries no
+pediatric taxonomy code; the subspecialty is published only on her hospital's
+own directory, which is a JavaScript shell to a plain fetch.
+
+**NPI taxonomy is self-reported and frequently omits subspecialty.** So:
+
+1. Query the parent taxonomy to enumerate the population (this is what turns 0
+   into 72).
+2. **Then check each employer's own directory for the subspecialty.** That is
+   where fellowship, department and "pediatric" actually appear.
+3. Only after both may you say a subspecialty is absent — and say it as
+   *no evidence found*, not as *none exist*.
+
+A registry zero is not the answer: it means the registry does not track that
+subspecialty, not that nobody in the ring has it.
+
+## Literature is the wrong instrument for a community roster
+
+Also measured, same round: an OpenAlex + Europe PMC pass over 60 community
+anesthesiologists returned **0 usable pediatric signals**, and **51 of 60 had
+no scholarly footprint at all**. Where papers existed they were uniformly
+adult — cardiopulmonary bypass, TAVR, obstetric analgesia.
+
+Community physicians are not academics. Sending a research pass at that roster
+spends the budget and returns nothing. Reach for OpenAlex and Europe PMC when
+the target is academic medicine — teaching hospitals, department chairs,
+fellowship faculty. For a community roster the subspecialty signal lives in
+hospital staff bios, residency and fellowship program pages, and board
+certification.
+
+The one pediatric hit in round 1 came from a hospital's own search index, not
+from a journal.

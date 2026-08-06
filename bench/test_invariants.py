@@ -177,12 +177,18 @@ def test_docs_claims(skill, cfg):
 # ---------------------------------------------------------------------------
 
 def _all_md(cfg):
+    """All markdown in the skill, whitespace-normalised.
+
+    Markdown hard-wraps prose, so a phrase like "necessary and not sufficient"
+    can straddle a newline and fail a naive substring check. Collapsing
+    whitespace tests the content rather than the line breaks.
+    """
     txt = ""
     for root, _, files in os.walk(cfg["dir"]):
         for f in files:
             if f.endswith(".md"):
-                txt += open(os.path.join(root, f), errors="ignore").read()
-    return txt.lower()
+                txt += open(os.path.join(root, f), errors="ignore").read() + "\n"
+    return re.sub(r"\s+", " ", txt.lower())
 
 
 def port_surface_lanes(skill, cfg):
@@ -273,7 +279,41 @@ def port_phone_type(skill, cfg):
                  has)
 
 
-PORT_TESTS = [port_surface_lanes, port_skillmd_fallback, port_qualify_branch,
+
+
+def port_subspecialty_not_in_registry(skill, cfg):
+    """Both. THE round-1 finding. Querying the parent taxonomy is necessary and
+    NOT sufficient: NPI carries no subspecialty code for many clinicians, so a
+    registry-only answer to 'find pediatric anesthesiologists' returns a
+    confident ZERO that is wrong. A real pediatric anesthesiologist was found
+    25 miles out, published only on her hospital's own directory.
+
+    Requires the explicit instruction, not incidental vocabulary — a registry
+    zero must be stated as NOT the final answer.
+    """
+    t = _all_md(cfg)
+    has = ("necessary" in t and "not sufficient" in t) and \
+          ("subspecialt" in t) and \
+          ("registry zero" in t or "zero is not" in t
+           or "not the answer" in t or "not a final answer" in t)
+    return check(skill, "PORT: subspecialty absent from NPI, check directories", has)
+
+
+def port_literature_wrong_instrument(skill, cfg):
+    """Both. Measured: 0 of 60 community anesthesiologists yielded a usable
+    scholarly signal; 51 had no footprint at all. Sending a research pass at a
+    community roster burns the budget for nothing — the signal lives in bios,
+    fellowship pages and board certification."""
+    t = _all_md(cfg)
+    has = ("community" in t) and ("openalex" in t or "literature" in t) and \
+          ("no scholarly" in t or "wrong instrument" in t
+           or "academic" in t)
+    return check(skill, "PORT: literature is wrong instrument for community rosters", has)
+
+
+PORT_TESTS = [port_subspecialty_not_in_registry,
+              port_literature_wrong_instrument,
+              port_surface_lanes, port_skillmd_fallback, port_qualify_branch,
               port_calibrated_email_tiers, port_unsourced_row_gate,
               port_corresponding_author_emails, port_linkedin_search_url,
               port_phone_type]

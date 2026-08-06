@@ -23,9 +23,10 @@ Contact channels (never report the total alone)
    phone     84   0 direct · 19 department · 65 practice switchboard · 0 answering service
    email      3   0 first_party_published · 3 pattern_confirmed (cmc-sc.com) · 0 guessed
    linkedin   0 verified profile URLs · 84 linkedin_search_url emitted for a human to click
+   refused    1 published address discarded for failing the affiliation lock (see §5)
 
 Corroboration
-    7  corroborated (2+ independent sources)   77  single_source
+   10  corroborated (2+ independent sources)   74  single_source
    83  carry a title    33  carry a named employing org
 ```
 
@@ -105,9 +106,23 @@ fetched or automated — only `linkedin_search_url` values a human can click.
 - **82 NONE_FOUND is a sourcing gap, not a verdict.** Tidelands publishes no training block at all; McLeod's
   index carries specialty but not fellowship; Grand Strand publishes training for only 2 of 6. A recruiter
   can still call someone whose record is thin online.
-- **A background OpenAlex / Europe PMC qualification pass over all 60 registry names had not returned when
-  this report was written**, so no publication-derived pediatric signal or corresponding-author email is
-  included here. The clamped run's equivalent pass returned NONE_FOUND across the board.
+- **The OpenAlex / Europe PMC qualification pass over all 60 registry names returned and is integrated:
+  0 STRONG, 0 MODERATE, 60 NONE_FOUND.** 51 of 60 have no attributable scholarly footprint at all — this is
+  a community anesthesia group, not academics — and where papers exist they are uniformly adult (bypass,
+  TAVR, spinal cord stimulation, obstetric analgesia, celiac plexus block). Only 4 of 60 passed a
+  *geographic* affiliation lock, and only those 4 were counted as corroboration (7 → 10 corroborated); the
+  other 56 were not bumped, because "searched, found nothing" is not corroboration of identity.
+- **One email was refused.** The pass surfaced `mbuvahfj@gmail.com` for Farayi Mbuvah, printed verbatim in
+  PMID 26185936 — genuinely first-party published, and still discarded. The paper's affiliation is Henry Ford
+  Hospital, Detroit MI (2015); this person practices in Conway/Myrtle Beach SC, so the affiliation lock
+  fails, and it is a personal gmail rather than a work address. `contact-channels.md`: *name + specialty is
+  not enough; name + affiliation is.* The address never entered the CSV; the finding is kept in
+  `records/refused_emails.json` so nothing is lost.
+- **Five tempting false positives were discarded rather than counted** — P. Ellen Grant (Boston Children's),
+  Anthony M. Alvarado (Lurie), Brandon Yee (St. Jude), John Schultz (Children's National), and Peter E.
+  Fischer, a Carolinas trauma surgeon with a real pediatric-trauma paper who passes the NC geo test but is
+  not our Shallotte anesthesiologist. Counting Fischer would have manufactured the only publication-derived
+  STRONG in the set.
 - **Frederick Bellamy appears twice** (Conway Medical Center and McLeod Anesthesia – Loris) because the two
   directories spell him differently (`Frederick Bellamy` / `Frederick W. Bellamy`). Both rows are real and
   both affiliations are real; the merge key does not span a middle initial. Left in deliberately rather than
@@ -130,4 +145,10 @@ fetched or automated — only `linkedin_search_url` values a human can click.
 - `merged.json` — merged records with per-field provenance
 - `records/` — one file per source, so corroboration stays countable
 - `raw/` — verbatim captures (Tidelands profiles, Grand Strand `physicianData`, McLeod Algolia hits)
+- `records/refused_emails.json` — the address the tooling declined to attribute, and why
 - `log.jsonl` — every step, with the rung it used
+
+**Closing lesson.** OpenAlex and Europe PMC are the wrong instrument class for pediatric-experience evidence
+on a community physician roster; that signal lives in hospital staff bios, residency/fellowship program
+pages and board certification. The one pediatric-anesthesia hit in this entire run came from a hospital
+directory — McLeod's own search index — not from the literature.

@@ -1,0 +1,9 @@
+[
+ {
+  "full_name": "Farayi Mbuvah",
+  "npi": "1306198841",
+  "address_withheld": "mbuvahfj@gmail.com",
+  "reason": "affiliation lock FAILED \u2014 paper affiliation 'Department of Anesthesiology, Henry Ford Hospital, Detroit MI' (2015) does not match this person's known practice (Conway/Myrtle Beach SC). Subagent itself labelled it specialty-locked, not affiliation-locked. Also a personal gmail, not a work address; skill scope is business contact data only.",
+  "evidence_url": "https://europepmc.org/article/MED/26185936"
+ }
+]

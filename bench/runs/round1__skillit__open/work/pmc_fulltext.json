@@ -1,0 +1,64 @@
+{
+ "39015587": {
+  "pmc": "PMC11249181",
+  "bytes": 8541,
+  "emails": [
+   "Jon.Halling@hcahealthcare.com"
+  ],
+  "affs": [],
+  "authors": [
+   "Manzi H",
+   "Halling J",
+   "Poldiak NP",
+   "Perkins S"
+  ]
+ },
+ "37426864": {
+  "pmc": "PMC10324711",
+  "bytes": 7263,
+  "emails": [
+   "David.Kingery@hcahealthcare.com"
+  ],
+  "affs": [],
+  "authors": [
+   "Kingery DR Jr",
+   "Roberts A",
+   "Horstemeyer D",
+   "Stahl R"
+  ]
+ },
+ "37426558": {
+  "pmc": "PMC10327958",
+  "bytes": 7906,
+  "emails": [
+   "alex.roberts@hcahealthcare.com"
+  ],
+  "affs": [],
+  "authors": [
+   "Roberts A",
+   "Duncan EC",
+   "Hargrave P",
+   "Kingery DR",
+   "Barnes J",
+   "Horstemeyer DL",
+   "Stahl RF"
+  ]
+ },
+ "35251718": {
+  "pmc": "PMC8890879",
+  "bytes": 28410,
+  "emails": [
+   "alex.roberts@hcahealthcare.com"
+  ],
+  "affs": [
+   "Grand Strand Regional Medical Center, Myrtle Beach, SC, USA"
+  ],
+  "authors": [
+   "Roberts A",
+   "Mach S",
+   "Goebel J",
+   "Palomino H",
+   "Horstemeyer D"
+  ]
+ }
+}

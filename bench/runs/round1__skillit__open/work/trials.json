@@ -1,0 +1,5466 @@
+{
+ "ct_person": {
+  "Michael Alvarado": {
+   "n": 2,
+   "hits": [
+    {
+     "nct": "NCT01570998",
+     "geo": [
+      "georgetown"
+     ],
+     "emails": [],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT01570998\", \"briefTitle\": \"Intraoperative Radiation Therapy in Treating Patients With Breast Cancer Undergoing Breast-Conserving Surgery\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"University of California, San Francisco\"}}, \"contactsLocationsModule\": {\"overallOfficials\": [{\"name\": \"Michael Alvarado, MD\", \"affiliation\": \"University of California, San Francisco\"}], \"locations\": [{\"facility\": \"Alta Bates Summit Medical Center-Herrick Campus\", \"city\": \"Berkeley\", \"state\": \"California\"}, {\"facility\": \"University of California, Irvine\", \"city\": \"Irvine\", \"state\": \"California\"}, {\"facility\": \"Dignity Health - California Hospital Medical Center\", \"city\": \"Los Angeles\", \"state\": \"California\"}, {\"facility\": \"University of California, San Francisco\", \"city\": \"San Francisco\", \"state\": \"California\"}, {\"facility\": \"John Muir Medical Center-Walnut Creek\", \"city\": \"Walnut Creek\", \"state\": \"California\"}, {\"facility\": \"Greenwich Hospital\", \"city\": \"Greenwich\", \"state\": \"Connecticut\"}, {\"facility\": \"MedStar Georgetown University Hospital\", \"city\": \"Washington D.C.\", \"state\": \"District of Columbia\"}, {\"facility\": \"MedStar Washin"
+    },
+    {
+     "nct": "NCT06445738",
+     "geo": [],
+     "emails": [
+      "heath.badger@bctrials.org.au",
+      "michael.alvarado@ucsf.edu",
+      "alastair.thompson@bcm.edu"
+     ],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT06445738\", \"briefTitle\": \"Post-operative Radiotherapy Omission in Selected Patients With Early Breast Cancer Trial International VErsion (PROSPECTIVE)\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Breast Cancer Trials, Australia and New Zealand\"}}, \"contactsLocationsModule\": {\"centralContacts\": [{\"name\": \"Heath Badger\", \"phone\": \"+61 2 4925 5239\", \"email\": \"heath.badger@bctrials.org.au\"}], \"overallOfficials\": [{\"name\": \"Bruce Mann, MD\", \"affiliation\": \"Melbourne Health\"}, {\"name\": \"Steven David, MD\", \"affiliation\": \"Peter MacCallum Cancer Centre - Moorrabin\"}, {\"name\": \"Alastair Thompson, MD\", \"affiliation\": \"Baylor College of Medicine\"}], \"locations\": [{\"facility\": \"UCSF Breast Care Center\", \"city\": \"San Francisco\", \"state\": \"California\", \"contacts\": [{\"name\": \"Michael Alvarado, Prof\", \"phone\": \"+1 (415) 353-7070\", \"email\": \"michael.alvarado@ucsf.edu\"}, {\"name\": \"Michael Alvarado, Prof\"}]}, {\"facility\": \"Baylor St Luke's Medical Centre\", \"city\": \"Houston\", \"state\": \"Texas\", \"contacts\": [{\"name\": \"Alastair Thompson, Prof\", \"phone\": \"+1 (713) 798 2901\", \"email\": \"alastair.thompson@bcm.edu\"}, {\"name\": \"Alastair T"
+    }
+   ]
+  },
+  "Ryan Joseph Galica": {
+   "n": 0,
+   "hits": []
+  },
+  "Gerald Anthony Mastaw": {
+   "n": 0,
+   "hits": []
+  },
+  "William Z Myers": {
+   "n": 0,
+   "hits": []
+  },
+  "Ryan Wesley Smith": {
+   "n": 6,
+   "hits": [
+    {
+     "nct": "NCT06087224",
+     "geo": [],
+     "emails": [
+      "fang.jennifer@mayo.edu",
+      "demaerschalk.bart@mayo.edu",
+      "teresa.lam@pediatrix.com",
+      "Mary.Johnson@providence.org",
+      "jmsperry@bartletthospital.org",
+      "KFahey@peacehealth.org",
+      "Jonathan.Walther@Chickasaw.net",
+      "bobby.saunkeah@chickasaw.net",
+      "LindseyKing@jcmh.com",
+      "callen@gprmc-ok.com",
+      "Erin-Bohon@ouhsc.edu",
+      "jhogge@islandhospital.org",
+      "mihaipd@uw.edu",
+      "lbullen@olympicmedical.org",
+      "jfeltner@uw.edu",
+      "jfeltner@uw.edu",
+      "brenda.baumeister@confluencehealth.org",
+      "rsvendsen@prairieridge.health",
+      "deborah.schumacher@forthc.com",
+      "cenelson4@wisc.edu",
+      "tschad@prairieclinic.com",
+      "aharris@ramchealth.org",
+      "pgedeme@watertownregional.com",
+      "ashley.mehta@sickkids.ca",
+      "ashley.mehta@sickkids.ca",
+      "ashley.mehta@sickkids.ca",
+      "ashley.mehta@sickkids.ca",
+      "ashley.mehta@sickkids.ca",
+      "ashley.mehta@sickkids.ca",
+      "ashley.mehta@sickkids.ca",
+      "ashley.mehta@sickkids.ca",
+      "ashley.mehta@sickkids.ca",
+      "ashley.mehta@sickkids.ca",
+      "ashley.mehta@sickkids.ca",
+      "ashley.mehta@sickkids.ca",
+      "ashley.mehta@sickkids.ca",
+      "brenda.graydon@sickkids.ca",
+      "ashley.mehta@sickkids.ca",
+      "ashley.mehta@sickkids.ca"
+     ],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT06087224\", \"briefTitle\": \"The TELENEO Trial: A Multicenter Trial of Telemedicine for Advanced Neonatal Resuscitations in Community Hospitals\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Mayo Clinic\"}}, \"contactsLocationsModule\": {\"centralContacts\": [{\"name\": \"Jennifer Fang, MD, MS\", \"phone\": \"5072669397\", \"email\": \"fang.jennifer@mayo.edu\"}, {\"name\": \"Bart M Demaerschalk, MD, MSc\", \"phone\": \"4803018000\", \"email\": \"demaerschalk.bart@mayo.edu\"}], \"overallOfficials\": [{\"name\": \"Jennifer Fang, MD\", \"affiliation\": \"Mayo Clinic\"}, {\"name\": \"Bart M Demaerschalk, MD\", \"affiliation\": \"Mayo Clinic\"}, {\"name\": \"Meegan G Van Straaten, MSPH\", \"affiliation\": \"Mayo Clinic\"}], \"locations\": [{\"facility\": \"Providence Alaska Medical Center\", \"city\": \"Anchorage\", \"state\": \"Alaska\", \"contacts\": [{\"name\": \"Teresa Lam, MD\", \"phone\": \"907-562-2211\", \"email\": \"teresa.lam@pediatrix.com\"}, {\"name\": \"Mary-Alice Johnson, MD\", \"email\": \"Mary.Johnson@providence.org\"}]}, {\"facility\": \"Bartlett Regional Hospital\", \"city\": \"Juneau\", \"state\": \"Alaska\", \"contacts\": [{\"name\": \"Jessica Sperry, RN\", \"phone\": \"907-796-8657\", \"email\": \"jmsperry@bartle"
+    }
+   ]
+  },
+  "Kenneth Jaan Wenz": {
+   "n": 0,
+   "hits": []
+  },
+  "Stephen E Boatwright": {
+   "n": 0,
+   "hits": []
+  },
+  "Matthew Douglas Mclaren": {
+   "n": 0,
+   "hits": []
+  },
+  "Ian Peace": {
+   "n": 0,
+   "hits": []
+  },
+  "Oyindamola Awe": {
+   "n": 0,
+   "hits": []
+  },
+  "Susan C Barbieri": {
+   "n": 0,
+   "hits": []
+  },
+  "Jon Michael Bennett": {
+   "n": 0,
+   "hits": []
+  },
+  "James Elliott Brannon": {
+   "n": 0,
+   "hits": []
+  },
+  "Nicholas Alexander Buskill": {
+   "n": 0,
+   "hits": []
+  },
+  "E J Collins": {
+   "n": 6,
+   "hits": [
+    {
+     "nct": "NCT01932801",
+     "geo": [],
+     "emails": [],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT01932801\", \"briefTitle\": \"Harm Reduction With Pharmacotherapy (HaRP)\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"University of Washington\"}}, \"contactsLocationsModule\": {\"overallOfficials\": [{\"name\": \"Susan E Collins, PhD\", \"affiliation\": \"University of Washington\"}], \"locations\": [{\"facility\": \"University of Washington - Harborview Medical Center\", \"city\": \"Seattle\", \"state\": \"Washington\"}]}}}"
+    },
+    {
+     "nct": "NCT07228104",
+     "geo": [],
+     "emails": [
+      "ahillel@jh.edu",
+      "shirsh1@jh.edu",
+      "scollin7@jhmi.edu"
+     ],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT07228104\", \"briefTitle\": \"Use of Steroid Injections to Prevent the Recurrence of Tracheal Stenosis in Idiopathic Subglottic Stenosis\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Johns Hopkins University\"}}, \"contactsLocationsModule\": {\"centralContacts\": [{\"name\": \"Alexander Hillel, M.D.\", \"phone\": \"4432876006\", \"email\": \"ahillel@jh.edu\"}], \"overallOfficials\": [{\"name\": \"Alexander Hillel, MD\", \"affiliation\": \"Johns Hopkins University\"}], \"locations\": [{\"facility\": \"Johns Hopkins Hospital\", \"city\": \"Baltimore\", \"state\": \"Maryland\", \"contacts\": [{\"name\": \"Sarah E Collins, M.S.\", \"phone\": \"434-962-3058\", \"email\": \"shirsh1@jh.edu\"}, {\"name\": \"Sam L Collins, Ph.D.\", \"phone\": \"4107020420\", \"email\": \"scollin7@jhmi.edu\"}, {\"name\": \"Kevin Motz, MD\"}]}]}}}"
+    },
+    {
+     "nct": "NCT03962660",
+     "geo": [],
+     "emails": [
+      "tatiubay@uw.edu",
+      "emt07@uw.edu",
+      "collinss@uw.edu"
+     ],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT03962660\", \"briefTitle\": \"Harm Reduction for Tobacco Smoking With Support of Tobacco-Replacing Electronic Nicotine Delivery Systems\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"University of Washington\"}}, \"contactsLocationsModule\": {\"centralContacts\": [{\"name\": \"Tatiana M Ubay\", \"phone\": \"206-744-9913\", \"email\": \"tatiubay@uw.edu\"}, {\"name\": \"Emily Taylor\", \"phone\": \"206-744-1873\", \"email\": \"emt07@uw.edu\"}], \"overallOfficials\": [{\"name\": \"Susan E Collins, PhD\", \"affiliation\": \"University of Washington\"}], \"locations\": [{\"facility\": \"University of Washington - Harborview Medical Center\", \"city\": \"Seattle\", \"state\": \"Washington\", \"contacts\": [{\"name\": \"Susan E Collins, PhD\", \"phone\": \"206-832-7885\", \"email\": \"collinss@uw.edu\"}, {\"name\": \"Susan E Collins, PhD\"}]}]}}}"
+    },
+    {
+     "nct": "NCT05733442",
+     "geo": [],
+     "emails": [],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT05733442\", \"briefTitle\": \"Counseling for Harm Reduction and Retention in Medication-assisted Treatment - Cherokee Nation\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Washington State University\"}}, \"contactsLocationsModule\": {\"overallOfficials\": [{\"name\": \"Lonnie A Nelson, PhD\", \"affiliation\": \"Washington State University\"}, {\"name\": \"Susan E Collins, PhD\", \"affiliation\": \"University of Washington\"}, {\"name\": \"Ashley Lincoln, MSW\", \"affiliation\": \"Cherokee Nation Health Services\"}], \"locations\": [{\"facility\": \"Cherokee Nation Health Services\", \"city\": \"Tahlequah\", \"state\": \"Oklahoma\"}, {\"facility\": \"University of Washington School of Medicine\", \"city\": \"Seattle\", \"state\": \"Washington\"}]}}}"
+    },
+    {
+     "nct": "NCT02607384",
+     "geo": [],
+     "emails": [],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT02607384\", \"briefTitle\": \"The Baltimore Reading and Eye Disease Study\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Johns Hopkins University\"}}, \"contactsLocationsModule\": {\"overallOfficials\": [{\"name\": \"David S Friedman, MD, MPH, PhD\", \"affiliation\": \"Johns Hopkins University\"}, {\"name\": \"Megan E Collins, MD\", \"affiliation\": \"Johns Hopkins University\"}]}}}"
+    }
+   ]
+  },
+  "Michael Ford": {
+   "n": 0,
+   "hits": []
+  },
+  "Jon D Halling": {
+   "n": 0,
+   "hits": []
+  },
+  "Derek L Horstemeyer": {
+   "n": 0,
+   "hits": []
+  },
+  "David Redding Kingery": {
+   "n": 0,
+   "hits": []
+  },
+  "Bryan Robert Lee": {
+   "n": 2,
+   "hits": [
+    {
+     "nct": "NCT04245683",
+     "geo": [],
+     "emails": [
+      "jennifer.victory@bassett.org",
+      "kately.tessier@bassett.org",
+      "jennifer.victory@bassett.org",
+      "katelyn.tessier@bassett.org"
+     ],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT04245683\", \"briefTitle\": \"Feasibility of Non-Operative Management of Rectal Cancer in a Rural Population\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Bassett Healthcare\"}}, \"contactsLocationsModule\": {\"centralContacts\": [{\"name\": \"Jennifer Victory, RN\", \"phone\": \"6075476965\", \"email\": \"jennifer.victory@bassett.org\"}, {\"name\": \"Katelyn Tessier\", \"phone\": \"607-547-3073\", \"email\": \"kately.tessier@bassett.org\"}], \"overallOfficials\": [{\"name\": \"Eric Bravin, MD\", \"affiliation\": \"Bassett Healthcare\"}], \"locations\": [{\"facility\": \"Bassett Healthcare Network\", \"city\": \"Cooperstown\", \"state\": \"New York\", \"contacts\": [{\"name\": \"Jennifer Victory, RN\", \"phone\": \"607-547-6965\", \"email\": \"jennifer.victory@bassett.org\"}, {\"name\": \"Katelyn Tessier\", \"phone\": \"607-547-3073\", \"email\": \"katelyn.tessier@bassett.org\"}, {\"name\": \"Eric Bravin, MD\"}, {\"name\": \"Raul Monzon, MD\"}, {\"name\": \"Luis Oceguera, MD\"}, {\"name\": \"Marcy Canary, MD\"}, {\"name\": \"Bharatsinh Gharia, MD\"}, {\"name\": \"Bryan Lee, DO\"}, {\"name\": \"James Leonardo, MD\"}, {\"name\": \"Anush Patel, MD\"}, {\"name\": \"Timothy Korytko, MD\"}, {\"name\": \"Julia Manzerova, MD\"}, {\"name\": \""
+    },
+    {
+     "nct": "NCT07222787",
+     "geo": [],
+     "emails": [
+      "ILIF@providencemt.com",
+      "jabailey@honorhealth.com",
+      "mawheeler@honorhealth.com",
+      "inaara@california-spine.com",
+      "alaa.khabaza@goldenstateortho.com",
+      "wzirl@goldenstateortho.com",
+      "ma@osiclinic.com",
+      "gangh@hss.edu",
+      "myersm@hss.edu",
+      "texas.ini.research@inifoundation.org",
+      "Gladcy.Mathew@hcahealthcare.com",
+      "areedy@saon.net"
+     ],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT07222787\", \"briefTitle\": \"Post-market Safety and Effectiveness of the CORUS-LX System in Improving Lumbar Interbody Fusion Outcomes\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Providence Medical Technology, Inc.\"}}, \"contactsLocationsModule\": {\"centralContacts\": [{\"name\": \"Erik M Summerside, PhD\", \"phone\": \"(415) 923-9376\", \"email\": \"ILIF@providencemt.com\"}], \"overallOfficials\": [{\"name\": \"Erik M Summerside, PhD\", \"affiliation\": \"Providence Medical Technology\"}], \"locations\": [{\"facility\": \"Barrow Brain & Spine\", \"city\": \"Scottsdale\", \"state\": \"Arizona\", \"contacts\": [{\"name\": \"Jamie Bailey, Clinical Research Coordinator\", \"phone\": \"480-583-0550\", \"email\": \"jabailey@honorhealth.com\"}, {\"name\": \"Bryan Lee, MD\"}]}, {\"facility\": \"HonorHealth Neurology\", \"city\": \"Scottsdale\", \"state\": \"Arizona\", \"contacts\": [{\"name\": \"Mattie Wheeler, Clinical Research Coordinator\", \"phone\": \"480-534-4525\", \"email\": \"mawheeler@honorhealth.com\"}, {\"name\": \"Abhineet Chowdhary, MD\"}]}, {\"facility\": \"California Spine\", \"city\": \"Los Angeles\", \"state\": \"California\", \"contacts\": [{\"name\": \"Inaara Bhola, Clinical Research Coordinator\", \"ph"
+    }
+   ]
+  },
+  "Joseph Anthony Maggioncalda": {
+   "n": 0,
+   "hits": []
+  },
+  "Joseph A Maggioncalda": {
+   "n": 0,
+   "hits": []
+  },
+  "Farayi Jonnes Mbuvah": {
+   "n": 0,
+   "hits": []
+  },
+  "Candace N Mcalpine": {
+   "n": 0,
+   "hits": []
+  },
+  "Joseph Michael Metz": {
+   "n": 0,
+   "hits": []
+  },
+  "Stephen C Music": {
+   "n": 0,
+   "hits": []
+  },
+  "Alisha Frank Palliser": {
+   "n": 0,
+   "hits": []
+  },
+  "Deeran Patel": {
+   "n": 0,
+   "hits": []
+  },
+  "Emma K. Rousakis": {
+   "n": 0,
+   "hits": []
+  },
+  "Alvin Tsang": {
+   "n": 0,
+   "hits": []
+  },
+  "Louis Tsichlis": {
+   "n": 0,
+   "hits": []
+  },
+  "Donna Jean Turner": {
+   "n": 0,
+   "hits": []
+  },
+  "William Ashton Wall": {
+   "n": 1,
+   "hits": [
+    {
+     "nct": "NCT00309231",
+     "geo": [],
+     "emails": [],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT00309231\", \"briefTitle\": \"Clinical Islet Transplantation Using the Edmonton Protocol\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"London Health Sciences Centre Research Institute OR Lawson Research Institute of St. Joseph's\"}}, \"contactsLocationsModule\": {\"overallOfficials\": [{\"name\": \"William Wall, MD\", \"affiliation\": \"Western University, Canada\"}], \"locations\": [{\"facility\": \"London Health Sciences Centre University Campus\", \"city\": \"London\", \"state\": \"Ontario\"}]}}}"
+    }
+   ]
+  },
+  "Keeland Williams": {
+   "n": 0,
+   "hits": []
+  },
+  "Nicholas Perry Gentry": {
+   "n": 0,
+   "hits": []
+  },
+  "Brian Scott Yee": {
+   "n": 0,
+   "hits": []
+  },
+  "Susan J Haskin": {
+   "n": 0,
+   "hits": []
+  },
+  "Frank F Humbles": {
+   "n": 0,
+   "hits": []
+  },
+  "Casmir Michal Kielar": {
+   "n": 0,
+   "hits": []
+  },
+  "Richard Blake Kline": {
+   "n": 0,
+   "hits": []
+  },
+  "Yair J Lopez Torres": {
+   "n": 0,
+   "hits": []
+  },
+  "Ihor V Melnytskyy": {
+   "n": 0,
+   "hits": []
+  },
+  "Chad James Skidmore": {
+   "n": 0,
+   "hits": []
+  },
+  "Edward Alton Wallace": {
+   "n": 0,
+   "hits": []
+  },
+  "Benjamin George Cameransi": {
+   "n": 0,
+   "hits": []
+  },
+  "Patricia R Grant": {
+   "n": 3,
+   "hits": [
+    {
+     "nct": "NCT02393118",
+     "geo": [],
+     "emails": [],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT02393118\", \"briefTitle\": \"A Study to Evaluate the BrainPort Vision Device in Individuals Blinded by Traumatic Injury\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Wicab\"}}, \"contactsLocationsModule\": {\"overallOfficials\": [{\"name\": \"Patricia Grant, M.S.\", \"affiliation\": \"Wicab, Inc.\"}], \"locations\": [{\"facility\": \"The Chicago Lighthouse for People Who Are Blind or Visually Impaired\", \"city\": \"Chicago\", \"state\": \"Illinois\"}, {\"facility\": \"Lighthouse Guild\", \"city\": \"New York\", \"state\": \"New York\"}, {\"facility\": \"Wicab, Inc.\", \"city\": \"Middleton\", \"state\": \"Wisconsin\"}]}}}"
+    },
+    {
+     "nct": "NCT04725760",
+     "geo": [],
+     "emails": [
+      "pgrant@wicab.com",
+      "daniele.denis@ap-hm.fr",
+      "msg@chu-montpellier.fr",
+      "miweber@chu-nantes.fr",
+      "Luc.Jeanjean@chu-nimes.fr",
+      "dominique.bremond@aphp.fr",
+      "helene.dollfus@chru-strasbourg.fr"
+     ],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT04725760\", \"briefTitle\": \"Evaluation of the Efficacy of the BrainPort Vision Pro on the Performance of Daily Activities in the Profoundly Blind French Population\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Wicab\"}}, \"contactsLocationsModule\": {\"centralContacts\": [{\"name\": \"Patricia Grant, Ph.D.\", \"phone\": \"312-447-3234\", \"email\": \"pgrant@wicab.com\"}], \"overallOfficials\": [{\"name\": \"Patricia Grant, Ph.D.\", \"affiliation\": \"Wicab, Inc.\"}, {\"name\": \"Isabelle Audo, Ph.D.\", \"affiliation\": \"National Hospital for Ophthalmology of the Fifteen-Vingts\"}], \"locations\": [{\"facility\": \"University Hospital La Timone\", \"city\": \"Marseille\", \"contacts\": [{\"name\": \"Dani\\u00e8le Denis, M.D.\", \"phone\": \"04 91 38 54 68\", \"email\": \"daniele.denis@ap-hm.fr\"}, {\"name\": \"Dani\\u00e8le Denis, M.D.\"}]}, {\"facility\": \"CHU de Montpellier\", \"city\": \"Montpellier\", \"contacts\": [{\"name\": \"Isabelle Meunier, M.D.\", \"phone\": \"04 67 33 02 78\", \"email\": \"msg@chu-montpellier.fr\"}, {\"name\": \"Isabelle Meunier, M.D.\"}]}, {\"facility\": \"University Hospital of Nantes\", \"city\": \"Nantes\", \"contacts\": [{\"name\": \"Michel Weber, M.D.\", \"phone\": \"02 40 08 36 56\","
+    }
+   ]
+  },
+  "Kent Jack Homnick": {
+   "n": 0,
+   "hits": []
+  },
+  "Steven J Petersen": {
+   "n": 0,
+   "hits": []
+  },
+  "Scott E Thomas": {
+   "n": 1,
+   "hits": [
+    {
+     "nct": "NCT04999410",
+     "geo": [],
+     "emails": [
+      "scott.thomas@utoronto.ca",
+      "m.rosenblat@mail.utoronto.ca",
+      "scott.thomas@utoronto.ca",
+      "m.rosenblat@mail.utoronto.ca"
+     ],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT04999410\", \"briefTitle\": \"Virtual Programming Interval Training for TT Performance\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Scott G. Thomas\"}}, \"contactsLocationsModule\": {\"centralContacts\": [{\"name\": \"Scott G Thomas, PhD\", \"phone\": \"6475196957\", \"email\": \"scott.thomas@utoronto.ca\"}, {\"name\": \"Michael Rosenblat, MSc\", \"phone\": \"778-782-9084\", \"email\": \"m.rosenblat@mail.utoronto.ca\"}], \"locations\": [{\"facility\": \"Goldring High Performance Sport Centre\", \"city\": \"Toronto\", \"state\": \"Ontario\", \"contacts\": [{\"name\": \"Scott Thomas\", \"phone\": \"6475196957\", \"email\": \"scott.thomas@utoronto.ca\"}, {\"name\": \"Michael Rosenblat, PhD (Cand)\", \"phone\": \"778-782-9084\", \"email\": \"m.rosenblat@mail.utoronto.ca\"}, {\"name\": \"Bruno R da Costa, PhD\"}]}]}}}"
+    }
+   ]
+  },
+  "Joshua Gore": {
+   "n": 0,
+   "hits": []
+  },
+  "Michelle Lee": {
+   "n": 4,
+   "hits": [
+    {
+     "nct": "NCT02223871",
+     "geo": [],
+     "emails": [],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT02223871\", \"briefTitle\": \"Effect of ACT-451840 Against Early Plasmodium Falciparum Blood Stage Infection in Healthy Subjects\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Idorsia Pharmaceuticals Ltd.\"}}, \"contactsLocationsModule\": {\"overallOfficials\": [{\"name\": \"Michelle Lee\", \"affiliation\": \"Actelion\"}], \"locations\": [{\"facility\": \"Q-Pharm Clinics\", \"city\": \"Herston\", \"state\": \"Queensland\"}]}}}"
+    },
+    {
+     "nct": "NCT07444073",
+     "geo": [],
+     "emails": [
+      "zmlim@nus.edu.sg",
+      "michelle.lee@novi-health.com",
+      "michelle.lee@novi-health.com"
+     ],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT07444073\", \"briefTitle\": \"Assessing Biological Aging in a Real-World Medical Weight Loss Program Using the LinAge2 Clinical Clock\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"National University of Singapore\"}}, \"contactsLocationsModule\": {\"centralContacts\": [{\"name\": \"Zhi Meng Lim, MSc\", \"phone\": \"+65 90084510\", \"email\": \"zmlim@nus.edu.sg\"}, {\"name\": \"Hui Ching Michelle Lee, PhD\", \"email\": \"michelle.lee@novi-health.com\"}], \"overallOfficials\": [{\"name\": \"Jan Gruber, PhD\", \"affiliation\": \"National University of Singapore\"}], \"locations\": [{\"facility\": \"NOVI Health (T3 Health PTE LTD)\", \"city\": \"Singapore\", \"contacts\": [{\"name\": \"Hui Ching Michelle Lee, PhD\", \"phone\": \"+65 82822765\", \"email\": \"michelle.lee@novi-health.com\"}, {\"name\": \"Sue-Anne Ee Shiow Toh, MA MBBChir MSc\"}]}, {\"facility\": \"National University of Singapore\", \"city\": \"Singapore\"}]}}}"
+    },
+    {
+     "nct": "NCT07671209",
+     "geo": [],
+     "emails": [
+      "MLEE37@mgb.org",
+      "mlee37@mgb.org"
+     ],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT07671209\", \"briefTitle\": \"Addressing Cancer Care Equity With Social Determinants of Health Screening and Early Intervention\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Massachusetts General Hospital\"}}, \"contactsLocationsModule\": {\"centralContacts\": [{\"name\": \"Michelle H Lee, MD\", \"phone\": \"617-882-6060\", \"email\": \"MLEE37@mgb.org\"}], \"overallOfficials\": [{\"name\": \"Michelle H Lee, MD\", \"affiliation\": \"Mass General Brigham Cancer Institute\"}], \"locations\": [{\"facility\": \"Mass General Brigham Cancer Institute\", \"city\": \"Boston\", \"state\": \"Massachusetts\", \"contacts\": [{\"name\": \"Michelle Lee\", \"phone\": \"978-882-6060\", \"email\": \"mlee37@mgb.org\"}]}]}}}"
+    },
+    {
+     "nct": "NCT07734272",
+     "geo": [],
+     "emails": [
+      "mlee37@mgb.org"
+     ],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT07734272\", \"briefTitle\": \"Standardized Documentation and Assessments for Polycythemia Vera: A Quality Improvement Initiative\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Massachusetts General Hospital\"}}, \"contactsLocationsModule\": {\"centralContacts\": [{\"name\": \"Michelle Lee, MD\", \"phone\": \"617-882-6060\", \"email\": \"mlee37@mgb.org\"}]}}}"
+    }
+   ]
+  },
+  "Frederick William Bellamy": {
+   "n": 0,
+   "hits": []
+  },
+  "Raymond Craig Collins": {
+   "n": 0,
+   "hits": []
+  },
+  "Ramiro Jay Godines": {
+   "n": 0,
+   "hits": []
+  },
+  "Kevin Armstrong": {
+   "n": 1,
+   "hits": [
+    {
+     "nct": "NCT03708302",
+     "geo": [],
+     "emails": [
+      "abhijit.biswas@lhsc.on.ca",
+      "abhijit.biswas@lhsc.on.ca"
+     ],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT03708302\", \"briefTitle\": \"Serratus and Parasternal Infrapectoral Block for Breast Surgery.\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Western University, Canada\"}}, \"contactsLocationsModule\": {\"centralContacts\": [{\"name\": \"Abhijit Biswas, MD\", \"phone\": \"+14168301696\", \"email\": \"abhijit.biswas@lhsc.on.ca\"}], \"overallOfficials\": [{\"name\": \"Abhijit Biswas, MD\", \"affiliation\": \"London Health Sciences Center, Western University, London. Ontario. Canada\"}], \"locations\": [{\"facility\": \"St. Joseph's Hospital\", \"city\": \"London\", \"state\": \"Ontario\", \"contacts\": [{\"name\": \"Abhijit Biswas, MD\", \"phone\": \"+1 4168301696\", \"email\": \"abhijit.biswas@lhsc.on.ca\"}, {\"name\": \"Abhijit Biswas, MD\"}, {\"name\": \"Cheng Lin, MD\"}, {\"name\": \"Muriel Brackstone, MD\"}, {\"name\": \"Allison Maciver, MD\"}, {\"name\": \"Armen Parsyan, MD\"}, {\"name\": \"Sarah Knowles, MD\"}, {\"name\": \"Edward Davies, MD\"}, {\"name\": \"Steven Latosinsky, MD\"}, {\"name\": \"Kevin Armstrong, MD\"}, {\"name\": \"Craig Railton, MD\"}, {\"name\": \"Shalini Dhir, MD\"}, {\"name\": \"Chris Hansebout, MD\"}, {\"name\": \"William Newmarch, MD\"}, {\"name\": \"Priyanka Singh, MD\"}, {\"name\": \"Mark Lukewic"
+    }
+   ]
+  },
+  "Olga Mallett Chrisman": {
+   "n": 0,
+   "hits": []
+  },
+  "Otto I Czechner": {
+   "n": 0,
+   "hits": []
+  },
+  "Stephen D Goerz": {
+   "n": 0,
+   "hits": []
+  },
+  "Peter Lawrence Fischer": {
+   "n": 1,
+   "hits": [
+    {
+     "nct": "NCT06070116",
+     "geo": [],
+     "emails": [],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT06070116\", \"briefTitle\": \"Safety and Efficacy of Novel Combination Regimens for Treatment of Onchocerciasis\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Washington University School of Medicine\"}}, \"contactsLocationsModule\": {\"overallOfficials\": [{\"name\": \"Peter Fischer, PhD\", \"affiliation\": \"Washington University School of Medicine\"}, {\"name\": \"Patrick Kpanyen, PhD\", \"affiliation\": \"National Public Health Institute of Liberia\"}, {\"name\": \"Gary Weil, MD\", \"affiliation\": \"Washington University School of Medicine\"}], \"locations\": [{\"facility\": \"Bong County Hospital\", \"city\": \"Bong Town\", \"state\": \"Bong County\"}]}}}"
+    }
+   ]
+  },
+  "Lawrence Anthony Montalto": {
+   "n": 0,
+   "hits": []
+  },
+  "Alexander Yuri Varzari": {
+   "n": 0,
+   "hits": []
+  },
+  "Dwayne J Livigni": {
+   "n": 0,
+   "hits": []
+  },
+  "Robin Zaki Dimitrious": {
+   "n": 0,
+   "hits": []
+  },
+  "Jawanza Nyahuma Jabari": {
+   "n": 0,
+   "hits": []
+  },
+  "William Frederick Obrecht": {
+   "n": 0,
+   "hits": []
+  },
+  "John Schultz": {
+   "n": 3,
+   "hits": [
+    {
+     "nct": "NCT03517761",
+     "geo": [],
+     "emails": [
+      "edodson@regenexx.com",
+      "nsteinmetz@regenexx.com",
+      "edodson@regenexx.com",
+      "nsteinmetz@regenexx.com"
+     ],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT03517761\", \"briefTitle\": \"Use of Bone Marrow Concentrate for Treatment of Alar, Accessory, and Transverse Ligament Injuries\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Regenexx, LLC\"}}, \"contactsLocationsModule\": {\"centralContacts\": [{\"name\": \"Ehren R Dodson, PhD\", \"phone\": \"720-287-7199\", \"email\": \"edodson@regenexx.com\"}, {\"name\": \"Neven Steinmetz, PhD\", \"email\": \"nsteinmetz@regenexx.com\"}], \"overallOfficials\": [{\"name\": \"Christopher Centeno, MD\", \"affiliation\": \"Regenexx, LLC\"}], \"locations\": [{\"facility\": \"Ehren Dodson\", \"city\": \"Broomfield\", \"state\": \"Colorado\", \"contacts\": [{\"name\": \"Ehren Dodson, PhD\", \"phone\": \"7202877199\", \"email\": \"edodson@regenexx.com\"}, {\"name\": \"Neven Steinmetz, PhD\", \"phone\": \"3034296448\", \"email\": \"nsteinmetz@regenexx.com\"}, {\"name\": \"Christopher Centeno, MD\"}, {\"name\": \"John Schultz, MD\"}, {\"name\": \"John Pitts, MD\"}, {\"name\": \"Jason Markle, DO\"}]}]}}}"
+    },
+    {
+     "nct": "NCT05551780",
+     "geo": [],
+     "emails": [
+      "john.schultz@soundbitemedical.com",
+      "Jennifer@palmvascular.com",
+      "Rebecca.Palermo@unchealth.unc.edu",
+      "lfelix@lifespan.org",
+      "romana.schuh@medunigraz.at",
+      "S.Mueller@klinikum-hochsauerland.de"
+     ],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT05551780\", \"briefTitle\": \"Treatment of Calcific Total Occlusions in Peripheral Artery Disease\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"SoundBite Medical Solutions, Inc.\"}}, \"contactsLocationsModule\": {\"centralContacts\": [{\"name\": \"John Schultz\", \"phone\": \"514-312-9181\", \"email\": \"john.schultz@soundbitemedical.com\"}], \"overallOfficials\": [{\"name\": \"George Adams, MD\", \"affiliation\": \"UNC REX Hospital, Raleigh, NC, USA\"}, {\"name\": \"Michael Lichtenberg, MD\", \"affiliation\": \"Angiology Clinic and Vascular Centre, Arnsberg, Germany\"}], \"locations\": [{\"facility\": \"Palm Vascular Centers\", \"city\": \"Fort Lauderdale\", \"state\": \"Florida\", \"contacts\": [{\"name\": \"Jennifer Gimeno\", \"email\": \"Jennifer@palmvascular.com\"}]}, {\"facility\": \"UNC REX Hospial\", \"city\": \"Raleigh\", \"state\": \"North Carolina\", \"contacts\": [{\"name\": \"Rebecca Palermo\", \"email\": \"Rebecca.Palermo@unchealth.unc.edu\"}]}, {\"facility\": \"Lifespan - The Miriam Hospital\", \"city\": \"Providence\", \"state\": \"Rhode Island\", \"contacts\": [{\"name\": \"Lina Felix\", \"email\": \"lfelix@lifespan.org\"}]}, {\"facility\": \"Medizinische Universit\\u00e4t Graz\", \"city\": \"Graz\", \"contac"
+    },
+    {
+     "nct": "NCT05287867",
+     "geo": [],
+     "emails": [
+      "edodson@regenexx.com",
+      "nsteinmetz@regenexx.com",
+      "espeer@centenoschultz.com",
+      "espeer@centenschultz.com"
+     ],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT05287867\", \"briefTitle\": \"Trial for Treating Painful Degenerative Disc Disease\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Regenexx, LLC\"}}, \"contactsLocationsModule\": {\"centralContacts\": [{\"name\": \"Ehren Dodson, PhD\", \"phone\": \"7202877199\", \"email\": \"edodson@regenexx.com\"}, {\"name\": \"Neven Steinmetz, PhD\", \"email\": \"nsteinmetz@regenexx.com\"}], \"overallOfficials\": [{\"name\": \"Christopher Centeno, MD\", \"affiliation\": \"Centeno-Schultz Clinic\"}], \"locations\": [{\"facility\": \"Centeno-Schultz Clinic\", \"city\": \"Broomfield\", \"state\": \"Colorado\", \"contacts\": [{\"name\": \"Eric Speer, MBA\", \"email\": \"espeer@centenoschultz.com\"}, {\"name\": \"Christopher Centeno, MD\"}, {\"name\": \"John Schultz, MD\"}, {\"name\": \"John Pitts, MD\"}, {\"name\": \"Jason Markle, DO\"}, {\"name\": \"Matthew Hyzy, DO\"}, {\"name\": \"Brandon Money, DO\"}]}, {\"facility\": \"Centeno-Schultz Clinic\", \"city\": \"Lone Tree\", \"state\": \"Colorado\", \"contacts\": [{\"name\": \"Eric Speer\", \"email\": \"espeer@centenschultz.com\"}, {\"name\": \"Christopher Centeno, MD\"}, {\"name\": \"John Schultz, MD\"}, {\"name\": \"John Pitts, MD\"}, {\"name\": \"Jason Markle, DO\"}, {\"name\": \"Matthew Hyzy, DO\"}, {\"nam"
+    }
+   ]
+  },
+  "Christopher Adams Brann": {
+   "n": 0,
+   "hits": []
+  },
+  "Zechariah Charles Harris": {
+   "n": 0,
+   "hits": []
+  },
+  "Lloyd Calhoun Meeks": {
+   "n": 0,
+   "hits": []
+  },
+  "Josef N. Mueksch": {
+   "n": 0,
+   "hits": []
+  },
+  "Miller J Van Vliet": {
+   "n": 0,
+   "hits": []
+  },
+  "Jonathan Ward": {
+   "n": 1,
+   "hits": [
+    {
+     "nct": "NCT05732870",
+     "geo": [],
+     "emails": [
+      "jake@relationrx.com",
+      "susan.oconnor@blctrials.onmicrosoft.com",
+      "catherine.hilton1@nhs.net",
+      "olaoluwa.olaosebikan@nhs.net",
+      "nazish.daudi@qasmc.com",
+      "brian.leaker@qasmc.com",
+      "agokturk@nhs.net",
+      "amrinder.sayan@nhs.net"
+     ],
+     "raw": "{\"protocolSection\": {\"identificationModule\": {\"nctId\": \"NCT05732870\", \"briefTitle\": \"OSTEOMICS: Identifying Regulators of Bone Homeostasis\"}, \"sponsorCollaboratorsModule\": {\"leadSponsor\": {\"name\": \"Relation Therapeutics\"}}, \"contactsLocationsModule\": {\"centralContacts\": [{\"name\": \"Jake Taylor-King, DPhil\", \"phone\": \"447387227904\", \"email\": \"jake@relationrx.com\"}, {\"name\": \"Susan O'Connor\", \"phone\": \"07513017280\", \"email\": \"susan.oconnor@blctrials.onmicrosoft.com\"}], \"overallOfficials\": [{\"name\": \"Raghbir Khakha\", \"affiliation\": \"Harley Street Specialist Hospital & Fitzrovia Hospital/QASMC\"}, {\"name\": \"Akash Patel\", \"affiliation\": \"Royal Free London NHS Foundation Trust\"}, {\"name\": \"Yegappan Kalairajah\", \"affiliation\": \"Luton & Dunstable University Hospital, Bedfordshire Hospitals NHS Foundation Trust\"}, {\"name\": \"Victor Babu\", \"affiliation\": \"Chelsea and Westminster NHS Foundation Trust\"}, {\"name\": \"Jonathan Ward\", \"affiliation\": \"Barts & The London NHS Trust\"}, {\"name\": \"Richard Keen\", \"affiliation\": \"Royal National Orthopaedic Hospital NHS Trust\"}, {\"name\": \"Ines Reichert\", \"affiliation\": \"King's College Hospital NHS Trust\"}], \"locations\": [{\"facility\": \"Harley Street Specialist "
+    }
+   ]
+  }
+ },
+ "ct_geo": {
+  "Myrtle Beach, South Carolina": {
+   "studies": 55,
+   "contacts": [
+    "AMellor@northwell.edu",
+    "Alvaro A. Martinez, MD, FACR",
+    "Anne_caramella@bshsi.org",
+    "Barbara.barhamand@advocatehealth.com",
+    "Barbara.rector@medstar.net",
+    "Beth.Knetter@aspirus.org",
+    "BinghamE@upstate.edu",
+    "CCTO@mssm.edu",
+    "CTO@hmc.psu.edu",
+    "CTOResearch@hfhs.org",
+    "CTUReferral@UHhospitals.org",
+    "CanRsrchStudies@providence.org",
+    "CancerAnswer@ccf.org",
+    "CancerAnswerLine@med.umich.edu",
+    "CancerClinicalTrials@bassett.org",
+    "CancerClinicalTrials@orlandohealth.com",
+    "CancerResearch@COMHS.org",
+    "CancerTrials@nyulangone.org",
+    "Cancer_Studies@rush.edu",
+    "Cancerresearch@edward.org",
+    "Chanda.miller@phci.org",
+    "Charles Kamen, PhD",
+    "Charmaine.A.Mckie@kp.org",
+    "Christina.Cole@chhi.org",
+    "Christina.weisenborn@umm.edu",
+    "ClinicalReserachDept@aultman.com",
+    "ClinicalTrials@FLCancer.com",
+    "ClinicalTrials@northside.com",
+    "Daniel Low, PhD",
+    "Danielle.Werle@mercy.net",
+    "David.j.perry2@medstar.net",
+    "Dawnmarie.DeFazio@ahn.org",
+    "Deborah W Bruner, RN, PhD",
+    "Donald.Smith3@nm.org",
+    "Elisemarie.curry@ochsner.org",
+    "Emily.Crofts@trinity-health.org",
+    "Eugene Paik, MD",
+    "FH.Cancer.Research@flhosp.org",
+    "Gregory P Swanson, MD",
+    "HSC-ClinicalTrialInfo@salud.unm.edu"
+   ]
+  },
+  "Conway, South Carolina": {
+   "studies": 23,
+   "contacts": [
+    "Anne F. Schott, MD",
+    "Arun J Sanyal, MD",
+    "ClinicalTrials.gov_Inquiries@pfizer.com",
+    "Eugene Paik, MD",
+    "Laurence H. Baker, DO, FACOI",
+    "Mariana Chavez-MacGregor, MD, MSc",
+    "N. Lynn Henry, MD, PhD",
+    "Sven Francque, MD",
+    "angie.lee@stryker.com",
+    "stephanie.guyon@stryker.com"
+   ]
+  },
+  "Georgetown, South Carolina": {
+   "studies": 100,
+   "contacts": [
+    "13588453501@163.com",
+    "AKPAMC.OncologyResearchSupport@providence.org",
+    "AMellor@northwell.edu",
+    "AWRI.Inquiry@Ascension.org",
+    "AWRI.inquiry@ascension.org",
+    "Aaron Trammell, MD, MSc",
+    "Abhijit Raval, MD",
+    "Abhishek Singh, MD, PhD",
+    "Abirami Sivapiragasam, MD",
+    "Agustin.Martin-Clavijo@uhb.nhs.uk",
+    "Ahmed Sadek, MD",
+    "Akadison@northwell.edu",
+    "Alan Kadison, MD",
+    "Alan S. Gamis, MD, MPH",
+    "Alberto S. Pappo, MD",
+    "Alexandra.Easson@uhn.ca",
+    "Ali Ataya, MD",
+    "Alice Goyanes, MD",
+    "Alison Conlin, MD, MPH",
+    "Allison.bruce@nemours.org",
+    "Alvaro Aranda, MD",
+    "Amanda Kirane, MD FACS",
+    "Amita Krishnan, MD",
+    "Amro Al-Astal, MD",
+    "Amy.Grossman@sluhn.org",
+    "Arun J. Sanyal, M.D.",
+    "Arunabh Talwar, MD",
+    "Ashley Davenport, MD",
+    "Ashley.Repp@jhmi.edu",
+    "BCCclintrials@bmhcc.org",
+    "BFahy@salud.unm.edu",
+    "BTawfik@salud.unm.edu",
+    "Barbara A Pockaj, MD",
+    "Barbara Peric, MD, PhD",
+    "Barbara.barhamand@advocatehealth.com",
+    "Bernard Tawfik, MD",
+    "Beth.Knetter@aspirus.org",
+    "Bridget Fahy, MD",
+    "Bruce J. Roth, MD",
+    "CCBDCresearch@chkd.org"
+   ]
+  },
+  "Murrells Inlet, South Carolina": {
+   "studies": 2,
+   "contacts": [
+    "Charles Kamen, PhD"
+   ]
+  },
+  "Shallotte, North Carolina": {
+   "studies": 0,
+   "contacts": []
+  },
+  "Whiteville, North Carolina": {
+   "studies": 3,
+   "contacts": [
+    "Krassimir Mitchev, MD"
+   ]
+  },
+  "Bolivia, North Carolina": {
+   "studies": 1,
+   "contacts": [
+    "Eugene Paik, MD",
+    "angie.lee@stryker.com",
+    "stephanie.guyon@stryker.com"
+   ]
+  },
+  "Loris, South Carolina": {
+   "studies": 0,
+   "contacts": []
+  }
+ },
+ "reporter_names": {
+  "total": 1667,
+  "results": [
+   {
+    "pi": "KOELLE, MICHAEL R",
+    "org": "YALE UNIVERSITY",
+    "state": "CT",
+    "city": "NEW HAVEN",
+    "proj": "5R01NS086932-11",
+    "fy": 2026,
+    "title": "Neuromodulator signaling and activity in the C. elegans egg-laying circuit"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01EB036945-02",
+    "fy": 2026,
+    "title": "Bringing Coherent Fetal Brain Volumes and Automated Metrics to the Radiology Workflow"
+   },
+   {
+    "pi": "SMITH, RYAN C.",
+    "org": "IOWA STATE UNIVERSITY",
+    "state": "IA",
+    "city": "AMES",
+    "proj": "5R01AI182256-02",
+    "fy": 2026,
+    "title": "Mosquito extracellular vesicles in malaria parasite killing and immune priming"
+   },
+   {
+    "pi": "COLLINS, JAMES TRISTAN",
+    "org": "UNIVERSITY OF LOUISVILLE",
+    "state": "KY",
+    "city": "LOUISVILLE",
+    "proj": "5P20GM125504-09",
+    "fy": 2026,
+    "title": "The role of sugar transport in C. difficile colonization and disease"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "4U01DA055353-06",
+    "fy": 2026,
+    "title": "5/24 Healthy Brain and Child Development National Consortium"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5T32HL166142-04",
+    "fy": 2026,
+    "title": "Inclusive Excellence Training Program in the Systems Biology of Cardiovascular Inflammatio"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "5R01AI167967-04",
+    "fy": 2026,
+    "title": "Drug Target Discovery, Validation, and Prioritization for Schistosomiasis"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HD076258-10",
+    "fy": 2026,
+    "title": "Neonatal Hypoxic Ischemic Encephalopathy: Potential of Innovative NIRS to Optimize Hypothe"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HD114338-03",
+    "fy": 2026,
+    "title": "Developing novel MR tools to optimize surgical planning and fetal outcome in TTTS"
+   },
+   {
+    "pi": "COLLINS, JEFFREY M",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "5R01AI182244-03",
+    "fy": 2026,
+    "title": "Immunometabolic Biomarkers to Advance TB Diagnosis and Treatment Monitoring"
+   },
+   {
+    "pi": "COLLINS, JEFFREY M",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "5P30AI168386-05",
+    "fy": 2026,
+    "title": "Emory/Georgia TB Research Advancement Center (TRAC)"
+   },
+   {
+    "pi": "COLLINS, GREGORY ",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "2R01DA039146-11A1",
+    "fy": 2026,
+    "title": "Bath Salts: Abuse-related and Toxic Effects"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R33DA059916-04",
+    "fy": 2026,
+    "title": "Single-cell multi-omic analysis of opioid-mediated HIV disease pathogenesis"
+   },
+   {
+    "pi": "MITREVA, MAKEDONKA ",
+    "org": "WASHINGTON UNIVERSITY",
+    "state": "MO",
+    "city": "SAINT LOUIS",
+    "proj": "5R01AI191507-02",
+    "fy": 2026,
+    "title": "Advancing lymphatic filariasis elimination with parasite genomic epidemiology"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01AR079477-05",
+    "fy": 2026,
+    "title": "Skeletal muscle sarcomere function in health and disease"
+   },
+   {
+    "pi": "COLLINS, JAMES F.",
+    "org": "UNIVERSITY OF FLORIDA",
+    "state": "FL",
+    "city": "GAINESVILLE",
+    "proj": "5R01DK134583-03",
+    "fy": 2026,
+    "title": "Mechanisms of Intestinal Heme-iron Absorption in Rat Models of Iron Deficiency and Iron Ov"
+   },
+   {
+    "pi": "COLLINS, HELEN E",
+    "org": "UNIVERSITY OF LOUISVILLE",
+    "state": "KY",
+    "city": "LOUISVILLE",
+    "proj": "5R01HL163003-04",
+    "fy": 2026,
+    "title": "Mechanisms Contributing to Pregnancy-induced Cardiac Remodeling"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R33NS126792-05",
+    "fy": 2026,
+    "title": "Consortium Of MRI Biomarkers In Neonatal Encephalopathy (COMBINE)"
+   },
+   {
+    "pi": "KOETHE, JOHN ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R01DK131529-05",
+    "fy": 2026,
+    "title": "Pathophysiology of Metabolically Detrimental Changes in Adipose Distribution, Adipocyte Fu"
+   },
+   {
+    "pi": "WALLACE, WILLIAM DEAN",
+    "org": "UNIVERSITY OF SOUTHERN CALIFORNIA",
+    "state": "CA",
+    "city": "Los Angeles",
+    "proj": "5P30CA014089-50",
+    "fy": 2026,
+    "title": "Translational Pathology Core"
+   },
+   {
+    "pi": "COLLINS, SEAN RYAN",
+    "org": "UNIVERSITY OF CALIFORNIA AT DAVIS",
+    "state": "CA",
+    "city": "DAVIS",
+    "proj": "5R01GM148769-04",
+    "fy": 2026,
+    "title": "Actin gating of crosstalk between Rho GTPases in cell migration"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5T32GM156550-02",
+    "fy": 2026,
+    "title": "Michigan Medical Scientist Training Program 2025-2030"
+   },
+   {
+    "pi": "COLLINS, JAMES TRISTAN",
+    "org": "UNIVERSITY OF LOUISVILLE",
+    "state": "KY",
+    "city": "LOUISVILLE",
+    "proj": "1R01AI198579-01",
+    "fy": 2026,
+    "title": "Defining Microbial and Host Pathways Driving Asymptomatic C. difficile Colonization Associ"
+   },
+   {
+    "pi": "MYERS, DAVID RICHARD",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "5R01AI180093-03",
+    "fy": 2026,
+    "title": "Integrating low-cost and versatile technologies to achieve colorimetric HCV and HIV detect"
+   },
+   {
+    "pi": "COLLINS, ANNE G.E.",
+    "org": "PRINCETON UNIVERSITY",
+    "state": "NJ",
+    "city": "Princeton",
+    "proj": "5P50MH132642-04",
+    "fy": 2026,
+    "title": "Thalamocortical cognitive networks in the healthy human brain"
+   },
+   {
+    "pi": "SMITH, RYAN C.",
+    "org": "IOWA STATE UNIVERSITY",
+    "state": "IA",
+    "city": "AMES",
+    "proj": "5R01AI177540-02",
+    "fy": 2026,
+    "title": "Influence of prostaglandin E2 on insect innate immune function"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN ",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "1R01GM162720-01",
+    "fy": 2026,
+    "title": "Site-specific Non-LTR Retrotransposon Mechanisms of Mobility and Transgene Insertion"
+   },
+   {
+    "pi": "GAGOSKI, BORJAN ",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01EB034757-03",
+    "fy": 2026,
+    "title": "Low-dose contrast enhanced fast pediatric brain MRI"
+   },
+   {
+    "pi": "COLLINS-BENNETT, KATHERINE ",
+    "org": "DUKE UNIVERSITY",
+    "state": "NC",
+    "city": "DURHAM",
+    "proj": "1R21HL184162-01",
+    "fy": 2026,
+    "title": "Genetic Predictors of Exercise and Physical Activity Dropout and Adherence"
+   },
+   {
+    "pi": "COLLINS, CHRISTOPHER M",
+    "org": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "5P41EB017183-13",
+    "fy": 2026,
+    "title": "TR&D 2: Unshackling the Scanners of the Future: From Rigid Control to Flexible Sensor-Rich"
+   },
+   {
+    "pi": "COLLINS, SEAN PATRICK",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R33HL155810-05",
+    "fy": 2025,
+    "title": "A Randomized Trial of Protocolized Diuretic Therapy Compared to Standard Care in Emergency"
+   },
+   {
+    "pi": "COLLINS, MATTHEW ",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "1U01AI186860-01A1",
+    "fy": 2025,
+    "title": "A Phase 2b randomized open label trial to assess the quality and balance of dengue immunit"
+   },
+   {
+    "pi": "COLLINS, JEFFREY M",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "5P30AI168386-04",
+    "fy": 2025,
+    "title": "Emory/Georgia TB Research Advancement Center (TRAC)"
+   },
+   {
+    "pi": "COLLINS, LAUREN FRANCES",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "5K23AG084415-03",
+    "fy": 2025,
+    "title": "An EYE toward healthy aging in HIV: building evidence for multimorbidity screening and pre"
+   },
+   {
+    "pi": "SMITH, RYAN C.",
+    "org": "IOWA STATE UNIVERSITY",
+    "state": "IA",
+    "city": "AMES",
+    "proj": "1R01AI177540-01A1",
+    "fy": 2025,
+    "title": "Influence of prostaglandin E2 on insect innate immune function"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "1T32GM156550-01",
+    "fy": 2025,
+    "title": "Michigan Medical Scientist Training Program 2025-2030"
+   },
+   {
+    "pi": "KOETHE, JOHN ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R01DK131529-04",
+    "fy": 2025,
+    "title": "Pathophysiology of Metabolically Detrimental Changes in Adipose Distribution, Adipocyte Fu"
+   },
+   {
+    "pi": "GAGOSKI, BORJAN ",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01EB034757-02",
+    "fy": 2025,
+    "title": "Low-dose contrast enhanced fast pediatric brain MRI"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "1R01EB036945-01",
+    "fy": 2025,
+    "title": "Bringing Coherent Fetal Brain Volumes and Automated Metrics to the Radiology Workflow"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01AR079477-04",
+    "fy": 2025,
+    "title": "Skeletal muscle sarcomere function in health and disease"
+   },
+   {
+    "pi": "COLLINS, JEFFREY M",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "5R21AI178324-02",
+    "fy": 2025,
+    "title": "Multiomics Characterization of Micobiome and Immunometabolic REmodeling in Tuberculosis St"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "5R01AI121037-10",
+    "fy": 2025,
+    "title": "The Biology of Stem Cells in the Human Parasite Schistosoma Mansoni"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HL152358-05",
+    "fy": 2025,
+    "title": "Exploring the relationship between advanced multimodal brain MRI phenotypes, genes and cog"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HD076258-09",
+    "fy": 2025,
+    "title": "Neonatal Hypoxic Ischemic Encephalopathy: Potential of Innovative NIRS to Optimize Hypothe"
+   },
+   {
+    "pi": "LEWANDOWSKI, ROBERT J",
+    "org": "NORTHWESTERN UNIVERSITY",
+    "state": "IL",
+    "city": "CHICAGO",
+    "proj": "5R01CA233878-05",
+    "fy": 2025,
+    "title": "Yittrium-90 radiation lobectomy: Dose optimization and prediction of FLR hypertrophy to en"
+   },
+   {
+    "pi": "GOLDBERGER, JEFFREY J",
+    "org": "UNIVERSITY OF MIAMI SCHOOL OF MEDICINE",
+    "state": "FL",
+    "city": "CORAL GABLES",
+    "proj": "5R01HL170019-02",
+    "fy": 2025,
+    "title": "Cardiac Imaging of Neuro-Embolic Mechanisms in Atriopathies causing Stroke (CINEMAS)"
+   },
+   {
+    "pi": "MYERS, DAVID RICHARD",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "5R01AI180093-02",
+    "fy": 2025,
+    "title": "Integrating low-cost and versatile technologies to achieve colorimetric HCV and HIV detect"
+   },
+   {
+    "pi": "COLLINS, JAMES TRISTAN",
+    "org": "UNIVERSITY OF LOUISVILLE",
+    "state": "KY",
+    "city": "LOUISVILLE",
+    "proj": "5P20GM125504-08",
+    "fy": 2025,
+    "title": "The role of sugar transport in C. difficile colonization and disease"
+   },
+   {
+    "pi": "COLLINS, CHRISTOPHER M",
+    "org": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "5P41EB017183-12",
+    "fy": 2025,
+    "title": "TR&D 2: Unshackling the Scanners of the Future: From Rigid Control to Flexible Sensor-Rich"
+   },
+   {
+    "pi": "WALLACE, WILLIAM DEAN",
+    "org": "UNIVERSITY OF SOUTHERN CALIFORNIA",
+    "state": "CA",
+    "city": "Los Angeles",
+    "proj": "5P30CA014089-49",
+    "fy": 2025,
+    "title": "Translational Pathology Core"
+   },
+   {
+    "pi": "COLLINS, JAMES F.",
+    "org": "UNIVERSITY OF FLORIDA",
+    "state": "FL",
+    "city": "GAINESVILLE",
+    "proj": "5R01DK137863-02",
+    "fy": 2025,
+    "title": "Pathological consequences of iron excess and hypoxia in \u03b2-thalassemia pregnancy"
+   },
+   {
+    "pi": "COLLINS, LAUREN FRANCES",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "5U01PS005260-03",
+    "fy": 2025,
+    "title": "PS23-003 - A Community-based Assessment of Preferences for Long-Acting Antiretroviral Ther"
+   },
+   {
+    "pi": "COLLINS, EVA-MARIA SCHOETZ",
+    "org": "SWARTHMORE COLLEGE",
+    "state": "PA",
+    "city": "SWARTHMORE",
+    "proj": "1R21ES036332-01A1",
+    "fy": 2025,
+    "title": "Planarian behavioral screening of ToxCast Phase I chemicals to determine context of use"
+   },
+   {
+    "pi": "COLLINS, KELSEY HELEN-MARIE",
+    "org": "UNIVERSITY OF CALIFORNIA, SAN FRANCISCO",
+    "state": "CA",
+    "city": "SAN FRANCISCO",
+    "proj": "5R00AR078949-05",
+    "fy": 2025,
+    "title": "The Role of Fat in Osteoarthritis"
+   },
+   {
+    "pi": "LEE, AARON ",
+    "org": "UNIVERSITY OF WASHINGTON",
+    "state": "WA",
+    "city": "SEATTLE",
+    "proj": "3OT2OD032644-01S3",
+    "fy": 2025,
+    "title": "Bridge2AI: Salutogenesis Data Generation Project"
+   },
+   {
+    "pi": "SMITH, BRYAN RONAIN",
+    "org": "MICHIGAN STATE UNIVERSITY",
+    "state": "MI",
+    "city": "EAST LANSING",
+    "proj": "5R01CA244491-05",
+    "fy": 2025,
+    "title": "Macrophage-specific nanotherapy for breast cancer"
+   },
+   {
+    "pi": "COLLINS, HELEN E",
+    "org": "UNIVERSITY OF LOUISVILLE",
+    "state": "KY",
+    "city": "LOUISVILLE",
+    "proj": "5R01HL163003-03",
+    "fy": 2025,
+    "title": "Mechanisms Contributing to Pregnancy-induced Cardiac Remodeling"
+   },
+   {
+    "pi": "KULP, MARJEAN T",
+    "org": "OHIO STATE UNIVERSITY",
+    "state": "OH",
+    "city": "Columbus",
+    "proj": "5R34EY035783-02",
+    "fy": 2025,
+    "title": "Identification of School-age Eye conditions Evaluation (ISEE)"
+   },
+   {
+    "pi": "JAMES, KATHERINE A",
+    "org": "UNIVERSITY OF COLORADO DENVER",
+    "state": "CO",
+    "city": "Aurora",
+    "proj": "5R01ES032612-05",
+    "fy": 2025,
+    "title": "The Impact of Drought on Arsenic Exposure and Cardiometabolic Outcomes in a Rural Aging Po"
+   },
+   {
+    "pi": "MYERS, DAVID RICHARD",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "1R01AI182314-01A1",
+    "fy": 2025,
+    "title": "Form with function: Rapid phenotypic carbapenemase testing to improve detection of carbape"
+   },
+   {
+    "pi": "COLLINS, ANNE G.E.",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "5R21MH136528-02",
+    "fy": 2025,
+    "title": "Habits as hierarchical building blocks"
+   },
+   {
+    "pi": "SEIMETZ, JOSEPH ",
+    "org": "RICOVR HEALTHCARE INC.",
+    "state": "NJ",
+    "city": "PRINCETON",
+    "proj": "3R43DA059318-01S1",
+    "fy": 2025,
+    "title": "Advancement of a Point-of-Need (PoN) platform device for accurate and destigmatized detect"
+   },
+   {
+    "pi": "COLLINS, ANGELA ",
+    "org": "OHIO STATE UNIVERSITY",
+    "state": "OH",
+    "city": "Columbus",
+    "proj": "1R03AG095801-01",
+    "fy": 2025,
+    "title": "The effect of age-related changes in macrophage polarization and the post-injury immune re"
+   },
+   {
+    "pi": "COLLINS, JEFFREY M",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "5R01AI182244-02",
+    "fy": 2025,
+    "title": "Immunometabolic Biomarkers to Advance TB Diagnosis and Treatment Monitoring"
+   },
+   {
+    "pi": "WAMALWA, DALTON CHEKOKO",
+    "org": "UNIVERSITY OF NAIROBI",
+    "state": null,
+    "city": "NAIROBI",
+    "proj": "5R01MH133261-03",
+    "fy": 2025,
+    "title": "INTEGRATING A TRANSDIAGNOSTIC PSYCHOLOGICAL INTERVENTION IN THE CARE FOR ADOLESCENTS AND Y"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5U01DA055353-05",
+    "fy": 2025,
+    "title": "5/24 Healthy Brain and Child Development National Consortium"
+   },
+   {
+    "pi": "COLLINS, SEAN RYAN",
+    "org": "UNIVERSITY OF CALIFORNIA AT DAVIS",
+    "state": "CA",
+    "city": "DAVIS",
+    "proj": "5R01GM148769-03",
+    "fy": 2025,
+    "title": "Actin gating of crosstalk between Rho GTPases in cell migration"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5T32HL166142-03",
+    "fy": 2025,
+    "title": "Inclusive Excellence Training Program in the Systems Biology of Cardiovascular Inflammatio"
+   },
+   {
+    "pi": "COLLINS, AMELIE ",
+    "org": "CINCINNATI CHILDRENS HOSP MED CTR",
+    "state": "OH",
+    "city": "CINCINNATI",
+    "proj": "5R01HD116402-02",
+    "fy": 2025,
+    "title": "Determining themechanism of maternal IL-10 restriction of fetal emergency myelopoiesis to "
+   },
+   {
+    "pi": "COLLINS, MICHAEL ",
+    "org": "NATIONAL INSTITUTE OF DENTAL & CRANIOFACIAL RESEARCH",
+    "state": null,
+    "city": null,
+    "proj": "1ZIADE000649-31",
+    "fy": 2025,
+    "title": "Skeletal Disorders and Mineral Homeostasis Section"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01EB032708-04",
+    "fy": 2025,
+    "title": "Fetal MRI: robust self-driving brain acquisition and body movement quantification"
+   },
+   {
+    "pi": "PARKOS, CHARLES A",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01DK129058-05",
+    "fy": 2025,
+    "title": "Molecular mechanisms underlying HIV related intestinal epithelial barrier dysfunction"
+   },
+   {
+    "pi": "MITREVA, MAKEDONKA ",
+    "org": "WASHINGTON UNIVERSITY",
+    "state": "MO",
+    "city": "SAINT LOUIS",
+    "proj": "1R01AI191507-01",
+    "fy": 2025,
+    "title": "Advancing lymphatic filariasis elimination with parasite genomic epidemiology"
+   },
+   {
+    "pi": "JAMES, KATHERINE A",
+    "org": "UNIVERSITY OF COLORADO DENVER",
+    "state": "CO",
+    "city": "Aurora",
+    "proj": "3R01ES032612-05S1",
+    "fy": 2025,
+    "title": "The Impact of Drought on Arsenic Exposure and Cardiometabolic Outcomes in a Rural Aging Po"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01HL132874-08",
+    "fy": 2025,
+    "title": "Myofilaments as regulators of heart function in disease"
+   },
+   {
+    "pi": "COLLINS-BENNETT, KATHERINE ",
+    "org": "DUKE UNIVERSITY",
+    "state": "NC",
+    "city": "DURHAM",
+    "proj": "1K01HL177266-01A1",
+    "fy": 2025,
+    "title": "Sex Differences in Barriers and Predictors of Physical Activity Participation During and F"
+   },
+   {
+    "pi": "COLLINS, MATTHEW ",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "3U01AI186860-01A1S1",
+    "fy": 2025,
+    "title": "A Phase 2b randomized open label trial to assess the quality and balance of dengue immunit"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "4R33DA059916-03",
+    "fy": 2025,
+    "title": "Single-cell multi-omic analysis of opioid-mediated HIV disease pathogenesis"
+   },
+   {
+    "pi": "COLLINS, SHEILA ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R01DK132236-03",
+    "fy": 2025,
+    "title": "Role of SIK3 in PKA/mTORC1 regulation of adipose browning"
+   },
+   {
+    "pi": "KOELLE, MICHAEL R",
+    "org": "YALE UNIVERSITY",
+    "state": "CT",
+    "city": "NEW HAVEN",
+    "proj": "5R01NS086932-10",
+    "fy": 2025,
+    "title": "Neuromodulator signaling and activity in the C. elegans egg-laying circuit"
+   },
+   {
+    "pi": "EDWARDS, JONATHAN JOSEPH",
+    "org": "CHILDREN'S HOSP OF PHILADELPHIA",
+    "state": "PA",
+    "city": "PHILADELPHIA",
+    "proj": "5K08HL159311-05",
+    "fy": 2025,
+    "title": "Defining the Role of ROR2 in Right Ventricular Failure Pathogenesis"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "1R01AI194902-01",
+    "fy": 2025,
+    "title": "Next-Generation CMA/CMB Derivatives as Targeted Inhibitors of HIV Nef"
+   },
+   {
+    "pi": "COLLINS, EVA-MARIA SCHOETZ",
+    "org": "SWARTHMORE COLLEGE",
+    "state": "PA",
+    "city": "SWARTHMORE",
+    "proj": "1R21ES037433-01",
+    "fy": 2025,
+    "title": "Organophosphorus pesticide bioactivation and detoxification in an invertebrate rapid scree"
+   },
+   {
+    "pi": "JAMES, KATHERINE A",
+    "org": "UNIVERSITY OF COLORADO DENVER",
+    "state": "CO",
+    "city": "Aurora",
+    "proj": "3R01ES032612-04S1",
+    "fy": 2025,
+    "title": "The Impact of Drought on Arsenic Exposure and Cardiometabolic Outcomes in a Rural Aging Po"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "5R01AI167967-03",
+    "fy": 2025,
+    "title": "Drug Target Discovery, Validation, and Prioritization for Schistosomiasis"
+   },
+   {
+    "pi": "COLLINS, SHEILA ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R01DK126890-04",
+    "fy": 2025,
+    "title": "Natriuretic peptide and cGMP signaling in adipose tissue and energy metabolism"
+   },
+   {
+    "pi": "SMITH, RYAN C.",
+    "org": "IOWA STATE UNIVERSITY",
+    "state": "IA",
+    "city": "AMES",
+    "proj": "1R01AI182256-01A1",
+    "fy": 2025,
+    "title": "Mosquito extracellular vesicles in malaria parasite killing and immune priming"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HD114338-02",
+    "fy": 2025,
+    "title": "Developing novel MR tools to optimize surgical planning and fetal outcome in TTTS"
+   },
+   {
+    "pi": "COLLINS, JAMES F.",
+    "org": "UNIVERSITY OF FLORIDA",
+    "state": "FL",
+    "city": "GAINESVILLE",
+    "proj": "5R01DK134583-02",
+    "fy": 2025,
+    "title": "Mechanisms of Intestinal Heme-iron Absorption in Rat Models of Iron Deficiency and Iron Ov"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "4R33NS126792-04",
+    "fy": 2025,
+    "title": "Consortium Of MRI Biomarkers In Neonatal Encephalopathy (COMBINE)"
+   },
+   {
+    "pi": "COLLINS, ANNE G.E.",
+    "org": "PRINCETON UNIVERSITY",
+    "state": "NJ",
+    "city": "Princeton",
+    "proj": "5P50MH132642-03",
+    "fy": 2025,
+    "title": "Thalamocortical cognitive networks in the healthy human brain"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "5R01AI121037-09",
+    "fy": 2024,
+    "title": "The Biology of Stem Cells in the Human Parasite Schistosoma Mansoni"
+   },
+   {
+    "pi": "KULP, MARJEAN T",
+    "org": "OHIO STATE UNIVERSITY",
+    "state": "OH",
+    "city": "Columbus",
+    "proj": "1R34EY035783-01",
+    "fy": 2024,
+    "title": "Identification of School-age Eye conditions Evaluation (ISEE)"
+   },
+   {
+    "pi": "KOETHE, JOHN ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R01DK131529-03",
+    "fy": 2024,
+    "title": "Pathophysiology of Metabolically Detrimental Changes in Adipose Distribution, Adipocyte Fu"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5T32HL166142-02",
+    "fy": 2024,
+    "title": "Inclusive Excellence Training Program in the Systems Biology of Cardiovascular Inflammatio"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HL152358-04",
+    "fy": 2024,
+    "title": "Exploring the relationship between advanced multimodal brain MRI phenotypes, genes and cog"
+   },
+   {
+    "pi": "DALEY, GEORGE Q",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5RC2DK120535-05",
+    "fy": 2024,
+    "title": "Molecular Circuits in the Hematopoietic Stem Cell Niche"
+   },
+   {
+    "pi": "GOLDBERGER, JEFFREY J",
+    "org": "UNIVERSITY OF MIAMI SCHOOL OF MEDICINE",
+    "state": "FL",
+    "city": "CORAL GABLES",
+    "proj": "1R01HL170019-01A1",
+    "fy": 2024,
+    "title": "Cardiac Imaging of Neuro-Embolic Mechanisms in Atriopathies causing Stroke (CINEMAS)"
+   },
+   {
+    "pi": "COLLINS, NICOLE ",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5F31HL165681-03",
+    "fy": 2024,
+    "title": "Pathways of Succinate Accumulation and Adenine Nucleotide Depletion in Cardiac Ischemia"
+   },
+   {
+    "pi": "COLLINS, LAUREN FRANCES",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "5U01PS005260-02",
+    "fy": 2024,
+    "title": "PS23-003 - A Community-based Assessment of Preferences for Long-Acting Antiretroviral Ther"
+   },
+   {
+    "pi": "COLLINS, HELEN E",
+    "org": "UNIVERSITY OF LOUISVILLE",
+    "state": "KY",
+    "city": "LOUISVILLE",
+    "proj": "5R01HL163003-02",
+    "fy": 2024,
+    "title": "Mechanisms Contributing to Pregnancy-induced Cardiac Remodeling"
+   },
+   {
+    "pi": "EDWARDS, JONATHAN JOSEPH",
+    "org": "CHILDREN'S HOSP OF PHILADELPHIA",
+    "state": "PA",
+    "city": "PHILADELPHIA",
+    "proj": "5K08HL159311-04",
+    "fy": 2024,
+    "title": "Defining the Role of ROR2 in Right Ventricular Failure Pathogenesis"
+   },
+   {
+    "pi": "GUPTA, DEEPAK ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R01HL153607-04",
+    "fy": 2024,
+    "title": "Improving Diagnostic Accuracy for Acute Heart Failure"
+   },
+   {
+    "pi": "GAGOSKI, BORJAN ",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "1R01EB034757-01A1",
+    "fy": 2024,
+    "title": "Low-dose contrast enhanced fast pediatric brain MRI"
+   },
+   {
+    "pi": "COLLINS, AMELIE ",
+    "org": "CINCINNATI CHILDRENS HOSP MED CTR",
+    "state": "OH",
+    "city": "CINCINNATI",
+    "proj": "1R01HD116402-01",
+    "fy": 2024,
+    "title": "Determining themechanism of maternal IL-10 restriction of fetal emergency myelopoiesis to "
+   },
+   {
+    "pi": "COLLINS, JAMES F.",
+    "org": "UNIVERSITY OF FLORIDA",
+    "state": "FL",
+    "city": "GAINESVILLE",
+    "proj": "1R01DK137863-01A1",
+    "fy": 2024,
+    "title": "Pathological consequences of iron excess and hypoxia in \u03b2-thalassemia pregnancy"
+   },
+   {
+    "pi": "PARKOS, CHARLES A",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "3R01DK129058-04S1",
+    "fy": 2024,
+    "title": "Molecular mechanisms underlying HIV related intestinal epithelial barrier dysfunction"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5T32GM007863-45",
+    "fy": 2024,
+    "title": "Michigan Medical Scientist Training Program"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN ",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "3DP1HL156819-05S1",
+    "fy": 2024,
+    "title": "Human genetic supplementation without donor DNA or a DNA break"
+   },
+   {
+    "pi": "COLLINS, CHRISTOPHER M",
+    "org": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "2P41EB017183-11",
+    "fy": 2024,
+    "title": "TR&D 2: Unshackling the Scanners of the Future: From Rigid Control to Flexible Sensor-Rich"
+   },
+   {
+    "pi": "COLLINS, ANNE G.E.",
+    "org": "PRINCETON UNIVERSITY",
+    "state": "NJ",
+    "city": "Princeton",
+    "proj": "5P50MH132642-02",
+    "fy": 2024,
+    "title": "Thalamocortical cognitive networks in the healthy human brain"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01HL132874-07",
+    "fy": 2024,
+    "title": "Myofilaments as regulators of heart function in disease"
+   },
+   {
+    "pi": "COLLINS, GREGORY ",
+    "org": "UNIVERSITY OF TEXAS HLTH SCIENCE CENTER",
+    "state": "TX",
+    "city": "SAN ANTONIO",
+    "proj": "5R01DA039146-10",
+    "fy": 2024,
+    "title": "Bath Salts: abuse-related and toxic effects"
+   },
+   {
+    "pi": "SEIMETZ, JOSEPH ",
+    "org": "RICOVR HEALTHCARE INC.",
+    "state": "NJ",
+    "city": "PRINCETON",
+    "proj": "1R43HL172410-01",
+    "fy": 2024,
+    "title": "Quantitative measurement of PlGF using a rapid, low-cost, point-of-care (POC) diagnostic p"
+   },
+   {
+    "pi": "SMITH, BRYAN RONAIN",
+    "org": "MICHIGAN STATE UNIVERSITY",
+    "state": "MI",
+    "city": "EAST LANSING",
+    "proj": "5R01CA244491-04",
+    "fy": 2024,
+    "title": "Macrophage-specific nanotherapy for breast cancer"
+   },
+   {
+    "pi": "LEWANDOWSKI, ROBERT J",
+    "org": "NORTHWESTERN UNIVERSITY",
+    "state": "IL",
+    "city": "CHICAGO",
+    "proj": "5R01CA233878-04",
+    "fy": 2024,
+    "title": "Yittrium-90 radiation lobectomy: Dose optimization and prediction of FLR hypertrophy to en"
+   },
+   {
+    "pi": "JAMES, KATHERINE A",
+    "org": "UNIVERSITY OF COLORADO DENVER",
+    "state": "CO",
+    "city": "Aurora",
+    "proj": "5R01ES032612-04",
+    "fy": 2024,
+    "title": "The Impact of Drought on Arsenic Exposure and Cardiometabolic Outcomes in a Rural Aging Po"
+   },
+   {
+    "pi": "SCHILLING, BIRGIT ",
+    "org": "BUCK INSTITUTE FOR RESEARCH ON AGING",
+    "state": "CA",
+    "city": "NOVATO",
+    "proj": "1R21AR084303-01A1",
+    "fy": 2024,
+    "title": "Spatial Proteomics of osteoarthritis in bones to uncover disease progression"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "3T32GM007863-45S1",
+    "fy": 2024,
+    "title": "Michigan Medical Scientist Training Program"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5U01DA055353-04",
+    "fy": 2024,
+    "title": "5/24 Healthy Brain and Child Development National Consortium"
+   },
+   {
+    "pi": "WAMALWA, DALTON CHEKOKO",
+    "org": "UNIVERSITY OF NAIROBI",
+    "state": null,
+    "city": "NAIROBI",
+    "proj": "5R01MH133261-02",
+    "fy": 2024,
+    "title": "INTEGRATING A TRANSDIAGNOSTIC PSYCHOLOGICAL INTERVENTION IN THE CARE FOR ADOLESCENTS AND Y"
+   },
+   {
+    "pi": "COLLINS, ANNE G.E.",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "1R21MH136528-01",
+    "fy": 2024,
+    "title": "Habits as hierarchical building blocks"
+   },
+   {
+    "pi": "COLLINS, JAMES F.",
+    "org": "UNIVERSITY OF FLORIDA",
+    "state": "FL",
+    "city": "GAINESVILLE",
+    "proj": "1R01DK134583-01A1",
+    "fy": 2024,
+    "title": "Mechanisms of Intestinal Heme-iron Absorption in Rat Models of Iron Deficiency and Iron Ov"
+   },
+   {
+    "pi": "COLLINS, KELSEY HELEN-MARIE",
+    "org": "UNIVERSITY OF CALIFORNIA, SAN FRANCISCO",
+    "state": "CA",
+    "city": "SAN FRANCISCO",
+    "proj": "5R00AR078949-04",
+    "fy": 2024,
+    "title": "The Role of Fat in Osteoarthritis"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "5R01AI150776-05",
+    "fy": 2024,
+    "title": "Characterizing sexual development of the human parasite Schistosoma mansoni"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "1R01HD114338-01A1",
+    "fy": 2024,
+    "title": "Developing novel MR tools to optimize surgical planning and fetal outcome in TTTS"
+   },
+   {
+    "pi": "COLLINS, SEAN RYAN",
+    "org": "UNIVERSITY OF CALIFORNIA AT DAVIS",
+    "state": "CA",
+    "city": "DAVIS",
+    "proj": "3R01GM148769-01A1S1",
+    "fy": 2024,
+    "title": "Actin gating of crosstalk between Rho GTPases in cell migration"
+   },
+   {
+    "pi": "COLLINS, SHEILA ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R01DK126890-03",
+    "fy": 2024,
+    "title": "Natriuretic peptide and cGMP signaling in adipose tissue and energy metabolism"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01AR079477-03",
+    "fy": 2024,
+    "title": "Skeletal muscle sarcomere function in health and disease"
+   },
+   {
+    "pi": "COLLINS, JEFFREY M",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "1R01AI182244-01",
+    "fy": 2024,
+    "title": "Immunometabolic Biomarkers to Advance TB Diagnosis and Treatment Monitoring"
+   },
+   {
+    "pi": "COLLINS, CATHERINE A",
+    "org": "CASE WESTERN RESERVE UNIVERSITY",
+    "state": "OH",
+    "city": "CLEVELAND",
+    "proj": "3R01NS069844-13S1",
+    "fy": 2024,
+    "title": "Regenerative and degenerative responses to axonal injury"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01AI149669-05",
+    "fy": 2024,
+    "title": "Integrative Single-Cell Analysis of Transcriptome, Epigenome, and Lineage in HIV Latency a"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN ",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "5DP1HL156819-05",
+    "fy": 2024,
+    "title": "Human genetic supplementation without donor DNA or a DNA break"
+   },
+   {
+    "pi": "COLLINS, EVA-MARIA SCHOETZ",
+    "org": "SWARTHMORE COLLEGE",
+    "state": "PA",
+    "city": "SWARTHMORE",
+    "proj": "5R21NS132528-02",
+    "fy": 2024,
+    "title": "Novel behavioral screening tool for therapeutics against organophosphorus agents"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01EB032708-03",
+    "fy": 2024,
+    "title": "Fetal MRI: robust self-driving brain acquisition and body movement quantification"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R61DA059916-02",
+    "fy": 2024,
+    "title": "Single-cell multi-omic analysis of opioid-mediated HIV disease pathogenesis"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R61NS126792-03",
+    "fy": 2024,
+    "title": "Consortium Of MRI Biomarkers In Neonatal Encephalopathy (COMBINE)"
+   },
+   {
+    "pi": "COLLINS, JEFFREY M",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "5P30AI168386-03",
+    "fy": 2024,
+    "title": "Emory/Georgia TB Research Advancement Center (TRAC)"
+   },
+   {
+    "pi": "COLLINS, SEAN PATRICK",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R33HL155810-04",
+    "fy": 2024,
+    "title": "A Randomized Trial of Protocolized Diuretic Therapy Compared to Standard Care in Emergency"
+   },
+   {
+    "pi": "SEIMETZ, JOSEPH ",
+    "org": "RICOVR HEALTHCARE INC.",
+    "state": "NJ",
+    "city": "PRINCETON",
+    "proj": "1R43DA059318-01",
+    "fy": 2024,
+    "title": "Advancement of a Point-of-Need (PoN) platform device for accurate and destigmatized detect"
+   },
+   {
+    "pi": "COLLINS, ANNE G.E.",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "5R21MH132974-02",
+    "fy": 2024,
+    "title": "Developing artificial neural network tools for cognitive modeling"
+   },
+   {
+    "pi": "CALDERWOOD, CHARLES C",
+    "org": "VIRGINIA POLYTECHNIC INST AND ST UNIV",
+    "state": "VA",
+    "city": "BLACKSBURG",
+    "proj": "5R01OH011772-04",
+    "fy": 2024,
+    "title": "Mechanisms Linking Daily Work Conditions and Work-Related Strain Reactions to Unsafe Commu"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "5R01AI167967-02",
+    "fy": 2024,
+    "title": "Drug Target Discovery, Validation, and Prioritization for Schistosomiasis"
+   },
+   {
+    "pi": "COLLINS, SEAN RYAN",
+    "org": "UNIVERSITY OF CALIFORNIA AT DAVIS",
+    "state": "CA",
+    "city": "DAVIS",
+    "proj": "5R01GM148769-02",
+    "fy": 2024,
+    "title": "Actin gating of crosstalk between Rho GTPases in cell migration"
+   },
+   {
+    "pi": "COLLINS, SHEILA ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R01DK132236-02",
+    "fy": 2024,
+    "title": "Role of SIK3 in PKA/mTORC1 regulation of adipose browning"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HD076258-08",
+    "fy": 2024,
+    "title": "Neonatal Hypoxic Ischemic Encephalopathy: Potential of Innovative NIRS to Optimize Hypothe"
+   },
+   {
+    "pi": "COLLINS, CATHERINE A",
+    "org": "CASE WESTERN RESERVE UNIVERSITY",
+    "state": "OH",
+    "city": "CLEVELAND",
+    "proj": "5R01NS069844-13",
+    "fy": 2024,
+    "title": "Regenerative and degenerative responses to axonal injury"
+   },
+   {
+    "pi": "PARKOS, CHARLES A",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01DK129058-04",
+    "fy": 2024,
+    "title": "Molecular mechanisms underlying HIV related intestinal epithelial barrier dysfunction"
+   },
+   {
+    "pi": "COLLINS, LAUREN FRANCES",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "5K23AG084415-02",
+    "fy": 2024,
+    "title": "An EYE toward healthy aging in HIV: building evidence for multimorbidity screening and pre"
+   },
+   {
+    "pi": "COLLINS, KELSEY HELEN-MARIE",
+    "org": "UNIVERSITY OF CALIFORNIA, SAN FRANCISCO",
+    "state": "CA",
+    "city": "SAN FRANCISCO",
+    "proj": "1DP2AG093209-01",
+    "fy": 2024,
+    "title": "Unraveling Fundamental Mechanisms of Interorgan Crosstalk in Osteoarthritis"
+   },
+   {
+    "pi": "KOELLE, MICHAEL R",
+    "org": "YALE UNIVERSITY",
+    "state": "CT",
+    "city": "NEW HAVEN",
+    "proj": "2R01NS086932-09A1",
+    "fy": 2024,
+    "title": "Neuromodulator signaling and activity in the C. elegans egg-laying circuit"
+   },
+   {
+    "pi": "COLLINS, JEFFREY M",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "1R21AI178324-01A1",
+    "fy": 2024,
+    "title": "Multiomics Characterization of Micobiome and Immunometabolic REmodeling in Tuberculosis St"
+   },
+   {
+    "pi": "COLLINS, MICHAEL ",
+    "org": "NATIONAL INSTITUTE OF DENTAL & CRANIOFACIAL RESEARCH",
+    "state": null,
+    "city": null,
+    "proj": "1ZIADE000649-30",
+    "fy": 2024,
+    "title": "Skeletal Disorders and Mineral Homeostasis Section"
+   },
+   {
+    "pi": "WALLACE, WILLIAM DEAN",
+    "org": "UNIVERSITY OF SOUTHERN CALIFORNIA",
+    "state": "CA",
+    "city": "Los Angeles",
+    "proj": "5P30CA014089-48",
+    "fy": 2024,
+    "title": "Translational Pathology Core"
+   },
+   {
+    "pi": "COLLINS, JAMES TRISTAN",
+    "org": "UNIVERSITY OF LOUISVILLE",
+    "state": "KY",
+    "city": "LOUISVILLE",
+    "proj": "5P20GM125504-07",
+    "fy": 2024,
+    "title": "The role of sugar transport in C. difficile colonization and disease"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "3R01AI148084-05S1",
+    "fy": 2023,
+    "title": "Cellular Reservoirs of HIV"
+   },
+   {
+    "pi": "KOETHE, JOHN ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R01DK131529-02",
+    "fy": 2023,
+    "title": "Pathophysiology of Metabolically Detrimental Changes in Adipose Distribution, Adipocyte Fu"
+   },
+   {
+    "pi": "COLLINS, LAUREN FRANCES",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "1U01PS005260-01",
+    "fy": 2023,
+    "title": "PS23-003 - A Community-based Assessment of Preferences for Long-Acting Antiretroviral Ther"
+   },
+   {
+    "pi": "COLLINS, JAMIE E.",
+    "org": "BRIGHAM AND WOMEN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5K01AR075879-04",
+    "fy": 2023,
+    "title": "Data-driven approaches in defining knee osteoarthritis phenotypes and factorsassociated wi"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "5R01AI150776-04",
+    "fy": 2023,
+    "title": "Characterizing sexual development of the human parasite Schistosoma mansoni"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01EB032708-02",
+    "fy": 2023,
+    "title": "Fetal MRI: robust self-driving brain acquisition and body movement quantification"
+   },
+   {
+    "pi": "PARKOS, CHARLES A",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01DK129058-03",
+    "fy": 2023,
+    "title": "Molecular mechanisms underlying HIV related intestinal epithelial barrier dysfunction"
+   },
+   {
+    "pi": "DALEY, GEORGE Q",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5RC2DK120535-04",
+    "fy": 2023,
+    "title": "Molecular Circuits in the Hematopoietic Stem Cell Niche"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN ",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "5DP1HL156819-04",
+    "fy": 2023,
+    "title": "Human genetic supplementation without donor DNA or a DNA break"
+   },
+   {
+    "pi": "COLLINS, KELSEY HELEN-MARIE",
+    "org": "UNIVERSITY OF CALIFORNIA, SAN FRANCISCO",
+    "state": "CA",
+    "city": "SAN FRANCISCO",
+    "proj": "4R00AR078949-03",
+    "fy": 2023,
+    "title": "The Role of Fat in Osteoarthritis"
+   },
+   {
+    "pi": "JAMES, KATHERINE A",
+    "org": "UNIVERSITY OF COLORADO DENVER",
+    "state": "CO",
+    "city": "Aurora",
+    "proj": "5R01ES032612-03",
+    "fy": 2023,
+    "title": "The Impact of Drought on Arsenic Exposure and Cardiometabolic Outcomes in a Rural Aging Po"
+   },
+   {
+    "pi": "COLLINS, LAUREN FRANCES",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "1K23AG084415-01",
+    "fy": 2023,
+    "title": "An EYE toward healthy aging in HIV: building evidence for multimorbidity screening and pre"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN ",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "3DP1HL156819-04S1",
+    "fy": 2023,
+    "title": "Human genetic supplementation without donor DNA or a DNA break"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "1R01AI167967-01A1",
+    "fy": 2023,
+    "title": "Drug Target Discovery, Validation, and Prioritization for Schistosomiasis"
+   },
+   {
+    "pi": "COLLINS, HELEN E",
+    "org": "UNIVERSITY OF LOUISVILLE",
+    "state": "KY",
+    "city": "LOUISVILLE",
+    "proj": "1R01HL163003-01A1",
+    "fy": 2023,
+    "title": "Mechanisms Contributing to Pregnancy-induced Cardiac Remodeling"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01AR079477-02",
+    "fy": 2023,
+    "title": "Skeletal muscle sarcomere function in health and disease"
+   },
+   {
+    "pi": "LEE, AARON ",
+    "org": "UNIVERSITY OF WASHINGTON",
+    "state": "WA",
+    "city": "SEATTLE",
+    "proj": "3OT2OD032644-01S2",
+    "fy": 2023,
+    "title": "Bridge2AI: Salutogenesis Data Generation Project"
+   },
+   {
+    "pi": "COLLINS, MICHAEL ",
+    "org": "NATIONAL INSTITUTE OF DENTAL & CRANIOFACIAL RESEARCH",
+    "state": null,
+    "city": null,
+    "proj": "1ZIADE000649-29",
+    "fy": 2023,
+    "title": "Skeletal Disorders and Mineral Homeostasis Section"
+   },
+   {
+    "pi": "SMITH, RYAN S",
+    "org": "LAUREATE INSTITUTE FOR BRAIN RESEARCH",
+    "state": "OK",
+    "city": "TULSA",
+    "proj": "2P20GM121312-06",
+    "fy": 2023,
+    "title": "Project 2: Investigating the effects of aversive interoceptive states on computations unde"
+   },
+   {
+    "pi": "SHERMAN, DAVID H",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "3R01AI148383-04S1",
+    "fy": 2023,
+    "title": "Development of natural product inhibitors of Nef for clearance of HIV reservoirs"
+   },
+   {
+    "pi": "COMERFORD, MICHAEL ",
+    "org": "NEUROGENECES, INC.",
+    "state": "NM",
+    "city": "SANTA FE",
+    "proj": "1R41AG085773-01",
+    "fy": 2023,
+    "title": "A Machine Learning Algorithm to Assess Functional \"Brain Age\" from an In-Home EEG Sleepban"
+   },
+   {
+    "pi": "COLLINS, CATHERINE A",
+    "org": "CASE WESTERN RESERVE UNIVERSITY",
+    "state": "OH",
+    "city": "CLEVELAND",
+    "proj": "3R01NS069844-12S1",
+    "fy": 2023,
+    "title": "Regenerative and degenerative responses to axonal injury"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5U01DA055353-03",
+    "fy": 2023,
+    "title": "5/24 Healthy Brain and Child Development National Consortium"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01HL132874-06",
+    "fy": 2023,
+    "title": "Myofilaments as regulators of heart function in disease"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "5R01AI121037-08",
+    "fy": 2023,
+    "title": "The Biology of Stem Cells in the Human Parasite Schistosoma Mansoni"
+   },
+   {
+    "pi": "COLLINS, GREGORY ",
+    "org": "SOUTH TEXAS VETERANS HEALTH CARE SYSTEM",
+    "state": "TX",
+    "city": "SAN ANTONIO",
+    "proj": "5I01BX004550-04",
+    "fy": 2023,
+    "title": "Preclinical Psychopharmacology of Substance Abuse"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HD100009-05",
+    "fy": 2023,
+    "title": "Novel MRI Assessment of Placental Structure and Function Throughout Pregnancy"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HD076258-07",
+    "fy": 2023,
+    "title": "Neonatal Hypoxic Ischemic Encephalopathy: Potential of Innovative NIRS to Optimize Hypothe"
+   },
+   {
+    "pi": "GUPTA, DEEPAK ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R01HL153607-03",
+    "fy": 2023,
+    "title": "Improving Diagnostic Accuracy for Acute Heart Failure"
+   },
+   {
+    "pi": "EDWARDS, JONATHAN JOSEPH",
+    "org": "CHILDREN'S HOSP OF PHILADELPHIA",
+    "state": "PA",
+    "city": "PHILADELPHIA",
+    "proj": "5K08HL159311-03",
+    "fy": 2023,
+    "title": "Defining the Role of ROR2 in Right Ventricular Failure Pathogenesis"
+   },
+   {
+    "pi": "COLLINS, JAMES F.",
+    "org": "UNIVERSITY OF FLORIDA",
+    "state": "FL",
+    "city": "GAINESVILLE",
+    "proj": "1R56DK137863-01",
+    "fy": 2023,
+    "title": "Iron Pathobiology in \u03b2-thalassemia Pregnancy"
+   },
+   {
+    "pi": "SCHULTZ, JOHN ALBERT",
+    "org": "IONWERKS, INC.",
+    "state": "TX",
+    "city": "HOUSTON",
+    "proj": "3R44GM106507-03S1",
+    "fy": 2023,
+    "title": "Nanoparticulate Coatings Enhance Ion Detection"
+   },
+   {
+    "pi": "COLLINS, ANNE G.E.",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "5R01MH119383-05",
+    "fy": 2023,
+    "title": "The neural computations supporting hierarchical reinforcement learning"
+   },
+   {
+    "pi": "SHERMAN, DAVID H",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "3R01AI148383-05S1",
+    "fy": 2023,
+    "title": "Development of natural product inhibitors of Nef for clearance of HIV reservoirs"
+   },
+   {
+    "pi": "WALLACE, WILLIAM DEAN",
+    "org": "UNIVERSITY OF SOUTHERN CALIFORNIA",
+    "state": "CA",
+    "city": "Los Angeles",
+    "proj": "5P30CA014089-47",
+    "fy": 2023,
+    "title": "Translational Pathology Core"
+   },
+   {
+    "pi": "COLLINS, EVA-MARIA SCHOETZ",
+    "org": "SWARTHMORE COLLEGE",
+    "state": "PA",
+    "city": "SWARTHMORE",
+    "proj": "2R15ES031354-02A1",
+    "fy": 2023,
+    "title": "Comparative mechanistic study of developmental neurotoxicity of organophosphorus pesticide"
+   },
+   {
+    "pi": "COLLINS, EVA-MARIA SCHOETZ",
+    "org": "SWARTHMORE COLLEGE",
+    "state": "PA",
+    "city": "SWARTHMORE",
+    "proj": "1R03ES034545-01A1",
+    "fy": 2023,
+    "title": "New statistical and computational tools for optimization of planarian behavioral  chemical"
+   },
+   {
+    "pi": "WAMALWA, DALTON CHEKOKO",
+    "org": "UNIVERSITY OF NAIROBI",
+    "state": null,
+    "city": "NAIROBI",
+    "proj": "1R01MH133261-01",
+    "fy": 2023,
+    "title": "INTEGRATING A TRANSDIAGNOSTIC PSYCHOLOGICAL INTERVENTION IN THE CARE FOR ADOLESCENTS AND Y"
+   },
+   {
+    "pi": "COLLINS, JEFFREY M",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "5K23AI144040-05",
+    "fy": 2023,
+    "title": "High resolution plasma metabolomics to identify biomarkers of tuberculosis"
+   },
+   {
+    "pi": "COLLINS, AMELIE ",
+    "org": "COLUMBIA UNIVERSITY HEALTH SCIENCES",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "5K08DK124657-04",
+    "fy": 2023,
+    "title": "Mapping the unique features of fetal and neonatal hematopoietic stem and progenitor cells "
+   },
+   {
+    "pi": "PARKOS, CHARLES A",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "3R01DK129058-03S1",
+    "fy": 2023,
+    "title": "Molecular mechanisms underlying HIV related intestinal epithelial barrier dysfunction"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "1T32HL166142-01",
+    "fy": 2023,
+    "title": "Inclusive Excellence Training Program in the Systems Biology of Cardiovascular Inflammatio"
+   },
+   {
+    "pi": "COLLINS, CATHERINE A",
+    "org": "CASE WESTERN RESERVE UNIVERSITY",
+    "state": "OH",
+    "city": "CLEVELAND",
+    "proj": "5R01NS069844-12",
+    "fy": 2023,
+    "title": "Regenerative and degenerative responses to axonal injury"
+   },
+   {
+    "pi": "COLLINS, GREGORY ",
+    "org": "UNIVERSITY OF TEXAS HLTH SCIENCE CENTER",
+    "state": "TX",
+    "city": "SAN ANTONIO",
+    "proj": "5R01DA039146-09",
+    "fy": 2023,
+    "title": "Bath Salts: abuse-related and toxic effects"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5T32GM007863-44",
+    "fy": 2023,
+    "title": "Michigan Medical Scientist Training Program"
+   },
+   {
+    "pi": "COLLINS, SEAN RYAN",
+    "org": "UNIVERSITY OF CALIFORNIA AT DAVIS",
+    "state": "CA",
+    "city": "DAVIS",
+    "proj": "1R01GM148769-01A1",
+    "fy": 2023,
+    "title": "Actin gating of crosstalk between Rho GTPases in cell migration"
+   },
+   {
+    "pi": "COLLINS, CATHERINE A",
+    "org": "CASE WESTERN RESERVE UNIVERSITY",
+    "state": "OH",
+    "city": "CLEVELAND",
+    "proj": "3R01NS069844-11S1",
+    "fy": 2023,
+    "title": "Regenerative and degenerative responses to axonal injury"
+   },
+   {
+    "pi": "COLLINS, SHEILA ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "1R01DK132236-01A1",
+    "fy": 2023,
+    "title": "Role of SIK3 in PKA/mTORC1 regulation of adipose browning"
+   },
+   {
+    "pi": "COLLINS, SHEILA ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R01DK126890-02",
+    "fy": 2023,
+    "title": "Natriuretic peptide and cGMP signaling in adipose tissue and energy metabolism"
+   },
+   {
+    "pi": "COLLINS, LESLIE M.",
+    "org": "DUKE UNIVERSITY",
+    "state": "NC",
+    "city": "DURHAM",
+    "proj": "1R56DC020267-01A1",
+    "fy": 2023,
+    "title": "Leveraging Natural Language Processing for Reverberant Speech Enhancement in Cochlear Impl"
+   },
+   {
+    "pi": "COLLINS, NICOLE ",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5F31HL165681-02",
+    "fy": 2023,
+    "title": "Pathways of Succinate Accumulation and Adenine Nucleotide Depletion in Cardiac Ischemia"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "1R61DA059916-01",
+    "fy": 2023,
+    "title": "Single-cell multi-omic analysis of opioid-mediated HIV disease pathogenesis"
+   },
+   {
+    "pi": "CALDERWOOD, CHARLES C",
+    "org": "VIRGINIA POLYTECHNIC INST AND ST UNIV",
+    "state": "VA",
+    "city": "BLACKSBURG",
+    "proj": "5R01OH011772-03",
+    "fy": 2023,
+    "title": "Mechanisms Linking Daily Work Conditions and Work-Related Strain Reactions to Unsafe Commu"
+   },
+   {
+    "pi": "COLLINS, CHRISTOPHER M",
+    "org": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "5P41EB017183-10",
+    "fy": 2023,
+    "title": "TR&D 2: Unshackling the Scanners of the Future: Flexible, self-correcting, multisensor mac"
+   },
+   {
+    "pi": "COLLINS, EVA-MARIA SCHOETZ",
+    "org": "SWARTHMORE COLLEGE",
+    "state": "PA",
+    "city": "SWARTHMORE",
+    "proj": "1R21NS132528-01",
+    "fy": 2023,
+    "title": "Novel behavioral screening tool for therapeutics against organophosphorus agents"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01AI149669-04",
+    "fy": 2023,
+    "title": "Integrative Single-Cell Analysis of Transcriptome, Epigenome, and Lineage in HIV Latency a"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HL152358-03",
+    "fy": 2023,
+    "title": "Exploring the relationship between advanced multimodal brain MRI phenotypes, genes and cog"
+   },
+   {
+    "pi": "COLLINS, KELSEY HELEN-MARIE",
+    "org": "WASHINGTON UNIVERSITY",
+    "state": "MO",
+    "city": "SAINT LOUIS",
+    "proj": "5K99AR078949-02",
+    "fy": 2023,
+    "title": "The Role of Fat in Osteoarthritis"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "3T32GM007863-44S1",
+    "fy": 2023,
+    "title": "Michigan Medical Scientist Training Program"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R61NS126792-02",
+    "fy": 2023,
+    "title": "Consortium Of MRI Biomarkers In Neonatal Encephalopathy (COMBINE)"
+   },
+   {
+    "pi": "COLLINS, JESSICA A",
+    "org": "VANDERBILT UNIVERSITY",
+    "state": "TN",
+    "city": "Nashville",
+    "proj": "1F31AI174684-01A1",
+    "fy": 2023,
+    "title": "Actions of spiropyrimidinetriones against bacterial type II topoisomerases"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01AI148084-05",
+    "fy": 2023,
+    "title": "Cellular Reservoirs of HIV"
+   },
+   {
+    "pi": "COLLINS, SEAN PATRICK",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R33HL155810-03",
+    "fy": 2023,
+    "title": "A Randomized Trial of Protocolized Diuretic Therapy Compared to Standard Care in Emergency"
+   },
+   {
+    "pi": "COLLINS, ANNE G.E.",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "1R21MH132974-01",
+    "fy": 2023,
+    "title": "Developing artificial neural network tools for cognitive modeling"
+   },
+   {
+    "pi": "SHERMAN, DAVID H",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01AI148383-05",
+    "fy": 2023,
+    "title": "Development of natural product inhibitors of Nef for clearance of HIV reservoirs"
+   },
+   {
+    "pi": "LEE, AARON ",
+    "org": "UNIVERSITY OF WASHINGTON",
+    "state": "WA",
+    "city": "SEATTLE",
+    "proj": "3OT2OD032644-01S1",
+    "fy": 2023,
+    "title": "Bridge2AI: Salutogenesis Data Generation Project"
+   },
+   {
+    "pi": "COLLINS, JAMES TRISTAN",
+    "org": "UNIVERSITY OF LOUISVILLE",
+    "state": "KY",
+    "city": "LOUISVILLE",
+    "proj": "2P20GM125504-06",
+    "fy": 2023,
+    "title": "The role of sugar transport in C. difficile colonization and disease"
+   },
+   {
+    "pi": "COLLINS, ANNE G.E.",
+    "org": "PRINCETON UNIVERSITY",
+    "state": "NJ",
+    "city": "Princeton",
+    "proj": "1P50MH132642-01",
+    "fy": 2023,
+    "title": "Thalamocortical cognitive networks in the healthy human brain"
+   },
+   {
+    "pi": "COLLINS, GREGORY ",
+    "org": "SOUTH TEXAS VETERANS HEALTH CARE SYSTEM",
+    "state": "TX",
+    "city": "SAN ANTONIO",
+    "proj": "5I01BX004550-03",
+    "fy": 2022,
+    "title": "Preclinical Psychopharmacology of Substance Abuse"
+   },
+   {
+    "pi": "SHERMAN, DAVID H",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01AI148383-04",
+    "fy": 2022,
+    "title": "Development of natural product inhibitors of Nef for clearance of HIV reservoirs"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5U01DA055353-02",
+    "fy": 2022,
+    "title": "5/24 Healthy Brain and Child Development National Consortium"
+   },
+   {
+    "pi": "COLLINS, CATHERINE A",
+    "org": "CASE WESTERN RESERVE UNIVERSITY",
+    "state": "OH",
+    "city": "CLEVELAND",
+    "proj": "7R01NS069844-11",
+    "fy": 2022,
+    "title": "Regenerative and degenerative responses to axonal injury"
+   },
+   {
+    "pi": "COLLINS, JEFFREY M",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "5K23AI144040-04",
+    "fy": 2022,
+    "title": "High resolution plasma metabolomics to identify biomarkers of tuberculosis"
+   },
+   {
+    "pi": "JAMES, KATHERINE A",
+    "org": "UNIVERSITY OF COLORADO DENVER",
+    "state": "CO",
+    "city": "Aurora",
+    "proj": "5R01ES032612-02",
+    "fy": 2022,
+    "title": "The Impact of Drought on Arsenic Exposure and Cardiometabolic Outcomes in a Rural Aging Po"
+   },
+   {
+    "pi": "COLLINS, AMELIE ",
+    "org": "COLUMBIA UNIVERSITY HEALTH SCIENCES",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "5K08DK124657-03",
+    "fy": 2022,
+    "title": "Mapping the unique features of fetal and neonatal hematopoietic stem and progenitor cells "
+   },
+   {
+    "pi": "DALEY, GEORGE Q",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5RC2DK120535-03",
+    "fy": 2022,
+    "title": "Molecular Circuits in the Hematopoietic Stem Cell Niche"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5T32GM007863-43",
+    "fy": 2022,
+    "title": "Michigan Medical Scientist Training Program"
+   },
+   {
+    "pi": "COLLINS, JAMES LESTER",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5F31GM140677-02",
+    "fy": 2022,
+    "title": "Improving Metabolic Stability Profiles in Kinase Inhibitor Development Through the Use of "
+   },
+   {
+    "pi": "KOELLE, MICHAEL R",
+    "org": "YALE UNIVERSITY",
+    "state": "CT",
+    "city": "NEW HAVEN",
+    "proj": "3R01NS086932-07S2",
+    "fy": 2022,
+    "title": "Neuromodulator signaling and activity in the C. elegans egg-laying circuit"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HD100009-04",
+    "fy": 2022,
+    "title": "Novel MRI Assessment of Placental Structure and Function Throughout Pregnancy"
+   },
+   {
+    "pi": "COLLINS, JAMIE E.",
+    "org": "BRIGHAM AND WOMEN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5K01AR075879-03",
+    "fy": 2022,
+    "title": "Data-driven approaches in defining knee osteoarthritis phenotypes and factorsassociated wi"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HL152358-02",
+    "fy": 2022,
+    "title": "Exploring the relationship between advanced multimodal brain MRI phenotypes, genes and cog"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "3R01AI148084-04S1",
+    "fy": 2022,
+    "title": "Cellular Reservoirs of HIV"
+   },
+   {
+    "pi": "COLLINS, MICHAEL ",
+    "org": "NATIONAL INSTITUTE OF DENTAL & CRANIOFACIAL RESEARCH",
+    "state": null,
+    "city": null,
+    "proj": "1ZIADE000649-28",
+    "fy": 2022,
+    "title": "Skeletal Disorders and Mineral Homeostasis Section"
+   },
+   {
+    "pi": "COLLINS, KERRIE B",
+    "org": "UNIVERSITY OF WASHINGTON",
+    "state": "WA",
+    "city": "SEATTLE",
+    "proj": "1F32HL160558-01A1",
+    "fy": 2022,
+    "title": "AKAP Integration of Phosphorylation and Ubiquitin Signaling"
+   },
+   {
+    "pi": "COLLINS, JAMES F.",
+    "org": "UNIVERSITY OF FLORIDA",
+    "state": "FL",
+    "city": "GAINESVILLE",
+    "proj": "1R56DK134583-01",
+    "fy": 2022,
+    "title": "Mechanisms of Heme and Non-heme Iron Absorption in Murine Models of Iron Overload"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "1R01EB032708-01",
+    "fy": 2022,
+    "title": "Fetal MRI: robust self-driving brain acquisition and body movement quantification"
+   },
+   {
+    "pi": "COLLINS, NICOLE ",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "1F31HL165681-01",
+    "fy": 2022,
+    "title": "Pathways of Succinate Accumulation and Adenine Nucleotide Depletion in Cardiac Ischemia"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN ",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "3DP1HL156819-03S1",
+    "fy": 2022,
+    "title": "Human genetic supplementation without donor DNA or a DNA break"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "3T32GM007863-43S1",
+    "fy": 2022,
+    "title": "Michigan Medical Scientist Training Program"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01AR071349-05",
+    "fy": 2022,
+    "title": "Copolymer-Based Sarcolemma Stabilization for Protecting Dystrophic Skeletal Muscles in Viv"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "1R61NS126792-01",
+    "fy": 2022,
+    "title": "Consortium Of MRI Biomarkers In Neonatal Encephalopathy (COMBINE)"
+   },
+   {
+    "pi": "SMITH, BRYAN RONAIN",
+    "org": "MICHIGAN STATE UNIVERSITY",
+    "state": "MI",
+    "city": "EAST LANSING",
+    "proj": "5R01CA244491-03",
+    "fy": 2022,
+    "title": "Macrophage-specific nanotherapy for breast cancer"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01AI148084-04",
+    "fy": 2022,
+    "title": "Cellular Reservoirs of HIV"
+   },
+   {
+    "pi": "COLLINS, GREGORY ",
+    "org": "UNIVERSITY OF TEXAS HLTH SCIENCE CENTER",
+    "state": "TX",
+    "city": "SAN ANTONIO",
+    "proj": "5R01DA039146-08",
+    "fy": 2022,
+    "title": "Bath Salts: abuse-related and toxic effects"
+   },
+   {
+    "pi": "PARKOS, CHARLES A",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "3R01DK129058-02S1",
+    "fy": 2022,
+    "title": "Molecular mechanisms underlying HIV related intestinal epithelial barrier dysfunction"
+   },
+   {
+    "pi": "COLLINS, SHEILA ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "2P30DK020593-45",
+    "fy": 2022,
+    "title": "Pilot and Feasibility Program"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01AI149669-03",
+    "fy": 2022,
+    "title": "Integrative Single-Cell Analysis of Transcriptome, Epigenome, and Lineage in HIV Latency a"
+   },
+   {
+    "pi": "COLLINS, SEAN PATRICK",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "4R33HL155810-02",
+    "fy": 2022,
+    "title": "A Randomized Trial of Protocolized Diuretic Therapy Compared to Standard Care in Emergency"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "2R01HD076258-06A1",
+    "fy": 2022,
+    "title": "Neonatal Hypoxic Ischemic Encephalopathy: Potential of Innovative NIRS to Optimize Hypothe"
+   },
+   {
+    "pi": "COLLINS, ANNE G.E.",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "5R01MH119383-04",
+    "fy": 2022,
+    "title": "The neural computations supporting hierarchical reinforcement learning"
+   },
+   {
+    "pi": "COLLINS, KELSEY HELEN-MARIE",
+    "org": "WASHINGTON UNIVERSITY",
+    "state": "MO",
+    "city": "SAINT LOUIS",
+    "proj": "1K99AR078949-01A1",
+    "fy": 2022,
+    "title": "The Role of Fat in Osteoarthritis"
+   },
+   {
+    "pi": "KOELLE, MICHAEL R",
+    "org": "YALE UNIVERSITY",
+    "state": "CT",
+    "city": "NEW HAVEN",
+    "proj": "3R01NS086932-08S2",
+    "fy": 2022,
+    "title": "Neuromodulator signaling and activity in the C. elegans egg-laying circuit"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN ",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "3DP1HL156819-02S1",
+    "fy": 2022,
+    "title": "Human genetic supplementation without donor DNA or a DNA break"
+   },
+   {
+    "pi": "PARKOS, CHARLES A",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01DK129058-02",
+    "fy": 2022,
+    "title": "Molecular mechanisms underlying HIV related intestinal epithelial barrier dysfunction"
+   },
+   {
+    "pi": "SCHULTZ, JOHN ALBERT",
+    "org": "IONWERKS, INC.",
+    "state": "TX",
+    "city": "HOUSTON",
+    "proj": "5R44GM106507-03",
+    "fy": 2022,
+    "title": "Nanoparticulate Coatings Enhance Ion Detection"
+   },
+   {
+    "pi": "KOELLE, MICHAEL R",
+    "org": "YALE UNIVERSITY",
+    "state": "CT",
+    "city": "NEW HAVEN",
+    "proj": "3R01NS086932-08S1",
+    "fy": 2022,
+    "title": "Neuromodulator signaling and activity in the C. elegans egg-laying circuit"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "5R01AI150776-03",
+    "fy": 2022,
+    "title": "Characterizing sexual development of the human parasite Schistosoma mansoni"
+   },
+   {
+    "pi": "COLLINS, COURTNEY ",
+    "org": "OHIO STATE UNIVERSITY",
+    "state": "OH",
+    "city": "Columbus",
+    "proj": "5R03AG074072-02",
+    "fy": 2022,
+    "title": "Frailty, Strength, and Mobility in Older Hernia Patients: A Novel Abdominal Wall Physical "
+   },
+   {
+    "pi": "CALDERWOOD, CHARLES C",
+    "org": "VIRGINIA POLYTECHNIC INST AND ST UNIV",
+    "state": "VA",
+    "city": "BLACKSBURG",
+    "proj": "5R01OH011772-02",
+    "fy": 2022,
+    "title": "Mechanisms Linking Daily Work Conditions and Work-Related Strain Reactions to Unsafe Commu"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "5R01AI121037-07",
+    "fy": 2022,
+    "title": "The Biology of Stem Cells in the Human Parasite Schistosoma Mansoni"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN ",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "5DP1HL156819-03",
+    "fy": 2022,
+    "title": "Human genetic supplementation without donor DNA or a DNA break"
+   },
+   {
+    "pi": "COLLINS, CHRISTOPHER M",
+    "org": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "5P41EB017183-09",
+    "fy": 2022,
+    "title": "TR&D 2: Unshackling the Scanners of the Future: Flexible, self-correcting, multisensor mac"
+   },
+   {
+    "pi": "COLLINS, JAMES TRISTAN",
+    "org": "UNIVERSITY OF LOUISVILLE",
+    "state": "KY",
+    "city": "LOUISVILLE",
+    "proj": "5P20GM125504-05",
+    "fy": 2022,
+    "title": "The role of sugar transport in C. difficile colonization and disease"
+   },
+   {
+    "pi": "LEWANDOWSKI, ROBERT J",
+    "org": "NORTHWESTERN UNIVERSITY",
+    "state": "IL",
+    "city": "CHICAGO",
+    "proj": "5R01CA233878-03",
+    "fy": 2022,
+    "title": "Yittrium-90 radiation lobectomy: Dose optimization and prediction of FLR hypertrophy to en"
+   },
+   {
+    "pi": "KOELLE, MICHAEL R",
+    "org": "YALE UNIVERSITY",
+    "state": "CT",
+    "city": "NEW HAVEN",
+    "proj": "5R01NS086932-08",
+    "fy": 2022,
+    "title": "Neuromodulator signaling and activity in the C. elegans egg-laying circuit"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "2R01HL132874-05A1",
+    "fy": 2022,
+    "title": "Myofilaments as regulators of heart function in disease"
+   },
+   {
+    "pi": "KOETHE, JOHN ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "1R01DK131529-01",
+    "fy": 2022,
+    "title": "Pathophysiology of Metabolically Detrimental Changes in Adipose Distribution, Adipocyte Fu"
+   },
+   {
+    "pi": "GUPTA, DEEPAK ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R01HL153607-02",
+    "fy": 2022,
+    "title": "Improving Diagnostic Accuracy for Acute Heart Failure"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "1R01AR079477-01A1",
+    "fy": 2022,
+    "title": "Skeletal muscle sarcomere function in health and disease"
+   },
+   {
+    "pi": "COLLINS, SHEILA ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "1R01DK126890-01A1",
+    "fy": 2022,
+    "title": "Natriuretic peptide and cGMP signaling in adipose tissue and energy metabolism"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "3R01AI148084-03S1",
+    "fy": 2022,
+    "title": "Cellular Reservoirs of HIV"
+   },
+   {
+    "pi": "EDWARDS, JONATHAN JOSEPH",
+    "org": "CHILDREN'S HOSP OF PHILADELPHIA",
+    "state": "PA",
+    "city": "PHILADELPHIA",
+    "proj": "5K08HL159311-02",
+    "fy": 2022,
+    "title": "Defining the Role of ROR2 in Right Ventricular Failure Pathogenesis"
+   },
+   {
+    "pi": "SMITH, RYAN C.",
+    "org": "IOWA STATE UNIVERSITY",
+    "state": "IA",
+    "city": "AMES",
+    "proj": "5R21AI166857-02",
+    "fy": 2022,
+    "title": "Development of genetic tools for the study of mosquito hemocytes"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01HL122323-08",
+    "fy": 2022,
+    "title": "Targeted membrane integrity in cardiac ischemia and reperfusion"
+   },
+   {
+    "pi": "COLLINS, JAMES F.",
+    "org": "UNIVERSITY OF FLORIDA",
+    "state": "FL",
+    "city": "GAINESVILLE",
+    "proj": "5R01DK074867-15",
+    "fy": 2022,
+    "title": "Molecular Mechanisms of Intestinal Metal Ion Transport During Iron Deficiency"
+   },
+   {
+    "pi": "COLLINS, BRIDGET E",
+    "org": "VANDERBILT UNIVERSITY",
+    "state": "TN",
+    "city": "Nashville",
+    "proj": "5F30MH122064-03",
+    "fy": 2022,
+    "title": "Characterization of functional molecular domains of MeCP2"
+   },
+   {
+    "pi": "LEE, AARON ",
+    "org": "UNIVERSITY OF WASHINGTON",
+    "state": "WA",
+    "city": "SEATTLE",
+    "proj": "1OT2OD032644-01",
+    "fy": 2022,
+    "title": "Bridge2AI: Salutogenesis Data Generation Project"
+   },
+   {
+    "pi": "COLLINS, BRADLEY HENRY",
+    "org": "DUKE UNIVERSITY",
+    "state": "NC",
+    "city": "DURHAM",
+    "proj": "4U19AI131471-06",
+    "fy": 2022,
+    "title": "Administrative Core"
+   },
+   {
+    "pi": "COLLINS, GREGORY ",
+    "org": "SOUTH TEXAS VETERANS HEALTH CARE SYSTEM",
+    "state": "TX",
+    "city": "SAN ANTONIO",
+    "proj": "5I01BX004550-02",
+    "fy": 2021,
+    "title": "Preclinical Psychopharmacology of Substance Abuse"
+   },
+   {
+    "pi": "COLLINS, AMELIE ",
+    "org": "COLUMBIA UNIVERSITY HEALTH SCIENCES",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "5K08DK124657-02",
+    "fy": 2021,
+    "title": "Mapping the unique features of fetal and neonatal hematopoietic stem and progenitor cells "
+   },
+   {
+    "pi": "COLLINS, GREGORY ",
+    "org": "UNIVERSITY OF TEXAS HLTH SCIENCE CENTER",
+    "state": "TX",
+    "city": "SAN ANTONIO",
+    "proj": "5R01DA039146-07",
+    "fy": 2021,
+    "title": "Bath Salts: abuse-related and toxic effects"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "2R01AI121037-06A1",
+    "fy": 2021,
+    "title": "The Biology of Stem Cells in the Human Parasite Schistosoma Mansoni"
+   },
+   {
+    "pi": "FRANCE, CHARLES P",
+    "org": "UNIVERSITY OF TEXAS HLTH SCIENCE CENTER",
+    "state": "TX",
+    "city": "SAN ANTONIO",
+    "proj": "5U01DA045025-04",
+    "fy": 2021,
+    "title": "Repurposing drugs in mixtures to treat drug abuse"
+   },
+   {
+    "pi": "SHERMAN, DAVID H",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01AI148383-03",
+    "fy": 2021,
+    "title": "Development of natural product inhibitors of Nef for clearance of HIV reservoirs"
+   },
+   {
+    "pi": "COLLINS, MICHAEL ",
+    "org": "NATIONAL INSTITUTE OF DENTAL & CRANIOFACIAL RESEARCH",
+    "state": null,
+    "city": null,
+    "proj": "1ZIADE000649-27",
+    "fy": 2021,
+    "title": "Skeletal Disorders and Mineral Homeostasis Section"
+   },
+   {
+    "pi": "SMITH, RYAN S",
+    "org": "LAUREATE INSTITUTE FOR BRAIN RESEARCH",
+    "state": "OK",
+    "city": "TULSA",
+    "proj": "5P20GM121312-05",
+    "fy": 2021,
+    "title": "Investigating the effects of aversive interoceptive states on computations underlying avoi"
+   },
+   {
+    "pi": "CALDERWOOD, CHARLES C",
+    "org": "VIRGINIA POLYTECHNIC INST AND ST UNIV",
+    "state": "VA",
+    "city": "BLACKSBURG",
+    "proj": "1R01OH011772-01A1",
+    "fy": 2021,
+    "title": "Mechanisms Linking Daily Work Conditions and Work-Related Strain Reactions to Unsafe Commu"
+   },
+   {
+    "pi": "GUPTA, DEEPAK ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "1R01HL153607-01A1",
+    "fy": 2021,
+    "title": "Improving Diagnostic Accuracy for Acute Heart Failure"
+   },
+   {
+    "pi": "COLLINS, JAMES F.",
+    "org": "UNIVERSITY OF FLORIDA",
+    "state": "FL",
+    "city": "GAINESVILLE",
+    "proj": "5R01DK074867-14",
+    "fy": 2021,
+    "title": "Molecular Mechanisms of Intestinal Metal Ion Transport During Iron Deficiency"
+   },
+   {
+    "pi": "COLLINS, ANNE ",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "1F32DA051138-01A1",
+    "fy": 2021,
+    "title": "Defining the role of an amygdalostriatal circuit in cocaine seeking and relapse"
+   },
+   {
+    "pi": "KOELLE, MICHAEL R",
+    "org": "YALE UNIVERSITY",
+    "state": "CT",
+    "city": "NEW HAVEN",
+    "proj": "5R01NS086932-07",
+    "fy": 2021,
+    "title": "Neuromodulator signaling and activity in the C. elegans egg-laying circuit"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01HL122323-07",
+    "fy": 2021,
+    "title": "Targeted membrane integrity in cardiac ischemia and reperfusion"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HD100009-03",
+    "fy": 2021,
+    "title": "Novel MRI Assessment of Placental Structure and Function Throughout Pregnancy"
+   },
+   {
+    "pi": "COLLINS, ANNE G.E.",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "5R01MH119383-03",
+    "fy": 2021,
+    "title": "The neural computations supporting hierarchical reinforcement learning"
+   },
+   {
+    "pi": "COLLINS, JAMIE E.",
+    "org": "BRIGHAM AND WOMEN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5K01AR075879-02",
+    "fy": 2021,
+    "title": "Data-driven approaches in defining knee osteoarthritis phenotypes and factors  associated "
+   },
+   {
+    "pi": "COLLINS, SEAN PATRICK",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "1R61HL155810-01",
+    "fy": 2021,
+    "title": "A Randomized Trial of Protocolized Diuretic Therapy Compared to Standard Care in Emergency"
+   },
+   {
+    "pi": "JAMES, KATHERINE A",
+    "org": "UNIVERSITY OF COLORADO DENVER",
+    "state": "CO",
+    "city": "Aurora",
+    "proj": "1R01ES032612-01A1",
+    "fy": 2021,
+    "title": "The Impact of Drought on Arsenic Exposure and Cardiometabolic Outcomes in a Rural Aging Po"
+   },
+   {
+    "pi": "KOELLE, MICHAEL R",
+    "org": "YALE UNIVERSITY",
+    "state": "CT",
+    "city": "NEW HAVEN",
+    "proj": "3R01NS086932-07S1",
+    "fy": 2021,
+    "title": "Neuromodulator signaling and activity in the C. elegans egg-laying circuit"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "3T32GM007863-42S1",
+    "fy": 2021,
+    "title": "Michigan Medical Scientist Training Program"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN ",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "5DP1HL156819-02",
+    "fy": 2021,
+    "title": "Human genetic supplementation without donor DNA or a DNA break"
+   },
+   {
+    "pi": "COLLINS, CHRISTOPHER M",
+    "org": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "5P41EB017183-08",
+    "fy": 2021,
+    "title": "TR&D 2: Unshackling the Scanners of the Future: Flexible, self-correcting, multisensor mac"
+   },
+   {
+    "pi": "DALEY, GEORGE Q",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5RC2DK120535-02",
+    "fy": 2021,
+    "title": "Molecular Circuits in the Hematopoietic Stem Cell Niche"
+   },
+   {
+    "pi": "PARKOS, CHARLES A",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "1R01DK129058-01A1",
+    "fy": 2021,
+    "title": "Molecular mechanisms underlying HIV related intestinal epithelial barrier dysfunction"
+   },
+   {
+    "pi": "SMITH, RYAN C.",
+    "org": "IOWA STATE UNIVERSITY",
+    "state": "IA",
+    "city": "AMES",
+    "proj": "5R21AI149118-02",
+    "fy": 2021,
+    "title": "The role of hemocytes in mosquito arbovirus infection"
+   },
+   {
+    "pi": "COLLINS, SHEILA ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R01DK116625-04",
+    "fy": 2021,
+    "title": "Dissecting PKA activation of mTORC1 and its function in adipose tissue"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01AI149669-02",
+    "fy": 2021,
+    "title": "Integrative Single-Cell Analysis of Transcriptome, Epigenome, and Lineage in HIV Latency a"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "1R01HL152358-01A1",
+    "fy": 2021,
+    "title": "Exploring the relationship between advanced multimodal brain MRI phenotypes, genes and cog"
+   },
+   {
+    "pi": "COLLINS, JAMES LESTER",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "1F31GM140677-01",
+    "fy": 2021,
+    "title": "Improving Metabolic Stability Profiles in Kinase Inhibitor Development Through the Use of "
+   },
+   {
+    "pi": "SCHULTZ, JOHN ALBERT",
+    "org": "IONWERKS, INC.",
+    "state": "TX",
+    "city": "HOUSTON",
+    "proj": "2R44GM106507-02A1",
+    "fy": 2021,
+    "title": "Nanoparticulate Coatings Enhance Ion Detection"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "1U01DA055353-01",
+    "fy": 2021,
+    "title": "5/24 Healthy Brain and Child Development National Consortium"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01AI148084-03",
+    "fy": 2021,
+    "title": "Cellular Reservoirs of HIV"
+   },
+   {
+    "pi": "COLLINS, CATHERINE A",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "2R01NS069844-10A1",
+    "fy": 2021,
+    "title": "Regenerative and degenerative responses to axonal injury"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "5R01AI150776-02",
+    "fy": 2021,
+    "title": "Characterizing sexual development of the human parasite Schistosoma mansoni"
+   },
+   {
+    "pi": "COLLINS, BRADLEY HENRY",
+    "org": "DUKE UNIVERSITY",
+    "state": "NC",
+    "city": "DURHAM",
+    "proj": "5U19AI131471-05",
+    "fy": 2021,
+    "title": "Administrative Core"
+   },
+   {
+    "pi": "COLLINS, JEFFREY M",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "5K23AI144040-03",
+    "fy": 2021,
+    "title": "High resolution plasma metabolomics to identify biomarkers of tuberculosis"
+   },
+   {
+    "pi": "SMITH, BRYAN RONAIN",
+    "org": "MICHIGAN STATE UNIVERSITY",
+    "state": "MI",
+    "city": "EAST LANSING",
+    "proj": "5R01CA244491-02",
+    "fy": 2021,
+    "title": "Macrophage-specific nanotherapy for breast cancer"
+   },
+   {
+    "pi": "EDWARDS, JONATHAN JOSEPH",
+    "org": "CHILDREN'S HOSP OF PHILADELPHIA",
+    "state": "PA",
+    "city": "PHILADELPHIA",
+    "proj": "1K08HL159311-01",
+    "fy": 2021,
+    "title": "Defining the Role of ROR2 in Right Ventricular Failure Pathogenesis"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01AR071349-04",
+    "fy": 2021,
+    "title": "Copolymer-Based Sarcolemma Stabilization for Protecting Dystrophic Skeletal Muscles in Viv"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "3R01HD065762-10S1",
+    "fy": 2021,
+    "title": "Examining neural mechanisms of developmental dyslexia from infancy to school-age (suppleme"
+   },
+   {
+    "pi": "COLLINS, COURTNEY ",
+    "org": "OHIO STATE UNIVERSITY",
+    "state": "OH",
+    "city": "Columbus",
+    "proj": "1R03AG074072-01",
+    "fy": 2021,
+    "title": "Frailty, Strength, and Mobility in Older Hernia Patients: A Novel Abdominal Wall Physical "
+   },
+   {
+    "pi": "SMITH, RYAN C.",
+    "org": "IOWA STATE UNIVERSITY",
+    "state": "IA",
+    "city": "AMES",
+    "proj": "1R21AI166857-01",
+    "fy": 2021,
+    "title": "Development of genetic tools for the study of mosquito hemocytes"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5T32GM007863-42",
+    "fy": 2021,
+    "title": "Michigan Medical Scientist Training Program"
+   },
+   {
+    "pi": "SMITH, RYAN M",
+    "org": "LUXEL CORPORATION",
+    "state": "WA",
+    "city": "FRIDAY HARBOR",
+    "proj": "5R44MH112349-04",
+    "fy": 2021,
+    "title": "\"Grid-Tape\": A High-Throughput Platform for Brain Connectomics and Nanoscale Structural An"
+   },
+   {
+    "pi": "COLLINS, BRIDGET E",
+    "org": "VANDERBILT UNIVERSITY",
+    "state": "TN",
+    "city": "Nashville",
+    "proj": "5F30MH122064-02",
+    "fy": 2021,
+    "title": "Characterization of functional molecular domains of MeCP2"
+   },
+   {
+    "pi": "COLLINS, JAMES F.",
+    "org": "UNIVERSITY OF FLORIDA",
+    "state": "FL",
+    "city": "GAINESVILLE",
+    "proj": "5R01DK109717-05",
+    "fy": 2020,
+    "title": "Divalent Metal-ion Transporter 1 as a Therapeutic Target to Optimize Intestinal Iron Trans"
+   },
+   {
+    "pi": "COLLINS-BUROW, BRIDGETTE MICHELLE",
+    "org": "TULANE UNIVERSITY OF LOUISIANA",
+    "state": "LA",
+    "city": "NEW ORLEANS",
+    "proj": "5R01CA174785-05",
+    "fy": 2020,
+    "title": "Kinase mediated suppression of metastasis in breast cancer"
+   },
+   {
+    "pi": "DALEY, GEORGE Q",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "1RC2DK120535-01A1",
+    "fy": 2020,
+    "title": "Molecular Circuits in the Hematopoietic Stem Cell Niche"
+   },
+   {
+    "pi": "SMITH, RYAN C.",
+    "org": "IOWA STATE UNIVERSITY",
+    "state": "IA",
+    "city": "AMES",
+    "proj": "5R21AI144705-02",
+    "fy": 2020,
+    "title": "Eicosanoid regulation of mosquito innate immunity"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "2T32GM007863-41",
+    "fy": 2020,
+    "title": "Michigan Medical Scientist Training Program"
+   },
+   {
+    "pi": "COLLINS, EVA-MARIA SCHOETZ",
+    "org": "SWARTHMORE COLLEGE",
+    "state": "PA",
+    "city": "SWARTHMORE",
+    "proj": "1R15ES031354-01",
+    "fy": 2020,
+    "title": "Comparative mechanistic study of developmental neurotoxicity of organophosphorus pesticide"
+   },
+   {
+    "pi": "SMITH, BRYAN RONAIN",
+    "org": "MICHIGAN STATE UNIVERSITY",
+    "state": "MI",
+    "city": "EAST LANSING",
+    "proj": "1R01CA244491-01A1",
+    "fy": 2020,
+    "title": "Macrophage-specific nanotherapy for breast cancer"
+   },
+   {
+    "pi": "COLLINS, SHEILA ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "3R01DK116625-02S1",
+    "fy": 2020,
+    "title": "Dissecting PKA activation of mTORC1 and its function in adipose tissue"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01AR071349-03",
+    "fy": 2020,
+    "title": "Copolymer-Based Sarcolemma Stabilization for Protecting Dystrophic Skeletal Muscles in Viv"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "5R01AI121037-05",
+    "fy": 2020,
+    "title": "The Biology of Stem Cells in the Human Parasite Schistosoma Mansoni"
+   },
+   {
+    "pi": "SMITH, RYAN C.",
+    "org": "IOWA STATE UNIVERSITY",
+    "state": "IA",
+    "city": "AMES",
+    "proj": "1R21AI149118-01A1",
+    "fy": 2020,
+    "title": "The role of hemocytes in mosquito arbovirus infection"
+   },
+   {
+    "pi": "SMITH, RYAN M",
+    "org": "LUXEL CORPORATION",
+    "state": "WA",
+    "city": "FRIDAY HARBOR",
+    "proj": "2R44MH112349-03",
+    "fy": 2020,
+    "title": "\"Grid-Tape\": A High-Throughput Platform for Brain Connectomics and Nanoscale Structural An"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HD065762-10",
+    "fy": 2020,
+    "title": "Examining neural mechanisms of developmental dyslexia from infancy to school-age"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HD100009-02",
+    "fy": 2020,
+    "title": "Novel MRI Assessment of Placental Structure and Function Throughout Pregnancy"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01HL138490-04",
+    "fy": 2020,
+    "title": "Dystrophin and Heart Disease"
+   },
+   {
+    "pi": "DEL VECCHIO, DOMITILLA ",
+    "org": "MASSACHUSETTS INSTITUTE OF TECHNOLOGY",
+    "state": "MA",
+    "city": "CAMBRIDGE",
+    "proj": "5R01EB024591-04",
+    "fy": 2020,
+    "title": "Synthetic Genetic Controller Circuits to Reprogram Cell Fate"
+   },
+   {
+    "pi": "COLLINS, MICHAEL ",
+    "org": "NATIONAL INSTITUTE OF DENTAL & CRANIOFACIAL RESEARCH",
+    "state": null,
+    "city": null,
+    "proj": "1ZIADE000649-26",
+    "fy": 2020,
+    "title": "Skeletal Disorders and Mineral Homeostasis Section"
+   },
+   {
+    "pi": "SMITH, RYAN S",
+    "org": "LAUREATE INSTITUTE FOR BRAIN RESEARCH",
+    "state": "OK",
+    "city": "TULSA",
+    "proj": "5P20GM121312-04",
+    "fy": 2020,
+    "title": "Investigating the effects of aversive interoceptive states on computations underlying avoi"
+   },
+   {
+    "pi": "COLLINS, JAMES F.",
+    "org": "UNIVERSITY OF FLORIDA",
+    "state": "FL",
+    "city": "GAINESVILLE",
+    "proj": "5R01DK074867-13",
+    "fy": 2020,
+    "title": "Molecular Mechanisms of Intestinal Metal Ion Transport During Iron Deficiency"
+   },
+   {
+    "pi": "FRANCE, CHARLES P",
+    "org": "UNIVERSITY OF TEXAS HLTH SCIENCE CENTER",
+    "state": "TX",
+    "city": "SAN ANTONIO",
+    "proj": "5U01DA045025-03",
+    "fy": 2020,
+    "title": "Repurposing drugs in mixtures to treat drug abuse"
+   },
+   {
+    "pi": "LEWANDOWSKI, ROBERT J",
+    "org": "NORTHWESTERN UNIVERSITY",
+    "state": "IL",
+    "city": "CHICAGO",
+    "proj": "5R01CA233878-02",
+    "fy": 2020,
+    "title": "Yittrium-90 radiation lobectomy: Dose optimization and prediction of FLR hypertrophy to en"
+   },
+   {
+    "pi": "COLLINS, SHEILA ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "1R56DK126890-01",
+    "fy": 2020,
+    "title": "Regulation of Natriuretic Peptide Signaling in Adipose Tissue and Energy Metabolism"
+   },
+   {
+    "pi": "COLLINS, CATHERINE A",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "2R56NS069844-10",
+    "fy": 2020,
+    "title": "Regenerative and degenerative responses to axonal injury"
+   },
+   {
+    "pi": "COLLINS, GREGORY ",
+    "org": "UNIVERSITY OF TEXAS HLTH SCIENCE CENTER",
+    "state": "TX",
+    "city": "SAN ANTONIO",
+    "proj": "2R01DA039146-06",
+    "fy": 2020,
+    "title": "Bath Salts: abuse-related and toxic effects"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "1R01AI149669-01",
+    "fy": 2020,
+    "title": "Integrative Single-Cell Analysis of Transcriptome, Epigenome, and Lineage in HIV Latency a"
+   },
+   {
+    "pi": "COLLINS, ANNE G.E.",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "5R01MH119383-02",
+    "fy": 2020,
+    "title": "The neural computations supporting hierarchical reinforcement learning"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01HL132874-04",
+    "fy": 2020,
+    "title": "Myofilaments as regulators of heart function in disease"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN ",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "1DP1HL156819-01",
+    "fy": 2020,
+    "title": "Human genetic supplementation without donor DNA or a DNA break"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN ",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "5R35GM130315-02",
+    "fy": 2020,
+    "title": "Mechanism and Regulation of Telomerases"
+   },
+   {
+    "pi": "COLLINS, BRADLEY HENRY",
+    "org": "DUKE UNIVERSITY",
+    "state": "NC",
+    "city": "DURHAM",
+    "proj": "5U19AI131471-04",
+    "fy": 2020,
+    "title": "Administrative Core"
+   },
+   {
+    "pi": "COLLINS, AMELIE ",
+    "org": "COLUMBIA UNIVERSITY HEALTH SCIENCES",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "1K08DK124657-01A1",
+    "fy": 2020,
+    "title": "Mapping the unique features of fetal and neonatal hematopoietic stem and progenitor cells "
+   },
+   {
+    "pi": "KOELLE, MICHAEL R",
+    "org": "YALE UNIVERSITY",
+    "state": "CT",
+    "city": "NEW HAVEN",
+    "proj": "5R01NS086932-06",
+    "fy": 2020,
+    "title": "Neuromodulator signaling and activity in the C. elegans egg-laying circuit"
+   },
+   {
+    "pi": "COLLINS, JEFFREY M",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "5K23AI144040-02",
+    "fy": 2020,
+    "title": "High resolution plasma metabolomics to identify biomarkers of tuberculosis"
+   },
+   {
+    "pi": "SHERMAN, DAVID H",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01AI148383-02",
+    "fy": 2020,
+    "title": "Development of natural product inhibitors of Nef for clearance of HIV reservoirs"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01AI148084-02",
+    "fy": 2020,
+    "title": "Cellular Reservoirs of HIV"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "1R01AI150776-01A1",
+    "fy": 2020,
+    "title": "Characterizing sexual development of the human parasite Schistosoma mansoni"
+   },
+   {
+    "pi": "COLLINS, JESSICA A",
+    "org": "MASSACHUSETTS GENERAL HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5K01AG059894-02",
+    "fy": 2020,
+    "title": "TMS in preclinical and prodromal AD: Modulation of brain networks and memory"
+   },
+   {
+    "pi": "COLLINS, SHEILA ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R01DK116625-03",
+    "fy": 2020,
+    "title": "Dissecting PKA activation of mTORC1 and its function in adipose tissue"
+   },
+   {
+    "pi": "COLLINS, BRIDGET E",
+    "org": "VANDERBILT UNIVERSITY",
+    "state": "TN",
+    "city": "Nashville",
+    "proj": "1F30MH122064-01A1",
+    "fy": 2020,
+    "title": "Characterization of functional molecular domains of MeCP2"
+   },
+   {
+    "pi": "COLLINS, EILEEN G",
+    "org": "UNIVERSITY OF ILLINOIS AT CHICAGO",
+    "state": "IL",
+    "city": "Chicago",
+    "proj": "5R01AA013328-14",
+    "fy": 2020,
+    "title": "Impact of supportive policies on minority stress, drinking and health among women"
+   },
+   {
+    "pi": "COLLINS, GREGORY ",
+    "org": "SOUTH TEXAS VETERANS HEALTH CARE SYSTEM",
+    "state": "TX",
+    "city": "SAN ANTONIO",
+    "proj": "1I01BX004550-01A2",
+    "fy": 2020,
+    "title": "Preclinical Psychopharmacology of Substance Abuse"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01HL122323-06",
+    "fy": 2020,
+    "title": "Targeted membrane integrity in cardiac ischemia and reperfusion"
+   },
+   {
+    "pi": "COLLINS, JAMIE E.",
+    "org": "BRIGHAM AND WOMEN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "1K01AR075879-01A1",
+    "fy": 2020,
+    "title": "Data-driven approaches in defining knee osteoarthritis phenotypes and factors  associated "
+   },
+   {
+    "pi": "COLLINS, CHRISTOPHER M",
+    "org": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "5P41EB017183-07",
+    "fy": 2020,
+    "title": "TR&D 2: Unshackling the Scanners of the Future: Flexible, self-correcting, multisensor mac"
+   },
+   {
+    "pi": "COLLINS, LESLIE M.",
+    "org": "DUKE UNIVERSITY",
+    "state": "NC",
+    "city": "DURHAM",
+    "proj": "5R01DC014290-05",
+    "fy": 2019,
+    "title": "Using Machine Learning to Mitigate Reverberation Effects in Cochlear Implants"
+   },
+   {
+    "pi": "COLLINS, CHRISTOPHER M",
+    "org": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "5R01EB021277-04",
+    "fy": 2019,
+    "title": "Next-Generation RF Coils with High-Permittivity Material for Improved Performance in MRI"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "2R01HL122323-05A1",
+    "fy": 2019,
+    "title": "Targeted membrane integrity in cardiac ischemia and reperfusion"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "1R01HD100009-01",
+    "fy": 2019,
+    "title": "Novel MRI Assessment of Placental Structure and Function Throughout Pregnancy"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN ",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "1R35GM130315-01",
+    "fy": 2019,
+    "title": "Mechanism and Regulation of Telomerases"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01AR071349-02",
+    "fy": 2019,
+    "title": "Copolymer-Based Sarcolemma Stabilization for Protecting Dystrophic Skeletal Muscles in Viv"
+   },
+   {
+    "pi": "TEICHER, MARTIN H",
+    "org": "MCLEAN HOSPITAL",
+    "state": "MA",
+    "city": "BELMONT",
+    "proj": "5R01HD079484-05",
+    "fy": 2019,
+    "title": "Neurobiology of Mothering and Infant Stress"
+   },
+   {
+    "pi": "LEPORE, STEPHEN J",
+    "org": "TEMPLE UNIV OF THE COMMONWEALTH",
+    "state": "PA",
+    "city": "PHILADELPHIA",
+    "proj": "5R01CA188813-05",
+    "fy": 2019,
+    "title": "Multilevel tobacco intervention in community clinics for underserved families"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R21AI132379-02",
+    "fy": 2019,
+    "title": "HIV evasion of the innate immune response"
+   },
+   {
+    "pi": "LEWANDOWSKI, ROBERT J",
+    "org": "NORTHWESTERN UNIVERSITY",
+    "state": "IL",
+    "city": "CHICAGO",
+    "proj": "1R01CA233878-01",
+    "fy": 2019,
+    "title": "Yittrium-90 radiation lobectomy: Dose optimization and prediction of FLR hypertrophy to en"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "5R01AI121037-04",
+    "fy": 2019,
+    "title": "The Biology of Stem Cells in the Human Parasite Schistosoma Mansoni"
+   },
+   {
+    "pi": "COLLINS, PETER LEON",
+    "org": "NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES",
+    "state": null,
+    "city": null,
+    "proj": "1ZIAAI000938-16",
+    "fy": 2019,
+    "title": "Paramyxoviruses as Vaccine Vectors Against Highly Pathogenic Viruses"
+   },
+   {
+    "pi": "PETERSEN, STEVEN E.",
+    "org": "WASHINGTON UNIVERSITY",
+    "state": "MO",
+    "city": "SAINT LOUIS",
+    "proj": "5U54HD087011-05",
+    "fy": 2019,
+    "title": "Core D - Developmental Neuroimaging Core"
+   },
+   {
+    "pi": "COLLINS, CATHERINE A",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "1R21NS107781-01A1",
+    "fy": 2019,
+    "title": "Non-cell-autonomous mitochondrial degradation in the Drosophila nervous system"
+   },
+   {
+    "pi": "COLLINS, JEFFREY M",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "1K23AI144040-01",
+    "fy": 2019,
+    "title": "High resolution plasma metabolomics to identify biomarkers of tuberculosis"
+   },
+   {
+    "pi": "COLLINS, SHEILA ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "5R01DK116625-02",
+    "fy": 2019,
+    "title": "Dissecting PKA activation of mTORC1 and its function in adipose tissue"
+   },
+   {
+    "pi": "COLLINS, GREGORY ",
+    "org": "UNIVERSITY OF TEXAS HLTH SCIENCE CENTER",
+    "state": "TX",
+    "city": "SAN ANTONIO",
+    "proj": "5R01DA039146-05",
+    "fy": 2019,
+    "title": "Bath salts: abuse-related and toxic effects"
+   },
+   {
+    "pi": "COLLINS, JAMES F.",
+    "org": "UNIVERSITY OF FLORIDA",
+    "state": "FL",
+    "city": "GAINESVILLE",
+    "proj": "5R01DK109717-04",
+    "fy": 2019,
+    "title": "Divalent Metal-ion Transporter 1 as a Therapeutic Target to Optimize Intestinal Iron Trans"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "1R01AI148084-01A1",
+    "fy": 2019,
+    "title": "Cellular Reservoirs of HIV"
+   },
+   {
+    "pi": "WILLIAMS, DAVID A",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "1OT2HL152640-01",
+    "fy": 2019,
+    "title": "Boston Consortium to Cure SCD - Williams/Ellen Grant"
+   },
+   {
+    "pi": "COLLINS, BRADLEY HENRY",
+    "org": "DUKE UNIVERSITY",
+    "state": "NC",
+    "city": "DURHAM",
+    "proj": "5U19AI131471-03",
+    "fy": 2019,
+    "title": "Administrative Core"
+   },
+   {
+    "pi": "COLLINS, CHRISTOPHER M",
+    "org": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "2P41EB017183-06",
+    "fy": 2019,
+    "title": "TR&D 2: Unshackling the Scanners of the Future: Flexible, self-correcting, multisensor mac"
+   },
+   {
+    "pi": "COLLINS, PETER LEON",
+    "org": "NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES",
+    "state": null,
+    "city": null,
+    "proj": "1ZIAAI000327-38",
+    "fy": 2019,
+    "title": "Laboratory And Pre-clinical Studies Of Parainfluenza Viruses"
+   },
+   {
+    "pi": "COLLINS-BUROW, BRIDGETTE MICHELLE",
+    "org": "TULANE UNIVERSITY OF LOUISIANA",
+    "state": "LA",
+    "city": "NEW ORLEANS",
+    "proj": "5R01CA174785-04",
+    "fy": 2019,
+    "title": "Kinase mediated suppression of metastasis in breast cancer"
+   },
+   {
+    "pi": "KOELLE, MICHAEL R",
+    "org": "YALE UNIVERSITY",
+    "state": "CT",
+    "city": "NEW HAVEN",
+    "proj": "2R01NS086932-05A1",
+    "fy": 2019,
+    "title": "Neuromodulator signaling and activity in the C. elegans egg-laying circuit"
+   },
+   {
+    "pi": "SHERMAN, DAVID H",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "1R01AI148383-01",
+    "fy": 2019,
+    "title": "Development of natural product inhibitors of Nef for clearance of HIV reservoirs"
+   },
+   {
+    "pi": "GAAB, NADINE ",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HD065762-09",
+    "fy": 2019,
+    "title": "Examining neural mechanisms of developmental dyslexia from infancy to school-age"
+   },
+   {
+    "pi": "FRANCE, CHARLES P",
+    "org": "UNIVERSITY OF TEXAS HLTH SCIENCE CENTER",
+    "state": "TX",
+    "city": "SAN ANTONIO",
+    "proj": "5U01DA045025-02",
+    "fy": 2019,
+    "title": "Repurposing drugs in mixtures to treat drug abuse"
+   },
+   {
+    "pi": "SMITH, RYAN C.",
+    "org": "IOWA STATE UNIVERSITY",
+    "state": "IA",
+    "city": "AMES",
+    "proj": "1R21AI144705-01",
+    "fy": 2019,
+    "title": "Eicosanoid regulation of mosquito innate immunity"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01HL132874-03",
+    "fy": 2019,
+    "title": "Myofilaments as regulators of heart function in disease"
+   },
+   {
+    "pi": "COLLINS, JESSICA A",
+    "org": "MASSACHUSETTS GENERAL HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "1K01AG059894-01A1",
+    "fy": 2019,
+    "title": "TMS in preclinical and prodromal AD: Modulation of brain networks and memory"
+   },
+   {
+    "pi": "BALDWIN, RICHARD KIMO",
+    "org": "NANOCOMPOSIX, INC.",
+    "state": "CA",
+    "city": "SAN DIEGO",
+    "proj": "1R41AI147875-01",
+    "fy": 2019,
+    "title": "The first commercial rapid diagnostic test to detect Paragonimus infections"
+   },
+   {
+    "pi": "COLLINS, MICHAEL ",
+    "org": "NATIONAL INSTITUTE OF DENTAL & CRANIOFACIAL RESEARCH",
+    "state": null,
+    "city": null,
+    "proj": "1ZIADE000649-25",
+    "fy": 2019,
+    "title": "Skeletal Disorders and Mineral Homeostasis Section"
+   },
+   {
+    "pi": "COLLINS, PETER LEON",
+    "org": "NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES",
+    "state": null,
+    "city": null,
+    "proj": "1ZIAAI000326-38",
+    "fy": 2019,
+    "title": "Clinical Trials of  Vaccines for Respiratory Syncytial Virus and Related Viruses"
+   },
+   {
+    "pi": "COLLINS, PETER LEON",
+    "org": "NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES",
+    "state": null,
+    "city": null,
+    "proj": "1ZIAAI000372-37",
+    "fy": 2019,
+    "title": "Laboratory Studies of Human Respiratory Syncytial Virus and Other Pneumoviruses"
+   },
+   {
+    "pi": "COLLINS-BUROW, BRIDGETTE MICHELLE",
+    "org": "TULANE UNIVERSITY OF LOUISIANA",
+    "state": "LA",
+    "city": "NEW ORLEANS",
+    "proj": "3R01CA174785-04S1",
+    "fy": 2019,
+    "title": "Kinase mediated suppression of metastasis in breast cancer"
+   },
+   {
+    "pi": "COLLINS, CATHERINE A",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01NS069844-09",
+    "fy": 2019,
+    "title": "Regenerative and Degenerative Responses to Axonal Injury"
+   },
+   {
+    "pi": "COLLINS, MATTHEW ",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "5K22AI137306-02",
+    "fy": 2019,
+    "title": "Seroepidemiologic risk for congenital Zika syndrome and adaptive immunity of fetal infecti"
+   },
+   {
+    "pi": "HEANEY, CHRISTOPHER D",
+    "org": "JOHNS HOPKINS UNIVERSITY",
+    "state": "MD",
+    "city": "BALTIMORE",
+    "proj": "5R21AI139784-02",
+    "fy": 2019,
+    "title": "Multiplex oral fluid antibody assay for arbovirus diagnosis, surveillance and prevention"
+   },
+   {
+    "pi": "DEL VECCHIO, DOMITILLA ",
+    "org": "MASSACHUSETTS INSTITUTE OF TECHNOLOGY",
+    "state": "MA",
+    "city": "CAMBRIDGE",
+    "proj": "5R01EB024591-03",
+    "fy": 2019,
+    "title": "Synthetic Genetic Controller Circuits to Reprogram Cell Fate"
+   },
+   {
+    "pi": "COLLINS, ANNE G.E.",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "1R01MH119383-01",
+    "fy": 2019,
+    "title": "The neural computations supporting hierarchical reinforcement learning"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01HL138490-03",
+    "fy": 2019,
+    "title": "Dystrophin and Heart Disease"
+   },
+   {
+    "pi": "COLLINS, JAMES F.",
+    "org": "UNIVERSITY OF FLORIDA",
+    "state": "FL",
+    "city": "GAINESVILLE",
+    "proj": "5R01DK074867-12",
+    "fy": 2019,
+    "title": "Molecular Mechanisms of Intestinal Metal Ion Transport During Iron Deficiency"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01HL132874-02",
+    "fy": 2018,
+    "title": "Myofilaments as regulators of heart function in disease"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "1R21AI132379-01A1",
+    "fy": 2018,
+    "title": "HIV evasion of the innate immune response"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "3R01HD076258-05S1",
+    "fy": 2018,
+    "title": "Perinatal Brain Injury: Potential of Innovative NIRS to Optimize Hypothermia"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01HL138490-02",
+    "fy": 2018,
+    "title": "Dystrophin and Heart Disease"
+   },
+   {
+    "pi": "COLLINS, PETER LEON",
+    "org": "NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES",
+    "state": null,
+    "city": null,
+    "proj": "1ZIAAI000938-15",
+    "fy": 2018,
+    "title": "Paramyxoviruses as Vaccine Vectors Against Highly Pathogenic Viruses"
+   },
+   {
+    "pi": "COLLINS, GREGORY ",
+    "org": "UNIVERSITY OF TEXAS HLTH SCIENCE CENTER",
+    "state": "TX",
+    "city": "SAN ANTONIO",
+    "proj": "5R01DA039146-04",
+    "fy": 2018,
+    "title": "Bath salts: abuse-related and toxic effects"
+   },
+   {
+    "pi": "COLLINS, CHRISTOPHER M",
+    "org": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "5R01EB021277-03",
+    "fy": 2018,
+    "title": "Next-Generation RF Coils with High-Permittivity Material for Improved Performance in MRI"
+   },
+   {
+    "pi": "COLLINS, LESLIE M.",
+    "org": "DUKE UNIVERSITY",
+    "state": "NC",
+    "city": "DURHAM",
+    "proj": "5R01DC014290-04",
+    "fy": 2018,
+    "title": "Using Machine Learning to Mitigate Reverberation Effects in Cochlear Implants"
+   },
+   {
+    "pi": "COLLINS, SHEILA ",
+    "org": "VANDERBILT UNIVERSITY MEDICAL CENTER",
+    "state": "TN",
+    "city": "NASHVILLE",
+    "proj": "1R01DK116625-01",
+    "fy": 2018,
+    "title": "Dissecting PKA activation of mTORC1 and its function in adipose tissue"
+   },
+   {
+    "pi": "HEANEY, CHRISTOPHER D",
+    "org": "JOHNS HOPKINS UNIVERSITY",
+    "state": "MD",
+    "city": "BALTIMORE",
+    "proj": "1R21AI139784-01",
+    "fy": 2018,
+    "title": "Multiplex oral fluid antibody assay for arbovirus diagnosis, surveillance and prevention"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R33AI116158-05",
+    "fy": 2018,
+    "title": "Development of Nef antagonists to enhance CTL clearance of HIV reservoirs"
+   },
+   {
+    "pi": "GAAB, NADINE ",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HD065762-08",
+    "fy": 2018,
+    "title": "Examining neural mechanisms of developmental dyslexia from infancy to school-age"
+   },
+   {
+    "pi": "COLLINS, REBECCA L",
+    "org": "RAND CORPORATION",
+    "state": "CA",
+    "city": "SANTA MONICA",
+    "proj": "5R01MH104381-04",
+    "fy": 2018,
+    "title": "Impact of a Discrimination & Stigma Reduction Initiative on MI Treatment Seeking & Outcome"
+   },
+   {
+    "pi": "DEL VECCHIO, DOMITILLA ",
+    "org": "MASSACHUSETTS INSTITUTE OF TECHNOLOGY",
+    "state": "MA",
+    "city": "CAMBRIDGE",
+    "proj": "5R01EB024591-02",
+    "fy": 2018,
+    "title": "Synthetic Genetic Controller Circuits to Reprogram Cell Fate"
+   },
+   {
+    "pi": "LEPORE, STEPHEN J",
+    "org": "TEMPLE UNIV OF THE COMMONWEALTH",
+    "state": "PA",
+    "city": "PHILADELPHIA",
+    "proj": "5R01CA188813-04",
+    "fy": 2018,
+    "title": "Multilevel tobacco intervention in community clinics for underserved families"
+   },
+   {
+    "pi": "COLLINS, JAMES F.",
+    "org": "UNIVERSITY OF FLORIDA",
+    "state": "FL",
+    "city": "GAINESVILLE",
+    "proj": "2R01DK074867-11",
+    "fy": 2018,
+    "title": "Molecular Mechanisms of Intestinal Metal Ion Transport During Iron Deficiency"
+   },
+   {
+    "pi": "TEICHER, MARTIN H",
+    "org": "MCLEAN HOSPITAL",
+    "state": "MA",
+    "city": "BELMONT",
+    "proj": "5R01HD079484-04",
+    "fy": 2018,
+    "title": "Neurobiology of Mothering and Infant Stress"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "5R01AI121037-03",
+    "fy": 2018,
+    "title": "The Biology of Stem Cells in the Human Parasite Schistosoma Mansoni"
+   },
+   {
+    "pi": "COLLINS, REBECCA L",
+    "org": "RAND CORPORATION",
+    "state": "CA",
+    "city": "SANTA MONICA",
+    "proj": "3R01MH104381-03S1",
+    "fy": 2018,
+    "title": "Impact of a Discrimination & Stigma Reduction Initiative on MI Treatment Seeking & Outcome"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN ",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "5R01GM054198-21",
+    "fy": 2018,
+    "title": "Structure and Function of Telomerase"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "1R01AR071349-01A1",
+    "fy": 2018,
+    "title": "Copolymer-Based Sarcolemma Stabilization for Protecting Dystrophic Skeletal Muscles in Viv"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01EB017337-05",
+    "fy": 2018,
+    "title": "Advanced Fetal Imaging"
+   },
+   {
+    "pi": "COLLINS, BRADLEY HENRY",
+    "org": "DUKE UNIVERSITY",
+    "state": "NC",
+    "city": "DURHAM",
+    "proj": "5U19AI131471-02",
+    "fy": 2018,
+    "title": "Administrative Core"
+   },
+   {
+    "pi": "PETERSEN, STEVEN E.",
+    "org": "WASHINGTON UNIVERSITY",
+    "state": "MO",
+    "city": "SAINT LOUIS",
+    "proj": "5U54HD087011-04",
+    "fy": 2018,
+    "title": "Core D - Developmental Neuroimaging Core"
+   },
+   {
+    "pi": "COLLINS, CHRISTOPHER M",
+    "org": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "5P41EB017183-05",
+    "fy": 2018,
+    "title": "CAI2R Technology Research and Development Project #2: Radiofrequency Field Interactions wi"
+   },
+   {
+    "pi": "COLLINS, PETER LEON",
+    "org": "NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES",
+    "state": null,
+    "city": null,
+    "proj": "1ZIAAI000327-37",
+    "fy": 2018,
+    "title": "Laboratory And Pre-clinical Studies Of Parainfluenza Viruses"
+   },
+   {
+    "pi": "COLLINS, JAMES F.",
+    "org": "UNIVERSITY OF FLORIDA",
+    "state": "FL",
+    "city": "GAINESVILLE",
+    "proj": "5R01DK109717-03",
+    "fy": 2018,
+    "title": "Divalent Metal-ion Transporter 1 as a Therapeutic Target to Optimize Intestinal Iron Trans"
+   },
+   {
+    "pi": "COLLINS, MATTHEW ",
+    "org": "EMORY UNIVERSITY",
+    "state": "GA",
+    "city": "ATLANTA",
+    "proj": "1K22AI137306-01",
+    "fy": 2018,
+    "title": "Seroepidemiologic risk for congenital Zika syndrome and adaptive immunity of fetal infecti"
+   },
+   {
+    "pi": "COLLINS-BUROW, BRIDGETTE MICHELLE",
+    "org": "TULANE UNIVERSITY OF LOUISIANA",
+    "state": "LA",
+    "city": "NEW ORLEANS",
+    "proj": "5R01CA174785-03",
+    "fy": 2018,
+    "title": "Kinase mediated suppression of metastasis in breast cancer"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "3R33AI116158-04S1",
+    "fy": 2018,
+    "title": "Development of Nef antagonists to enhance CTL clearance of HIV reservoirs"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01HL122323-04",
+    "fy": 2018,
+    "title": "Targeted membrane integrity in cardiac ischemia and reperfusion"
+   },
+   {
+    "pi": "FRANCE, CHARLES P",
+    "org": "UNIVERSITY OF TEXAS HLTH SCIENCE CENTER",
+    "state": "TX",
+    "city": "SAN ANTONIO",
+    "proj": "1U01DA045025-01",
+    "fy": 2018,
+    "title": "Repurposing drugs in mixtures to treat drug abuse"
+   },
+   {
+    "pi": "COLLINS, MICHAEL A.",
+    "org": "LOYOLA UNIVERSITY CHICAGO",
+    "state": "IL",
+    "city": "MAYWOOD",
+    "proj": "5U01AA018279-08",
+    "fy": 2018,
+    "title": "Binge alcohol-induced neurodamage and omega-3 DHA Protection"
+   },
+   {
+    "pi": "DALEY, GEORGE Q",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R24DK092760-08",
+    "fy": 2018,
+    "title": "Customized stem cells for clinical application in blood disorders"
+   },
+   {
+    "pi": "COLLINS, CATHERINE A",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01NS069844-08",
+    "fy": 2018,
+    "title": "Regenerative and Degenerative Responses to Axonal Injury"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HD076258-05",
+    "fy": 2018,
+    "title": "Perinatal Brain Injury: Potential of Innovative NIRS to Optimize Hypothermia"
+   },
+   {
+    "pi": "SMITH, RYAN M",
+    "org": "LUXEL CORPORATION",
+    "state": "WA",
+    "city": "FRIDAY HARBOR",
+    "proj": "5R43MH112349-02",
+    "fy": 2018,
+    "title": "\"Grid-Tape\": A High-Throughput Platform for Brain Connectomics and Nanoscale Structural An"
+   },
+   {
+    "pi": "SMITH, RYAN CHRISTOPHER",
+    "org": "SLOAN-KETTERING INST CAN RESEARCH",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "5F31CA210408-03",
+    "fy": 2018,
+    "title": "Modeling pediatric gliomas using a human pluripotent stem cell-based platform"
+   },
+   {
+    "pi": "LAGHI, FRANCO ",
+    "org": "EDWARD HINES JR VA HOSPITAL",
+    "state": "IL",
+    "city": "HINES",
+    "proj": "5I01RX001325-04",
+    "fy": 2018,
+    "title": "Sustainability of Rehabilitation Gains in COPD"
+   },
+   {
+    "pi": "TEICHER, MARTIN H",
+    "org": "MCLEAN HOSPITAL",
+    "state": "MA",
+    "city": "BELMONT",
+    "proj": "3R01HD079484-04S1",
+    "fy": 2018,
+    "title": "Neurobiology of Mothering and Infant Stress"
+   },
+   {
+    "pi": "COLLINS, PETER LEON",
+    "org": "NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES",
+    "state": null,
+    "city": null,
+    "proj": "1ZIAAI000372-36",
+    "fy": 2018,
+    "title": "Laboratory Studies of Human Respiratory Syncytial Virus and Other Pneumoviruses"
+   },
+   {
+    "pi": "SMITH, BRYAN ",
+    "org": "CLINICAL CENTER",
+    "state": null,
+    "city": null,
+    "proj": "1ZIACL090029-07",
+    "fy": 2018,
+    "title": "Neurovascular MRI in the Assessment of HIV-Associated Neurocognitive Disorders"
+   },
+   {
+    "pi": "COLLINS, PETER LEON",
+    "org": "NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES",
+    "state": null,
+    "city": null,
+    "proj": "1ZIAAI000326-37",
+    "fy": 2018,
+    "title": "Clinical Trials of  Vaccines for Respiratory Syncytial Virus and Related Viruses"
+   },
+   {
+    "pi": "COLLINS, MICHAEL ",
+    "org": "NATIONAL INSTITUTE OF DENTAL & CRANIOFACIAL RESEARCH",
+    "state": null,
+    "city": null,
+    "proj": "1ZIADE000649-24",
+    "fy": 2018,
+    "title": "Skeletal Disorders and Mineral Homeostasis Section"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "1R01HL132874-01A1",
+    "fy": 2017,
+    "title": "Myofilaments as regulators of heart function in disease"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN ",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "5R01HL079585-12",
+    "fy": 2017,
+    "title": "Biogenesis and Regulation of Human Telomerase"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R33AI116158-04",
+    "fy": 2017,
+    "title": "Development of Nef antagonists to enhance CTL clearance of HIV reservoirs"
+   },
+   {
+    "pi": "GAAB, NADINE ",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HD065762-07",
+    "fy": 2017,
+    "title": "Examining neural mechanisms of developmental dyslexia from infancy to school-age"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01HD076258-04",
+    "fy": 2017,
+    "title": "Perinatal Brain Injury: Potential of Innovative NIRS to Optimize Hypothermia"
+   },
+   {
+    "pi": "COLLINS, PETER LEON",
+    "org": "NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES",
+    "state": null,
+    "city": null,
+    "proj": "1ZIAAI000326-36",
+    "fy": 2017,
+    "title": "Clinical Trials of  Vaccines for Respiratory Syncytial Virus and Related Viruses"
+   },
+   {
+    "pi": "COLLINS, PETER LEON",
+    "org": "NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES",
+    "state": null,
+    "city": null,
+    "proj": "1ZIAAI000938-14",
+    "fy": 2017,
+    "title": "Paramyxoviruses as Vaccine Vectors Against Highly Pathogenic Viruses"
+   },
+   {
+    "pi": "DALEY, GEORGE Q",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R24DK092760-07",
+    "fy": 2017,
+    "title": "Customized stem cells for clinical application in blood disorders"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "1R01HL138490-01",
+    "fy": 2017,
+    "title": "Dystrophin and Heart Disease"
+   },
+   {
+    "pi": "GRANT, PATRICIA ELLEN",
+    "org": "BOSTON CHILDREN'S HOSPITAL",
+    "state": "MA",
+    "city": "BOSTON",
+    "proj": "5R01EB017337-04",
+    "fy": 2017,
+    "title": "Advanced Fetal Imaging"
+   },
+   {
+    "pi": "COLLINS, CHRISTOPHER M",
+    "org": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "5R01EB021277-02",
+    "fy": 2017,
+    "title": "Next-Generation RF Coils with High-Permittivity Material for Improved Performance in MRI"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN ",
+    "org": "UNIVERSITY OF CALIFORNIA BERKELEY",
+    "state": "CA",
+    "city": "BERKELEY",
+    "proj": "5R01GM054198-20",
+    "fy": 2017,
+    "title": "Structure and Function of Telomerase"
+   },
+   {
+    "pi": "COLLINS, JAMES F.",
+    "org": "UNIVERSITY OF FLORIDA",
+    "state": "FL",
+    "city": "GAINESVILLE",
+    "proj": "5R01DK109717-02",
+    "fy": 2017,
+    "title": "Divalent Metal-ion Transporter 1 as a Therapeutic Target to Optimize Intestinal Iron Trans"
+   },
+   {
+    "pi": "COLLINS-BUROW, BRIDGETTE MICHELLE",
+    "org": "TULANE UNIVERSITY OF LOUISIANA",
+    "state": "LA",
+    "city": "NEW ORLEANS",
+    "proj": "5R01CA174785-02",
+    "fy": 2017,
+    "title": "Kinase mediated suppression of metastasis in breast cancer"
+   },
+   {
+    "pi": "COLLINS, KIMBERLY S.",
+    "org": "INDIANA UNIVERSITY INDIANAPOLIS",
+    "state": "IN",
+    "city": "INDIANAPOLIS",
+    "proj": "5F31GM119401-02",
+    "fy": 2017,
+    "title": "Age-related changes in microRNA expression effect on drug metabolism in human liver"
+   },
+   {
+    "pi": "COLLINS, TRACIE CHIANTI",
+    "org": "UNIVERSITY OF NEW MEXICO HEALTH SCIS CTR",
+    "state": "NM",
+    "city": "ALBUQUERQUE",
+    "proj": "7R56HL138244-02",
+    "fy": 2017,
+    "title": "Texting for Mobility in Overweight/Obese Adults with Peripheral Artery Disease"
+   },
+   {
+    "pi": "COLLINS, MICHAEL ",
+    "org": "NATIONAL INSTITUTE OF DENTAL & CRANIOFACIAL RESEARCH",
+    "state": null,
+    "city": null,
+    "proj": "1ZIADE000649-23",
+    "fy": 2017,
+    "title": "Section on Skeletal Disorders and Mineral Homeostasis "
+   },
+   {
+    "pi": "COLLINS, CHRISTOPHER M",
+    "org": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "5P41EB017183-04",
+    "fy": 2017,
+    "title": "CAI2R Technology Research and Development Project #2: Radiofrequency Field Interactions wi"
+   },
+   {
+    "pi": "COLLINS, BRADLEY HENRY",
+    "org": "DUKE UNIVERSITY",
+    "state": "NC",
+    "city": "DURHAM",
+    "proj": "1U19AI131471-01",
+    "fy": 2017,
+    "title": "Administrative Core"
+   },
+   {
+    "pi": "KOELLE, MICHAEL R",
+    "org": "YALE UNIVERSITY",
+    "state": "CT",
+    "city": "NEW HAVEN",
+    "proj": "5R01NS086932-04",
+    "fy": 2017,
+    "title": "Neuromodulator signaling and activity in the C. elegans egg-laying circuit."
+   },
+   {
+    "pi": "LEPORE, STEPHEN J",
+    "org": "TEMPLE UNIV OF THE COMMONWEALTH",
+    "state": "PA",
+    "city": "PHILADELPHIA",
+    "proj": "5R01CA188813-03",
+    "fy": 2017,
+    "title": "Multilevel tobacco intervention in community clinics for underserved families"
+   },
+   {
+    "pi": "TEICHER, MARTIN H",
+    "org": "MCLEAN HOSPITAL",
+    "state": "MA",
+    "city": "BELMONT",
+    "proj": "5R01HD079484-03",
+    "fy": 2017,
+    "title": "Neurobiology of Mothering and Infant Stress"
+   },
+   {
+    "pi": "COLLINS, LESLIE M.",
+    "org": "DUKE UNIVERSITY",
+    "state": "NC",
+    "city": "DURHAM",
+    "proj": "5R01DC014290-03",
+    "fy": 2017,
+    "title": "Using Machine Learning to Mitigate Reverberation Effects in Cochlear Implants"
+   },
+   {
+    "pi": "SMITH, RYAN CHRISTOPHER",
+    "org": "SLOAN-KETTERING INST CAN RESEARCH",
+    "state": "NY",
+    "city": "NEW YORK",
+    "proj": "5F31CA210408-02",
+    "fy": 2017,
+    "title": "Modeling pediatric gliomas using a human pluripotent stem cell-based platform"
+   },
+   {
+    "pi": "METZGER, JOSEPH MARK",
+    "org": "UNIVERSITY OF MINNESOTA",
+    "state": "MN",
+    "city": "MINNEAPOLIS",
+    "proj": "5R01HL122323-03",
+    "fy": 2017,
+    "title": "Targeted membrane integrity in cardiac ischemia and reperfusion"
+   },
+   {
+    "pi": "COLLINS, GREGORY ",
+    "org": "UNIVERSITY OF TEXAS HLTH SCIENCE CENTER",
+    "state": "TX",
+    "city": "SAN ANTONIO",
+    "proj": "5R01DA039146-03",
+    "fy": 2017,
+    "title": "Bath salts: abuse-related and toxic effects"
+   },
+   {
+    "pi": "PETERSEN, STEVEN E.",
+    "org": "WASHINGTON UNIVERSITY",
+    "state": "MO",
+    "city": "SAINT LOUIS",
+    "proj": "5U54HD087011-03",
+    "fy": 2017,
+    "title": "Core D - Developmental Neuroimaging Core"
+   },
+   {
+    "pi": "COLLINS, PETER LEON",
+    "org": "NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES",
+    "state": null,
+    "city": null,
+    "proj": "1ZIAAI000372-35",
+    "fy": 2017,
+    "title": "Laboratory Studies of Human Respiratory Syncytial Virus and Other Pneumoviruses"
+   },
+   {
+    "pi": "COLLINS, REBECCA L",
+    "org": "RAND CORPORATION",
+    "state": "CA",
+    "city": "SANTA MONICA",
+    "proj": "5R01MH104381-03",
+    "fy": 2017,
+    "title": "Impact of a Discrimination & Stigma Reduction Initiative on MI Treatment Seeking & Outcome"
+   },
+   {
+    "pi": "COLLINS, TRACIE CHIANTI",
+    "org": "UNIVERSITY OF KANSAS MEDICAL CENTER",
+    "state": "KS",
+    "city": "KANSAS CITY",
+    "proj": "1R56HL138244-01",
+    "fy": 2017,
+    "title": "Texting for Mobility in Overweight/Obese Adults with Peripheral Artery Disease"
+   },
+   {
+    "pi": "COLLINS, SHEILA ",
+    "org": "SANFORD BURNHAM PREBYS MEDICAL DISCOVERY INSTITUTE",
+    "state": "CA",
+    "city": "LA JOLLA",
+    "proj": "5R01DK103056-04",
+    "fy": 2017,
+    "title": "Natriuretic peptide receptors, adipose browning and energy expenditure"
+   },
+   {
+    "pi": "SMITH, RYAN M",
+    "org": "LUXEL CORPORATION",
+    "state": "WA",
+    "city": "FRIDAY HARBOR",
+    "proj": "1R43MH112349-01",
+    "fy": 2017,
+    "title": "\"Grid-Tape\": A High-Throughput Platform for Brain Connectomics and Nanoscale Structural An"
+   },
+   {
+    "pi": "DEL VECCHIO, DOMITILLA ",
+    "org": "MASSACHUSETTS INSTITUTE OF TECHNOLOGY",
+    "state": "MA",
+    "city": "CAMBRIDGE",
+    "proj": "1R01EB024591-01",
+    "fy": 2017,
+    "title": "Synthetic Genetic Controller Circuits to Reprogram Cell Fate"
+   },
+   {
+    "pi": "COLLINS, KATHLEEN L.",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "1R56AI130004-01A1",
+    "fy": 2017,
+    "title": "Molecular Mechanisms of the Innate Immune Response in HIV-Infected Macrophages"
+   },
+   {
+    "pi": "COLLINS, JAMES J",
+    "org": "UT SOUTHWESTERN MEDICAL CENTER",
+    "state": "TX",
+    "city": "DALLAS",
+    "proj": "5R01AI121037-02",
+    "fy": 2017,
+    "title": "The Biology of Stem Cells in the Human Parasite Schistosoma Mansoni"
+   },
+   {
+    "pi": "COLLINS, CATHERINE A",
+    "org": "UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+    "state": "MI",
+    "city": "ANN ARBOR",
+    "proj": "5R01NS069844-07",
+    "fy": 2017,
+    "title": "Regenerative and Degenerative Responses to Axonal Injury"
+   },
+   {
+    "pi": "COLLINS, SEAN RYAN",
+    "org": "UNIVERSITY OF CALIFORNIA AT DAVIS",
+    "state": "CA",
+    "city": "DAVIS",
+    "proj": "1DP2HD094656-01",
+    "fy": 2017,
+    "title": "Rewiring Control of Leukocyte Motility for Therapeutic Application"
+   },
+   {
+    "pi": "COLLINS, MICHAEL A.",
+    "org": "LOYOLA UNIVERSITY CHICAGO",
+    "state": "IL",
+    "city": "MAYWOOD",
+    "proj": "5U01AA018279-07",
+    "fy": 2017,
+    "title": "Binge alcohol-induced neurodamage and omega-3 DHA Protection"
+   },
+   {
+    "pi": "COLLINS, AMBER T",
+    "org": "DUKE UNIVERSITY",
+    "state": "NC",
+    "city": "DURHAM",
+    "proj": "5F32AR066477-03",
+    "fy": 2017,
+    "title": "Biomechanical Markers of Knee Osteoarthritis and In Vivo Cartilage Loading"
+   }
+  ]
+ },
+ "reporter_geo": {
+  "total": 130,
+  "results": [
+   {
+    "pi": "BARNHOUSE, BRYAN ",
+    "org": "ARKANSAS RESEARCH ALLIANCE",
+    "city": "CONWAY"
+   },
+   {
+    "pi": "BARNHOUSE, BRYAN ",
+    "org": "ARKANSAS RESEARCH ALLIANCE",
+    "city": "CONWAY"
+   },
+   {
+    "pi": "BARNHOUSE, BRYAN ",
+    "org": "ARKANSAS RESEARCH ALLIANCE",
+    "city": "CONWAY"
+   },
+   {
+    "pi": "BARNHOUSE, BRYAN ",
+    "org": "ARKANSAS RESEARCH ALLIANCE",
+    "city": "CONWAY"
+   },
+   {
+    "pi": "BARNHOUSE, BRYAN ",
+    "org": "ARKANSAS RESEARCH ALLIANCE",
+    "city": "CONWAY"
+   },
+   {
+    "pi": "BARNHOUSE, BRYAN ",
+    "org": "ARKANSAS RESEARCH ALLIANCE",
+    "city": "CONWAY"
+   },
+   {
+    "pi": "BARNHOUSE, BRYAN ",
+    "org": "ARKANSAS RESEARCH ALLIANCE",
+    "city": "CONWAY"
+   },
+   {
+    "pi": "BARNHOUSE, BRYAN ",
+    "org": "ARKANSAS RESEARCH ALLIANCE",
+    "city": "CONWAY"
+   },
+   {
+    "pi": "BARNHOUSE, BRYAN ",
+    "org": "ARKANSAS RESEARCH ALLIANCE",
+    "city": "CONWAY"
+   },
+   {
+    "pi": "LAMBERT, ANDREA ",
+    "org": "DAVIS MEMORIAL HOSPITAL AND CLINIC",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "YODER, RYAN MATTHEW",
+    "org": "COASTAL CAROLINA UNIVERSITY",
+    "city": "CONWAY"
+   },
+   {
+    "pi": "BARNHOUSE, BRYAN ",
+    "org": "ARKANSAS RESEARCH ALLIANCE",
+    "city": "CONWAY"
+   },
+   {
+    "pi": "LAMBERT, ANDREA ",
+    "org": "DAVIS MEMORIAL HOSPITAL AND CLINIC",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "OLIVER, KERRY ",
+    "org": "RADIX BIOSOLUTIONS, LTD",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "BARNHOUSE, BRYAN ",
+    "org": "ARKANSAS RESEARCH ALLIANCE",
+    "city": "CONWAY"
+   },
+   {
+    "pi": "SULLIVAN, PATRICK G",
+    "org": "NANO-MITE TECHNOLOGIES, LLC",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "WOODALL, DREW ",
+    "org": "BLACK OAK MINE UNIFIED SCHOOL DISTRICT",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "LAMBERT, ANDREA ",
+    "org": "DAVIS MEMORIAL HOSPITAL AND CLINIC",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "LAMBERT, ANDREA ",
+    "org": "DAVIS MEMORIAL HOSPITAL AND CLINIC",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "CHAN, IRV TSIKIDI OHENI",
+    "org": "MINISTRY OF HEALTH GUYANA",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "NAIL, PAUL REID",
+    "org": "UNIVERSITY OF CENTRAL ARKANSAS",
+    "city": "CONWAY"
+   },
+   {
+    "pi": "MCCULLOUGH, GARY HODGE",
+    "org": "UNIVERSITY OF CENTRAL ARKANSAS",
+    "city": "CONWAY"
+   },
+   {
+    "pi": "WOODALL, DREW ",
+    "org": "BLACK OAK MINE UNIFIED SCHOOL DISTRICT",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "FILARDO, EDWARD ",
+    "org": "RADIX BIOSOLUTIONS, LTD",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "SINGH, SHANTI ",
+    "org": "MINISTRY OF HEALTH GUYANA",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "LAMBERT, ANDREA ",
+    "org": "DAVIS MEMORIAL HOSPITAL AND CLINIC",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "LAMBERT, ANDREA ",
+    "org": "DAVIS MEMORIAL HOSPITAL AND CLINIC",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "KLEINPETER, MICHAEL ",
+    "org": "SCOTT COUNTIANS AGAINST DRUGS, INC.",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "BYNOE-SUTHERLAND, JULIETTE ",
+    "org": "CARIBBEAN COMMUNITY (CARICOM)",
+    "city": "GREATER GEORGETOWN"
+   },
+   {
+    "pi": "CHAN, IRV TSIKIDI OHENI",
+    "org": "MINISTRY OF HEALTH GUYANA",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "DEBUSK, CANDY ",
+    "org": "COUNTY OF HORRY",
+    "city": "CONWAY"
+   },
+   {
+    "pi": "LAMBERT, ANDREA ",
+    "org": "DAVIS MEMORIAL HOSPITAL AND CLINIC",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "KLEINPETER, MICHAEL ",
+    "org": "SCOTT COUNTIANS AGAINST DRUGS, INC.",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "WOODALL, DREW ",
+    "org": "BLACK OAK MINE UNIFIED SCHOOL DISTRICT",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "CORRY, AUDREY ",
+    "org": "GEORGETOWN PUBLIC HOSPITAL CORPORATION",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "SINGH, SHANTI ",
+    "org": "MINISTRY OF HEALTH GUYANA",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "CORRY, AUDREY ",
+    "org": "GEORGETOWN PUBLIC HOSPITAL CORPORATION",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "SPRINGER, DERECK ",
+    "org": "CARIBBEAN COMMUNITY (CARICOM)",
+    "city": "GREATER GEORGETOWN"
+   },
+   {
+    "pi": "KLEINPETER, MICHAEL ",
+    "org": "SCOTT COUNTIANS AGAINST DRUGS, INC.",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "DEBUSK, CANDY ",
+    "org": "COUNTY OF HORRY",
+    "city": "CONWAY"
+   },
+   {
+    "pi": "WOODALL, DREW ",
+    "org": "BLACK OAK MINE UNIFIED SCHOOL DISTRICT",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "CORRY, AUDREY ",
+    "org": "GEORGETOWN PUBLIC HOSPITAL CORPORATION",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "LAMBERT, ANDREA ",
+    "org": "DAVIS MEMORIAL HOSPITAL AND CLINIC",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "SINGH, SHANTI ",
+    "org": "MINISTRY OF HEALTH GUYANA",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "SINGH, SHANTI ",
+    "org": "MINISTRY OF HEALTH GUYANA",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "BYNOE-SUTHERLAND, JULIETTE ",
+    "org": "CARIBBEAN COMMUNITY (CARICOM)",
+    "city": "GREATER GEORGETOWN"
+   },
+   {
+    "pi": "KLEINPETER, MICHAEL ",
+    "org": "SCOTT COUNTIANS AGAINST DRUGS, INC.",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "DEBUSK, CANDY ",
+    "org": "COUNTY OF HORRY",
+    "city": "CONWAY"
+   },
+   {
+    "pi": "CORRY, AUDREY ",
+    "org": "GEORGETOWN PUBLIC HOSPITAL CORPORATION",
+    "city": "GEORGETOWN"
+   },
+   {
+    "pi": "SINGH, SHANTI ",
+    "org": "MINISTRY OF HEALTH GUYANA",
+    "city": "GEORGETOWN"
+   }
+  ]
+ }
+}
