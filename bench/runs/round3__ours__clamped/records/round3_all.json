@@ -1,0 +1,1202 @@
+[
+ {
+  "full_name": "Ahmed Elhaimer",
+  "title": "Anesthesiology, Critical Care Medicine",
+  "org": "McLeod Health \u2014 McLeod Anesthesia \u2013 Loris",
+  "org_domain": "mcleodhealth.org",
+  "email": "",
+  "phone": "(843) 716-7370",
+  "profile_url": "https://www.mcleodhealth.org/physician/ahmed-elhaimer/",
+  "source": "https://www.mcleodhealth.org/ (public Algolia index live_physicians, app JUNR3SUCF2 \u2014 rung 3, no browser)"
+ },
+ {
+  "full_name": "Alexander Varzari",
+  "title": "Physical Medicine & Rehabilitation",
+  "org": "EMERGEORTHO PA",
+  "org_domain": "",
+  "email": "",
+  "phone": "910-332-3800",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1023647112",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Alexandra Anatolievna Armstrong",
+  "title": "ANESTHESIOLOGY",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 527-7100",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1255569133",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Alisha F. Palliser",
+  "title": "Anesthesiology",
+  "org": "McLeod Health \u2014 McLeod Anesthesia \u2013 Loris",
+  "org_domain": "mcleodhealth.org",
+  "email": "",
+  "phone": "(843) 716-7370",
+  "profile_url": "https://www.mcleodhealth.org/physician/alisha-f-palliser/",
+  "source": "https://www.mcleodhealth.org/ (public Algolia index live_physicians, app JUNR3SUCF2 \u2014 rung 3, no browser)"
+ },
+ {
+  "full_name": "Andrew Barton",
+  "title": "ANESTHESIOLOGY",
+  "org": "SOUTHEAST ANESTHESIOLOGY CONSULTANTS PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(910) 457-3800",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1669477600",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Andrew Lee Criser",
+  "title": "ANESTHESIOLOGY",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 692-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1841417870",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Ann Elizabeth Didelot",
+  "title": "ANESTHESIOLOGY",
+  "org": "MEDSTREAM ANESTHESIA PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 347-7111",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1306809934",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Anthony A Tucker",
+  "title": "ANESTHESIOLOGY",
+  "org": "PROVIDENCE ANESTHESIOLOGY ASSOCIATES PA",
+  "org_domain": "",
+  "email": "",
+  "phone": "(910) 721-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1063482883",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Ari I. Fleishman",
+  "title": "ANESTHESIOLOGY",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 692-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1588605489",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Benjamin Cameransi",
+  "title": "Anesthesiology, Pain Medicine",
+  "org": "MUSC COMMUNITY PHYSICIANS",
+  "org_domain": "",
+  "email": "",
+  "phone": "615-824-3737",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1275629933",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Brandon Sloop",
+  "title": "Anesthesiology",
+  "org": "Grand Strand Medical Center (HCA) \u2014 Teamhealth Anesthesia",
+  "org_domain": "mygrandstrandhealth.com",
+  "email": "",
+  "phone": "(843) 692-1062",
+  "profile_url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Brandon-Sloop-MD",
+  "source": "https://www.mygrandstrandhealth.com/ (all 299 profiles from physicians.xml fetched; physicianData JSON parsed from each \u2014 rung 3, no browser)"
+ },
+ {
+  "full_name": "Brian Yee",
+  "title": "Anesthesiology, Pain Medicine",
+  "org": "WEST VIRGINIA PAIN INSTITUTE INC",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-652-8260",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1881891059",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Bryan Lee",
+  "title": "Anesthesiology",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-692-4544",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1891323259",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Candace Mcalpine",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-692-1063",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1245491174",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Carlos Hermes Casamalhuapa",
+  "title": "ANESTHESIOLOGY",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 692-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1154697787",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Carroll P Shivers",
+  "title": "ANESTHESIOLOGY",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 692-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1699753160",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Casmir Kielar",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-347-9587",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1326260167",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Chad Skidmore",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-347-8134",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1922749274",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Charles M Hahn",
+  "title": "ANESTHESIOLOGY",
+  "org": "SOUTHEAST ANESTHESIOLOGY CONSULTANTS PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(910) 457-3800",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1578568457",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Christopher Brann",
+  "title": "Anesthesiology",
+  "org": "MAINEHEALTH",
+  "org_domain": "",
+  "email": "",
+  "phone": "910-721-1477",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1679583835",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Christopher J Duggins",
+  "title": "ANESTHESIOLOGY",
+  "org": "PROVIDENCE ANESTHESIOLOGY ASSOCIATES PA",
+  "org_domain": "",
+  "email": "",
+  "phone": "(910) 721-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1699769117",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Christopher John Samuel",
+  "title": "ANESTHESIOLOGY",
+  "org": "MEDSTREAM ANESTHESIA PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 527-7100",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1992798219",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Daniel Richard Carhart",
+  "title": "ANESTHESIOLOGY",
+  "org": "TIDELANDS ANESTHESIA GROUP LLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 527-7100",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1700851466",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Daniela Smith",
+  "title": "ANESTHESIOLOGY",
+  "org": "MCLEOD PHYSICIAN ASSOCIATES II",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 646-8001",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1891904181",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "David O. Atkinson",
+  "title": "Anesthesiology",
+  "org": "McLeod Health \u2014 McLeod Anesthesia \u2013 Loris",
+  "org_domain": "mcleodhealth.org",
+  "email": "",
+  "phone": "(843) 716-7370",
+  "profile_url": "https://www.mcleodhealth.org/physician/daniel-o-atkinson/",
+  "source": "https://www.mcleodhealth.org/ (public Algolia index live_physicians, app JUNR3SUCF2 \u2014 rung 3, no browser)"
+ },
+ {
+  "full_name": "Derek Horstemeyer",
+  "title": "Anesthesiology",
+  "org": "Grand Strand Medical Center (HCA)",
+  "org_domain": "mygrandstrandhealth.com",
+  "email": "",
+  "phone": "843-692-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1225018849",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | https://www.mygrandstrandhealth.com/physicians/profile/Dr-Derek-L-Horstemeyer-MD | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Derek J Shirey",
+  "title": "ANESTHESIOLOGY",
+  "org": "MEDSTREAM ANESTHESIA PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 527-7100",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1467913608",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Desiree Aird",
+  "title": "Anesthesiology",
+  "org": "Grand Strand Medical Center (HCA) \u2014 Teamhealth Anesthesia",
+  "org_domain": "mygrandstrandhealth.com",
+  "email": "",
+  "phone": "(843) 692-1062",
+  "profile_url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Desiree-Aird-MD",
+  "source": "https://www.mygrandstrandhealth.com/ (all 299 profiles from physicians.xml fetched; physicianData JSON parsed from each \u2014 rung 3, no browser)"
+ },
+ {
+  "full_name": "Donna Turner",
+  "title": "Anesthesiology",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-692-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1679710685",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Dwayne Livigni",
+  "title": "Anesthesiology",
+  "org": "Grand Strand Medical Center (HCA)",
+  "org_domain": "mygrandstrandhealth.com",
+  "email": "",
+  "phone": "843-661-6215",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1982655262",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | https://www.mygrandstrandhealth.com/physicians/profile/Dr-Dwayne-LiVigni-DO | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "E J Collins",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-692-1595",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1124026240",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Edward Marion Tavel",
+  "title": "ANESTHESIOLOGY",
+  "org": "PAIN SPECIALISTS OF CHARLESTON",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 818-1181",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1508833468",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Edward Wallace",
+  "title": "Anesthesiology",
+  "org": "McLeod Health \u2014 McLeod Anesthesia \u2013 MRMC",
+  "org_domain": "mcleodhealth.org",
+  "email": "",
+  "phone": "843-669-5162",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1255486452",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Farayi Mbuvah",
+  "title": "Anesthesiology, Pain Medicine",
+  "org": "Conway Medical Center",
+  "org_domain": "conwaymedicalcenter.com",
+  "email": "farayi.mbuvah@cmc-sc.com",
+  "phone": "843-839-4598",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1306198841",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | https://www.conwaymedicalcenter.com/providers/farayi-mbuvah-md/ | leadkit emails --domain cmc-sc.com : pattern first.last, pattern_confirmed from 2 published addresses (sandy.moore@cmc-sc.com https://www.conwaymedicalcenter.com/contact-us/ ; Sydney.Causey@cmc-sc.com https://www.conwaymedicalcenter.com/careers/) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Felicia Cain",
+  "title": "ANESTHESIOLOGY",
+  "org": "TIDELANDS ANESTHESIA GROUP LLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 527-7100",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1619957305",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Frank Humbles",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-669-5162",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1902958572",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Frederick Bellamy",
+  "title": "Anesthesiology",
+  "org": "Conway Medical Center",
+  "org_domain": "conwaymedicalcenter.com",
+  "email": "frederick.bellamy@cmc-sc.com",
+  "phone": "843-716-7000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1972587012",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | https://www.conwaymedicalcenter.com/providers/frederick-w-bellamy-md/ | leadkit emails --domain cmc-sc.com : pattern first.last, pattern_confirmed from 2 published addresses (sandy.moore@cmc-sc.com https://www.conwaymedicalcenter.com/contact-us/ ; Sydney.Causey@cmc-sc.com https://www.conwaymedicalcenter.com/careers/) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Hassan A Nagem",
+  "title": "ANESTHESIOLOGY",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 692-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1275777534",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Ian Peace",
+  "title": "Anesthesiology",
+  "org": "ANESTHESIOLOGISTS OF GREATER ORLANDO INC",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-780-8346",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1124655691",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Ihor Melnytskyy",
+  "title": "Anesthesiology",
+  "org": "Conway Medical Center",
+  "org_domain": "conwaymedicalcenter.com",
+  "email": "ihor.melnytskyy@cmc-sc.com",
+  "phone": "843-347-7111",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1184882789",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | https://www.conwaymedicalcenter.com/providers/ihor-melnytskyy-md/ | leadkit emails --domain cmc-sc.com : pattern first.last, pattern_confirmed from 2 published addresses (sandy.moore@cmc-sc.com https://www.conwaymedicalcenter.com/contact-us/ ; Sydney.Causey@cmc-sc.com https://www.conwaymedicalcenter.com/careers/) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "James Brannon",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-692-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1841270485",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "James Dierkes",
+  "title": "ANESTHESIOLOGY",
+  "org": "PROVIDENCE ANESTHESIOLOGY ASSOCIATES PA",
+  "org_domain": "",
+  "email": "",
+  "phone": "(910) 721-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1497287262",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Jawanza Jabari",
+  "title": "Anesthesiology",
+  "org": "SOUTHEAST ANESTHESIOLOGY CONSULTANTS PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "910-642-8011",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1144294943",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Jeffrey Charles Williams",
+  "title": "ANESTHESIOLOGY",
+  "org": "MEDSTREAM ANESTHESIA PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 347-7111",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1699725416",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "John Gantomasso",
+  "title": "ANESTHESIOLOGY",
+  "org": "MEDSTREAM ANESTHESIA PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 347-7111",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1396064481",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "John Raul Ares",
+  "title": "ANESTHESIOLOGY",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 692-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1972658482",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "John Schultz",
+  "title": "Anesthesiology",
+  "org": "SOUTHEAST ANESTHESIOLOGY CONSULTANTS PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "910-642-8011",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1982788865",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Jon Bennett",
+  "title": "Anesthesiology",
+  "org": "MEDSTREAM ANESTHESIA PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-449-3381",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1366427841",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Jon Halling",
+  "title": "Anesthesiology",
+  "org": "Grand Strand Medical Center (HCA), Myrtle Beach",
+  "org_domain": "hcahealthcare.com",
+  "email": "Jon.Halling@hcahealthcare.com",
+  "phone": "843-497-6348",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1831103944",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Jonathan Hisghman Ii",
+  "title": "ANESTHESIOLOGY",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 692-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1689888034",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Jonathan Ward",
+  "title": "Anesthesiology",
+  "org": "MCLEOD PHYSICIAN ASSOCIATES II",
+  "org_domain": "",
+  "email": "",
+  "phone": "704-749-5800",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1245670066",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Josef Mueksch",
+  "title": "Anesthesiology",
+  "org": "PROVIDENCE ANESTHESIOLOGY ASSOCIATES PA",
+  "org_domain": "",
+  "email": "",
+  "phone": "910-721-1477",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1487643581",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Joseph Maggioncalda",
+  "title": "Anesthesiology",
+  "org": "AMERICAN ANESTHESIOLOGY OF VIRGINIA PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-692-1595",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1134626294",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Joseph Metz",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-497-8340",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1295485035",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Joshua Gore",
+  "title": "Anesthesiology",
+  "org": "McLeod Health \u2014 McLeod Anesthesiology \u2013 Seacoast",
+  "org_domain": "mcleodhealth.org",
+  "email": "",
+  "phone": "843-353-3460",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1891015061",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Kamran Khattak",
+  "title": "ANESTHESIOLOGY",
+  "org": "TIDELANDS ANESTHESIA GROUP LLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 527-7100",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1710946850",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Kathleen Wild",
+  "title": "ANESTHESIOLOGY",
+  "org": "SOUTHEAST ANESTHESIOLOGY CONSULTANTS PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(910) 457-3800",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1184897670",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Keeland Williams",
+  "title": "Anesthesiology",
+  "org": "NEW YORK UNIVERSITY",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-848-4670",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1487115937",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Kenneth Sinclair Houghton",
+  "title": "ANESTHESIOLOGY",
+  "org": "MCLEOD PHYSICIAN ASSOCIATES II",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 646-8001",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1679669162",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Kenneth Wenz",
+  "title": "Pain Medicine, Interventional Pain Medicine",
+  "org": "ORTHOSC LLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-353-3460",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1003924093",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Kent Homnick",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-446-0937",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1427155241",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Kevin Armstrong",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "276-698-8151",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1063489870",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Lawrence Montalto",
+  "title": "",
+  "org": "EMERGEORTHO PA",
+  "org_domain": "",
+  "email": "",
+  "phone": "910-332-3800",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1669891206",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Laymon Charles Farmer",
+  "title": "ANESTHESIOLOGY",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 692-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1235150368",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Ligia E. Cisneros-Gonzalez",
+  "title": "Anesthesiology",
+  "org": "McLeod Health \u2014 McLeod Anesthesia \u2013 Loris",
+  "org_domain": "mcleodhealth.org",
+  "email": "",
+  "phone": "(843) 716-7370",
+  "profile_url": "https://www.mcleodhealth.org/physician/ligia-e-cisneros-gonzalez/",
+  "source": "https://www.mcleodhealth.org/ (public Algolia index live_physicians, app JUNR3SUCF2 \u2014 rung 3, no browser)"
+ },
+ {
+  "full_name": "Lloyd Meeks",
+  "title": "Anesthesiology",
+  "org": "SOUTHEAST ANESTHESIOLOGY CONSULTANTS PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "704-749-5800",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1801094156",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Lorna Macpherson Miller",
+  "title": "ANESTHESIOLOGY",
+  "org": "MEDSTREAM ANESTHESIA PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 347-7111",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1922088897",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Maria Gorneva",
+  "title": "ANESTHESIOLOGY",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 692-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1043730419",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Matthew Holt",
+  "title": "ANESTHESIOLOGY",
+  "org": "TIDELANDS ANESTHESIA GROUP LLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 527-7100",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1598331746",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Michael Alvarado",
+  "title": "Anesthesiology",
+  "org": "GEORGETOWN PHYSICIAN ASSOCIATES, LLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-545-5927",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1750801841",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Michael Andrew Lee",
+  "title": "ANESTHESIOLOGY",
+  "org": "PROVIDENCE ANESTHESIOLOGY ASSOCIATES PA",
+  "org_domain": "",
+  "email": "",
+  "phone": "(910) 721-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1215260997",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Michael Bart Pesce",
+  "title": "ANESTHESIOLOGY",
+  "org": "TIDELANDS ANESTHESIA GROUP LLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 527-7100",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1124016589",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Michael D. Wingfield",
+  "title": "Anesthesiology",
+  "org": "McLeod Health \u2014 McLeod Anesthesia \u2013 Loris",
+  "org_domain": "mcleodhealth.org",
+  "email": "",
+  "phone": "(843) 716-7370",
+  "profile_url": "https://www.mcleodhealth.org/physician/michael-d-wingfield/",
+  "source": "https://www.mcleodhealth.org/ (public Algolia index live_physicians, app JUNR3SUCF2 \u2014 rung 3, no browser)"
+ },
+ {
+  "full_name": "Michael Ford",
+  "title": "Anesthesiology",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "720-762-0699",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1457402513",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Michael James Warden",
+  "title": "ANESTHESIOLOGY",
+  "org": "MCLEOD PHYSICIAN ASSOCIATES II",
+  "org_domain": "",
+  "email": "",
+  "phone": "",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1164943155",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Michael Jones",
+  "title": "ANESTHESIOLOGY",
+  "org": "MEDSTREAM ANESTHESIA PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 652-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1245268861",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Michelle Lee",
+  "title": "Anesthesiology",
+  "org": "McLeod Health \u2014 McLeod Anesthesia \u2013 Loris",
+  "org_domain": "mcleodhealth.org",
+  "email": "",
+  "phone": "843-390-8100",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1275689861",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Miller Van Vliet",
+  "title": "Anesthesiology",
+  "org": "PROVIDENCE ANESTHESIOLOGY ASSOCIATES PA",
+  "org_domain": "",
+  "email": "",
+  "phone": "704-749-5800",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1891790622",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Morganne B Beard",
+  "title": "ANESTHESIOLOGY",
+  "org": "MCLEOD PHYSICIAN ASSOCIATES II",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 646-8001",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1982066031",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Natalya Riek",
+  "title": "ANESTHESIOLOGY",
+  "org": "PROVIDENCE ANESTHESIOLOGY ASSOCIATES PA",
+  "org_domain": "",
+  "email": "",
+  "phone": "(910) 721-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1437442886",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Nicholas Buskill",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-497-8340",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1184373565",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Nicholas Gentry",
+  "title": "Anesthesiology, Pain Medicine",
+  "org": "SC PAIN AND SPINE SPECIALISTS, LLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-839-7246",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1629538954",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Nishankkumar Patel Nooli",
+  "title": "ANESTHESIOLOGY",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 692-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1043565856",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Olga Chrisman",
+  "title": "Anesthesiology",
+  "org": "McLeod Health \u2014 McLeod Anesthesiology \u2013 Seacoast",
+  "org_domain": "mcleodhealth.org",
+  "email": "",
+  "phone": "843-545-5927",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1881120764",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Olutoyin Okanlawon",
+  "title": "ANESTHESIOLOGY",
+  "org": "MEDSTREAM ANESTHESIA PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 347-7111",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1780970525",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Otto Czechner",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-527-7000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1316927056",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Patricia Grant",
+  "title": "Anesthesiology, Pain Medicine",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-894-0978",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1508841156",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Peter Fischer",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "910-386-9106",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1164462396",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Peter Willett",
+  "title": "ANESTHESIOLOGY",
+  "org": "PROVIDENCE ANESTHESIOLOGY ASSOCIATES PA",
+  "org_domain": "",
+  "email": "",
+  "phone": "(910) 721-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1730528639",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Philip C Moore",
+  "title": "ANESTHESIOLOGY",
+  "org": "TIDELANDS ANESTHESIA GROUP LLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 527-7100",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1699793075",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Philip M Dulberger",
+  "title": "ANESTHESIOLOGY",
+  "org": "TIDELANDS ANESTHESIA GROUP LLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 527-7100",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1154315463",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Raju Prasad Krishna",
+  "title": "ANESTHESIOLOGY",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 692-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1780636969",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Ramiro Godines",
+  "title": "Anesthesiology",
+  "org": "BEACH ANESTHESIA, LLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-716-7000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1073596631",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Raymond Collins",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-716-7000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1831172493",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Richard Kline",
+  "title": "Anesthesiology, Pain Medicine",
+  "org": "ATLANTIC COAST PAIN SPECIALISTS INC",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-438-8470",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1902824378",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Robert Michael Shakar",
+  "title": "ANESTHESIOLOGY",
+  "org": "SOUTHEAST ANESTHESIOLOGY CONSULTANTS PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(910) 457-3800",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1861497687",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Robert O'Connor",
+  "title": "Anesthesiology",
+  "org": "McLeod Health \u2014 McLeod Anesthesiology \u2013 Seacoast",
+  "org_domain": "mcleodhealth.org",
+  "email": "",
+  "phone": "(843) 390-8128",
+  "profile_url": "https://www.mcleodhealth.org/physician/robert-oconnor/",
+  "source": "https://www.mcleodhealth.org/ (public Algolia index live_physicians, app JUNR3SUCF2 \u2014 rung 3, no browser)"
+ },
+ {
+  "full_name": "Robin Dimitrious",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "910-642-6427",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1518091081",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Ruzanna Nalbandyan",
+  "title": "ANESTHESIOLOGY",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 692-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1447601604",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Ryan Smith",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-504-7194",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1861479974",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Sam Xiang-Ming Zheng",
+  "title": "ANESTHESIOLOGY",
+  "org": "MEDSTREAM ANESTHESIA PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 347-7111",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1194707281",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Scott Thomas",
+  "title": "Anesthesiology",
+  "org": "US ANESTHESIA PARTNERS OF FLORIDA INC",
+  "org_domain": "",
+  "email": "",
+  "phone": "303-579-8759",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1063664894",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Soheyla H Pilling",
+  "title": "ANESTHESIOLOGY",
+  "org": "PROVIDENCE ANESTHESIOLOGY ASSOCIATES PA",
+  "org_domain": "",
+  "email": "",
+  "phone": "(910) 721-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1760407555",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Songoli C Umeh",
+  "title": "Anesthesiology",
+  "org": "Grand Strand Medical Center (HCA) staff \u2014 Weatherby Locums Inc",
+  "org_domain": "mygrandstrandhealth.com",
+  "email": "",
+  "phone": "(800) 586-5022",
+  "profile_url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Songoli-C-Umeh-MD",
+  "source": "https://www.mygrandstrandhealth.com/ (all 299 profiles from physicians.xml fetched; physicianData JSON parsed from each \u2014 rung 3, no browser)"
+ },
+ {
+  "full_name": "Stephen Boatwright",
+  "title": "Anesthesiology, Pain Medicine",
+  "org": "PALMETTO SPINE AND PAIN CARE CONSULTANTS, LLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-231-2039",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1538157334",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Stephen Goerz",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-527-7000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1215917448",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Stephen P Ellison",
+  "title": "ANESTHESIOLOGY",
+  "org": "SOUTHEAST ANESTHESIOLOGY CONSULTANTS PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(910) 457-3800",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1811383458",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Stephen Rolfe Wells",
+  "title": "ANESTHESIOLOGY",
+  "org": "SOUTHEAST ANESTHESIOLOGY CONSULTANTS PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(910) 457-3800",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1952563686",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Steven Petersen",
+  "title": "Anesthesiology",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "920-217-9708",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1619997798",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Susan Barbieri",
+  "title": "Anesthesiology",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-692-2100",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1891745279",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Susan Haskin",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-669-5162",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1871645440",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "Victoria Suzanne Vogle",
+  "title": "ANESTHESIOLOGY",
+  "org": "TIDELANDS ANESTHESIA GROUP LLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 527-7100",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1710909635",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Whitney Scott Phillips",
+  "title": "ANESTHESIOLOGY",
+  "org": "PROVIDENCE ANESTHESIOLOGY ASSOCIATES PA",
+  "org_domain": "",
+  "email": "",
+  "phone": "(910) 721-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1447407788",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "William Currie Buhrman",
+  "title": "ANESTHESIOLOGY",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 692-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1811983737",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "William Myers",
+  "title": "Physician Assistant",
+  "org": "CHARLESTON CARENOW URGENT CARE LLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-903-6650",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1235788753",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "William Obrecht",
+  "title": "Anesthesiology",
+  "org": "SOUTHEAST ANESTHESIOLOGY CONSULTANTS PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "910-642-6427",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1669506150",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "William Raymond Comeau",
+  "title": "ANESTHESIOLOGY",
+  "org": "MEDSTREAM ANESTHESIA PLLC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 527-7100",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1487652558",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "William Wall",
+  "title": "Anesthesiology",
+  "org": "NEW YORK UNIVERSITY",
+  "org_domain": "",
+  "email": "",
+  "phone": "843-692-4544",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1093392607",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ },
+ {
+  "full_name": "William Worthington",
+  "title": "ANESTHESIOLOGY",
+  "org": "ATLANTIC COAST ANESTHESIA SERVICES PC",
+  "org_domain": "",
+  "email": "",
+  "phone": "(843) 692-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1124098207",
+  "source": "https://data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0 (CMS Doctors and Clinicians National Downloadable File, PECOS Medicare enrollment; official_filing; released 2026-07-09)"
+ },
+ {
+  "full_name": "Zechariah Harris",
+  "title": "Anesthesiology",
+  "org": "",
+  "org_domain": "",
+  "email": "",
+  "phone": "910-721-1000",
+  "profile_url": "https://npiregistry.cms.hhs.gov/provider-view/1669121786",
+  "source": "https://npiregistry.cms.hhs.gov/api/ (NPI registry, taxonomy_description=Anesthesiology|Pediatric Anesthesiology, postal_code=283*|284*|290*|294*|295*) | OpenAlex + ORCID public APIs"
+ }
+]

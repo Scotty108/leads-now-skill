@@ -1,0 +1,11 @@
+=== COVERAGE ===
+retrieved from source:   777  (searched area, wider than the target)
+matched the target:      77  <- THIS is the denominator for the brief
+delivered rows:          77
+with an email:           3 (4%)
+with a phone:            77 (100%)
+confidence:              unconfirmed=71, probable=5, confirmed=1
+email_status:            none_no_observed_address=74, observed=2, pattern_confirmed=1
+unreadable sources:      SC LLR Board of Medical Examiners: reCAPTCHA v2 gate; NC Medical Board: reCAPTCHA v2 gate; ASA member directory: 404 no public directory; SPA member directory: members-only; list rental is paid; Vitals.com: 403; certificationmatters.org: 403; Tidelands Health: 403; OpenAlex: 429; WebSearch: budget exhausted
+
+PASS: every row is sourced, tiered, and unique.

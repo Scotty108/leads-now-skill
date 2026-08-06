@@ -1,0 +1,58 @@
+{
+  "skill": "skillit",
+  "condition": "clamped",
+  "subagents": 0,
+  "tool_calls": 60,
+  "wall_clock_s": 780,
+  "people_found": 77,
+  "in_radius": 77,
+  "reachable": 77,
+  "peds_signal_strong": 1,
+  "peds_signal_moderate": 0,
+  "blocked_sources": [
+    {"host": "verify.llronline.com", "reason": "SC LLR Board of Medical Examiners licensee lookup - reCAPTCHA v2 (sitekey 6Lc2X-saAAAAAPC6HatgHFOd8rCxCl-2yPTh44PN); full ASP.NET POST with valid __VIEWSTATE/__EVENTVALIDATION returned CaptchaIncorrectLabel='Incorrect' and zero rows. Skill boundary forbids solving a CAPTCHA - NOT a clamp artifact."},
+    {"host": "portal.ncmedboard.org", "reason": "NC Medical Board licensee search - reCAPTCHA-gated; server response literally read 'You did not pass CAPTCHA validation. Please try again. Error Codes Received: missing-input-response'. NOT a clamp artifact."},
+    {"host": "eservice.llr.sc.gov", "reason": "SC LLR OnlineVerificationBulk and OnlineVerification2 - username/password login walls (SSO/Login/LoginPage)"},
+    {"host": "portal.ncmedboard.org/Verification/roster.aspx", "reason": "NCMB full licensee roster is a PAID product - $150.00 Excel purchase form; out of scope for free-sources-only"},
+    {"host": "www.certificationmatters.org", "reason": "HTTP 403 to plain fetch (ABMS consumer verification route)"},
+    {"host": "www.abms.org", "reason": "/verify-a-physician/ HTTP 404; apps.abms.org does not resolve (NXDOMAIN)"},
+    {"host": "www.asahq.org", "reason": "No public member directory - /member-directory and /about-asa/member-center/find-a-member both 404"},
+    {"host": "pedsanesthesia.org", "reason": "Society for Pediatric Anesthesia publishes no public member directory; /members/ is a login/dues landing page, /member-directory/ and /find-a-member/ 404. Only member-data product is paid SPA Mailing List Rental."},
+    {"host": "www.vitals.com", "reason": "HTTP 403 on / and /doctors"},
+    {"host": "www.healthgrades.com", "reason": "Not blocked but useless to a plain fetch - serves an identical 1,575,662-byte homepage for a per-physician URL and for /"},
+    {"host": "www.doximity.com", "reason": "Not blocked; Education & Training block is gated behind 'Join to view full profile' for exactly the place-corroborated roster members"},
+    {"host": "www.tidelandshealth.org", "reason": "HTTP 403 bot fingerprinting - carried over unresolved from round 2"},
+    {"host": "api.openalex.org", "reason": "HTTP 429 insufficient budget - not re-attempted this round"},
+    {"host": "WebSearch", "reason": "session budget exhausted 200/200 per run condition - never attempted"}
+  ],
+  "truncation_detected": true,
+  "notes": "New source class that worked: the American Board of Anesthesiology Diplomate Directory, an open unauthenticated JSON API at directoryreactapi.theaba.org, found by climbing the skill's access ladder (theaba.org/directory -> directoryreact.theaba.org React shell -> main.js -> API_URL + endpoint shapes in shipped client code). Endpoints: GET lookups/getCertifications, GET lookups/getstates, GET searchResults/basic?FirstName&LastName, POST searchResults/advanced {FirstName,LastName,City,StateId,ABAId,ProgramType}, GET doctorRecord/getDoctorRecords?ABAId=<digits, dash stripped - the dashed form 400s>. ProgramType 519 = Pediatric Anesthesiology, the exact subspecialty field rounds 1-2 could not reach. Rung-3 payload-parsing beat rung-4 again. TRUNCATION: searchResults/advanced for NC + ProgramType 513 (Anesthesiology) returned exactly 1000 records - a silent ceiling of the same shape as NPI skip=1000 and McLeod paginationLimitedTo; SC 513 = 860 and both peds queries (SC 53, NC 117) are under it, so the subspecialty frame is complete while the parent counts are floors not totals. THE CRITICAL NEGATIVE: ABA City/State is the diplomate's MAILING address, not a practice location. The SC peds census put Desiree Aird MD and John Gantomasso DO at 'Myrtle Beach SC', 1.5 mi from centre - two brand-new in-ring pediatric anesthesiologists. Both rejected: NPI 1528471406 AND Doximity independently place Aird at 1501 N Campbell Ave, Tucson AZ (Univ of Arizona; residency Wayne State 2015-18, fellowship Peds Anesth DMC/Wayne State); NPI 1396064481 places Gantomasso at 777 Hemlock St, Macon GA. Two plausible rows withheld; the ring still contains exactly 1 pediatric anesthesiologist, Michelle D. Lee MD, now double-sourced (McLeod directory + ABA certificate Certified 2026-01-01 thru 2030-12-31). Full-forename lock did heavy work: 94 raw ABA hits -> 85 forename+surname matches -> 47 accepted on agreeing state; 38 withheld including Deeran Patel (Arlington VA) and Michelle Pae Lee (Fullerton CA), a near-miss on the single person the whole benchmark turns on. One diminutive accepted on middle name + city + state + specialty: roster Frederick William Bellamy <-> ABA Fred William Bellamy MD, Myrtle Beach SC. The 29 unmatched are structurally explained: 12 NPI trainees (Student in an Organized Health Care Education/Training Program, not board-eligible), 1 PA-C and 1 CRNA (not ABA-eligible), 15 MD/DO genuinely unchecked - and those 29 are now the highest-value calls, replacing round 2's 12 Tidelands. Round 2's Tidelands gap partially closed from OUTSIDE Tidelands: Ryan Joseph Galica now carries Anesthesiology + Pain Medicine, both Certified thru 2027-12-31, while tidelandshealth.org still 403s. Residency/fellowship program pages are structurally circular for discovery - a program page is indexed BY PROGRAM and the program is the field being filled; 0 of 77 roster names on the MUSC anesthesia residency page. Doximity is inverted: it publishes training only where place fails to corroborate, and gates it where place does corroborate. Both state medical boards are hard-closed by reCAPTCHA, which the skill forbids defeating - so this zero would also be a zero in the OPEN condition.",
+  "channel_yield": {
+    "state_board_records": 0,
+    "board_cert_lookups": 48,
+    "society_directories": 0,
+    "aggregator_corroborations": 0,
+    "new_training_blocks_filled": 46,
+    "new_emails": 0,
+    "department_phones": 0
+  },
+  "sources_exhausted": [
+    {"source": "SC LLR Board of Medical Examiners licensee lookup", "tried": "GET verify.llronline.com/LicLookup/Med/med.aspx?div=13 with AspxAutoDetectCookieSupport cookie jar, then ASP.NET POST with harvested __VIEWSTATE/__VIEWSTATEGENERATOR/__EVENTVALIDATION, txt_lastName=Alvarado; also probed llr.sc.gov/med for a free bulk roster and eservice.llr.sc.gov/OnlineVerificationBulk + /OnlineVerification2/", "yield": 0},
+    {"source": "NC Medical Board licensee search", "tried": "GET portal.ncmedboard.org/verification/search.aspx, then POST with __VIEWSTATE/__EVENTVALIDATION/__RequestVerificationToken and ctl00$Content$txtLast=Obrecht, txtFirst=William; also probed /Verification/roster.aspx bulk product", "yield": 0},
+    {"source": "ABMS / certificationmatters.org consumer verification", "tried": "GET certificationmatters.org (403), abms.org/verify-a-physician/ (404), apps.abms.org (NXDOMAIN)", "yield": 0},
+    {"source": "American Board of Anesthesiology Diplomate Directory", "tried": "theaba.org -> /directory/ -> directoryreact.theaba.org -> main.js -> API base; then lookups/getCertifications, lookups/getstates, 77 basic searches by FirstName+LastName, 30 second-pass surname+state advanced searches, 48 doctorRecord/getDoctorRecords, plus SC/NC x ProgramType 519 and 513 census queries", "yield": 46},
+    {"source": "Society for Pediatric Anesthesia member directory", "tried": "GET pedsanesthesia.org/members/, /member-directory/, /find-a-member/", "yield": 0},
+    {"source": "ASA member directory", "tried": "GET asahq.org/member-directory, /about-asa/member-center/find-a-member, education.asahq.org", "yield": 0},
+    {"source": "Doximity public /pub/ profiles", "tried": "14 highest-value blanks (all 3 Tidelands roster members + all no-ABA-match members), slug pattern /pub/first-last-<credential>, Education & Training block parsed with page chrome stripped and place-corroborated against the roster city/state", "yield": 0},
+    {"source": "Healthgrades", "tried": "GET healthgrades.com/physician/dr-desiree-aird and healthgrades.com/", "yield": 0},
+    {"source": "Vitals", "tried": "GET vitals.com/ and vitals.com/doctors", "yield": 0},
+    {"source": "Residency / fellowship program pages and alumni lists", "tried": "medicine.musc.edu anesthesia residency (200, chrome-stripped, all 77 roster names matched against it), MUSC department page link harvest for resident/fellow/alumni pages, childrenscolorado.org peds-anesth fellowship (404), prismahealth.org anesthesiology residency (1160-byte stub)", "yield": 0},
+    {"source": "NPI registry, targeted", "tried": "2 name lookups ONLY for the two NEW ABA candidates (Aird, Gantomasso) to test their practice location - the 77-person roster was not re-fetched", "yield": 0}
+  ],
+  "marginal_vs_round2": {
+    "people": 0,
+    "emails": 0,
+    "peds": 0,
+    "training_blocks_filled": 46
+  }
+}

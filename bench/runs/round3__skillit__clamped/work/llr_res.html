@@ -1,0 +1,226 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><link href="../StyleSheet1.css" type="text/css" rel="stylesheet" /><title>
+	Medical Board
+</title>     
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>         
+         function onSubmit(token) {
+             return new Promise(function (resolve, reject) {                 
+                 if (grecaptcha.getResponse() !== "") {
+                     document.getElementById("ctl00_ContentPlaceHolder1_btn_find").click();
+                 }
+                 grecaptcha.reset();
+             });
+         }
+     </script>
+
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="./med.aspx?div=13&amp;AspxAutoDetectCookieSupport=1" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUIMTMxNzk3OTcPZBYCZg9kFgICAw9kFgQCAw9kFgICAQ9kFgYCHQ8PFgIeB1Zpc2libGVoZGQCHw8QDxYIHg1EYXRhVGV4dEZpZWxkBQdMaWNOYW1lHg5EYXRhVmFsdWVGaWVsZAUHTGljSWRudB4LXyFEYXRhQm91bmRnHwBoZBAVABUAFCsDABYAZAIhDw8WAh8AZ2RkAgUPZBYEAgUPPCsAEQMADxYEHwNnHgtfIUl0ZW1Db3VudGZkARAWABYAFgAMFCsAAGQCBw9kFgJmDxYCHgRUZXh0BfoTPCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwvL0VOIj4NCjxodG1sIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiA+DQoJPGhlYWQ+DQoJCTx0aXRsZT48L3RpdGxlPg0KCQk8bWV0YSBuYW1lPSJHRU5FUkFUT1IiIGNvbnRlbnQ9Ik1pY3Jvc29mdCBWaXN1YWwgU3R1ZGlvIC5ORVQgNy4xIiAvPg0KCQk8bWV0YSBuYW1lPSJQcm9nSWQiIGNvbnRlbnQ9IlZpc3VhbFN0dWRpby5IVE1MIiAvPg0KCQk8bWV0YSBuYW1lPSJPcmlnaW5hdG9yIiBjb250ZW50PSJNaWNyb3NvZnQgVmlzdWFsIFN0dWRpbyAuTkVUIDcuMSIgLz4NCgk8L2hlYWQ+DQogICAgPGJvZHk+DQoNCiAgICAgICAgPGRpdiBzdHlsZT0iZm9udC13ZWlnaHQ6IGJvbGQ7Ij5TZWFyY2ggVGlwOjwvZGl2Pg0KDQogICAgICAgIDxkaXY+DQogICAgICAgICAgICBZb3UgZG8gbm90IGhhdmUgdG8gZW50ZXINCiAgICAgICAgICAgIGNvbXBsZXRlIG5hbWVzLjxiciAvPg0KICAgICAgICAgICAgRm9yIGV4YW1wbGUsICJKIiBhbmQgIlNtaXRoIiB3aWxsIHNlYXJjaCBmb3IgcmVjb3Jkcw0KICAgICAgICAgICAgd2l0aCBhIGxhc3QgbmFtZSBvZiAiU21pdGgiIGFuZCBhIGZpcnN0IG5hbWUgYmVnaW5uaW5nDQogICAgICAgICAgICB3aXRoICJKLiIgIElmIHNlYXJjaGluZyBieSBzcGVjaWFsdHksIHNlbGVjdCBzcGVjaWFsdHkmbmJzcDsNCiAgICAgICAgICAgIGFuZCBlbnRlciBhIGNpdHkNCiAgICAgICAgPC9kaXY+DQoNCiAgICAgICAgPGJyIC8+DQoNCg0KICAgICAgICBGb2xsb3dpbmcgdGhlIGVuYWN0bWVudCBvZg0KICAgICAgICByZWNlbnQgbGVnaXNsYXRpb24gcGVydGFpbmluZyB0byBQaHlzaWNpYW4gQXNzaXN0YW50IGxpY2Vuc3VyZSwgYSBsaXN0aW5nIG9mDQogICAgICAgIGFsdGVybmF0ZSBzdXBlcnZpc2luZyBwaHlzaWNpYW5zIHdpbGwgbm8gbG9uZ2VyIGFwcGVhciBpbiBsaWNlbnNlZSBsb29rdXAuDQogICAgICAgIFlvdSBtYXkgY29udGludWUgdG8gc3VibWl0IHJlcXVlc3RzIHRvIHRoZSBib2FyZCB0byBhZGQgb3IgdXBkYXRlIGFsdGVybmF0ZQ0KICAgICAgICBzdXBlcnZpc2luZyBwaHlzaWNpYW5zLiBZb3UgYXJlIGVuY291cmFnZWQgdG8gbWFpbnRhaW4gYSBjb3B5IGZvciB5b3VyIHJlY29yZHMuDQoNCiAgICAgICAgPGJyIC8+DQogICAgICAgIDxiciAvPg0KICAgICAgICA8YnIgLz4NCiAgICAgICAgPGRpdiBzdHlsZT0iZm9udC13ZWlnaHQ6IGJvbGQ7IHRleHQtYWxpZ246IGNlbnRlcjsiPg0KICAgICAgICAgICAgPHA+UXVlc3Rpb25zIC8gQ29udGFjdCBJbmZvcm1hdGlvbiAgICA8L3A+DQogICAgICAgIDwvZGl2Pg0KICAgICAgICA8ZGl2Pg0KICAgICAgICAgIDxwPg0KICAgICAgICAgIFRoaXMgd2Vic2l0ZSBpcyBtYWludGFpbmVkIGJ5IExMUiBzdGFmZiBhbmQgaXMgdXBkYXRlZCBuaWdodGx5IHJlZmxlY3RpbmcgY2hhbmdlcyB0byBvdXIgbGljZW5zaW5nIGFuZCBlbmZvcmNlbWVudCBkYXRhYmFzZS4gICBJZiB5b3UgYXJlIGEgbGljZW5zZWUgd2hvIHJlcXVpcmVzIGEgbGljZW5zZSB2ZXJpZmljYXRpb24gdG8gYW5vdGhlciBzdGF0ZSBib2FyZCwgcGxlYXNlIGxvZyBpbnRvIHlvdXIgb25saW5lIExMUiBhY2NvdW50IGFuZCBzZWxlY3QgdGhlIHZlcmlmaWNhdGlvbiBvcHRpb24uICBJZiB5b3UgYXJlIG5vdCBhIGxpY2Vuc2VlLCBwbGVhc2UgZW1haWwgdGhlIGJvYXJkIGRpcmVjdGx5LjwvcD4NCiAgICAgICAgPC9kaXY+DQogICAgICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246IGNlbnRlcjsiPg0KDQogICAgICAgICAgICA8cD48YSBocmVmPSJodHRwOi8vd3d3Lmxsci5zYy5nb3YvbWVkIiB0YXJnZXQ9Il9ibGFuayI+U291dGggQ2Fyb2xpbmEgQm9hcmQgb2YgTWVkaWNhbCBFeGFtaW5lcnMgPC9hPjwvcD4NCg0KICAgICAgICAgICAgPHNwYW4gc3R5bGU9InRleHQtYWxpZ246IGNlbnRlcjsiPg0KICAgICAgICAgICAgICAgIFBob25lOiAoODAzKSA4OTYtNDUwMCA8YnIgLz4NCiAgICAgICAgICAgICAgICBGYXg6ICg4MDMpODk2LTQ1MTUNCiAgICAgICAgICAgIDwvc3Bhbj48c3BhbiBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyI+DQogICAgICAgICAgICAgICAgPGJyIC8+DQogICAgICAgICAgICA8L3NwYW4+UE8gQm94IDExMjg5PGJyIC8+DQogICAgICAgICAgICBDb2x1bWJpYSwgUy5DLiAyOTIxMS0xMjg5IDxiciAvPiA8YnIgLz4NCiAgICAgICAgICAgIEVtYWlsOiA8YSBocmVmPSJtYWlsdG86bWVkYm9hcmRAbGxyLnNjLmdvdiI+bWVkYm9hcmRAbGxyLnNjLmdvdjwvYT4NCiAgICAgICAgICAgIDxwPg0KICAgICAgICAgICAgICAgIDxhIGhyZWY9Imh0dHBzOi8vbGxyLnNjLmdvdiI+DQogICAgICAgICAgICAgICAgICAgIFNvdXRoIENhcm9saW5hIERlcGFydG1lbnQgb2YgTGFib3IsIExpY2Vuc2luZyAmYW1wOw0KICAgICAgICAgICAgICAgICAgICBSZWd1bGF0aW9uDQogICAgICAgICAgICAgICAgPC9hPg0KICAgICAgICAgICAgPC9wPg0KICAgICAgICA8L2Rpdj4NCg0KICAgIDwvYm9keT4NCjwvaHRtbD4NCmQYAQUkY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMiRndl9yZXN1bHRzDzwrAAwBCGZkfbkgcl8iBs515SyCoT1fzD5EuhA1WiMGBV7FkHGtuKo=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="FCEF1450" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAbb2YMhw0sSkMkOqCPI3N3E5bdw0yNzasGq/xYz4VsuBKRoOaiERkXO5wrFl8sdEjxS+AUBIfExz/4ZZnVZkNCdu/Tto+l6pgX/jK0spmxiBcftYgdsR1Tpm4PpwuH1GhTW4C46913kvcsb5n6pXUBdU93amfXzAEuRqT4Cw1od5Q==" />
+</div>
+    <div class="container">
+        <div class="wrapper">
+            <div class="content" onclick="window.location.href = 'https://llr.sc.gov/'">
+            </div> 
+        </div>
+        <div class="navigation">
+        </div>
+    </div>
+  
+    
+    <div style="background: #1d4557 url('../Images/bg-blue7.png');background-repeat: no-repeat;background-attachment: scroll; width: 100%; height: 20px; white-space: nowrap; height: 44px;">
+        <div class="nav">
+            
+        </div>
+    </div>
+    <div style="border-bottom: gainsboro ridge; padding-top: 12px; background-color: #EAEAEA;">
+        <div style="white-space: nowrap; padding-bottom: 20px;">
+            <div style="float: left;">
+                &nbsp;&nbsp;<span id="ctl00_SiteMapPath1" style="font-weight:normal;"><a href="#ctl00_SiteMapPath1_SkipLink"><img alt="Skip Navigation Links" src="/LicLookup/WebResource.axd?d=XqBr-xpzLAb0ZLRkDQFGvDCqhwsDfbiwIX2PLFhE774jz63ZuK48U3Y9qf8pejFRERnhontwssnAbq_RKH1eM0dHIS0mHzDJEwcGAbwcUG41&amp;t=638901627720898773" width="0" height="0" style="border-width:0px;" /></a><span><a title="Menu" href="/LicLookup/LookupMain.aspx" style="font-size:100%;">Main Menu</a></span><span> : </span><span style="font-size:120%;font-weight:bold;">Medical Board</span><a id="ctl00_SiteMapPath1_SkipLink"></a></span>
+            </div>
+            <div class="note1" style="float: left;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note: All fields are not required for searching</div>
+        </div>
+        
+
+    <br />
+   
+        <table border="0" cellpadding="0" cellspacing="0">        
+            <tr>
+                <td>
+                    
+
+<table border="0">
+    <tr>
+        <td align="right" class="tdleftside">
+            <label for="ctl00_ContentPlaceHolder1_UserInputGen1_txt_lastName" id="ctl00_ContentPlaceHolder1_UserInputGen1_lbl_lastName" style="font-family:Arial;font-size:80%;font-weight:bold;">Last Name:</label></td>
+        <td class="tdrightside">
+            <input name="ctl00$ContentPlaceHolder1$UserInputGen1$txt_lastName" type="text" value="Alvarado" id="ctl00_ContentPlaceHolder1_UserInputGen1_txt_lastName" tabindex="1" style="font-family:Arial;" /></td>
+        <td>
+            &nbsp;&nbsp;&nbsp;</td>
+        <td align="right" class="tdleftside">
+            <label for="ctl00_ContentPlaceHolder1_UserInputGen1_txt_firstName" id="ctl00_ContentPlaceHolder1_UserInputGen1_lbl_firstName" style="font-family:Arial;font-size:80%;font-weight:bold;">First name:</label></td>
+        <td class="tdrightside">
+            <input name="ctl00$ContentPlaceHolder1$UserInputGen1$txt_firstName" type="text" id="ctl00_ContentPlaceHolder1_UserInputGen1_txt_firstName" tabindex="2" style="font-family:Arial;" /></td>
+        <td valign="bottom" align="left" rowspan="3">
+        </td>
+    </tr>
+    <tr>
+        <td align="right" class="tdleftside">
+            <label for="ctl00_ContentPlaceHolder1_UserInputGen1_txt_licNum" id="ctl00_ContentPlaceHolder1_UserInputGen1_lbl_licNum" style="font-family:Arial;font-size:80%;font-weight:bold;">License number:</label></td>
+        <td class="tdrightside">
+            <input name="ctl00$ContentPlaceHolder1$UserInputGen1$txt_licNum" type="text" id="ctl00_ContentPlaceHolder1_UserInputGen1_txt_licNum" tabindex="3" style="font-family:Arial;" /></td>
+        <td>
+            &nbsp;&nbsp;&nbsp;</td>
+        <td align="right" class="tdleftside">
+            <label for="ctl00_ContentPlaceHolder1_UserInputGen1_txt_city" id="ctl00_ContentPlaceHolder1_UserInputGen1_lbl_city" style="font-family:Arial;font-size:80%;font-weight:bold;">City:</label></td>
+        <td class="tdrightside">
+            <input name="ctl00$ContentPlaceHolder1$UserInputGen1$txt_city" type="text" id="ctl00_ContentPlaceHolder1_UserInputGen1_txt_city" tabindex="4" style="font-family:Arial;" /></td>
+    </tr>
+    <tr>
+        <td class="tdleftside">
+        </td>
+        <td class="tdrightside">
+        </td>
+        <td>
+        </td>
+        <td align="right" class="tdleftside">
+            
+            </td>
+        <td class="tdrightside">
+            
+            </td>
+    </tr>
+    <tr>
+        <td align="right" class="tdleftside">
+            
+        </td>
+        <td class="tdrightside">
+            
+        </td>
+        <td>
+        </td>
+        <td align="right" class="tdleftside">
+            </td>
+        <td class="tdrightside">
+            </td>
+    </tr>
+    <tr>
+        <td class="tdleftside" colspan="4" valign="top" align="right">
+            
+            
+        </td>
+        <td class="tdrightside" >           
+            
+            
+            <button class="g-recaptcha" data-sitekey="6Lc2X-saAAAAAPC6HatgHFOd8rCxCl-2yPTh44PN" data-callback='onSubmit'>Find</button>
+            
+
+
+
+            <span id="ctl00_ContentPlaceHolder1_UserInputGen1_CaptchaIncorrectLabel" style="color:Red;">Incorrect</span>
+        </td> 
+    </tr>
+</table>
+
+
+                </td>
+                <td valign="bottom">
+                <div style="padding-bottom:4px;">
+                    <input type="submit" name="ctl00$ContentPlaceHolder1$btn_find" value="Find" id="ctl00_ContentPlaceHolder1_btn_find" style="visibility: hidden;" /></div>
+                    </td>
+            </tr>
+        </table>
+
+    </div>
+    <div style="margin: 12px;">
+        
+<div class="searchRes">
+        <span id="ctl00_ContentPlaceHolder2_lbl_results"></span></div>
+    <div class="info">
+        </div>
+    <br />
+    <div>
+
+</div>
+    <div style="margin-top: 20px;"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+	<head>
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1" />
+		<meta name="ProgId" content="VisualStudio.HTML" />
+		<meta name="Originator" content="Microsoft Visual Studio .NET 7.1" />
+	</head>
+    <body>
+
+        <div style="font-weight: bold;">Search Tip:</div>
+
+        <div>
+            You do not have to enter
+            complete names.<br />
+            For example, "J" and "Smith" will search for records
+            with a last name of "Smith" and a first name beginning
+            with "J."  If searching by specialty, select specialty&nbsp;
+            and enter a city
+        </div>
+
+        <br />
+
+
+        Following the enactment of
+        recent legislation pertaining to Physician Assistant licensure, a listing of
+        alternate supervising physicians will no longer appear in licensee lookup.
+        You may continue to submit requests to the board to add or update alternate
+        supervising physicians. You are encouraged to maintain a copy for your records.
+
+        <br />
+        <br />
+        <br />
+        <div style="font-weight: bold; text-align: center;">
+            <p>Questions / Contact Information    </p>
+        </div>
+        <div>
+          <p>
+          This website is maintained by LLR staff and is updated nightly reflecting changes to our licensing and enforcement database.   If you are a licensee who requires a license verification to another state board, please log into your online LLR account and select the verification option.  If you are not a licensee, please email the board directly.</p>
+        </div>
+        <div style="text-align: center;">
+
+            <p><a href="http://www.llr.sc.gov/med" target="_blank">South Carolina Board of Medical Examiners </a></p>
+
+            <span style="text-align: center;">
+                Phone: (803) 896-4500 <br />
+                Fax: (803)896-4515
+            </span><span style="text-align: center;">
+                <br />
+            </span>PO Box 11289<br />
+            Columbia, S.C. 29211-1289 <br /> <br />
+            Email: <a href="mailto:medboard@llr.sc.gov">medboard@llr.sc.gov</a>
+            <p>
+                <a href="https://llr.sc.gov">
+                    South Carolina Department of Labor, Licensing &amp;
+                    Regulation
+                </a>
+            </p>
+        </div>
+
+    </body>
+</html>
+</div>
+       
+
+        <br />
+    </div>
+    </form>
+</body>
+</html>

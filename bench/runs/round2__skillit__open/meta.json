@@ -1,0 +1,38 @@
+{
+  "skill": "skillit",
+  "condition": "open",
+  "subagents": 0,
+  "tool_calls": 24,
+  "wall_clock_s": 3300,
+  "people_found": 108,
+  "in_radius": 108,
+  "reachable": 108,
+  "peds_signal_strong": 87,
+  "peds_signal_moderate": 2,
+  "blocked_sources": [
+    {
+      "host": "tidelandshealth.org",
+      "reason": "403 to plain fetch; read via browser (rung 4), 301/301 profiles recovered"
+    },
+    {
+      "host": "conwaymedicalcenter.com/phone-directory/",
+      "reason": "301 redirect, resolved with -L to /patients-visitors/phone-directory/"
+    }
+  ],
+  "truncation_detected": true,
+  "notes": "Reproduced the index-is-a-pointer move independently and pushed past it. McLeod Algolia nbHits=805 but a blind browse returns 100; specialty partition got 785, practice partition 804, gender+letter sweep 805/805. Two specialty facets (Family Medicine 161, Primary Care 132) were themselves truncated at 100 - the truncation is recursive, one level deeper than documented. Read 1708 profile records across 4 systems: 89 pediatric signals (87 strong, 2 moderate) vs the 79 benchmark; exactly 1 pediatric ANESTHESIOLOGIST (Michelle D. Lee, MD, Board Certification: Anesthesiology; Pediatric Anesthesiology). Three corrections to references/contact-channels.md are falsified by measurement: Tidelands DOES publish training for 11/12 anesthesiologists (not 0), Conway DOES publish board certification (258/303), and McLeod DOES publish 15 first-party clinician emails. Withheld a derived @hcahealthcare.com address inherited from the clamped run after efetch showed the paper carries a different author's address and the org is a non-HCA contractor.",
+  "channel_yield": {
+    "directory_profiles_read": 1708,
+    "peds_from_directories": 89,
+    "peds_anesthesiologists": 1,
+    "department_phones": 30,
+    "directory_emails": 15,
+    "linkedin_search_urls": 108
+  },
+  "marginal_vs_round1": {
+    "people": 31,
+    "emails": -1,
+    "peds": 88,
+    "department_phones": 30
+  }
+}

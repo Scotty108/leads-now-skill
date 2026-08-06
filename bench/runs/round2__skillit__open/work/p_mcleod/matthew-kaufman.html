@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script>
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+</script>
+
+
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]},feature_flags:["soft_nav"]};(window.NREUM||(NREUM={})).loader_config={licenseKey:"6dfd76a37f",applicationID:"34734046",browserID:"42668972"};;/*! For license information please see nr-loader-rum-1.319.0.min.js.LICENSE.txt */
+(()=>{var e={8122(e,t,r){"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),s=0===Object.keys(r).length?e:r;for(let o in s)if(void 0!==e[o])try{if(null===e[o]){r[o]=null;continue}Array.isArray(e[o])&&Array.isArray(t[o])?r[o]=Array.from(new Set([...e[o],...t[o]])):e[o]instanceof Map||e[o]instanceof Set||e[o]instanceof Date||e[o]instanceof RegExp?r[o]=e[o]:"object"==typeof e[o]&&null!==t[o]&&"object"==typeof t[o]?r[o]=i(e[o],t[o]):r[o]=e[o]}catch(e){r[o]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555(e,t,r){"use strict";r.d(t,{f:()=>o});var n=r(384),i=r(8122);const s={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function o(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}r.d(t,["D",0,e=>(0,i.a)(e,s)])},7699(e,t,r){"use strict";var n=r(860);const i={[n.K7.logging]:!0,[n.K7.genericEvents]:!0,[n.K7.jserrors]:!0,[n.K7.ajax]:!0};r.d(t,["It",0,1e6,"KC",0,i,"qh",0,"SESSION_ERROR"])},9324(e,t,r){"use strict";r.d(t,["xv",0,"1.319.0"])},981(e,t,r){"use strict";r.d(t,["R",0,{AJAX:"AjaxRequest",PA:"PageAction",UA:"UserAction",BP:"BrowserPerformance",WS:"WebSocket",SPV:"SecurityPolicyViolation",JSE:"JavaScriptError",LOG:"Log",PVE:"PageView",PVT:"PageViewTiming",SR:"SessionReplay",ST:"SessionTrace",BI:"BrowserInteraction"}])},6154(e,t,r){"use strict";var n=r(1863);const i="undefined"!=typeof window&&!!window.document,s="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),c=""+o?.location,u=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),d=u&&"undefined"==typeof SharedWorker,l=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)());r.d(t,["OF",0,u,"RI",0,i,"WN",0,l,"bv",0,s,"gm",0,o,"m",0,c,"mw",0,a,"sb",0,d,"zk",0,()=>{const e=o?.performance?.getEntriesByType?.("navigation")?.[0];if(e&&e.responseStart>0&&e.responseStart<o.performance.now())return e}])},3241(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(6154);function i(e={}){try{n.gm.dispatchEvent(new CustomEvent("newrelic",{detail:e}))}catch(e){}}},1687(e,t,r){"use strict";r.d(t,{Ak:()=>a,Ze:()=>u,x3:()=>c});var n=r(3241),i=r(3606),s=r(860),o=r(2646);function a(e,t){if(!e)return;const r={staged:!1,priority:s.P3[t]||0};e.runtime.drainRegistry.get(t)||e.runtime.drainRegistry.set(t,r)}function c(e,t){if(!e)return;const r=e.runtime.drainRegistry;r&&(r.get(t)&&r.delete(t),l(e,t,!1),r.size&&d(e))}function u(e,t="feature",r=!1){if(e){if(!e.runtime.drainRegistry.get(t)||r)return l(e,t);e.runtime.drainRegistry.get(t).staged=!0,d(e)}}function d(e){if(!e)return;const t=Array.from(e.runtime.drainRegistry);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{e.runtime.drainRegistry.delete(t),l(e,t)}))}function l(e,t,r=!0){if(!e)return;const s=e.ee,a=i.i.handlers;if(s&&!s.aborted&&s.backlog&&a){if((0,n.W)({type:"lifecycle",name:"drain",feature:t}),r){const e=s.backlog[t],r=a[t];if(r){for(let t=0;e&&t<e.length;++t)f(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof o.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}s.isolatedBacklog||delete a[t],s.backlog[t]=null,s.emit("drain-"+t,[])}}function f(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],s=e[2];n.apply(i,s)}})}},7836(e,t,r){"use strict";var n=r(384),i=r(8990),s=r(2646),o=r(5607);const a="nr@context:".concat(o.W),c=function e(t,r){var n={},o={},d={},l=!1;try{l=16===r.length&&u.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,s){!1!==s&&(s=!0);if(c.aborted&&!i)return;t&&s&&t.emit(e,r,n);var a=g(n);m(e).forEach(e=>{e.apply(a,r)});var u=v()[o[e]];u&&u.push([f,e,r,a]);return a},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{o[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[o[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof s.y?e:e?(0,i.I)(e,a,()=>new s.y(a)):new s.y(a)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),u=(0,n.Zm)();u.ee||(u.ee=c),r.d(t,["P",0,a,"ee",0,c])},2646(e,t,r){"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908(e,t,r){"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,s){s?(s.buffer([e],i),s.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606(e,t,r){"use strict";r.d(t,{i:()=>s});var n=r(9908);s.on=o;var i=s.handlers={};function s(e,t,r,s){o(s||n.d,i,e,t,r)}function o(e,t,r,i,s){s||(s="feature"),e||(e=n.d);var o=t[s]=t[s]||{};(o[r]=o[r]||[]).push([e,i])}},3878(e,t,r){"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function s(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>s,jT:()=>n,sp:()=>i})},5607(e,t,r){"use strict";const n=(0,r(9566).bz)();r.d(t,["W",0,n])},9566(e,t,r){"use strict";r.d(t,{LA:()=>o,bz:()=>s});var n=r(6154);function i(e,t){return e?15&e[t]:16*Math.random()|0}function s(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split("").map(e=>"x"===e?i(t,r++).toString(16):"y"===e?(3&i()|8).toString(16):e).join("")}function o(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,s=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const o=[];for(var a=0;a<e;a++)o.push(i(r,s++).toString(16));return o.join("")}},2614(e,t,r){"use strict";r.d(t,["BB",0,18e5,"Wt",0,"NRBA_SESSION::","iL",0,{SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},"tS",0,{STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},"wk",0,144e5])},1863(e,t,r){"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},944(e,t,r){"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},8990(e,t,r){"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389(e,t,r){"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},1910(e,t,r){"use strict";r.d(t,{i:()=>s});var n=r(944);const i=new Map;function s(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),s=t.includes("nrWrapper");return r||s||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},5289(e,t,r){"use strict";r.d(t,{GG:()=>o,Qr:()=>c,sB:()=>a});var n=r(3878),i=r(6389);function s(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(s())return e();const r=(0,i.J)(e),o=setInterval(()=>{s()&&(clearInterval(o),r())},500);(0,n.sp)("load",r,t)}function a(e){if(s())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(s())return e();(0,n.sp)("popstate",e)}},384(e,t,r){"use strict";r.d(t,{Zm:()=>c,bQ:()=>d,dV:()=>u,pV:()=>l});var n=r(6154),i=r(1863),s=r(944),o=r(1910);const a={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function u(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,o.i)(...Object.values(e.o))),e}function d(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,s.R)(69)}function l(){return function(){let e=c();const t=e.info||{};e.info={beacon:a.beacon,errorBeacon:a.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),u(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}r.d(t,["NT",0,a])},2843(e,t,r){"use strict";r.d(t,{G:()=>s,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function s(e,t,r){(0,n.sp)("pagehide",e,t,r)}},3969(e,t,r){"use strict";const n=r(860).K7.metrics;r.d(t,["TZ",0,n,"XG",0,"storeEventMetrics","xV",0,"storeSupportabilityMetrics"])},6630(e,t,r){"use strict";const n=r(860).K7.pageViewEvent;r.d(t,["T",0,n])},782(e,t,r){"use strict";const n=r(860).K7.pageViewTiming;r.d(t,["T",0,n])},4234(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(1687);class i{constructor(e,t){this.agentRef=e,this.ee=e?.ee,this.featureName=t,this.blocked=!1}deregisterDrain(){(0,n.x3)(this.agentRef,this.featureName)}}},7767(e,t,r){"use strict";var n=r(6154);r.d(t,["V",0,e=>n.RI&&!0===e?.privacy.cookies_enabled])},8362(e,t,r){"use strict";r.d(t,{d:()=>s});var n=r(9566),i=r(1741);class s extends i.W{agentIdentifier=(0,n.LA)(16)}},1741(e,t,r){"use strict";r.d(t,{W:()=>s});var n=r(944),i=r(4261);class s{#e(e,...t){if(this[e]!==s.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e("log",e,t)}start(){return this.#e("start")}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},4261(e,t,r){"use strict";r.d(t,["BL",0,"finished","CH",0,"recordReplay","Dl",0,"setUserId","Fw",0,"setPageViewName","PA",0,"setCurrentRouteName","Pv",0,"consent","Tb",0,"pauseReplay","U2",0,"addToTrace","V1",0,"measure","Wb",0,"wrapLogger","bt",0,"setErrorHandler","cD",0,"setCustomAttribute","dT",0,"interaction","eY",0,"register","fF",0,"recordCustomEvent","hG",0,"addPageAction","k6",0,"addRelease","nb",0,"setApplicationVersion","o5",0,"noticeError"])},1738(e,t,r){"use strict";r.d(t,{U:()=>l,Y:()=>d});var n=r(3241),i=r(9908),s=r(1863),o=r(944),a=r(3969),c=r(8362),u=r(860);function d(e,t,r,s){const d=s||r;!d||d[e]&&d[e]!==c.d.prototype[e]||(d[e]=function(){(0,i.p)(a.xV,["API/"+e+"/called"],void 0,u.K7.metrics,r.ee),(0,n.W)({drained:!!r.runtime?.activatedFeatures,type:"data",name:"api",feature:"api-"+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,o.R)(23,e)}})}function l(e,t,r,n,o){const a=e.info;null===r?delete a.jsAttributes[t]:a.jsAttributes[t]=r,(o||null===r)&&(0,i.p)("api-"+n,[(0,s.t)(),t,r],void 0,"session",e.ee)}},8374(e,t,r){r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860(e,t,r){"use strict";const n="events",i="jserrors",s="browser/blobs",o="browser/logs",a={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations"},c={[a.pageViewEvent]:1,[a.pageViewTiming]:2,[a.metrics]:3,[a.jserrors]:4,[a.softNav]:5,[a.ajax]:6,[a.sessionTrace]:7,[a.sessionReplay]:8,[a.logging]:9,[a.genericEvents]:10},u={[a.pageViewEvent]:"rum",[a.pageViewTiming]:n,[a.ajax]:n,[a.softNav]:n,[a.metrics]:i,[a.jserrors]:i,[a.sessionTrace]:s,[a.sessionReplay]:s,[a.logging]:o,[a.genericEvents]:"ins"};r.d(t,["$J",0,u,"K7",0,a,"P3",0,c,"XX",0,i,"Yy",0,o,"df",0,s])}};const t={};function r(n){const i=t[n];if(void 0!==i)return i.exports;const s=t[n]={exports:{}};return e[n](s,s.exports,r),s.exports}r.m=e,r.d=(e,t)=>{if(Array.isArray(t))for(var n=0;n<t.length;){var i=t[n++],s=t[n++];r.o(e,i)?0===s&&n++:0===s?Object.defineProperty(e,i,{enumerable:!0,value:t[n++]}):Object.defineProperty(e,i,{enumerable:!0,get:s})}else for(var i in t)r.o(t,i)&&!r.o(e,i)&&Object.defineProperty(e,i,{enumerable:!0,get:t[i]})},r.f={},r.e=e=>Promise.all(Object.keys(r.f).reduce((t,n)=>(r.f[n](e,t),t),[])),r.u=e=>"nr-rum-1.319.0.min.js",r.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),(()=>{const e={},t="NRBA-1.319.0.PROD:";r.l=(n,i,s,o)=>{if(e[n])return void e[n].push(i);let a,c;if(void 0!==s){const e=document.getElementsByTagName("script");for(var u=0;u<e.length;u++){const r=e[u];if(r.getAttribute("src")==n||r.getAttribute("data-webpack")==t+s){a=r;break}}}if(!a){c=!0;var d={296:"sha512-AjMYlPlHGtonfj4LWnnP4dVoLRowrBrm4lRfeuRr88daClWRPCh62aASF1JsR277iWOhlLcoggRr9BulWGKOyQ=="};a=document.createElement("script"),a.charset="utf-8",r.nc&&a.setAttribute("nonce",r.nc),a.setAttribute("data-webpack",t+s),a.src=n,0!==a.src.indexOf(window.location.origin+"/")&&(a.crossOrigin="anonymous"),d[o]&&(a.integrity=d[o])}e[n]=[i];const l=(t,r)=>{a.onerror=a.onload=null,clearTimeout(f);const i=e[n];if(delete e[n],a.parentNode?.removeChild(a),i?.forEach(e=>e(r)),t)return t(r)},f=setTimeout(l.bind(null,void 0,{type:"timeout",target:a}),12e4);a.onerror=l.bind(null,a.onerror),a.onload=l.bind(null,a.onload),c&&document.head.appendChild(a)}})(),r.r=e=>{Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.p="https://js-agent.newrelic.com/",(()=>{const e={374:0,840:0};r.f.j=(t,n)=>{let i=r.o(e,t)?e[t]:void 0;if(0!==i)if(i)n.push(i[2]);else{const s=new Promise((r,n)=>i=e[t]=[r,n]);n.push(i[2]=s);const o=r.p+r.u(t),a=new Error,c=n=>{if(r.o(e,t)&&(i=e[t],0!==i&&(e[t]=void 0),i)){const e=n&&("load"===n.type?"missing":n.type),r=n&&n.target&&n.target.src;a.message="Loading chunk "+t+" failed: ("+e+": "+r+")",a.name="ChunkLoadError",a.type=e,a.request=r,i[1](a)}};r.l(o,c,"chunk-"+t,t)}};const t=(t,n)=>{let[i,s,o]=n;var a,c,u=0;if(i.some(t=>0!==e[t])){for(a in s)r.o(s,a)&&(r.m[a]=s[a]);if(o)o(r)}for(t&&t(n);u<i.length;u++)c=i[u],r.o(e,c)&&e[c]&&e[c][0](),e[c]=0},n=self["webpackChunk:NRBA-1.319.0.PROD"]=self["webpackChunk:NRBA-1.319.0.PROD"]||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})(),(()=>{"use strict";r(8374);var e=r(8362),t=r(860);const n=Object.values(t.K7);var i=r(384),s=r(1741);var o=r(2555),a=r(981);t.K7.genericEvents,a.R.PA,a.R.UA,a.R.BP;const c="experimental.resources",u="register",d=(t.K7.ajax,"none"),l=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var f=r(2614),g=r(944),p=r(8122);const m="[data-nr-mask]",h=e=>(0,p.a)(e,(()=>{const e={feature_flags:[],experimental:{register:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0,capture_payloads:d},api:{register:{get enabled(){return e.feature_flags.includes(u)||e.experimental.register},set enabled(t){e.experimental.register=t},duplicate_data_to_container:!1}},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(c)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:f.wk,inactiveMs:f.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){l(t)?e.mask_selector="".concat(t,",").concat(m):""===t||null===t?e.mask_selector=m:(0,g.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){l(t)?e.block_selector+=",".concat(t):""!==t&&(0,g.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,g.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]},web_sockets:{enabled:!1}}})());var v=r(6154),b=r(9324);let y=0;const _={buildEnv:"PROD",distMethod:"CDN",version:b.xv,originTime:v.WN},w={consented:!1},R={activatedFeatures:void 0,appMetadata:{},configured:!1,get consented(){return this.session?.state?.consent||w.consented},set consented(e){w.consented=e},customTransaction:void 0,denyList:[],disabled:!1,drainRegistry:new Map,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++y}};var x=r(7836),A=r(3241);const k={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0};function S(e,t={},n,a){let{init:c,info:u,loader_config:d,runtime:l={},exposed:f=!0}=t;if(!u){const e=(0,i.pV)();c=e.init,u=e.info,d=e.loader_config}var g;e.init=h(c||{}),e.loader_config=(g=d||{},(0,p.a)(g,k)),u.jsAttributes??={},v.bv&&(u.jsAttributes.isWorker=!0),e.info=(0,o.D)(u);const m=e.init;e.runtime??=(e=>{const t=(0,p.a)(e,R),r=Object.keys(_).reduce((e,t)=>(e[t]={value:_[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)})(l),m.proxy.assets&&(e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e})(m.proxy.assets),e.runtime.configured||(Object.defineProperty(e,"beacons",{get:()=>[e.info.beacon,e.info.errorBeacon,e.init.proxy.assets,e.init.proxy.beacon].filter(Boolean)}),Object.defineProperty(e.runtime,"denyList",{get:()=>[...e.init.ajax.deny_list||[],...e.init.ajax.block_internal?e.beacons:[]]}),e.runtime.ptid=e.agentIdentifier,function(e){const t=(0,i.pV)();Object.getOwnPropertyNames(s.W.prototype).forEach(r=>{const n=s.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let i=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return i?i(...t):n})})}(e),e.runtime.loaderType=n,e.ee=x.ee.get(e.agentIdentifier),e.exposed=f,(0,A.W)({drained:!!e.runtime.activatedFeatures,type:"lifecycle",name:"initialize",feature:void 0,data:e.config}),e.runtime.configured=!0)}var T=r(9908),E=r(1863),j=r(4261),P=r(1738);var N=r(1687),O=r(4234),M=r(5289),I=r(7767);function V(e){return!!(0,i.dV)().o.MO&&(0,I.V)(e)&&!0===e?.session_trace.enabled}var D=r(6389),W=r(7699);const B=new WeakSet;class K extends O.W{constructor(e,t){super(e,t),this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,D.J)(()=>{(0,N.Ak)(e,this.featureName),t()}))}):(0,N.Ak)(e,t)}importAggregator(e,t,n={}){if(this.featAggregate)return;const i=async()=>{if(await this.deferred,this.#t(e),!(0,o.f)(e.info))return(0,g.R)(43),e.ee.abort(),void this.loadedSuccessfully(!1);let i;try{if((0,I.V)(e.init)){const{setupAgentSession:t}=await r.e(296).then(r.bind(r,8391));i=t(e)}}catch(e){(0,g.R)(20,e),this.ee.emit("internal-error",[e]),(0,T.p)(W.qh,[e],void 0,this.featureName,this.ee)}try{if(!this.#r(this.featureName,i,e.init))return(0,N.Ze)(this.agentRef,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:r}=await t();this.featAggregate=new r(e,n),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,g.R)(34,e),this.abortHandler?.(),(0,N.Ze)(this.agentRef,this.featureName,!0),this.loadedSuccessfully(!1),this.ee&&this.ee.abort()}};v.RI?(0,M.GG)(()=>i(),!0):i()}#r(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return V(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}#t(e){if(!B.has(e)&&(B.add(e),!(0,o.f)(e.info))){const t=(0,i.pV)();let r={...t.info?.jsAttributes};try{r={...r,...e.info?.jsAttributes}}catch(e){}S(e,{...t,info:{...t.info,jsAttributes:r},runtime:e.runtime},e.runtime.loaderType)}}}var C=r(6630);class U extends K{static featureName=C.T;constructor(e){var t;super(e,C.T),this.setupInspectionEvents(),t=e,(0,P.Y)(j.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,T.p)("api-"+j.Fw,[(0,E.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>r.e(296).then(r.bind(r,1324)))}setupInspectionEvents(){const e=(e,t)=>{e&&(0,A.W)({timeStamp:e.timeStamp,loaded:"complete"===e.target.readyState,type:"window",name:t,data:e.target.location+""})};(0,M.sB)(t=>{e(t,"DOMContentLoaded")}),(0,M.GG)(t=>{e(t,"load")}),(0,M.Qr)(t=>{e(t,"navigate")}),this.ee.on(f.tS.UPDATE,(e,t)=>{(0,A.W)({type:"lifecycle",name:"session",data:t})})}}class L extends e.d{constructor(e){var t;(super(),v.gm)?(this.features={},(0,i.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(U),S(this,e,e.loaderType||"agent"),t=this,(0,P.Y)(j.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,P.U)(t,e,r,j.cD,n);(0,g.R)(40,typeof r)}else(0,g.R)(39,typeof e)},t),function(e){(0,P.Y)(j.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,g.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,T.p)("api-setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,P.U)(e,"enduser.id",t,j.Dl,!0)},e)}(this),function(e){(0,P.Y)(j.nb,function(t){if("string"==typeof t||null===t)return(0,P.U)(e,"application.version",t,j.nb,!1);(0,g.R)(42,typeof t)},e)}(this),function(e){(0,P.Y)("start",function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,P.Y)(j.Pv,function(t=!0){if("boolean"==typeof t){if((0,T.p)("api-"+j.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum()})}}else(0,g.R)(65,typeof t)},e)}(this),this.run()):(0,g.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return n.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),r=[...this.desiredFeatures];r.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),r.forEach(r=>{if(!e[r.featureName]&&r.featureName!==t.K7.pageViewEvent)return;const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,g.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,g.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,i.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var G=r(2843),F=r(782);class H extends K{static featureName=F.T;constructor(e){super(e,F.T),v.RI&&((0,G.u)(()=>(0,T.p)("docHidden",[(0,E.t)()],void 0,F.T,this.ee),!0),(0,G.G)(()=>(0,T.p)("winPagehide",[(0,E.t)()],void 0,F.T,this.ee)),this.importAggregator(e,()=>r.e(296).then(r.bind(r,2117))))}}var z=r(3969);class Y extends K{static featureName=z.TZ;constructor(e){super(e,z.TZ),this.importAggregator(e,()=>r.e(296).then(r.bind(r,9623)))}}new L({features:[U,H,Y],loaderType:"lite"})})()})();</script>
+
+		<link rel="profile" href="https://gmpg.org/xfn/11" />
+
+		
+		<link rel="pingback" href="https://www.mcleodhealth.org/xmlrpc.php" />
+
+		<script type="text/javascript" id="gform_gravityforms-js-extra-alt">
+/* <![CDATA[ */
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https:\/\/www.mcleodhealth.org\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www.mcleodhealth.org\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"9b9a15e1901b39559d68f1acf86a1eeb","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+/* ]]> */
+</script>
+		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+            <script data-no-defer="1" data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer data-cookieconsent="ignore">
+                var ctPublicFunctions = {"_ajax_nonce":"336c862327","_rest_nonce":"c415b3a84a","_ajax_url":"\/wp-admin\/admin-ajax.php","_rest_url":"https:\/\/www.mcleodhealth.org\/wp-json\/","data__cookies_type":"none","data__ajax_type":"rest","bot_detector_enabled":false,"data__frontend_data_log_enabled":1,"cookiePrefix":"","wprocket_detected":false,"host_url":"www.mcleodhealth.org","text__ee_click_to_select":"Click to select the whole data","text__ee_original_email":"The complete one is","text__ee_got_it":"Got it","text__ee_blocked":"Blocked","text__ee_cannot_connect":"Cannot connect","text__ee_cannot_decode":"Can not decode email. Unknown reason","text__ee_email_decoder":"CleanTalk email decoder","text__ee_wait_for_decoding":"The magic is on the way!","text__ee_decoding_process":"Please wait a few seconds while we decode the contact data."}
+            </script>
+        
+            <script data-no-defer="1" data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer data-cookieconsent="ignore">
+                var ctPublic = {"_ajax_nonce":"336c862327","settings__forms__check_internal":"0","settings__forms__check_external":"0","settings__forms__force_protection":0,"settings__forms__search_test":"0","settings__forms__wc_add_to_cart":"0","bot_detector_enabled":false,"settings__sfw__anti_crawler":0,"blog_home":"https:\/\/www.mcleodhealth.org\/","pixel__setting":"3","pixel__enabled":true,"pixel__url":"https:\/\/moderate1-v4.cleantalk.org\/pixel\/631a00e62a8935d614645adda4d10e88.gif","data__email_check_before_post":"1","data__email_check_exist_post":0,"data__cookies_type":"none","data__key_is_ok":true,"data__visible_fields_required":true,"wl_brandname":"Anti-Spam by CleanTalk","wl_brandname_short":"CleanTalk","ct_checkjs_key":"8254983d51242140a9d0b99f7742e765df21be457be64c5165a2566cade6b275","emailEncoderPassKey":"dcef5dd549d7218adea4ddfcd0a6717d","bot_detector_forms_excluded":"W10=","advancedCacheExists":false,"varnishCacheExists":true,"wc_ajax_add_to_cart":false,"theRealPerson":{"phrases":{"trpHeading":"The Real Person Badge!","trpContent1":"Verified as a real person and not a bot. The comment was approved without pre-moderation.","trpContent2":" Anti-Spam by CleanTalk","trpContentLearnMore":"Learn more"},"trpContentLink":"https:\/\/cleantalk.org\/help\/the-real-person?utm_id=&amp;utm_term=&amp;utm_source=admin_side&amp;utm_medium=trp_badge&amp;utm_content=trp_badge_link_click&amp;utm_campaign=apbct_links","imgPersonUrl":"https:\/\/www.mcleodhealth.org\/wp-content\/plugins\/cleantalk-spam-protect\/css\/images\/real_user.svg","imgShieldUrl":"https:\/\/www.mcleodhealth.org\/wp-content\/plugins\/cleantalk-spam-protect\/css\/images\/shield.svg"}}
+            </script>
+        
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO Premium plugin v28.1 (Yoast SEO v28.1) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<title>Matthew Kaufman - McLeod Health</title>
+	<link rel="canonical" href="https://www.mcleodhealth.org/physician/matthew-kaufman/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Matthew Kaufman" />
+	<meta property="og:url" content="https://www.mcleodhealth.org/physician/matthew-kaufman/" />
+	<meta property="og:site_name" content="McLeod Health" />
+	<meta property="article:publisher" content="https://facebook.com/McLeodHealth/" />
+	<meta property="article:modified_time" content="2025-05-02T17:36:59+00:00" />
+	<meta property="og:image" content="https://www.mcleodhealth.org/wp-content/uploads/2022/08/Matthew-Kaufman-MD-WEBSITE.jpg" />
+	<meta property="og:image:width" content="200" />
+	<meta property="og:image:height" content="250" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@McLeodHealth" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/www.mcleodhealth.org\/physician\/matthew-kaufman\/","url":"https:\/\/www.mcleodhealth.org\/physician\/matthew-kaufman\/","name":"Matthew Kaufman - McLeod Health","isPartOf":{"@id":"https:\/\/www.mcleodhealth.org\/#website"},"primaryImageOfPage":{"@id":"https:\/\/www.mcleodhealth.org\/physician\/matthew-kaufman\/#primaryimage"},"image":{"@id":"https:\/\/www.mcleodhealth.org\/physician\/matthew-kaufman\/#primaryimage"},"thumbnailUrl":"https:\/\/www.mcleodhealth.org\/wp-content\/uploads\/2022\/08\/Matthew-Kaufman-MD-WEBSITE.jpg","datePublished":"2022-08-01T13:36:40+00:00","dateModified":"2025-05-02T17:36:59+00:00","breadcrumb":{"@id":"https:\/\/www.mcleodhealth.org\/physician\/matthew-kaufman\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.mcleodhealth.org\/physician\/matthew-kaufman\/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/www.mcleodhealth.org\/physician\/matthew-kaufman\/#primaryimage","url":"https:\/\/www.mcleodhealth.org\/wp-content\/uploads\/2022\/08\/Matthew-Kaufman-MD-WEBSITE.jpg","contentUrl":"https:\/\/www.mcleodhealth.org\/wp-content\/uploads\/2022\/08\/Matthew-Kaufman-MD-WEBSITE.jpg","width":200,"height":250},{"@type":"BreadcrumbList","@id":"https:\/\/www.mcleodhealth.org\/physician\/matthew-kaufman\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/www.mcleodhealth.org\/"},{"@type":"ListItem","position":2,"name":"Matthew Kaufman"}]},{"@type":"WebSite","@id":"https:\/\/www.mcleodhealth.org\/#website","url":"https:\/\/www.mcleodhealth.org\/","name":"McLeod Health","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.mcleodhealth.org\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//maps.googleapis.com' />
+
+<link rel='dns-prefetch' href='//transparency.nrchealth.com' />
+<link rel="alternate" type="application/rss+xml" title="McLeod Health &raquo; Feed" href="https://www.mcleodhealth.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="McLeod Health &raquo; Comments Feed" href="https://www.mcleodhealth.org/comments/feed/" />
+<link rel="alternate" type="text/calendar" title="McLeod Health &raquo; iCal Feed" href="https://www.mcleodhealth.org/events/?ical=1" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.mcleodhealth.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mcleodhealth.org%2Fphysician%2Fmatthew-kaufman%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.mcleodhealth.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mcleodhealth.org%2Fphysician%2Fmatthew-kaufman%2F&#038;format=xml" />
+<link rel="shortcut icon" href="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/favicon.ico?ver=1785927336" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='tribe-events-pro-mini-calendar-block-styles-css' href='https://www.mcleodhealth.org/wp-content/plugins/events-calendar-pro/build/css/tribe-events-pro-mini-calendar-block.css?ver=7.8.0' media='all' />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='cleantalk-public-css-css' href='https://www.mcleodhealth.org/wp-content/plugins/cleantalk-spam-protect/css/cleantalk-public.min.css?ver=6.84_1785927331' media='all' />
+<link rel='stylesheet' id='cleantalk-email-decoder-css-css' href='https://www.mcleodhealth.org/wp-content/plugins/cleantalk-spam-protect/css/cleantalk-email-decoder.min.css?ver=6.84_1785927331' media='all' />
+<link rel='stylesheet' id='cleantalk-trp-css-css' href='https://www.mcleodhealth.org/wp-content/plugins/cleantalk-spam-protect/css/cleantalk-trp.min.css?ver=6.84_1785927331' media='all' />
+<link rel='stylesheet' id='cpsh-shortcodes-css' href='https://www.mcleodhealth.org/wp-content/plugins/column-shortcodes//assets/css/shortcodes.css?ver=1.0.1' media='all' />
+<link rel='stylesheet' id='email-subscribers-css' href='https://www.mcleodhealth.org/wp-content/plugins/email-subscribers/lite/public/css/email-subscribers-public.css?ver=5.9.32' media='all' />
+<style type="text/css" id="google-font-great-vibes-css" media="all">@font-face {font-family:'Great Vibes';font-style:normal;font-weight:400;src:url(/cf-fonts/s/great-vibes/5.2.8/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Great Vibes';font-style:normal;font-weight:400;src:url(/cf-fonts/s/great-vibes/5.2.8/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Great Vibes';font-style:normal;font-weight:400;src:url(/cf-fonts/s/great-vibes/5.2.8/latin-ext/400/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Great Vibes';font-style:normal;font-weight:400;src:url(/cf-fonts/s/great-vibes/5.2.8/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Great Vibes';font-style:normal;font-weight:400;src:url(/cf-fonts/s/great-vibes/5.2.8/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Great Vibes';font-style:normal;font-weight:400;src:url(/cf-fonts/s/great-vibes/5.2.8/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}</style>
+<style type="text/css" id="google-font-open-sans-css" media="all">@font-face {font-family:'Open Sans';font-style:normal;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/vietnamese/300/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/math/300/normal.woff2);unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/latin/300/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic-ext/300/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/latin-ext/300/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/symbols/300/normal.woff2);unicode-range:U+0001-000C,U+000E-001F,U+007F-009F,U+20DD-20E0,U+20E2-20E4,U+2150-218F,U+2190,U+2192,U+2194-2199,U+21AF,U+21E6-21F0,U+21F3,U+2218-2219,U+2299,U+22C4-22C6,U+2300-243F,U+2440-244A,U+2460-24FF,U+25A0-27BF,U+2800-28FF,U+2921-2922,U+2981,U+29BF,U+29EB,U+2B00-2BFF,U+4DC0-4DFF,U+FFF9-FFFB,U+10140-1018E,U+10190-1019C,U+101A0,U+101D0-101FD,U+102E0-102FB,U+10E60-10E7E,U+1D2C0-1D2D3,U+1D2E0-1D37F,U+1F000-1F0FF,U+1F100-1F1AD,U+1F1E6-1F1FF,U+1F30D-1F30F,U+1F315,U+1F31C,U+1F31E,U+1F320-1F32C,U+1F336,U+1F378,U+1F37D,U+1F382,U+1F393-1F39F,U+1F3A7-1F3A8,U+1F3AC-1F3AF,U+1F3C2,U+1F3C4-1F3C6,U+1F3CA-1F3CE,U+1F3D4-1F3E0,U+1F3ED,U+1F3F1-1F3F3,U+1F3F5-1F3F7,U+1F408,U+1F415,U+1F41F,U+1F426,U+1F43F,U+1F441-1F442,U+1F444,U+1F446-1F449,U+1F44C-1F44E,U+1F453,U+1F46A,U+1F47D,U+1F4A3,U+1F4B0,U+1F4B3,U+1F4B9,U+1F4BB,U+1F4BF,U+1F4C8-1F4CB,U+1F4D6,U+1F4DA,U+1F4DF,U+1F4E3-1F4E6,U+1F4EA-1F4ED,U+1F4F7,U+1F4F9-1F4FB,U+1F4FD-1F4FE,U+1F503,U+1F507-1F50B,U+1F50D,U+1F512-1F513,U+1F53E-1F54A,U+1F54F-1F5FA,U+1F610,U+1F650-1F67F,U+1F687,U+1F68D,U+1F691,U+1F694,U+1F698,U+1F6AD,U+1F6B2,U+1F6B9-1F6BA,U+1F6BC,U+1F6C6-1F6CF,U+1F6D3-1F6D7,U+1F6E0-1F6EA,U+1F6F0-1F6F3,U+1F6F7-1F6FC,U+1F700-1F7FF,U+1F800-1F80B,U+1F810-1F847,U+1F850-1F859,U+1F860-1F887,U+1F890-1F8AD,U+1F8B0-1F8BB,U+1F8C0-1F8C1,U+1F900-1F90B,U+1F93B,U+1F946,U+1F984,U+1F996,U+1F9E9,U+1FA00-1FA6F,U+1FA70-1FA7C,U+1FA80-1FA89,U+1FA8F-1FAC6,U+1FACE-1FADC,U+1FADF-1FAE9,U+1FAF0-1FAF8,U+1FB00-1FBFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/hebrew/300/normal.woff2);unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic/300/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/greek/300/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/greek-ext/300/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/hebrew/300/italic.woff2);unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/latin/300/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/greek-ext/300/italic.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/greek/300/italic.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic-ext/300/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/latin-ext/300/italic.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/symbols/300/italic.woff2);unicode-range:U+0001-000C,U+000E-001F,U+007F-009F,U+20DD-20E0,U+20E2-20E4,U+2150-218F,U+2190,U+2192,U+2194-2199,U+21AF,U+21E6-21F0,U+21F3,U+2218-2219,U+2299,U+22C4-22C6,U+2300-243F,U+2440-244A,U+2460-24FF,U+25A0-27BF,U+2800-28FF,U+2921-2922,U+2981,U+29BF,U+29EB,U+2B00-2BFF,U+4DC0-4DFF,U+FFF9-FFFB,U+10140-1018E,U+10190-1019C,U+101A0,U+101D0-101FD,U+102E0-102FB,U+10E60-10E7E,U+1D2C0-1D2D3,U+1D2E0-1D37F,U+1F000-1F0FF,U+1F100-1F1AD,U+1F1E6-1F1FF,U+1F30D-1F30F,U+1F315,U+1F31C,U+1F31E,U+1F320-1F32C,U+1F336,U+1F378,U+1F37D,U+1F382,U+1F393-1F39F,U+1F3A7-1F3A8,U+1F3AC-1F3AF,U+1F3C2,U+1F3C4-1F3C6,U+1F3CA-1F3CE,U+1F3D4-1F3E0,U+1F3ED,U+1F3F1-1F3F3,U+1F3F5-1F3F7,U+1F408,U+1F415,U+1F41F,U+1F426,U+1F43F,U+1F441-1F442,U+1F444,U+1F446-1F449,U+1F44C-1F44E,U+1F453,U+1F46A,U+1F47D,U+1F4A3,U+1F4B0,U+1F4B3,U+1F4B9,U+1F4BB,U+1F4BF,U+1F4C8-1F4CB,U+1F4D6,U+1F4DA,U+1F4DF,U+1F4E3-1F4E6,U+1F4EA-1F4ED,U+1F4F7,U+1F4F9-1F4FB,U+1F4FD-1F4FE,U+1F503,U+1F507-1F50B,U+1F50D,U+1F512-1F513,U+1F53E-1F54A,U+1F54F-1F5FA,U+1F610,U+1F650-1F67F,U+1F687,U+1F68D,U+1F691,U+1F694,U+1F698,U+1F6AD,U+1F6B2,U+1F6B9-1F6BA,U+1F6BC,U+1F6C6-1F6CF,U+1F6D3-1F6D7,U+1F6E0-1F6EA,U+1F6F0-1F6F3,U+1F6F7-1F6FC,U+1F700-1F7FF,U+1F800-1F80B,U+1F810-1F847,U+1F850-1F859,U+1F860-1F887,U+1F890-1F8AD,U+1F8B0-1F8BB,U+1F8C0-1F8C1,U+1F900-1F90B,U+1F93B,U+1F946,U+1F984,U+1F996,U+1F9E9,U+1FA00-1FA6F,U+1FA70-1FA7C,U+1FA80-1FA89,U+1FA8F-1FAC6,U+1FACE-1FADC,U+1FADF-1FAE9,U+1FAF0-1FAF8,U+1FB00-1FBFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic/300/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/math/300/italic.woff2);unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:300;src:url(/cf-fonts/s/open-sans/5.2.7/vietnamese/300/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/greek-ext/400/italic.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic/400/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/hebrew/400/italic.woff2);unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/symbols/400/italic.woff2);unicode-range:U+0001-000C,U+000E-001F,U+007F-009F,U+20DD-20E0,U+20E2-20E4,U+2150-218F,U+2190,U+2192,U+2194-2199,U+21AF,U+21E6-21F0,U+21F3,U+2218-2219,U+2299,U+22C4-22C6,U+2300-243F,U+2440-244A,U+2460-24FF,U+25A0-27BF,U+2800-28FF,U+2921-2922,U+2981,U+29BF,U+29EB,U+2B00-2BFF,U+4DC0-4DFF,U+FFF9-FFFB,U+10140-1018E,U+10190-1019C,U+101A0,U+101D0-101FD,U+102E0-102FB,U+10E60-10E7E,U+1D2C0-1D2D3,U+1D2E0-1D37F,U+1F000-1F0FF,U+1F100-1F1AD,U+1F1E6-1F1FF,U+1F30D-1F30F,U+1F315,U+1F31C,U+1F31E,U+1F320-1F32C,U+1F336,U+1F378,U+1F37D,U+1F382,U+1F393-1F39F,U+1F3A7-1F3A8,U+1F3AC-1F3AF,U+1F3C2,U+1F3C4-1F3C6,U+1F3CA-1F3CE,U+1F3D4-1F3E0,U+1F3ED,U+1F3F1-1F3F3,U+1F3F5-1F3F7,U+1F408,U+1F415,U+1F41F,U+1F426,U+1F43F,U+1F441-1F442,U+1F444,U+1F446-1F449,U+1F44C-1F44E,U+1F453,U+1F46A,U+1F47D,U+1F4A3,U+1F4B0,U+1F4B3,U+1F4B9,U+1F4BB,U+1F4BF,U+1F4C8-1F4CB,U+1F4D6,U+1F4DA,U+1F4DF,U+1F4E3-1F4E6,U+1F4EA-1F4ED,U+1F4F7,U+1F4F9-1F4FB,U+1F4FD-1F4FE,U+1F503,U+1F507-1F50B,U+1F50D,U+1F512-1F513,U+1F53E-1F54A,U+1F54F-1F5FA,U+1F610,U+1F650-1F67F,U+1F687,U+1F68D,U+1F691,U+1F694,U+1F698,U+1F6AD,U+1F6B2,U+1F6B9-1F6BA,U+1F6BC,U+1F6C6-1F6CF,U+1F6D3-1F6D7,U+1F6E0-1F6EA,U+1F6F0-1F6F3,U+1F6F7-1F6FC,U+1F700-1F7FF,U+1F800-1F80B,U+1F810-1F847,U+1F850-1F859,U+1F860-1F887,U+1F890-1F8AD,U+1F8B0-1F8BB,U+1F8C0-1F8C1,U+1F900-1F90B,U+1F93B,U+1F946,U+1F984,U+1F996,U+1F9E9,U+1FA00-1FA6F,U+1FA70-1FA7C,U+1FA80-1FA89,U+1FA8F-1FAC6,U+1FACE-1FADC,U+1FADF-1FAE9,U+1FAF0-1FAF8,U+1FB00-1FBFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/greek/400/italic.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic-ext/400/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/latin-ext/400/italic.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/math/400/italic.woff2);unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/latin/400/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/vietnamese/400/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/greek/400/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/math/400/normal.woff2);unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/symbols/400/normal.woff2);unicode-range:U+0001-000C,U+000E-001F,U+007F-009F,U+20DD-20E0,U+20E2-20E4,U+2150-218F,U+2190,U+2192,U+2194-2199,U+21AF,U+21E6-21F0,U+21F3,U+2218-2219,U+2299,U+22C4-22C6,U+2300-243F,U+2440-244A,U+2460-24FF,U+25A0-27BF,U+2800-28FF,U+2921-2922,U+2981,U+29BF,U+29EB,U+2B00-2BFF,U+4DC0-4DFF,U+FFF9-FFFB,U+10140-1018E,U+10190-1019C,U+101A0,U+101D0-101FD,U+102E0-102FB,U+10E60-10E7E,U+1D2C0-1D2D3,U+1D2E0-1D37F,U+1F000-1F0FF,U+1F100-1F1AD,U+1F1E6-1F1FF,U+1F30D-1F30F,U+1F315,U+1F31C,U+1F31E,U+1F320-1F32C,U+1F336,U+1F378,U+1F37D,U+1F382,U+1F393-1F39F,U+1F3A7-1F3A8,U+1F3AC-1F3AF,U+1F3C2,U+1F3C4-1F3C6,U+1F3CA-1F3CE,U+1F3D4-1F3E0,U+1F3ED,U+1F3F1-1F3F3,U+1F3F5-1F3F7,U+1F408,U+1F415,U+1F41F,U+1F426,U+1F43F,U+1F441-1F442,U+1F444,U+1F446-1F449,U+1F44C-1F44E,U+1F453,U+1F46A,U+1F47D,U+1F4A3,U+1F4B0,U+1F4B3,U+1F4B9,U+1F4BB,U+1F4BF,U+1F4C8-1F4CB,U+1F4D6,U+1F4DA,U+1F4DF,U+1F4E3-1F4E6,U+1F4EA-1F4ED,U+1F4F7,U+1F4F9-1F4FB,U+1F4FD-1F4FE,U+1F503,U+1F507-1F50B,U+1F50D,U+1F512-1F513,U+1F53E-1F54A,U+1F54F-1F5FA,U+1F610,U+1F650-1F67F,U+1F687,U+1F68D,U+1F691,U+1F694,U+1F698,U+1F6AD,U+1F6B2,U+1F6B9-1F6BA,U+1F6BC,U+1F6C6-1F6CF,U+1F6D3-1F6D7,U+1F6E0-1F6EA,U+1F6F0-1F6F3,U+1F6F7-1F6FC,U+1F700-1F7FF,U+1F800-1F80B,U+1F810-1F847,U+1F850-1F859,U+1F860-1F887,U+1F890-1F8AD,U+1F8B0-1F8BB,U+1F8C0-1F8C1,U+1F900-1F90B,U+1F93B,U+1F946,U+1F984,U+1F996,U+1F9E9,U+1FA00-1FA6F,U+1FA70-1FA7C,U+1FA80-1FA89,U+1FA8F-1FAC6,U+1FACE-1FADC,U+1FADF-1FAE9,U+1FAF0-1FAF8,U+1FB00-1FBFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/hebrew/400/normal.woff2);unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:400;src:url(/cf-fonts/s/open-sans/5.2.7/latin-ext/400/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/greek/600/italic.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic-ext/600/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/greek-ext/600/italic.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/latin/600/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/vietnamese/600/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/latin-ext/600/italic.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/math/600/italic.woff2);unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/symbols/600/italic.woff2);unicode-range:U+0001-000C,U+000E-001F,U+007F-009F,U+20DD-20E0,U+20E2-20E4,U+2150-218F,U+2190,U+2192,U+2194-2199,U+21AF,U+21E6-21F0,U+21F3,U+2218-2219,U+2299,U+22C4-22C6,U+2300-243F,U+2440-244A,U+2460-24FF,U+25A0-27BF,U+2800-28FF,U+2921-2922,U+2981,U+29BF,U+29EB,U+2B00-2BFF,U+4DC0-4DFF,U+FFF9-FFFB,U+10140-1018E,U+10190-1019C,U+101A0,U+101D0-101FD,U+102E0-102FB,U+10E60-10E7E,U+1D2C0-1D2D3,U+1D2E0-1D37F,U+1F000-1F0FF,U+1F100-1F1AD,U+1F1E6-1F1FF,U+1F30D-1F30F,U+1F315,U+1F31C,U+1F31E,U+1F320-1F32C,U+1F336,U+1F378,U+1F37D,U+1F382,U+1F393-1F39F,U+1F3A7-1F3A8,U+1F3AC-1F3AF,U+1F3C2,U+1F3C4-1F3C6,U+1F3CA-1F3CE,U+1F3D4-1F3E0,U+1F3ED,U+1F3F1-1F3F3,U+1F3F5-1F3F7,U+1F408,U+1F415,U+1F41F,U+1F426,U+1F43F,U+1F441-1F442,U+1F444,U+1F446-1F449,U+1F44C-1F44E,U+1F453,U+1F46A,U+1F47D,U+1F4A3,U+1F4B0,U+1F4B3,U+1F4B9,U+1F4BB,U+1F4BF,U+1F4C8-1F4CB,U+1F4D6,U+1F4DA,U+1F4DF,U+1F4E3-1F4E6,U+1F4EA-1F4ED,U+1F4F7,U+1F4F9-1F4FB,U+1F4FD-1F4FE,U+1F503,U+1F507-1F50B,U+1F50D,U+1F512-1F513,U+1F53E-1F54A,U+1F54F-1F5FA,U+1F610,U+1F650-1F67F,U+1F687,U+1F68D,U+1F691,U+1F694,U+1F698,U+1F6AD,U+1F6B2,U+1F6B9-1F6BA,U+1F6BC,U+1F6C6-1F6CF,U+1F6D3-1F6D7,U+1F6E0-1F6EA,U+1F6F0-1F6F3,U+1F6F7-1F6FC,U+1F700-1F7FF,U+1F800-1F80B,U+1F810-1F847,U+1F850-1F859,U+1F860-1F887,U+1F890-1F8AD,U+1F8B0-1F8BB,U+1F8C0-1F8C1,U+1F900-1F90B,U+1F93B,U+1F946,U+1F984,U+1F996,U+1F9E9,U+1FA00-1FA6F,U+1FA70-1FA7C,U+1FA80-1FA89,U+1FA8F-1FAC6,U+1FACE-1FADC,U+1FADF-1FAE9,U+1FAF0-1FAF8,U+1FB00-1FBFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/hebrew/600/italic.woff2);unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic/600/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/symbols/600/normal.woff2);unicode-range:U+0001-000C,U+000E-001F,U+007F-009F,U+20DD-20E0,U+20E2-20E4,U+2150-218F,U+2190,U+2192,U+2194-2199,U+21AF,U+21E6-21F0,U+21F3,U+2218-2219,U+2299,U+22C4-22C6,U+2300-243F,U+2440-244A,U+2460-24FF,U+25A0-27BF,U+2800-28FF,U+2921-2922,U+2981,U+29BF,U+29EB,U+2B00-2BFF,U+4DC0-4DFF,U+FFF9-FFFB,U+10140-1018E,U+10190-1019C,U+101A0,U+101D0-101FD,U+102E0-102FB,U+10E60-10E7E,U+1D2C0-1D2D3,U+1D2E0-1D37F,U+1F000-1F0FF,U+1F100-1F1AD,U+1F1E6-1F1FF,U+1F30D-1F30F,U+1F315,U+1F31C,U+1F31E,U+1F320-1F32C,U+1F336,U+1F378,U+1F37D,U+1F382,U+1F393-1F39F,U+1F3A7-1F3A8,U+1F3AC-1F3AF,U+1F3C2,U+1F3C4-1F3C6,U+1F3CA-1F3CE,U+1F3D4-1F3E0,U+1F3ED,U+1F3F1-1F3F3,U+1F3F5-1F3F7,U+1F408,U+1F415,U+1F41F,U+1F426,U+1F43F,U+1F441-1F442,U+1F444,U+1F446-1F449,U+1F44C-1F44E,U+1F453,U+1F46A,U+1F47D,U+1F4A3,U+1F4B0,U+1F4B3,U+1F4B9,U+1F4BB,U+1F4BF,U+1F4C8-1F4CB,U+1F4D6,U+1F4DA,U+1F4DF,U+1F4E3-1F4E6,U+1F4EA-1F4ED,U+1F4F7,U+1F4F9-1F4FB,U+1F4FD-1F4FE,U+1F503,U+1F507-1F50B,U+1F50D,U+1F512-1F513,U+1F53E-1F54A,U+1F54F-1F5FA,U+1F610,U+1F650-1F67F,U+1F687,U+1F68D,U+1F691,U+1F694,U+1F698,U+1F6AD,U+1F6B2,U+1F6B9-1F6BA,U+1F6BC,U+1F6C6-1F6CF,U+1F6D3-1F6D7,U+1F6E0-1F6EA,U+1F6F0-1F6F3,U+1F6F7-1F6FC,U+1F700-1F7FF,U+1F800-1F80B,U+1F810-1F847,U+1F850-1F859,U+1F860-1F887,U+1F890-1F8AD,U+1F8B0-1F8BB,U+1F8C0-1F8C1,U+1F900-1F90B,U+1F93B,U+1F946,U+1F984,U+1F996,U+1F9E9,U+1FA00-1FA6F,U+1FA70-1FA7C,U+1FA80-1FA89,U+1FA8F-1FAC6,U+1FACE-1FADC,U+1FADF-1FAE9,U+1FAF0-1FAF8,U+1FB00-1FBFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/latin/600/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/latin-ext/600/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic-ext/600/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/greek/600/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/greek-ext/600/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic/600/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/hebrew/600/normal.woff2);unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/math/600/normal.woff2);unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:600;src:url(/cf-fonts/s/open-sans/5.2.7/vietnamese/600/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic-ext/700/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/symbols/700/italic.woff2);unicode-range:U+0001-000C,U+000E-001F,U+007F-009F,U+20DD-20E0,U+20E2-20E4,U+2150-218F,U+2190,U+2192,U+2194-2199,U+21AF,U+21E6-21F0,U+21F3,U+2218-2219,U+2299,U+22C4-22C6,U+2300-243F,U+2440-244A,U+2460-24FF,U+25A0-27BF,U+2800-28FF,U+2921-2922,U+2981,U+29BF,U+29EB,U+2B00-2BFF,U+4DC0-4DFF,U+FFF9-FFFB,U+10140-1018E,U+10190-1019C,U+101A0,U+101D0-101FD,U+102E0-102FB,U+10E60-10E7E,U+1D2C0-1D2D3,U+1D2E0-1D37F,U+1F000-1F0FF,U+1F100-1F1AD,U+1F1E6-1F1FF,U+1F30D-1F30F,U+1F315,U+1F31C,U+1F31E,U+1F320-1F32C,U+1F336,U+1F378,U+1F37D,U+1F382,U+1F393-1F39F,U+1F3A7-1F3A8,U+1F3AC-1F3AF,U+1F3C2,U+1F3C4-1F3C6,U+1F3CA-1F3CE,U+1F3D4-1F3E0,U+1F3ED,U+1F3F1-1F3F3,U+1F3F5-1F3F7,U+1F408,U+1F415,U+1F41F,U+1F426,U+1F43F,U+1F441-1F442,U+1F444,U+1F446-1F449,U+1F44C-1F44E,U+1F453,U+1F46A,U+1F47D,U+1F4A3,U+1F4B0,U+1F4B3,U+1F4B9,U+1F4BB,U+1F4BF,U+1F4C8-1F4CB,U+1F4D6,U+1F4DA,U+1F4DF,U+1F4E3-1F4E6,U+1F4EA-1F4ED,U+1F4F7,U+1F4F9-1F4FB,U+1F4FD-1F4FE,U+1F503,U+1F507-1F50B,U+1F50D,U+1F512-1F513,U+1F53E-1F54A,U+1F54F-1F5FA,U+1F610,U+1F650-1F67F,U+1F687,U+1F68D,U+1F691,U+1F694,U+1F698,U+1F6AD,U+1F6B2,U+1F6B9-1F6BA,U+1F6BC,U+1F6C6-1F6CF,U+1F6D3-1F6D7,U+1F6E0-1F6EA,U+1F6F0-1F6F3,U+1F6F7-1F6FC,U+1F700-1F7FF,U+1F800-1F80B,U+1F810-1F847,U+1F850-1F859,U+1F860-1F887,U+1F890-1F8AD,U+1F8B0-1F8BB,U+1F8C0-1F8C1,U+1F900-1F90B,U+1F93B,U+1F946,U+1F984,U+1F996,U+1F9E9,U+1FA00-1FA6F,U+1FA70-1FA7C,U+1FA80-1FA89,U+1FA8F-1FAC6,U+1FACE-1FADC,U+1FADF-1FAE9,U+1FAF0-1FAF8,U+1FB00-1FBFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/hebrew/700/italic.woff2);unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/greek/700/italic.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/vietnamese/700/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/math/700/italic.woff2);unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/latin/700/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic/700/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/greek-ext/700/italic.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/latin-ext/700/italic.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/latin-ext/700/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/greek/700/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/symbols/700/normal.woff2);unicode-range:U+0001-000C,U+000E-001F,U+007F-009F,U+20DD-20E0,U+20E2-20E4,U+2150-218F,U+2190,U+2192,U+2194-2199,U+21AF,U+21E6-21F0,U+21F3,U+2218-2219,U+2299,U+22C4-22C6,U+2300-243F,U+2440-244A,U+2460-24FF,U+25A0-27BF,U+2800-28FF,U+2921-2922,U+2981,U+29BF,U+29EB,U+2B00-2BFF,U+4DC0-4DFF,U+FFF9-FFFB,U+10140-1018E,U+10190-1019C,U+101A0,U+101D0-101FD,U+102E0-102FB,U+10E60-10E7E,U+1D2C0-1D2D3,U+1D2E0-1D37F,U+1F000-1F0FF,U+1F100-1F1AD,U+1F1E6-1F1FF,U+1F30D-1F30F,U+1F315,U+1F31C,U+1F31E,U+1F320-1F32C,U+1F336,U+1F378,U+1F37D,U+1F382,U+1F393-1F39F,U+1F3A7-1F3A8,U+1F3AC-1F3AF,U+1F3C2,U+1F3C4-1F3C6,U+1F3CA-1F3CE,U+1F3D4-1F3E0,U+1F3ED,U+1F3F1-1F3F3,U+1F3F5-1F3F7,U+1F408,U+1F415,U+1F41F,U+1F426,U+1F43F,U+1F441-1F442,U+1F444,U+1F446-1F449,U+1F44C-1F44E,U+1F453,U+1F46A,U+1F47D,U+1F4A3,U+1F4B0,U+1F4B3,U+1F4B9,U+1F4BB,U+1F4BF,U+1F4C8-1F4CB,U+1F4D6,U+1F4DA,U+1F4DF,U+1F4E3-1F4E6,U+1F4EA-1F4ED,U+1F4F7,U+1F4F9-1F4FB,U+1F4FD-1F4FE,U+1F503,U+1F507-1F50B,U+1F50D,U+1F512-1F513,U+1F53E-1F54A,U+1F54F-1F5FA,U+1F610,U+1F650-1F67F,U+1F687,U+1F68D,U+1F691,U+1F694,U+1F698,U+1F6AD,U+1F6B2,U+1F6B9-1F6BA,U+1F6BC,U+1F6C6-1F6CF,U+1F6D3-1F6D7,U+1F6E0-1F6EA,U+1F6F0-1F6F3,U+1F6F7-1F6FC,U+1F700-1F7FF,U+1F800-1F80B,U+1F810-1F847,U+1F850-1F859,U+1F860-1F887,U+1F890-1F8AD,U+1F8B0-1F8BB,U+1F8C0-1F8C1,U+1F900-1F90B,U+1F93B,U+1F946,U+1F984,U+1F996,U+1F9E9,U+1FA00-1FA6F,U+1FA70-1FA7C,U+1FA80-1FA89,U+1FA8F-1FAC6,U+1FACE-1FADC,U+1FADF-1FAE9,U+1FAF0-1FAF8,U+1FB00-1FBFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/greek-ext/700/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/math/700/normal.woff2);unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/hebrew/700/normal.woff2);unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/vietnamese/700/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic-ext/700/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic/700/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:700;src:url(/cf-fonts/s/open-sans/5.2.7/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic/800/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/greek-ext/800/italic.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/hebrew/800/italic.woff2);unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/latin/800/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/symbols/800/italic.woff2);unicode-range:U+0001-000C,U+000E-001F,U+007F-009F,U+20DD-20E0,U+20E2-20E4,U+2150-218F,U+2190,U+2192,U+2194-2199,U+21AF,U+21E6-21F0,U+21F3,U+2218-2219,U+2299,U+22C4-22C6,U+2300-243F,U+2440-244A,U+2460-24FF,U+25A0-27BF,U+2800-28FF,U+2921-2922,U+2981,U+29BF,U+29EB,U+2B00-2BFF,U+4DC0-4DFF,U+FFF9-FFFB,U+10140-1018E,U+10190-1019C,U+101A0,U+101D0-101FD,U+102E0-102FB,U+10E60-10E7E,U+1D2C0-1D2D3,U+1D2E0-1D37F,U+1F000-1F0FF,U+1F100-1F1AD,U+1F1E6-1F1FF,U+1F30D-1F30F,U+1F315,U+1F31C,U+1F31E,U+1F320-1F32C,U+1F336,U+1F378,U+1F37D,U+1F382,U+1F393-1F39F,U+1F3A7-1F3A8,U+1F3AC-1F3AF,U+1F3C2,U+1F3C4-1F3C6,U+1F3CA-1F3CE,U+1F3D4-1F3E0,U+1F3ED,U+1F3F1-1F3F3,U+1F3F5-1F3F7,U+1F408,U+1F415,U+1F41F,U+1F426,U+1F43F,U+1F441-1F442,U+1F444,U+1F446-1F449,U+1F44C-1F44E,U+1F453,U+1F46A,U+1F47D,U+1F4A3,U+1F4B0,U+1F4B3,U+1F4B9,U+1F4BB,U+1F4BF,U+1F4C8-1F4CB,U+1F4D6,U+1F4DA,U+1F4DF,U+1F4E3-1F4E6,U+1F4EA-1F4ED,U+1F4F7,U+1F4F9-1F4FB,U+1F4FD-1F4FE,U+1F503,U+1F507-1F50B,U+1F50D,U+1F512-1F513,U+1F53E-1F54A,U+1F54F-1F5FA,U+1F610,U+1F650-1F67F,U+1F687,U+1F68D,U+1F691,U+1F694,U+1F698,U+1F6AD,U+1F6B2,U+1F6B9-1F6BA,U+1F6BC,U+1F6C6-1F6CF,U+1F6D3-1F6D7,U+1F6E0-1F6EA,U+1F6F0-1F6F3,U+1F6F7-1F6FC,U+1F700-1F7FF,U+1F800-1F80B,U+1F810-1F847,U+1F850-1F859,U+1F860-1F887,U+1F890-1F8AD,U+1F8B0-1F8BB,U+1F8C0-1F8C1,U+1F900-1F90B,U+1F93B,U+1F946,U+1F984,U+1F996,U+1F9E9,U+1FA00-1FA6F,U+1FA70-1FA7C,U+1FA80-1FA89,U+1FA8F-1FAC6,U+1FACE-1FADC,U+1FADF-1FAE9,U+1FAF0-1FAF8,U+1FB00-1FBFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/vietnamese/800/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic-ext/800/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/latin-ext/800/italic.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/greek/800/italic.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:italic;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/math/800/italic.woff2);unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic/800/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/greek-ext/800/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/greek/800/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/math/800/normal.woff2);unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/vietnamese/800/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/symbols/800/normal.woff2);unicode-range:U+0001-000C,U+000E-001F,U+007F-009F,U+20DD-20E0,U+20E2-20E4,U+2150-218F,U+2190,U+2192,U+2194-2199,U+21AF,U+21E6-21F0,U+21F3,U+2218-2219,U+2299,U+22C4-22C6,U+2300-243F,U+2440-244A,U+2460-24FF,U+25A0-27BF,U+2800-28FF,U+2921-2922,U+2981,U+29BF,U+29EB,U+2B00-2BFF,U+4DC0-4DFF,U+FFF9-FFFB,U+10140-1018E,U+10190-1019C,U+101A0,U+101D0-101FD,U+102E0-102FB,U+10E60-10E7E,U+1D2C0-1D2D3,U+1D2E0-1D37F,U+1F000-1F0FF,U+1F100-1F1AD,U+1F1E6-1F1FF,U+1F30D-1F30F,U+1F315,U+1F31C,U+1F31E,U+1F320-1F32C,U+1F336,U+1F378,U+1F37D,U+1F382,U+1F393-1F39F,U+1F3A7-1F3A8,U+1F3AC-1F3AF,U+1F3C2,U+1F3C4-1F3C6,U+1F3CA-1F3CE,U+1F3D4-1F3E0,U+1F3ED,U+1F3F1-1F3F3,U+1F3F5-1F3F7,U+1F408,U+1F415,U+1F41F,U+1F426,U+1F43F,U+1F441-1F442,U+1F444,U+1F446-1F449,U+1F44C-1F44E,U+1F453,U+1F46A,U+1F47D,U+1F4A3,U+1F4B0,U+1F4B3,U+1F4B9,U+1F4BB,U+1F4BF,U+1F4C8-1F4CB,U+1F4D6,U+1F4DA,U+1F4DF,U+1F4E3-1F4E6,U+1F4EA-1F4ED,U+1F4F7,U+1F4F9-1F4FB,U+1F4FD-1F4FE,U+1F503,U+1F507-1F50B,U+1F50D,U+1F512-1F513,U+1F53E-1F54A,U+1F54F-1F5FA,U+1F610,U+1F650-1F67F,U+1F687,U+1F68D,U+1F691,U+1F694,U+1F698,U+1F6AD,U+1F6B2,U+1F6B9-1F6BA,U+1F6BC,U+1F6C6-1F6CF,U+1F6D3-1F6D7,U+1F6E0-1F6EA,U+1F6F0-1F6F3,U+1F6F7-1F6FC,U+1F700-1F7FF,U+1F800-1F80B,U+1F810-1F847,U+1F850-1F859,U+1F860-1F887,U+1F890-1F8AD,U+1F8B0-1F8BB,U+1F8C0-1F8C1,U+1F900-1F90B,U+1F93B,U+1F946,U+1F984,U+1F996,U+1F9E9,U+1FA00-1FA6F,U+1FA70-1FA7C,U+1FA80-1FA89,U+1FA8F-1FAC6,U+1FACE-1FADC,U+1FADF-1FAE9,U+1FAF0-1FAF8,U+1FB00-1FBFF;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/latin/800/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/cyrillic-ext/800/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/hebrew/800/normal.woff2);unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:'Open Sans';font-style:normal;font-weight:800;src:url(/cf-fonts/s/open-sans/5.2.7/latin-ext/800/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}</style>
+<link rel='stylesheet' id='jquery-magnific-popup-css' href='https://www.mcleodhealth.org/wp-content/themes/mcleod-health/css/magnific-popup.css?ver=1785927336' media='all' />
+<link rel='stylesheet' id='jquery-ui-css' href='https://www.mcleodhealth.org/wp-content/themes/mcleod-health/css/jquery-ui.css?ver=1785927336' media='all' />
+<link rel='stylesheet' id='theme-fonts-css' href='https://www.mcleodhealth.org/wp-content/themes/mcleod-health/css/fonts.css?ver=1785927336' media='all' />
+<link rel='stylesheet' id='page-animations-css' href='https://www.mcleodhealth.org/wp-content/themes/mcleod-health/css/page-animations.css?ver=1785927336' media='all' />
+<link rel='stylesheet' id='animate-css' href='https://www.mcleodhealth.org/wp-content/themes/mcleod-health/css/animate.css?ver=1785927336' media='all' />
+<link rel='stylesheet' id='slick-css' href='https://www.mcleodhealth.org/wp-content/themes/mcleod-health/css/slick.css?ver=1785927336' media='all' />
+<link rel='stylesheet' id='select2-css' href='https://www.mcleodhealth.org/wp-content/themes/mcleod-health/css/select2.css?ver=1785927336' media='all' />
+<link rel='stylesheet' id='selectric-css' href='https://www.mcleodhealth.org/wp-content/themes/mcleod-health/css/selectric.css?ver=1785927336' media='all' />
+<link rel='stylesheet' id='dropkick-css' href='https://www.mcleodhealth.org/wp-content/themes/mcleod-health/css/dropkick.css?ver=1785927336' media='all' />
+<link rel='stylesheet' id='loader-css' href='https://www.mcleodhealth.org/wp-content/themes/mcleod-health/css/css-loader.css?ver=1785927336' media='all' />
+<link rel='stylesheet' id='theme-styles-css' href='https://www.mcleodhealth.org/wp-content/themes/mcleod-health/style.css?ver=1785927336' media='all' />
+<link rel='stylesheet' id='theme-styles-additional-css' href='https://www.mcleodhealth.org/wp-content/themes/mcleod-health/css/additional-styles.css?ver=1785927336' media='all' />
+<link rel='stylesheet' id='theme-ratings-css' href='https://transparency.nrchealth.com/resources/css/docscores-lotw.v14100-2025040916.css?ver=7.0.2' media='all' />
+<link rel='stylesheet' id='theme-css-bundle-css' href='https://www.mcleodhealth.org/wp-content/plugins/mcleod-algolia//dist/css/bundle-a70dab75f9.css?ver=7.0.2' media='all' />
+<link rel='stylesheet' id='algolia-plugin-styles-css' href='https://www.mcleodhealth.org/wp-content/plugins/mcleod-algolia/resources/css/styles.css?ver=1785927333' media='all' />
+<script id="jquery-core-js-extra">
+var crbAlgoliaCredentials = {"credits":{"api_id":"JUNR3SUCF2","api_key":"ad6044da492ef74aedd8e768a1c21b5d"},"indexes":{"hospitals":"live_hospitals","physician":"live_physicians","physician_replica_practice":"live_physicians_replica_practice","practice":"live_practices","medical":"live_medical_library","medical_video":"live_medical_video","medical_article":"live_medical_article","news":"live_news","post":"live_blog","page":"live_site","practices_cerner":"live_practices_cerner","physician_cerner":"live_physicians_cerner","citystate":"live_citystate","findadoc":"live_physicians_findadoc","physician_specialty":"live_specialties","physician_specialty_specific":"live_"}};
+var crbPluginVariables = {"defaultSrc":"https://www.mcleodhealth.org/wp-content/uploads/cache/2016/07/news-item5/785620661.jpg","defaultCoordinates":{"lat":34.1954331,"lng":-79.7625625,"address":"Florence, SC","zoom":14},"aroundPrecision":"5000","homeUrl":"https://www.mcleodhealth.org/"};
+//# sourceURL=jquery-core-js-extra
+</script>
+<script id="jquery-core-js" src="https://www.mcleodhealth.org/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.mcleodhealth.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="3d-flip-book-client-locale-loader-js-extra">
+var FB3D_CLIENT_LOCALE = {"ajaxurl":"https://www.mcleodhealth.org/wp-admin/admin-ajax.php","dictionary":{"Table of contents":"Table of contents","Close":"Close","Bookmarks":"Bookmarks","Thumbnails":"Thumbnails","Search":"Search","Share":"Share","Facebook":"Facebook","Twitter":"Twitter","Email":"Email","Play":"Play","Previous page":"Previous page","Next page":"Next page","Zoom in":"Zoom in","Zoom out":"Zoom out","Fit view":"Fit view","Auto play":"Auto play","Full screen":"Full screen","More":"More","Smart pan":"Smart pan","Single page":"Single page","Sounds":"Sounds","Stats":"Stats","Print":"Print","Download":"Download","Goto first page":"Goto first page","Goto last page":"Goto last page"},"images":"https://www.mcleodhealth.org/wp-content/plugins/3d-flip-book/assets/images/","jsData":{"urls":[],"posts":{"ids_mis":[],"ids":[]},"pages":[],"firstPages":[],"bookCtrlProps":[],"bookTemplates":[]},"key":"3d-flip-book","pdfJS":{"pdfJsLib":"https://www.mcleodhealth.org/wp-content/plugins/3d-flip-book/assets/js/pdf.min.js?ver=4.3.136","pdfJsWorker":"https://www.mcleodhealth.org/wp-content/plugins/3d-flip-book/assets/js/pdf.worker.js?ver=4.3.136","stablePdfJsLib":"https://www.mcleodhealth.org/wp-content/plugins/3d-flip-book/assets/js/stable/pdf.min.js?ver=2.5.207","stablePdfJsWorker":"https://www.mcleodhealth.org/wp-content/plugins/3d-flip-book/assets/js/stable/pdf.worker.js?ver=2.5.207","pdfJsCMapUrl":"https://www.mcleodhealth.org/wp-content/plugins/3d-flip-book/assets/cmaps/"},"cacheurl":"https://www.mcleodhealth.org/wp-content/uploads/3d-flip-book/cache/","pluginsurl":"https://www.mcleodhealth.org/wp-content/plugins/","pluginurl":"https://www.mcleodhealth.org/wp-content/plugins/3d-flip-book/","thumbnailSize":{"width":"150","height":"150"},"version":"1.16.19"};
+//# sourceURL=3d-flip-book-client-locale-loader-js-extra
+</script>
+<script async data-wp-strategy="async" id="3d-flip-book-client-locale-loader-js" src="https://www.mcleodhealth.org/wp-content/plugins/3d-flip-book/assets/js/client-locale-loader.js?ver=1.16.19"></script>
+<script id="apbct-public-bundle_gathering.min-js-js" src="https://www.mcleodhealth.org/wp-content/plugins/cleantalk-spam-protect/js/apbct-public-bundle_gathering.min.js?ver=6.84_1785927331"></script>
+<script id="gform_json-js" src="https://www.mcleodhealth.org/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.10.5"></script>
+<script id="gform_gravityforms-js-extra">
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":0,"iconText":"Select date"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","file_uploaded":"File uploaded","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled","error":"Error","message":"Message"},"vars":{"images_url":"https://www.mcleodhealth.org/wp-content/plugins/gravityforms/images"}};
+//# sourceURL=gform_gravityforms-js-extra
+</script>
+<script id="gform_gravityforms-js-before">
+
+//# sourceURL=gform_gravityforms-js-before
+</script>
+<script id="gform_gravityforms-js" src="https://www.mcleodhealth.org/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.10.5"></script>
+<script id="moxiejs-js" src="https://www.mcleodhealth.org/wp-includes/js/plupload/moxie.min.js?ver=1.3.5.1"></script>
+<script id="plupload-js" src="https://www.mcleodhealth.org/wp-includes/js/plupload/plupload.min.js?ver=2.1.9"></script>
+<script id="blazy-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/blazy.min.js?ver=1785927336"></script>
+<script id="vimeo-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/player.js?ver=1785927336"></script>
+<script id="freewall-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/freewall.js?ver=1785927336"></script>
+<script id="jquery-mask-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/jquery.mask.js?ver=1785927336"></script>
+<script id="scrollreveal-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/scrollreveal.min.js?ver=1785927336"></script>
+<script id="jqbrowser-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/jqbrowser.js?ver=1785927336"></script>
+<script id="jquery-smoothstate-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/jquery.smoothState.min.js?ver=1785927336"></script>
+<script id="jquery-ui-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/jquery-ui.js?ver=1785927336"></script>
+<script id="jquery-select2-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/select2.full.js?ver=1785927336"></script>
+<script id="jquery-magnific-popup-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/jquery.magnific-popup.js?ver=1785927336"></script>
+<script id="jquery-arctext-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/jquery.arctext.js?ver=1785927336"></script>
+<script id="jquery-viewportchecker-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/jquery.viewportchecker.js?ver=1785927336"></script>
+<script id="slick-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/slick.js?ver=1785927336"></script>
+<script id="tickerNews-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/jquery.tickerNews.min.js?ver=1785927336"></script>
+<script id="isotope-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/isotope.pkgd.min.js?ver=1785927336"></script>
+<script id="dropkick-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/dropkick.2.1.8.min.js?ver=1785927336"></script>
+<script id="dotdotdot-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/jquery.dotdotdot.js?ver=1785927336"></script>
+<script id="selectric-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/jquery.selectric.min.js?ver=1785927336"></script>
+<script id="recaptcha-js" src="//www.google.com/recaptcha/api.js?ver=7.0.2"></script>
+<script id="google-maps-api-js" src="//maps.googleapis.com/maps/api/js?key=AIzaSyC1VzdkeqsNNnBg-6WHvmTZHbMpVDAOnsk&#038;ver=7.0.2"></script>
+<script id="jquery-co0kie-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/js.co0kie.js?ver=1785927336"></script>
+<script id="theme-layer-slider-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/layer.slider.js?ver=1785927336"></script>
+<script id="global-functions-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/global-functions.js?ver=1785927336"></script>
+<script id="portal-functions-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/functions-portal.js?ver=1785927336"></script>
+<script id="theme-functions-js-extra">
+var crb_site_data = {"current_page":"236233","current_page_parent":"0","subsite":"","home_url":"https://www.mcleodhealth.org/","ajax_url":"https://www.mcleodhealth.org/wp-admin/admin-ajax.php","template_dir":"https://www.mcleodhealth.org/wp-content/themes/mcleod-health","duplicate_payment_confirmation_text":"We show this amount for you has already been submitted within the last 24 hours. Possibly a duplicate payment. Please wait 24-48 hours and double check your bank/credit card statement before proceeding. Do you want to proceed anyways?"};
+//# sourceURL=theme-functions-js-extra
+</script>
+<script id="theme-functions-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/functions.js?ver=1785927336"></script>
+<script id="popup-foundation-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/popup-foundation.js?ver=1785927336"></script>
+<script id="theme-js-ignored-words-js-extra">
+var crbIgnoredWordsData = ["Dr","dr","doctor","Doctor","Dr.","dr."];
+//# sourceURL=theme-js-ignored-words-js-extra
+</script>
+<script id="theme-js-ignored-words-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/js/functions.js?ver=1785927336"></script>
+<link rel="https://api.w.org/" href="https://www.mcleodhealth.org/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.mcleodhealth.org/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.0.2" />
+<link rel='shortlink' href='https://www.mcleodhealth.org/?p=236233' />
+<meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://www.mcleodhealth.org"><link rel="alternate" href="https://www.mcleodhealth.org/wp-json/tribe/events/v1/" />
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to manual -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var dataLayer_content = {"pagePostType":"crb_physician","pagePostType2":"single-crb_physician","pagePostAuthor":"Shaw Thompson"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PLCF54V');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->	<script type="text/javascript">
+		if ( window.stLight ) {
+			stLight.options({
+				publisher: "a128fafe-3614-4851-81cc-077bfaade296",
+				doNotHash: true,
+				doNotCopy: false,
+				hashAddressBar: false
+			});
+		}
+	</script>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-12527884-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-12527884-1');
+</script>
+
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script>
+
+<script>
+/**
+* Function that tracks a click on an outbound link in Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+* using 'navigator.sendBeacon' in browser that support it.
+*/
+var trackOutboundLink = function(url) {
+   ga('send', 'event', 'outbound', 'click', url, {
+     'transport': 'beacon',
+     'hitCallback': function(){document.location = url;}
+   });
+}
+</script>
+
+<script async src="https://i.simpli.fi/dpx.js?cid=64993&action=100&segment=wmbfmcleodtelehealthsite&m=1&sifi_tuid=64082"></script>
+<script async src="https://i.simpli.fi/dpx.js?cid=64993&conversion=40&campaign_id=0&m=1&tid=telehealthviewthrough&sifi_tuid=64083"></script>	</head>
+	<body class="wp-singular crb_physician-template-default single single-crb_physician postid-236233 wp-theme-mcleod-health tribe-no-js algolia-plugin">
+				<div class="wrapper" id="wrapper">
+						<header class="header header--main" data-site-navigation="main">
+				<div class="header-bar crb_main_logo">
+					<a href="https://www.mcleodhealth.org/" class="logo">
+						McLeod Health
+						<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/logo.png" alt="" />
+
+						<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/logo-hover.png" alt="" class="hover-logo" />
+					</a>
+
+					<div class="header-right">
+						<nav class="nav"><ul id="menu-header-top-menu" class=""><li id="menu-item-15" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15"><a href="https://www.mcleodhealth.org/about-us/">About Us</a></li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-16"><a href="https://www.mcleodhealth.org/blog/">Blog</a></li>
+<li id="menu-item-88716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88716"><a href="https://www.mcleodhealth.org/foundation/">Giving</a></li>
+<li id="menu-item-307659" class="current-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-307659"><a href="https://www.mcleodhealth.org/notice-of-data-security-incident/">Notice of Data Security Incident</a></li>
+<li id="menu-item-198741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198741"><a href="https://www.mcleodhealth.org/newsletter-sign-up/">Newsletter Sign-Up</a></li>
+<li id="menu-item-20" class="search menu-item menu-item-type-custom menu-item-object-custom menu-item-20 search-link search-link-algolia"><a href="https://www.mcleodhealth.org/search-mcleod-search/"><img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/search-icon.png" alt="" width="39" height="40"><img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/search-icon-hover.png" alt="" width="39" height="40" class="hover"></a></li>
+<li id="menu-item-21" class="phone menu-item menu-item-type-custom menu-item-object-custom menu-item-21 phone-link"><a href="#phone-information"><img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/phone-icon.png" alt="" width="38" height="40"><img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/phone-icon-hover.png" alt="" width="38" height="40" class="hover"></a></li>
+</ul></nav>					</div><!-- /.header-right -->
+				</div><!-- /.header-bar -->
+
+				<div class="header-bottom">
+					<div class="tabs">
+	<ul>
+		<li class="complex-item">
+			<a href="#">
+				<span>
+					<img width="74" height="87" src="https://www.mcleodhealth.org/wp-content/uploads/2016/07/doctor.png" class="attachment-full size-full" alt="" decoding="async" />Find a Doctor				</span>
+			</a>
+
+			<div class="tab">
+				<div class="mobile-form">
+
+<form id="nav-physician-form" action="https://www.mcleodhealth.org/search-physician-finder/" method="get" class="search-form crb_algolia_find_a_doctor_search" role="search">
+	<label for="doctor-search">Search by<br />
+any or All Categories:</label>
+
+	<input type="search" name="location" class="locator-address-input" placeholder="Zip Code or City" value="" >
+
+	<input type="search" name="crb_search_term" data-default-name="crb_search_term" placeholder="Physician, Specialty, or Practice Name" class="doctor-search" value="" >
+
+	<div class="radio">
+				<input type="radio" id="location-input-400143197" name="crb_use_user_location" class="locator-get-user-location" value="yes" >
+
+		<label for="location-input-400143197" class="form-label">Use My Current Location</label>
+	</div><!-- /.radio -->
+
+	<footer class="search-foot">
+		<input type="hidden" name="" value="" class="locator-type-input" >
+		<input type="hidden" name="crb_is_accepting_new_patients" value="" >
+		<input type="hidden" name="crb_is_physician_search" value="yes" >
+		<input type="submit" value="Search" class="search-btn">
+		<span class="border-bottom"></span>
+	</footer><!-- /.search-foot -->
+</form>
+
+<div class="crb_load_spinner loader-hide"></div><!-- /.crb_load_spinner -->
+</div><!-- /.mobile-form -->			</div><!-- /.tab -->
+		</li>
+
+		<li class="nav-portal">
+			<a href="#" class="nav-portal-item" data-url="/patient-online-services/">
+				<span>
+											<span class="tab__icon" style="background-image: url( https://www.mcleodhealth.org/wp-content/uploads/2019/06/RECORDS-ICON.png );">
+							<img width="67" height="95" src="https://www.mcleodhealth.org/wp-content/uploads/2019/06/RECORDS-ICON-WHITE.png" class="attachment-full size-full" alt="" decoding="async" />						</span>
+									
+					PATIENT ONLINE SERVICES				</span>
+			</a>
+		</li>
+
+		<li>
+			<a href="#">
+				<span>
+					<img width="62" height="90" src="https://www.mcleodhealth.org/wp-content/uploads/2016/07/location.png" class="attachment-full size-full" alt="" decoding="async" />Locations				</span>
+			</a>
+
+			<div class="tab">
+				<nav class="nav-locations"><ul id="menu-locations-menu" class=""><li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="https://www.mcleodhealth.org/locations/mcleod-regional-medical-center-florence/">McLeod Regional Medical Center <span>Florence</span></a></li>
+<li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="https://www.mcleodhealth.org/locations/mcleod-cheraw/">McLeod Health <span>Cheraw</span></a></li>
+<li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46"><a href="https://www.mcleodhealth.org/locations/mcleod-clarendon/">McLeod Health <span>Clarendon</span></a></li>
+<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="https://www.mcleodhealth.org/locations/mcleod-dillon/">McLeod Health <span>Dillon</span></a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="https://www.mcleodhealth.org/locations/mcleod-loris/">McLeod Health <span>Loris</span></a></li>
+<li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a href="https://www.mcleodhealth.org/locations/mcleod-seacoast/">McLeod Health <span>Seacoast</span></a></li>
+<li id="menu-item-176556" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176556"><a href="https://www.mcleodhealth.org/locations/mcleod-health-carolina-forest/">McLeod Health <span>Carolina Forest</span></a></li>
+</ul></nav>			</div><!-- /.tab -->
+		</li>
+
+		<li>
+			<a href="#">
+				<span>
+					<img width="88" height="88" src="https://www.mcleodhealth.org/wp-content/uploads/2016/07/service.png" class="attachment-full size-full" alt="" decoding="async" />Services				</span>
+			</a>
+
+			<div class="tab">
+				<nav class="nav-utilities"><ul id="menu-services-menu" class=""><li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-130"><a href="https://www.mcleodhealth.org/services/care/">Care</a>
+<ul class="sub-menu">
+	<li id="menu-item-300391" class="menu-item--pink menu-item menu-item-type-post_type menu-item-object-page menu-item-300391"><a href="https://www.mcleodhealth.org/services/care/cancer-center/breast-health-center-2/">Breast Health Center</a></li>
+	<li id="menu-item-132" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132"><a href="https://www.mcleodhealth.org/services/care/cancer-center/">Cancer Center</a></li>
+	<li id="menu-item-7630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7630"><a href="https://www.mcleodhealth.org/services/care/heart-vascular/cardiology/">Cardiology</a></li>
+	<li id="menu-item-134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"><a href="https://www.mcleodhealth.org/services/care/childrens-hospital/">Children’s Hospital</a></li>
+	<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135"><a href="https://www.mcleodhealth.org/services/care/diabetes-management/">Diabetes Center</a></li>
+	<li id="menu-item-102396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102396"><a href="https://www.mcleodhealth.org/services/care/gastroenterology/">Digestive Health</a></li>
+	<li id="menu-item-136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136"><a href="https://www.mcleodhealth.org/services/care/emergency-trauma-overview/">Emergency/Trauma</a></li>
+	<li id="menu-item-137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137"><a href="https://www.mcleodhealth.org/services/care/heart-vascular/">Heart</a></li>
+	<li id="menu-item-138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-138"><a href="https://www.mcleodhealth.org/services/care/home-health/">Home Health</a></li>
+	<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139"><a href="https://www.mcleodhealth.org/services/care/hospice-overview/">Hospice</a></li>
+	<li id="menu-item-140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-140"><a href="https://www.mcleodhealth.org/services/care/neurology-overview/">Neurosciences</a></li>
+	<li id="menu-item-307779" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307779"><a href="https://www.mcleodhealth.org/services/mcleod-urgent-care/mcleod-orthonow/">OrthoNow (Walk-in Clinic)</a></li>
+	<li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142"><a href="https://www.mcleodhealth.org/services/care/orthopedic-spine-care/">Orthopedic &amp; Spine Care</a></li>
+	<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="https://www.mcleodhealth.org/services/care/palliative-care-overview/">Palliative Care</a></li>
+	<li id="menu-item-305629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305629"><a href="https://www.mcleodhealth.org/pharmacy/patients/">Pharmacy &#038; Outpatient Infusion</a></li>
+	<li id="menu-item-219412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219412"><a href="https://www.mcleodhealth.org/practices/mcleod-plastic-reconstructive-surgery/">Plastic/Reconstructive Surgery</a></li>
+	<li id="menu-item-7039" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7039"><a href="https://www.mcleodhealth.org/services/care/primary-care/">Primary Care</a></li>
+	<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="https://www.mcleodhealth.org/services/care/pulmonology/">Pulmonology</a></li>
+	<li id="menu-item-146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="https://www.mcleodhealth.org/services/care/radiology-overview/">Radiology</a></li>
+	<li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="https://www.mcleodhealth.org/services/care/rehabilitation-overview/">Rehabilitation</a></li>
+	<li id="menu-item-293095" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293095"><a href="https://www.mcleodhealth.org/services/care/respiratory-therapy/">Respiratory Therapy</a></li>
+	<li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="https://www.mcleodhealth.org/services/care/sports-medicine/">Sports Medicine</a></li>
+	<li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="https://www.mcleodhealth.org/services/care/stroke/">Stroke</a></li>
+	<li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="https://www.mcleodhealth.org/services/care/surgery-overview/">Surgery</a></li>
+	<li id="menu-item-10141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10141"><a href="https://www.mcleodhealth.org/services/care/telehealth/">TeleHealth</a></li>
+	<li id="menu-item-232382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232382"><a href="https://www.mcleodhealth.org/services/mcleod-urgent-care/">Urgent Care</a></li>
+	<li id="menu-item-92732" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92732"><a href="https://www.mcleodhealth.org/services/care/urology-overview/">Urology</a></li>
+	<li id="menu-item-87368" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87368"><a href="https://www.mcleodhealth.org/services/care/heart-vascular/">Vascular</a></li>
+	<li id="menu-item-148988" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148988"><a href="https://www.mcleodhealth.org/services/care/heart-vascular/vein-center/">Vein Center</a></li>
+	<li id="menu-item-6121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6121"><a href="https://www.mcleodhealth.org/services/care/womens-services-overview/">Women&#8217;s Services</a></li>
+	<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="https://www.mcleodhealth.org/services/care/outpatient-wound-care-overview/">Wound Care - Outpatient</a></li>
+</ul>
+</li>
+<li id="menu-item-153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153"><a href="https://www.mcleodhealth.org/services/wellness/">Wellness</a>
+<ul class="sub-menu">
+	<li id="menu-item-154" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154"><a href="https://www.mcleodhealth.org/services/wellness/health-fitness/">Health &amp; Fitness</a></li>
+</ul>
+</li>
+<li id="menu-item-156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-156"><a href="https://www.mcleodhealth.org/?page_id=112">Occupational Health</a>
+<ul class="sub-menu">
+	<li id="menu-item-285538" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-285538"><a target="_blank" href="https://www.mcleodonsitehealth.org/">Onsite & Nearsite Services</a></li>
+	<li id="menu-item-297525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297525"><a href="https://www.mcleodhealth.org/services/occupational-health-emp/new-occupational-health-eap-program/">Employee Assistance Program</a></li>
+</ul>
+</li>
+<li id="menu-item-159" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-159"><a href="https://www.mcleodhealth.org/services/community-involvement/">Community Involvement</a>
+<ul class="sub-menu">
+	<li id="menu-item-88717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88717"><a href="https://www.mcleodhealth.org/foundation/">McLeod Foundation</a></li>
+	<li id="menu-item-161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161"><a href="https://www.mcleodhealth.org/services/community-involvement/pastoral-services/">Pastoral Services</a></li>
+	<li id="menu-item-8316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8316"><a href="https://www.mcleodhealth.org/services/care/safe-kids/">McLeod Safe Kids</a></li>
+	<li id="menu-item-8323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8323"><a href="https://www.mcleodhealth.org/services/community-involvement/volunteers/">Volunteers</a></li>
+	<li id="menu-item-164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"><a href="https://www.mcleodhealth.org/services/community-involvement/guest-house/">Guest House</a></li>
+</ul>
+</li>
+<li id="menu-item-249524" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-249524"><a href="https://www.mcleodhealth.org/providers/">For Providers</a>
+<ul class="sub-menu">
+	<li id="menu-item-249525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-249525"><a href="https://www.mcleodhealth.org/providers/welcome-to-mcleod-epiclink/">McLeod EpicLink</a></li>
+</ul>
+</li>
+</ul></nav>			</div><!-- /.tab -->
+		</li>
+
+		<li>
+			<a href="#" class="dots-trigger">
+				<span>
+					<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/dots-image.png" height="5" width="33" alt="">
+				</span>
+			</a>
+			<ul id="menu-header-side-menu" class="tabs-links"><li id="menu-item-2601" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2601"><a href="https://www.mcleodhealth.org/physician-employment/"><span>Physician Employment</span></a></li>
+<li id="menu-item-6167" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6167"><a target="_blank" href="https://jobs.mcleodhealth.org/"><span>Careers</span></a></li>
+<li id="menu-item-823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-823"><a target="_blank" href="https://www.mcleodhealth.org/residency-programs/"><span>Residency</span></a></li>
+</ul>		</li>
+	</ul>
+</div><!-- /.tabs -->				</div><!-- /.header-bottom -->
+
+				
+			</header><!-- /.header -->
+						<div class="inner-wrapper" id="inner-wrapper">
+				<span class="wp-singular crb_physician-template-default single single-crb_physician postid-236233 wp-theme-mcleod-health body-classes tribe-no-js algolia-plugin" style="display: none;"></span>
+							<header class="header header--main" data-site-navigation="main">
+				<div class="header-bar crb_main_logo">
+					<a href="https://www.mcleodhealth.org/" class="logo">
+						McLeod Health
+						<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/logo.png" alt="" />
+
+						<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/logo-hover.png" alt="" class="hover-logo" />
+					</a>
+
+					<div class="header-right">
+						<nav class="nav"><ul id="menu-header-top-menu" class=""><li id="menu-item-15" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15"><a href="https://www.mcleodhealth.org/about-us/">About Us</a></li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-16"><a href="https://www.mcleodhealth.org/blog/">Blog</a></li>
+<li id="menu-item-88716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88716"><a href="https://www.mcleodhealth.org/foundation/">Giving</a></li>
+<li id="menu-item-307659" class="current-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-307659"><a href="https://www.mcleodhealth.org/notice-of-data-security-incident/">Notice of Data Security Incident</a></li>
+<li id="menu-item-198741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198741"><a href="https://www.mcleodhealth.org/newsletter-sign-up/">Newsletter Sign-Up</a></li>
+<li id="menu-item-20" class="search menu-item menu-item-type-custom menu-item-object-custom menu-item-20 search-link search-link-algolia"><a href="https://www.mcleodhealth.org/search-mcleod-search/"><img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/search-icon.png" alt="" width="39" height="40"><img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/search-icon-hover.png" alt="" width="39" height="40" class="hover"></a></li>
+<li id="menu-item-21" class="phone menu-item menu-item-type-custom menu-item-object-custom menu-item-21 phone-link"><a href="#phone-information"><img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/phone-icon.png" alt="" width="38" height="40"><img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/phone-icon-hover.png" alt="" width="38" height="40" class="hover"></a></li>
+</ul></nav>					</div><!-- /.header-right -->
+				</div><!-- /.header-bar -->
+
+				<div class="header-bottom">
+					<div class="tabs">
+	<ul>
+		<li class="complex-item">
+			<a href="#">
+				<span>
+					<img width="74" height="87" src="https://www.mcleodhealth.org/wp-content/uploads/2016/07/doctor.png" class="attachment-full size-full" alt="" decoding="async" />Find a Doctor				</span>
+			</a>
+
+			<div class="tab">
+				<div class="mobile-form">
+
+<form id="nav-physician-form" action="https://www.mcleodhealth.org/search-physician-finder/" method="get" class="search-form crb_algolia_find_a_doctor_search" role="search">
+	<label for="doctor-search">Search by<br />
+any or All Categories:</label>
+
+	<input type="search" name="location" class="locator-address-input" placeholder="Zip Code or City" value="" >
+
+	<input type="search" name="crb_search_term" data-default-name="crb_search_term" placeholder="Physician, Specialty, or Practice Name" class="doctor-search" value="" >
+
+	<div class="radio">
+				<input type="radio" id="location-input-400143197" name="crb_use_user_location" class="locator-get-user-location" value="yes" >
+
+		<label for="location-input-400143197" class="form-label">Use My Current Location</label>
+	</div><!-- /.radio -->
+
+	<footer class="search-foot">
+		<input type="hidden" name="" value="" class="locator-type-input" >
+		<input type="hidden" name="crb_is_accepting_new_patients" value="" >
+		<input type="hidden" name="crb_is_physician_search" value="yes" >
+		<input type="submit" value="Search" class="search-btn">
+		<span class="border-bottom"></span>
+	</footer><!-- /.search-foot -->
+</form>
+
+<div class="crb_load_spinner loader-hide"></div><!-- /.crb_load_spinner -->
+</div><!-- /.mobile-form -->			</div><!-- /.tab -->
+		</li>
+
+		<li class="nav-portal">
+			<a href="#" class="nav-portal-item" data-url="/patient-online-services/">
+				<span>
+											<span class="tab__icon" style="background-image: url( https://www.mcleodhealth.org/wp-content/uploads/2019/06/RECORDS-ICON.png );">
+							<img width="67" height="95" src="https://www.mcleodhealth.org/wp-content/uploads/2019/06/RECORDS-ICON-WHITE.png" class="attachment-full size-full" alt="" decoding="async" />						</span>
+									
+					PATIENT ONLINE SERVICES				</span>
+			</a>
+		</li>
+
+		<li>
+			<a href="#">
+				<span>
+					<img width="62" height="90" src="https://www.mcleodhealth.org/wp-content/uploads/2016/07/location.png" class="attachment-full size-full" alt="" decoding="async" />Locations				</span>
+			</a>
+
+			<div class="tab">
+				<nav class="nav-locations"><ul id="menu-locations-menu" class=""><li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="https://www.mcleodhealth.org/locations/mcleod-regional-medical-center-florence/">McLeod Regional Medical Center <span>Florence</span></a></li>
+<li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="https://www.mcleodhealth.org/locations/mcleod-cheraw/">McLeod Health <span>Cheraw</span></a></li>
+<li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46"><a href="https://www.mcleodhealth.org/locations/mcleod-clarendon/">McLeod Health <span>Clarendon</span></a></li>
+<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="https://www.mcleodhealth.org/locations/mcleod-dillon/">McLeod Health <span>Dillon</span></a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="https://www.mcleodhealth.org/locations/mcleod-loris/">McLeod Health <span>Loris</span></a></li>
+<li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a href="https://www.mcleodhealth.org/locations/mcleod-seacoast/">McLeod Health <span>Seacoast</span></a></li>
+<li id="menu-item-176556" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176556"><a href="https://www.mcleodhealth.org/locations/mcleod-health-carolina-forest/">McLeod Health <span>Carolina Forest</span></a></li>
+</ul></nav>			</div><!-- /.tab -->
+		</li>
+
+		<li>
+			<a href="#">
+				<span>
+					<img width="88" height="88" src="https://www.mcleodhealth.org/wp-content/uploads/2016/07/service.png" class="attachment-full size-full" alt="" decoding="async" />Services				</span>
+			</a>
+
+			<div class="tab">
+				<nav class="nav-utilities"><ul id="menu-services-menu" class=""><li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-130"><a href="https://www.mcleodhealth.org/services/care/">Care</a>
+<ul class="sub-menu">
+	<li id="menu-item-300391" class="menu-item--pink menu-item menu-item-type-post_type menu-item-object-page menu-item-300391"><a href="https://www.mcleodhealth.org/services/care/cancer-center/breast-health-center-2/">Breast Health Center</a></li>
+	<li id="menu-item-132" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132"><a href="https://www.mcleodhealth.org/services/care/cancer-center/">Cancer Center</a></li>
+	<li id="menu-item-7630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7630"><a href="https://www.mcleodhealth.org/services/care/heart-vascular/cardiology/">Cardiology</a></li>
+	<li id="menu-item-134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"><a href="https://www.mcleodhealth.org/services/care/childrens-hospital/">Children’s Hospital</a></li>
+	<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135"><a href="https://www.mcleodhealth.org/services/care/diabetes-management/">Diabetes Center</a></li>
+	<li id="menu-item-102396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102396"><a href="https://www.mcleodhealth.org/services/care/gastroenterology/">Digestive Health</a></li>
+	<li id="menu-item-136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136"><a href="https://www.mcleodhealth.org/services/care/emergency-trauma-overview/">Emergency/Trauma</a></li>
+	<li id="menu-item-137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137"><a href="https://www.mcleodhealth.org/services/care/heart-vascular/">Heart</a></li>
+	<li id="menu-item-138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-138"><a href="https://www.mcleodhealth.org/services/care/home-health/">Home Health</a></li>
+	<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139"><a href="https://www.mcleodhealth.org/services/care/hospice-overview/">Hospice</a></li>
+	<li id="menu-item-140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-140"><a href="https://www.mcleodhealth.org/services/care/neurology-overview/">Neurosciences</a></li>
+	<li id="menu-item-307779" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307779"><a href="https://www.mcleodhealth.org/services/mcleod-urgent-care/mcleod-orthonow/">OrthoNow (Walk-in Clinic)</a></li>
+	<li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142"><a href="https://www.mcleodhealth.org/services/care/orthopedic-spine-care/">Orthopedic &amp; Spine Care</a></li>
+	<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="https://www.mcleodhealth.org/services/care/palliative-care-overview/">Palliative Care</a></li>
+	<li id="menu-item-305629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305629"><a href="https://www.mcleodhealth.org/pharmacy/patients/">Pharmacy &#038; Outpatient Infusion</a></li>
+	<li id="menu-item-219412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219412"><a href="https://www.mcleodhealth.org/practices/mcleod-plastic-reconstructive-surgery/">Plastic/Reconstructive Surgery</a></li>
+	<li id="menu-item-7039" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7039"><a href="https://www.mcleodhealth.org/services/care/primary-care/">Primary Care</a></li>
+	<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="https://www.mcleodhealth.org/services/care/pulmonology/">Pulmonology</a></li>
+	<li id="menu-item-146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="https://www.mcleodhealth.org/services/care/radiology-overview/">Radiology</a></li>
+	<li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="https://www.mcleodhealth.org/services/care/rehabilitation-overview/">Rehabilitation</a></li>
+	<li id="menu-item-293095" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293095"><a href="https://www.mcleodhealth.org/services/care/respiratory-therapy/">Respiratory Therapy</a></li>
+	<li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="https://www.mcleodhealth.org/services/care/sports-medicine/">Sports Medicine</a></li>
+	<li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="https://www.mcleodhealth.org/services/care/stroke/">Stroke</a></li>
+	<li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="https://www.mcleodhealth.org/services/care/surgery-overview/">Surgery</a></li>
+	<li id="menu-item-10141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10141"><a href="https://www.mcleodhealth.org/services/care/telehealth/">TeleHealth</a></li>
+	<li id="menu-item-232382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232382"><a href="https://www.mcleodhealth.org/services/mcleod-urgent-care/">Urgent Care</a></li>
+	<li id="menu-item-92732" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92732"><a href="https://www.mcleodhealth.org/services/care/urology-overview/">Urology</a></li>
+	<li id="menu-item-87368" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87368"><a href="https://www.mcleodhealth.org/services/care/heart-vascular/">Vascular</a></li>
+	<li id="menu-item-148988" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148988"><a href="https://www.mcleodhealth.org/services/care/heart-vascular/vein-center/">Vein Center</a></li>
+	<li id="menu-item-6121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6121"><a href="https://www.mcleodhealth.org/services/care/womens-services-overview/">Women&#8217;s Services</a></li>
+	<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="https://www.mcleodhealth.org/services/care/outpatient-wound-care-overview/">Wound Care - Outpatient</a></li>
+</ul>
+</li>
+<li id="menu-item-153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153"><a href="https://www.mcleodhealth.org/services/wellness/">Wellness</a>
+<ul class="sub-menu">
+	<li id="menu-item-154" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154"><a href="https://www.mcleodhealth.org/services/wellness/health-fitness/">Health &amp; Fitness</a></li>
+</ul>
+</li>
+<li id="menu-item-156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-156"><a href="https://www.mcleodhealth.org/?page_id=112">Occupational Health</a>
+<ul class="sub-menu">
+	<li id="menu-item-285538" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-285538"><a target="_blank" href="https://www.mcleodonsitehealth.org/">Onsite & Nearsite Services</a></li>
+	<li id="menu-item-297525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297525"><a href="https://www.mcleodhealth.org/services/occupational-health-emp/new-occupational-health-eap-program/">Employee Assistance Program</a></li>
+</ul>
+</li>
+<li id="menu-item-159" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-159"><a href="https://www.mcleodhealth.org/services/community-involvement/">Community Involvement</a>
+<ul class="sub-menu">
+	<li id="menu-item-88717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88717"><a href="https://www.mcleodhealth.org/foundation/">McLeod Foundation</a></li>
+	<li id="menu-item-161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161"><a href="https://www.mcleodhealth.org/services/community-involvement/pastoral-services/">Pastoral Services</a></li>
+	<li id="menu-item-8316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8316"><a href="https://www.mcleodhealth.org/services/care/safe-kids/">McLeod Safe Kids</a></li>
+	<li id="menu-item-8323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8323"><a href="https://www.mcleodhealth.org/services/community-involvement/volunteers/">Volunteers</a></li>
+	<li id="menu-item-164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"><a href="https://www.mcleodhealth.org/services/community-involvement/guest-house/">Guest House</a></li>
+</ul>
+</li>
+<li id="menu-item-249524" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-249524"><a href="https://www.mcleodhealth.org/providers/">For Providers</a>
+<ul class="sub-menu">
+	<li id="menu-item-249525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-249525"><a href="https://www.mcleodhealth.org/providers/welcome-to-mcleod-epiclink/">McLeod EpicLink</a></li>
+</ul>
+</li>
+</ul></nav>			</div><!-- /.tab -->
+		</li>
+
+		<li>
+			<a href="#" class="dots-trigger">
+				<span>
+					<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/dots-image.png" height="5" width="33" alt="">
+				</span>
+			</a>
+			<ul id="menu-header-side-menu" class="tabs-links"><li id="menu-item-2601" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2601"><a href="https://www.mcleodhealth.org/physician-employment/"><span>Physician Employment</span></a></li>
+<li id="menu-item-6167" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6167"><a target="_blank" href="https://jobs.mcleodhealth.org/"><span>Careers</span></a></li>
+<li id="menu-item-823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-823"><a target="_blank" href="https://www.mcleodhealth.org/residency-programs/"><span>Residency</span></a></li>
+</ul>		</li>
+	</ul>
+</div><!-- /.tabs -->				</div><!-- /.header-bottom -->
+
+				
+			</header><!-- /.header -->
+			<div class="doctor-popup" id="doctor-popup-236233">
+	<div class="doctor-left">
+		<img src="https://www.mcleodhealth.org/wp-content/uploads/cache/2022/08/Matthew-Kaufman-MD-WEBSITE/882932090.jpg" alt="" width="152" height="121" />		<div class="doctor-actions">
+			
+							<a href="#portal-popup" class="btn-schedule btn-schedule-popup" target="_self">
+					<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/physician-icon-green.png" height="85" width="100" alt="">
+					<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/physician-icon-white.png" height="85" width="100" alt="" class="hover">
+
+					<span>APPOINTMENT</span>
+				</a>
+
+									<div id="portal-popup" class="portal-popup">
+						<button title="Close (Esc)" type="button" class="mfp-btn-close portal-popup__close">×</button>
+
+						<div class="portal-popup__entry">
+							<h2 class="fadeInUp animated no-opacity full-visible">
+								Please call <a href="tel:843777-7555">(843) 777-7555</a> <br> to make an appointment.							</h2>
+						</div><!-- /.portal-popup__entry -->
+					</div>
+											<a href="tel:(843) 777-7555">
+					<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/doctor-phone.png" alt="">
+					<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/doctor-phone-hover.png" alt="" class="hover">
+
+					<span>CALL</span>
+				</a>
+							<a href="https://www.google.com/maps/place/800+E+Cheves+St+%23350,+Florence,+SC+29506/@34.19529,-79.7597417,17z/data=!3m1!4b1!4m5!3m4!1s0x8855676bf0a7a2ad:0xb12f4451b294204e!8m2!3d34.1952856!4d-79.7575477" class="location-pin" target="_blank">
+					<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/doctor-location.png" alt="">
+					<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/doctor-location-hover.png" alt="" class="hover">
+
+					<span>LOCATION</span>
+				</a>
+					</div><!-- /.doctor-actions -->
+	</div><!-- /.doctor-left -->
+
+	<div class="doctor-right">
+		<h2>Matthew Kaufman, MD</h2>
+					<h3>Urology, Robotic-Assisted Surgery</h3>
+			
+		
+		<p>
+	<em>McLeod Urology Associates – Florence</em><br/>800 East Cheves Street, Suite 350<br />
+McLeod Medical Plaza<br/>Florence, South Carolina 29506</p>
+<p>Phone: <a href="tel:(843) 777-7555">(843) 777-7555</a><br />Fax: <a href="tel:(843) 777-7563">(843) 777-7563</a></p>
+<h6>Medical School:</h6>
+<p>Medical College of Georgia, Augusta, GA/2017</p>
+<h6>Residencies:</h6>
+<p>Urology – Augusta University, Augusta, GA/2022</p>
+
+		<div class="doctor-buttons">
+					</div><!-- /.doctor-buttons -->
+	</div><!-- /.doctor-right -->
+
+			<div class="google-map-wrapper">
+			<div class="google-map-container" data-locations="{&quot;0&quot;:{&quot;address&quot;:&quot;800 East Cheves Street, Suite 350\r McLeod Medical Plaza, Florence,, SC, 29506&quot;,&quot;lat&quot;:&quot;34.1952856&quot;,&quot;lng&quot;:&quot;-79.7575477&quot;,&quot;content&quot;:&quot;\t\t\t\t\t\t&lt;h5&gt;McLeod Urology Associates \u2013 Florence&lt;\/h5&gt;\r\n\t\t\t\t\t\t&lt;p&gt;800 East Cheves Street, Suite 350\r McLeod Medical Plaza, Florence,, SC, 29506&lt;\/p&gt;\r\n\t\t\t\t\t\t&lt;a href=\&quot;https:\/\/www.google.com\/maps\/place\/800+E+Cheves+St+%23350,+Florence,+SC+29506\/@34.19529,-79.7597417,17z\/data=!3m1!4b1!4m5!3m4!1s0x8855676bf0a7a2ad:0xb12f4451b294204e!8m2!3d34.1952856!4d-79.7575477\&quot; target=\&quot;_blank\&quot;&gt;Directions&lt;\/a&gt;\r\n\t\t\t\t\t\t&quot;},&quot;zoom&quot;:&quot;17&quot;}" data-custom-marker="false"></div><!-- /.google-map-container -->
+		</div><!-- /.google-map -->
+	</div><!-- /.doctor-popup -->
+
+<div id="phone-information" class="phone-popup mfp-hide">
+	<ul class="list-phones">
+			<li>
+			<h4>McLEOD REGIONAL MEDICAL CENTER FLORENCE</h4>
+
+			<a href="tel:8437772000">843-777-2000</a>
+		</li>
+				<li>
+			<h4>McLEOD DARLINGTON</h4>
+
+			<a href="tel:8437771100">843-777-1100</a>
+		</li>
+				<li>
+			<h4>McLEOD DILLON</h4>
+
+			<a href="tel:8437744111">843-774-4111</a>
+		</li>
+				<li>
+			<h4>McLEOD LORIS</h4>
+
+			<a href="tel:8437167000">843-716-7000</a>
+		</li>
+				<li>
+			<h4>McLEOD SEACOAST</h4>
+
+			<a href="tel:8433908100">843-390-8100</a>
+		</li>
+				<li>
+			<h4>McLEOD CHERAW</h4>
+
+			<a href="tel:8435377881">843-537-7881</a>
+		</li>
+				<li>
+			<h4>McLEOD CLARENDON</h4>
+
+			<a href="tel:8034333000">803-433-3000</a>
+		</li>
+		</ul><!-- /.list-phones --></div><!-- /#phone-popup.phone-popup --><div id="search-popup" class="phone-popup mfp-hide">
+	<form action="https://www.mcleodhealth.org/search-mcleod-search/" data-default-search="" class="search-form" method="get" role="search" >
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+
+		<input type="search" title="Search for:" name="search" value="" placeholder="Search" class="search-field" data-post_type="page,post,crb_news,crb_ml_entry" disabled>
+	</label>
+
+	<input type="submit" value="Submit" class="search-submit screen-reader-text">
+
+			<p class="results-info">results appear while typing</p>
+	
+	</form>
+
+<div class="crb_load_spinner loader-hide"></div><!-- /.crb_load_spinner --></div><!-- /#phone-popup.phone-popup -->	<div class="subscribe-popup mfp-hide" id="subscribe-popup">
+		<p><div class="emaillist" id="es_form_f0-p236233-n1"><form action="/physician/matthew-kaufman/#es_form_f0-p236233-n1" method="post" class="es_subscription_form es_shortcode_form  es_ajax_subscription_form" id="es_subscription_form_6a74bed90736f" data-source="ig-es" data-form-id="0"><div class="es-field-wrap"><label>Name<br /><input type="text" name="esfpx_name" class="ig_es_form_field_name" placeholder="" value="" /></label></div><div class="es-field-wrap ig-es-form-field"><label class="es-field-label">Email*<br /><input class="es_required_field es_txt_email ig_es_form_field_email ig-es-form-input" type="email" name="esfpx_email" value="" placeholder="" required="required" /></label></div><input type="hidden" name="esfpx_lists[]" value="b42619034171" /><input type="hidden" name="esfpx_form_id" value="0" /><input type="hidden" name="es" value="subscribe" />
+			<input type="hidden" name="esfpx_es_form_identifier" value="f0-p236233-n1" />
+			<input type="hidden" name="esfpx_es_email_page" value="236233" />
+			<input type="hidden" name="esfpx_es_email_page_url" value="https://www.mcleodhealth.org/physician/matthew-kaufman/" />
+			<input type="hidden" name="esfpx_status" value="Unconfirmed" />
+			<input type="hidden" name="esfpx_es-subscribe" id="es-subscribe-6a74bed90736f" value="7a5be91a27" />
+			<label style="position:absolute;top:-99999px;left:-99999px;z-index:-99;" aria-hidden="true"><span hidden>Please leave this field empty.</span><input type="email" name="esfpx_es_hp_email" class="es_required_field" tabindex="-1" autocomplete="-1" value="" /></label><input type="submit" name="submit" class="es_subscription_form_submit es_submit_button es_textbox_button" id="es_subscription_form_submit_6a74bed90736f" value="Subscribe" /><span class="es_spinner_image" id="spinner-image"><img src="https://www.mcleodhealth.org/wp-content/plugins/email-subscribers/lite/public/images/spinner.gif" alt="Loading" /></span></form><span class="es_subscription_message " id="es_subscription_message_6a74bed90736f" role="alert" aria-live="assertive"></span></div></p>
+	</div><!-- /#subscribe-popup.subscribe-popup -->
+	<div class="mobile-wrapper">
+	<header class="header-mobile">
+					<a href="https://www.mcleodhealth.org/" class="logo">
+				McLeod Health
+				<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/logo.png" alt="" />
+
+				<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/logo-hover.png" alt="" class="hover-logo" />
+			</a>
+
+			<div class="slogan slogan-mobile">
+				<h2></h2>
+			</div><!-- /.slogan -->
+
+			
+			<nav class="nav-mobile">
+				<a href="#" class="nav-trigger">
+					<span></span>
+
+					<span></span>
+
+					<span></span>
+
+					<em>Menu</em>
+				</a>
+
+				<ul id="menu-main-menu-mobile" class=""><li id="menu-item-552" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-552"><a href="https://www.mcleodhealth.org/">HOME</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-553"><a href="https://www.mcleodhealth.org/search-physician-finder/">FIND A DOCTOR</a></li>
+<li id="menu-item-554" class="mobile-location menu-item menu-item-type-post_type menu-item-object-page menu-item-554"><a href="https://www.mcleodhealth.org/locations/mcleod-regional-medical-center-florence/">LOCATIONS</a></li>
+<li id="menu-item-555" class="mobile-services menu-item menu-item-type-post_type menu-item-object-page menu-item-555"><a href="https://www.mcleodhealth.org/services/care/cancer-center/">SERVICES</a></li>
+<li id="menu-item-306246" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-306246"><a href="https://www.mcleodhealth.org/patient-online-services/">PATIENT PORTAL</a></li>
+<li id="menu-item-2727" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2727"><a href="https://www.mcleodhealth.org/physician-employment/">Physician Employment</a></li>
+<li id="menu-item-8224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8224"><a target="_blank" href="https://jobs.mcleodhealth.org/">Careers</a></li>
+<li id="menu-item-2550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2550"><a target="_blank" href="https://www.mcleodhealth.org/residency-programs/">Residency</a></li>
+<li id="menu-item-561" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-561"><a href="https://www.mcleodhealth.org/about-us/">About Us</a></li>
+<li id="menu-item-562" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-562"><a href="https://www.mcleodhealth.org/blog/">Blog</a></li>
+<li id="menu-item-88715" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88715"><a href="https://www.mcleodhealth.org/foundation/">Giving</a></li>
+<li id="menu-item-636" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-636"><a href="https://www.mcleodhealth.org/events/month/">Calendar</a></li>
+<li id="menu-item-307662" class="current-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-307662"><a href="https://www.mcleodhealth.org/notice-of-data-security-incident/">Notice of Data Security Incident</a></li>
+<li id="menu-item-566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566"><a href="https://www.mcleodhealth.org/patient-stories/">Patient Stories</a></li>
+<li id="menu-item-567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-567"><a href="https://www.mcleodhealth.org/news/">McLeod News</a></li>
+<li id="menu-item-198742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198742"><a href="https://www.mcleodhealth.org/newsletter-sign-up/">Newsletter Sign-Up</a></li>
+<li id="menu-item-167955" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167955"><a href="https://www.mcleodhealth.org/?page_id=165779">For Employees</a></li>
+</ul><div class="mouse-wrapper">
+	<div class="mouse">
+		<div class="wheel"></div>
+	</div>
+
+	<div>
+		<span class="m_scroll_arrows unu"></span>
+		<span class="m_scroll_arrows doi"></span>
+	</div>
+</div><!-- /.mouse-wrapper -->			</nav><!-- /.nav-mobile -->
+		
+		<div class="curve-wrapper">
+			<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/header-curve.png" alt="" class="header-curve">
+		</div><!-- /.curve-wrapper -->
+
+	</header><!-- /.header-mobile -->
+				<div class="bottom-wrapper">
+			<svg viewBox="0 0 1000 225" preserveAspectRatio="none" width="100%" height="225" style="background-color:#3caca7;">
+				<polygon points="500 0,0 0,0 150" style="fill:#3caca7;" />
+
+				<polygon points="170 490,0 450,0 150,490 0" style="fill:#55b7b2;" />
+
+				<polygon points="800 350,225 450,170 450,490 0" style="fill:#3caca7;" />
+
+				<polygon points="800 350,1200 450,1000 140,490 0" style="fill:#55b7b2;" />
+
+				<polygon points="1200 0,1200 0,1000 140,490 0" style="fill:#3caca7;" />
+			</svg>
+
+			<nav class="bottom-nav">
+				<ul>
+					<li>
+						<a href="#call-module"><i class="ico-phone"></i>Call</a>
+					</li>
+
+					<li>
+						<a href="#location-module"><i class="ico-location"></i>Locations</a>
+					</li>
+
+										<li class="bottom-nav-portal">
+						<a href="/patient-online-services/" class="actual-link bottom__item">
+							<i class="ico-portal"></i>PATIENT ONLINE SERVICES						</a>
+					</li>
+
+					<li>
+						<a href="#services-module"><i class="ico-services"></i>Services</a>
+					</li>
+
+					<li>
+						<a href="#search-module"><i class="ico-search"></i>Search</a>
+					</li>
+
+					<li class="doctor-search">
+						<a href="#doctor-search-module"><i class="ico-doctor"></i>Find a Doctor</a>
+					</li>
+
+					<li class="back-button">
+						<a href="#">Main Menu</a>
+					</li><!-- /.back-button -->
+				</ul>
+
+				<a href="#" class="menu-close"></a>
+			</nav><!-- /.bottom-nav -->
+
+			<div class="mobile-modules">
+				<div class="mobile-module" id="doctor-search-module">
+					<div class="mobile-form">
+
+<form id="nav-physician-form-mobile" action="https://www.mcleodhealth.org/search-physician-finder/" method="get" class="search-form crb_algolia_find_a_doctor_search" role="search">
+	<label for="doctor-search">Search by<br />
+any or All Categories:</label>
+
+	<input type="search" name="location" class="locator-address-input" placeholder="Zip Code or City" value="" >
+
+	<input type="search" name="crb_search_term" data-default-name="crb_search_term" placeholder="Physician, Specialty, or Practice Name" class="doctor-search" value="" >
+
+	<div class="radio">
+				<input type="radio" id="location-input-986876361" name="crb_use_user_location" class="locator-get-user-location" value="yes" >
+
+		<label for="location-input-986876361" class="form-label">Use My Current Location</label>
+	</div><!-- /.radio -->
+
+	<footer class="search-foot">
+		<input type="hidden" name="" value="" class="locator-type-input" >
+		<input type="hidden" name="crb_is_accepting_new_patients" value="" >
+		<input type="hidden" name="crb_is_physician_search" value="yes" >
+		<input type="submit" value="Search" class="search-btn">
+		<span class="border-bottom"></span>
+	</footer><!-- /.search-foot -->
+</form>
+
+<div class="crb_load_spinner loader-hide"></div><!-- /.crb_load_spinner -->
+</div><!-- /.mobile-form --><div class="mouse-wrapper">
+	<div class="mouse">
+		<div class="wheel"></div>
+	</div>
+
+	<div>
+		<span class="m_scroll_arrows unu"></span>
+		<span class="m_scroll_arrows doi"></span>
+	</div>
+</div><!-- /.mouse-wrapper -->				</div><!-- /.mobile-module -->
+
+				<div class="mobile-module" id="call-module">
+					<ul class="list-phones">
+			<li>
+			<h4>McLEOD REGIONAL MEDICAL CENTER FLORENCE</h4>
+
+			<a href="tel:8437772000">843-777-2000</a>
+		</li>
+				<li>
+			<h4>McLEOD DARLINGTON</h4>
+
+			<a href="tel:8437771100">843-777-1100</a>
+		</li>
+				<li>
+			<h4>McLEOD DILLON</h4>
+
+			<a href="tel:8437744111">843-774-4111</a>
+		</li>
+				<li>
+			<h4>McLEOD LORIS</h4>
+
+			<a href="tel:8437167000">843-716-7000</a>
+		</li>
+				<li>
+			<h4>McLEOD SEACOAST</h4>
+
+			<a href="tel:8433908100">843-390-8100</a>
+		</li>
+				<li>
+			<h4>McLEOD CHERAW</h4>
+
+			<a href="tel:8435377881">843-537-7881</a>
+		</li>
+				<li>
+			<h4>McLEOD CLARENDON</h4>
+
+			<a href="tel:8034333000">803-433-3000</a>
+		</li>
+		</ul><!-- /.list-phones --><div class="mouse-wrapper">
+	<div class="mouse">
+		<div class="wheel"></div>
+	</div>
+
+	<div>
+		<span class="m_scroll_arrows unu"></span>
+		<span class="m_scroll_arrows doi"></span>
+	</div>
+</div><!-- /.mouse-wrapper -->				</div><!-- /.mobile-module -->
+
+				<div class="mobile-module" id="search-module">
+										<form action="https://www.mcleodhealth.org/search-mcleod-search/" method="get" class="search-form search-primary">
+						<label class="hidden">Search</label>
+
+						<input type="search" name="search" value="" placeholder="Search Term" class="search-field" data-tags="[]">
+
+						<footer class="search-foot">
+							<input type="submit" value="Search" class="search-btn">
+							<span class="border-bottom"></span>
+						</footer><!-- /.search-foot -->
+					</form>
+					<div class="mouse-wrapper">
+	<div class="mouse">
+		<div class="wheel"></div>
+	</div>
+
+	<div>
+		<span class="m_scroll_arrows unu"></span>
+		<span class="m_scroll_arrows doi"></span>
+	</div>
+</div><!-- /.mouse-wrapper -->				</div><!-- /.mobile-module -->
+
+				<div class="mobile-module" id="location-module">
+					<nav class="nav-locations"><ul id="menu-locations-menu-1" class="mobile-nav-locations"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="https://www.mcleodhealth.org/locations/mcleod-regional-medical-center-florence/">				<strong>
+					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://www.mcleodhealth.org/wp-content/uploads/cache/2016/10/McLeod_Florence_Mobile2/3294970231.jpg" alt="" width="800" height="600" class="b-lazy" />					</strong>
+					McLeod Regional<br />
+Medical Center <span>Florence</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="https://www.mcleodhealth.org/locations/mcleod-cheraw/">				<strong>
+					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://www.mcleodhealth.org/wp-content/uploads/cache/2016/10/McLeod_Cheraw_Mobile/1287449246.jpg" alt="" width="800" height="600" class="b-lazy" />					</strong>
+					McLeod Health <span>Cheraw</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46"><a href="https://www.mcleodhealth.org/locations/mcleod-clarendon/">				<strong>
+					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://www.mcleodhealth.org/wp-content/uploads/cache/2016/10/McLeod_Clarendon_Mobile/3521232331.jpg" alt="" width="800" height="600" class="b-lazy" />					</strong>
+					McLeod Health <span>Clarendon</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="https://www.mcleodhealth.org/locations/mcleod-dillon/">				<strong>
+					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://www.mcleodhealth.org/wp-content/uploads/cache/2016/10/McLeod_Dillon_Mobile/3338587096.jpg" alt="" width="800" height="600" class="b-lazy" />					</strong>
+					McLeod Health <span>Dillon</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="https://www.mcleodhealth.org/locations/mcleod-loris/">				<strong>
+					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://www.mcleodhealth.org/wp-content/uploads/cache/2016/10/McLeod_Loris_Mobile2/3449365534.jpg" alt="" width="800" height="600" class="b-lazy" />					</strong>
+					McLeod Health <span>Loris</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a href="https://www.mcleodhealth.org/locations/mcleod-seacoast/">				<strong>
+					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://www.mcleodhealth.org/wp-content/uploads/cache/2019/01/2019-seacoast-exterior-2/1207532860.jpg" alt="" width="800" height="600" class="b-lazy" />					</strong>
+					McLeod Health <span>Seacoast</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176556"><a href="https://www.mcleodhealth.org/locations/mcleod-health-carolina-forest/">				<strong>
+					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://www.mcleodhealth.org/wp-content/uploads/cache/2019/10/McLeod-Carolina-Forest-mobile/3368919527.jpg" alt="" width="800" height="600" class="b-lazy" />					</strong>
+					McLeod Health <span>Carolina Forest</span></a></li>
+</ul></nav><div class="mouse-wrapper">
+	<div class="mouse">
+		<div class="wheel"></div>
+	</div>
+
+	<div>
+		<span class="m_scroll_arrows unu"></span>
+		<span class="m_scroll_arrows doi"></span>
+	</div>
+</div><!-- /.mouse-wrapper -->				</div><!-- /.mobile-module -->
+
+				<div class="mobile-module" id="services-module">
+					<nav class="nav-utilities"><ul id="menu-services-menu-1" class="mobile-nav-locations2"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-130"><a href="https://www.mcleodhealth.org/services/care/">					<span>
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://www.mcleodhealth.org/wp-content/uploads/cache/2016/10/ServicesCareMobile/3571695954.jpg" alt="" width="800" height="600" class="b-lazy" />				</span>
+				<strong>Care</strong></a>
+<ul class="sub-menu">
+	<li class="menu-item--pink menu-item menu-item-type-post_type menu-item-object-page menu-item-300391"><a href="https://www.mcleodhealth.org/services/care/cancer-center/breast-health-center-2/">Breast Health Center</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132"><a href="https://www.mcleodhealth.org/services/care/cancer-center/">Cancer Center</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7630"><a href="https://www.mcleodhealth.org/services/care/heart-vascular/cardiology/">Cardiology</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"><a href="https://www.mcleodhealth.org/services/care/childrens-hospital/">Children’s Hospital</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135"><a href="https://www.mcleodhealth.org/services/care/diabetes-management/">Diabetes Center</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102396"><a href="https://www.mcleodhealth.org/services/care/gastroenterology/">Digestive Health</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136"><a href="https://www.mcleodhealth.org/services/care/emergency-trauma-overview/">Emergency/Trauma</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137"><a href="https://www.mcleodhealth.org/services/care/heart-vascular/">Heart</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-138"><a href="https://www.mcleodhealth.org/services/care/home-health/">Home Health</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139"><a href="https://www.mcleodhealth.org/services/care/hospice-overview/">Hospice</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-140"><a href="https://www.mcleodhealth.org/services/care/neurology-overview/">Neurosciences</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307779"><a href="https://www.mcleodhealth.org/services/mcleod-urgent-care/mcleod-orthonow/">OrthoNow (Walk-in Clinic)</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142"><a href="https://www.mcleodhealth.org/services/care/orthopedic-spine-care/">Orthopedic &amp; Spine Care</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="https://www.mcleodhealth.org/services/care/palliative-care-overview/">Palliative Care</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305629"><a href="https://www.mcleodhealth.org/pharmacy/patients/">Pharmacy &#038; Outpatient Infusion</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219412"><a href="https://www.mcleodhealth.org/practices/mcleod-plastic-reconstructive-surgery/">Plastic/Reconstructive Surgery</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7039"><a href="https://www.mcleodhealth.org/services/care/primary-care/">Primary Care</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="https://www.mcleodhealth.org/services/care/pulmonology/">Pulmonology</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="https://www.mcleodhealth.org/services/care/radiology-overview/">Radiology</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="https://www.mcleodhealth.org/services/care/rehabilitation-overview/">Rehabilitation</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293095"><a href="https://www.mcleodhealth.org/services/care/respiratory-therapy/">Respiratory Therapy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="https://www.mcleodhealth.org/services/care/sports-medicine/">Sports Medicine</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="https://www.mcleodhealth.org/services/care/stroke/">Stroke</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="https://www.mcleodhealth.org/services/care/surgery-overview/">Surgery</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10141"><a href="https://www.mcleodhealth.org/services/care/telehealth/">TeleHealth</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-232382"><a href="https://www.mcleodhealth.org/services/mcleod-urgent-care/">Urgent Care</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92732"><a href="https://www.mcleodhealth.org/services/care/urology-overview/">Urology</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87368"><a href="https://www.mcleodhealth.org/services/care/heart-vascular/">Vascular</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148988"><a href="https://www.mcleodhealth.org/services/care/heart-vascular/vein-center/">Vein Center</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6121"><a href="https://www.mcleodhealth.org/services/care/womens-services-overview/">Women&#8217;s Services</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="https://www.mcleodhealth.org/services/care/outpatient-wound-care-overview/">Wound Care - Outpatient</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153"><a href="https://www.mcleodhealth.org/services/wellness/">					<span>
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://www.mcleodhealth.org/wp-content/uploads/cache/2016/10/ServicesWelnnessMobile/4155995531.jpg" alt="" width="800" height="600" class="b-lazy" />				</span>
+				<strong>Wellness</strong></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154"><a href="https://www.mcleodhealth.org/services/wellness/health-fitness/">Health &amp; Fitness</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-156"><a href="https://www.mcleodhealth.org/?page_id=112">					<span>
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://www.mcleodhealth.org/wp-content/uploads/cache/2016/08/service1-1/2991301489.jpg" alt="" width="800" height="600" class="b-lazy" />				</span>
+				<strong>Occupational Health</strong></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-285538"><a target="_blank" href="https://www.mcleodonsitehealth.org/">Onsite & Nearsite Services</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297525"><a href="https://www.mcleodhealth.org/services/occupational-health-emp/new-occupational-health-eap-program/">Employee Assistance Program</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-159"><a href="https://www.mcleodhealth.org/services/community-involvement/">					<span>
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://www.mcleodhealth.org/wp-content/uploads/cache/2016/10/ServicesCommunityInvolvementMobile/1618152300.jpg" alt="" width="800" height="600" class="b-lazy" />				</span>
+				<strong>Community Involvement</strong></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88717"><a href="https://www.mcleodhealth.org/foundation/">McLeod Foundation</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161"><a href="https://www.mcleodhealth.org/services/community-involvement/pastoral-services/">Pastoral Services</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8316"><a href="https://www.mcleodhealth.org/services/care/safe-kids/">McLeod Safe Kids</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8323"><a href="https://www.mcleodhealth.org/services/community-involvement/volunteers/">Volunteers</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"><a href="https://www.mcleodhealth.org/services/community-involvement/guest-house/">Guest House</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-249524"><a href="https://www.mcleodhealth.org/providers/">For Providers</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-249525"><a href="https://www.mcleodhealth.org/providers/welcome-to-mcleod-epiclink/">McLeod EpicLink</a></li>
+</ul>
+</li>
+</ul></nav><div class="mouse-wrapper">
+	<div class="mouse">
+		<div class="wheel"></div>
+	</div>
+
+	<div>
+		<span class="m_scroll_arrows unu"></span>
+		<span class="m_scroll_arrows doi"></span>
+	</div>
+</div><!-- /.mouse-wrapper -->				</div><!-- /.mobile-module -->
+			</div><!-- /.mobile-modules -->
+		</div><!-- /.bottom-wrapper -->
+	</div><!-- /.mobile-wrapper -->
+			</div><!-- /.inner-wrapper -->
+			<footer class="footer">
+								<div class="shell">
+					<div class="socials">
+						<ul>
+									<li>
+			<a href="https://facebook.com/McLeodHealth/" target="_blank">
+				<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/facebook.png" height="51" width="51" alt="">
+
+				<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/facebook-hover.png" height="51" width="51" alt="" class="hover">
+			</a>
+		</li>
+				<li>
+			<a href="https://twitter.com/McLeodHealth" target="_blank">
+				<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/twitter.png" height="51" width="51" alt="">
+
+				<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/twitter-hover.png" height="51" width="51" alt="" class="hover">
+			</a>
+		</li>
+				<li>
+			<a href="https://vimeo.com/mcleodhealth/" target="_blank">
+				<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/vimeo.png" height="51" width="51" alt="">
+
+				<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/vimeo-hover.png" height="51" width="51" alt="" class="hover">
+			</a>
+		</li>
+				<li>
+			<a href="https://www.instagram.com/mcleodhealth/?hl=en" target="_blank">
+				<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/instagram.png" height="51" width="51" alt="">
+
+				<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/instagram-hover.png" height="51" width="51" alt="" class="hover">
+			</a>
+		</li>
+				<li>
+			<a href="https://www.linkedin.com/company/mcleod-health/" target="_blank">
+				<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/linkedin.png" height="51" width="51" alt="">
+
+				<img src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/images/temp/linkedin-hover.png" height="51" width="51" alt="" class="hover">
+			</a>
+		</li>
+								</ul>
+					</div><!-- /.socials -->
+
+					<div class="copyright">
+						<p>The information on this site is intended to increase your awareness and understanding of specific health issues and services at McLeod Health. It should not be used for diagnosis or as a substitute for health care by your physician. To report technical issues, please contact us.</p>
+<p>©2026 McLeod Health. <a href="/wp-content/uploads/2020/03/Corporate-Compliance-Program-Code-of-Conduct-Book.pdf" target="_blank" rel="noopener">Code of Conduct</a> | <a href="/hipaa-notice-privacy-practice/">HIPAA Notice of Privacy Practices</a> | <a href="/mcleod-patient-bill-rights/">Patient Bill of Rights</a> | <a href="/wp-content/uploads/2026/02/Nondiscrimination-and-Accessibility-Notice-Feb2026.pdf" target="_blank" rel="noopener">Nondiscrimination &amp; Accessibility Notice</a> | <a href="/about-us/price-transparency/">Price Transparency</a> | <a href="/about-us/provider-based-billing/">Provider-Based Billing</a> | <a href="/contact-mcleod-health/">Report a Compliment/Concern</a> | <a href="/about-us/mcleod-visitation-policies/" target="_blank" rel="noopener">Visitation</a> | <a href="/wp-content/uploads/2016/10/Mission_Core_Values.pdf" target="_blank" rel="noopener">Download McLeod Health Mission &amp; Values</a> | <a href="/about-us/community-health-needs-assessments/">Community Health Needs Assessments</a> | <a href="/about-us/us-healthcare-assistance/">Financial Assistance Policy</a></p>
+					</div><!-- /.copyright -->
+				</div><!-- /.shell -->
+			</footer><!-- /.footer -->
+
+			
+			
+			
+		</div><!-- /.wrapper -->
+		<div id="footer-assets">
+			<script>				
+                    document.addEventListener('DOMContentLoaded', function () {
+                        setTimeout(function(){
+                            if( document.querySelectorAll('[name^=ct_checkjs]').length > 0 ) {
+                                if (typeof apbct_public_sendREST === 'function' && typeof apbct_js_keys__set_input_value === 'function') {
+                                    apbct_public_sendREST(
+                                    'js_keys__get',
+                                    { callback: apbct_js_keys__set_input_value })
+                                }
+                            }
+                        },0)					    
+                    })				
+                </script><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/mcleod-health/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script>
+              (function(e){
+                  var el = document.createElement('script');
+                  el.setAttribute('data-account', 'QpadBB6C88');
+                  el.setAttribute('src', 'https://cdn.userway.org/widget.js');
+                  document.body.appendChild(el);
+                })();
+              </script>		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script><script id="tec-user-agent-js" src="https://www.mcleodhealth.org/wp-content/plugins/the-events-calendar/common/build/js/user-agent.js?ver=da75d0bdea6dde3898df"></script>
+<script id="email-subscribers-js-extra">
+var es_data = {"messages":{"es_empty_email_notice":"Please enter email address","es_rate_limit_notice":"You need to wait for some time before subscribing again","es_single_optin_success_message":"Successfully Subscribed.","es_email_exists_notice":"Email Address already exists!","es_unexpected_error_notice":"Oops.. Unexpected error occurred.","es_invalid_email_notice":"Invalid email address","es_try_later_notice":"Please try after some time"},"es_ajax_url":"https://www.mcleodhealth.org/wp-admin/admin-ajax.php"};
+//# sourceURL=email-subscribers-js-extra
+</script>
+<script id="email-subscribers-js" src="https://www.mcleodhealth.org/wp-content/plugins/email-subscribers/lite/public/js/email-subscribers-public.js?ver=5.9.32"></script>
+<script id="gtm4wp-form-move-tracker-js" src="https://www.mcleodhealth.org/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.22.4"></script>
+<script id="jquery-ui-core-js" src="https://www.mcleodhealth.org/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-datepicker-js" src="https://www.mcleodhealth.org/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-datepicker-js-after">
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":0,"isRTL":false});});
+//# sourceURL=jquery-ui-datepicker-js-after
+</script>
+<script src='https://www.mcleodhealth.org/wp-content/plugins/the-events-calendar/common/build/js/underscore-before.js'></script>
+<script id="underscore-js" src="https://www.mcleodhealth.org/wp-includes/js/underscore.min.js?ver=1.13.8"></script>
+<script src='https://www.mcleodhealth.org/wp-content/plugins/the-events-calendar/common/build/js/underscore-after.js'></script>
+<script id="wp-util-js-extra">
+var _wpUtilSettings = {"ajax":{"url":"/wp-admin/admin-ajax.php"}};
+//# sourceURL=wp-util-js-extra
+</script>
+<script id="wp-util-js" src="https://www.mcleodhealth.org/wp-includes/js/wp-util.min.js?ver=7.0.2"></script>
+<script id="theme-new-js-bundle-js" src="https://www.mcleodhealth.org/wp-content/themes/mcleod-health/dist/js/bundle-0ef763ca1c.js"></script>
+<script async data-wp-strategy="async" fetchpriority="low" id="comment-reply-js" src="https://www.mcleodhealth.org/wp-includes/js/comment-reply.min.js?ver=7.0.2"></script>
+<script id="theme-js-bundle-js" src="https://www.mcleodhealth.org/wp-content/plugins/mcleod-algolia//dist/js/bundle-d629c291e2.js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.mcleodhealth.org/wp-includes/js/wp-emoji-release.min.js?ver=7.0.2"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://www.mcleodhealth.org/wp-includes/js/wp-emoji-loader.min.js
+</script>
+		</div><!-- /.footer-assets -->
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"6dfd76a37f","applicationID":"34734046","transactionName":"MVZQMkNTC0RYWkJQXwgccwVFWwpZFkpfV1cKVh8FQ1A6R1FARVBTD1Jc","queueTime":0,"applicationTime":2295,"atts":"HRFTRAtJGEo=","errorBeacon":"bam.nr-data.net","agent":""}</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"45c5cc1dc9584cfaa82556c731f66e82"}' crossorigin="anonymous"></script>
+</body>
+</html>
+<!-- plugin=object-cache-pro client=phpredis metric#hits=15883 metric#misses=34 metric#hit-ratio=99.8 metric#bytes=7227318 metric#prefetches=0 metric#store-reads=219 metric#store-writes=20 metric#store-hits=1059 metric#store-misses=21 metric#sql-queries=54 metric#ms-total=2289.89 metric#ms-cache=282.53 metric#ms-cache-avg=1.1871 metric#ms-cache-ratio=12.3 -->

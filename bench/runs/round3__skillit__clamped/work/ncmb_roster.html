@@ -1,0 +1,745 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head><title>
+	Licensee Search | North Carolina Medical Board
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /><link rel="icon" href="/favicon.ico" type="image/x-icon" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha512-Dop/vW3iOtayerlYAqCgkVr2aTr2ErwwTYOvRFUpzl2VhCMJyjQF0Q9TjUXIo6JhuM/3i0vVEt2e/7QQmnHQqw==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha512-iy8EXLW01a00b26BaqJWaCmk9fJ4PsMdgNRqV96KwMPSH+blO82OHzisF/zQbRIIi8m0PiO10dpS0QxrcXsisw==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" integrity="sha512-aEe/ZxePawj0+G2R+AaIxgrQuKT68I28qh+wgLrcAJOz3rxCP+TwrK5SPN+E5I+1IQjNtcfvb96HDagwrKRdBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/v4-shims.min.css" integrity="sha512-4yDn1AmIfvyydlRqsIga3JribpHu5HdkIFTBZjJPcz01tcsd8B9UwObwZCGez1ZOyUNnxjNQNcZEElhkguF76Q==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" type="text/css" href="/common/css/gateway.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/css/bootstrap-multiselect.min.css" integrity="sha512-fZNmykQ6RlCyzGl9he+ScLrlU0LWeaR6MO/Kq9lelfXOw54O63gizFMSD5fVgZvU1YfDIc6mxom5n60qJ1nCrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="/scripts/cmssettings.js?v=6.0.9706.30775"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha512-oBTprMeNEKCnqfuqKd6sbvFzmFQtlXS3e0C/RGFV0hD6QzhHV+ODfaQbAlmY6/q0ubbwlAM/nCJjkrgA3waLzg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js" integrity="sha512-QoJS4DOhdmG8kbbHkxmB/rtPdN62cGWXAdAFWWJPvUFF1/zxcPSdAnn4HhYZSIlVoLVEJ0LesfNlusgm2bPfnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha512-GDey37RZAxFkpFeJorEUwNoIbkTwsyC736KNSYucu1WJWFK9qTdzYub8ATxktr6Dwke7nbFaioypzbDOQykoRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="/common/application-validator/validator.js?v=6.0.9706.30775"></script>
+    <script type="text/javascript" src="/scripts/jquery.tspan.addressReq.js?v=6.0.9706.30775"></script>
+    
+    <script type="text/javascript" src="/common/application-validator/alert-override.js?v=6.0.9706.30775"></script>
+    <script src="/Scripts/jquery-cookie.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/1.1.2/js/bootstrap-multiselect.min.js" integrity="sha512-lxQ4VnKKW7foGFV6L9zlSe+6QppP9B2t+tMMaV4s4iqAv4iHIyXED7O+fke1VeLNaRdoVkVt8Hw/jmZ+XocsXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    
+
+    <!-- Check if JavaScript is disabled -->
+    <noscript>
+	    <style>
+		    form { display: none; }
+	    </style>
+	    <div class="text-center">
+		    It seems JavaScript is either disabled or not supported by your browser.
+		    JavaScript must be enabled in order for you to receive the best user experience.
+	    </div>
+    </noscript>
+
+    
+
+    
+    <link rel="stylesheet" href="/common/css/application.css" />
+
+</head>
+<body>
+    <form method="post" action="./roster.aspx" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script type="text/javascript" src="https://portal.ncmedboard.org//bundles/scripts?v=6.0.9706.30775"></script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="549682C6" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+</div>
+        <input name="__RequestVerificationToken" type="hidden" value="yEniYfgAXRTKughzT-LdAOov4CzzpdcBnVoeVIRYa1xdc4spevQz7n77Njwwc5VGrNtSaS62K0Ni7Rs9UE0XZPnxoEfKZU2wdDeHOSH21dk1" />
+        <a href="#content" class="skip-link">Skip to main content</a>
+
+        
+
+        <!-- HEADER -->
+        <header id="header">
+            <nav class="navbar" aria-label="Main">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a id="LogoLink" class="navbar-brand text-uppercase" href="https://www.ncmedboard.org">
+								<img src="/common/images/logo2.png" alt="North Carolina Medical Board Logo" />
+                        </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="mobile-menu">
+                        <div class="navbar-app-title text-uppercase text-right hidden-sm hidden-xs">
+                            Licensee Search
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- SUBHEADER -->
+        
+
+        <!-- LICENSE VERIFICATION SUB NAVIGATION -->
+        
+        <nav id="subheader" class="hidden-print" aria-label="Verification">
+            <div class="container">
+                <ul>
+                    <li><a href="/Verification/Request/begin.aspx">Request Verification</a></li>
+                    <li><a href="/Verification/roster.aspx">Roster</a></li>
+                    <li><a href="https://www.ncmedboard.org/licensee-search/index.html" target="_blank">Disclaimer</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="clearfix"></div>
+        <!-- CONTENT -->
+        <main id="content" class="container MainContent">
+            
+    
+	<div class="row application-container row-offcanvas row-offcanvas-left">
+		<div class="col-md-9 col-md-push-3">
+			<div class="application-app-title-row">
+				<div id="AppTitle"></div>
+				
+			</div>
+			<div id="PageTitle">
+                <button type="button" class="btn btn-link btn-xs visible-xs visible-sm pull-left hidden-print" data-toggle="offcanvas" aria-label="Open application steps menu"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button> 
+                
+			</div>
+			
+
+    <div class="panel panel-primary">
+		<div class="panel-heading">
+			Roster Report
+		</div>
+
+		<div class="panel-body">
+            <p>
+                The NCMB Roster is a full listing of the physicians, physician assistants, perfusionists, and residents regulated by the NCMB. It provides 
+                names, address, license numbers, area of practice, and more, but not phone numbers or email addresses.
+            </p>
+
+            <p>
+                A new roster report is run monthly to provide the most up-to-date listing of the Board's licensees. The Roster is provided in Excel file 
+                format and is available electronically.
+            </p>
+
+            <p>
+                To purchase a copy of the current NCMB Roster, complete the request form below and submit payment of $150.00.
+            </p>
+
+            <hr />
+
+            <p>
+                Purchaser understands and agrees that no part of this data will be distributed
+                in any form or by any means for the purpose of resale. Purchaser
+                understands and agrees NCMB data represents unpublished data which is
+                to be provided to Purchaser solely for information. Any other use of data
+                obtained by Purchaser shall constitute unlawful usage by Purchaser.
+                Purchaser shall not incorporate NCMB data with or into NCMB data in
+                the same data field nor incorporate NCMB data, as a whole or any portion
+                thereof, with or into ­NCMB data to an extent that it is impracticable to
+                extricate the profiles or any portions thereof from the ­NCMB data at any
+                time.
+            </p>
+
+            <p>
+                NCMB data is provided "AS IS" without warranty of any kind as to
+                completeness or accuracy. However, NCMB will make reasonable efforts to
+                keep the data current and complete. In no event will NCMB be liable for any
+                damages, including any lost profits or other incidental or consequential
+                damages, arising out of Purchaser's electronic access to, use, non­use,
+                misuse or interpretation of or inability to use NCMB data even if NCMB has
+                been advised of the possibility of such damages.
+            </p>
+
+            <hr />
+
+            <p>
+                Please email any questions and/or concerns to <a href="mailto:roster@ncmedboard.org" target="_blank">roster@ncmedboard.org.</a>
+            </p>
+
+            <div class="form-group">
+                <label for="txtCompany">Company Name:</label>
+                <input name="ctl00$ctl00$Content$Content$txtCompany" type="text" id="txtCompany" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="txtName">Full Name:</label>
+                <input name="ctl00$ctl00$Content$Content$txtName" type="text" id="txtName" class="form-control required" />
+            </div>
+
+            <div class="form-group">
+                <label for="txtAddr1">Address 1:</label>
+                <input name="ctl00$ctl00$Content$Content$txtAddr1" type="text" id="txtAddr1" class="form-control" TSREQ="true" AssociatedLabel="" />
+            </div>
+
+            <div class="form-group">
+                <label for="txtAddr2">Address 2:</label>
+                <input name="ctl00$ctl00$Content$Content$txtAddr2" type="text" id="txtAddr2" class="form-control" TSREQ="false" AssociatedLabel="" />
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="txtCity">City:</label>
+                        <input name="ctl00$ctl00$Content$Content$txtCity" type="text" id="txtCity" class="form-control" TSREQ="true" AssociatedLabel="" />
+                    </div>
+                </div>
+
+                <div class="col-md-4" id="divState">
+                    <div class="form-group">
+                        <label for="ddState">State:</label>
+                        <select name="ctl00$ctl00$Content$Content$ddState" id="ddState" class="form-control required" TSREQ="false" AssociatedLabel="" BlankText=" " BlankValue="">
+	<option selected="selected" value=""> </option>
+	<option value="AL">Alabama</option>
+	<option value="AK">Alaska</option>
+	<option value="AZ">Arizona</option>
+	<option value="AR">Arkansas</option>
+	<option value="CA">California</option>
+	<option value="CO">Colorado</option>
+	<option value="CT">Connecticut</option>
+	<option value="DE">Delaware</option>
+	<option value="DC">District of Columbia</option>
+	<option value="FL">Florida</option>
+	<option value="GA">Georgia</option>
+	<option value="HI">Hawaii</option>
+	<option value="ID">Idaho</option>
+	<option value="IL">Illinois</option>
+	<option value="IN">Indiana</option>
+	<option value="IA">Iowa</option>
+	<option value="KS">Kansas</option>
+	<option value="KY">Kentucky</option>
+	<option value="LA">Louisiana</option>
+	<option value="ME">Maine</option>
+	<option value="MD">Maryland</option>
+	<option value="MA">Massachusetts</option>
+	<option value="MI">Michigan</option>
+	<option value="MN">Minnesota</option>
+	<option value="MS">Mississippi</option>
+	<option value="MO">Missouri</option>
+	<option value="MT">Montana</option>
+	<option value="NE">Nebraska</option>
+	<option value="NV">Nevada</option>
+	<option value="NH">New Hampshire</option>
+	<option value="NJ">New Jersey</option>
+	<option value="NM">New Mexico</option>
+	<option value="NY">New York</option>
+	<option value="NC">North Carolina</option>
+	<option value="ND">North Dakota</option>
+	<option value="OH">Ohio</option>
+	<option value="OK">Oklahoma</option>
+	<option value="OR">Oregon</option>
+	<option value="PA">Pennsylvania</option>
+	<option value="RI">Rhode Island</option>
+	<option value="SC">South Carolina</option>
+	<option value="SD">South Dakota</option>
+	<option value="TN">Tennessee</option>
+	<option value="TX">Texas</option>
+	<option value="UT">Utah</option>
+	<option value="VT">Vermont</option>
+	<option value="VA">Virginia</option>
+	<option value="WA">Washington</option>
+	<option value="WV">West Virginia</option>
+	<option value="WI">Wisconsin</option>
+	<option value="WY">Wyoming</option>
+	<option value="PR">Puerto Rico</option>
+	<option value="VI">US Virgin Islands</option>
+	<option value="AA">Armed Forces (the) Americas</option>
+	<option value="AE">Armed Forces Europe</option>
+	<option value="AP">Armed Forces Pacific</option>
+	<option value="AB">Alberta</option>
+	<option value="BC">British Columbia</option>
+	<option value="MB">Manitoba</option>
+	<option value="NB">New Brunswick</option>
+	<option value="NL">Newfoundland and Labrador</option>
+	<option value="NS">Nova Scotia</option>
+	<option value="NT">Northwest Territories</option>
+	<option value="NU">Nunavut</option>
+	<option value="ON">Ontario</option>
+	<option value="PE">Prince Edward Island</option>
+	<option value="QC">Quebec</option>
+	<option value="SK">Saskatchewan</option>
+	<option value="YT">Yukon</option>
+
+</select>
+                    </div>
+                </div>
+
+                <div class="col-md-4" id="divZip">
+                    <div class="form-group">
+                        <label for="txtZip">Zip:</label>
+                        <input name="ctl00$ctl00$Content$Content$txtZip" type="text" maxlength="10" size="10" id="txtZip" class="form-control" onblur="this.value=jsFormatZip(this.value);FindZipCode(&#39;https://portal.ncmedboard.org/&#39;, this.value, &#39;txtCity&#39;, &#39;ddState&#39;, &#39;ddCountry&#39;, &#39;txtZip&#39;);" onkeypress="var k = (event.charCode || event.keyCode); return (k >= 48 &amp;&amp; k &lt;= 57) || (k >= 65 &amp;&amp; k &lt;= 90) || (k >= 97 &amp;&amp; k &lt;= 122) || k == 45 || k == 32;" TSREQ="true" AssociatedLabel="" />
+                    </div>
+                </div>
+            </div>  
+
+            <div class="form-group">
+                <label for="ddCountry">Country:</label>
+                <select name="ctl00$ctl00$Content$Content$ddCountry" id="ddCountry" class="form-control" TSREQ="true" AssociatedLabel="" BlankText=" " BlankValue="">
+	<option selected="selected" value=""> </option>
+	<option value="US">United States of America</option>
+	<option value="AF">Afghanistan</option>
+	<option value="AX">&#197;land Islands</option>
+	<option value="AL">Albania</option>
+	<option value="DZ">Algeria</option>
+	<option value="AS">American Samoa</option>
+	<option value="AD">Andorra</option>
+	<option value="AO">Angola</option>
+	<option value="AI">Anguilla</option>
+	<option value="AQ">Antarctica</option>
+	<option value="AG">Antigua and Barbuda</option>
+	<option value="AR">Argentina</option>
+	<option value="AM">Armenia</option>
+	<option value="AW">Aruba</option>
+	<option value="AU">Australia</option>
+	<option value="AT">Austria</option>
+	<option value="AZ">Azerbaijan</option>
+	<option value="BS">Bahamas</option>
+	<option value="BH">Bahrain</option>
+	<option value="BD">Bangladesh</option>
+	<option value="BB">Barbados</option>
+	<option value="BY">Belarus</option>
+	<option value="BE">Belgium</option>
+	<option value="BZ">Belize</option>
+	<option value="BJ">Benin</option>
+	<option value="BM">Bermuda</option>
+	<option value="BT">Bhutan</option>
+	<option value="BO">Bolivia (Plurinational State of)</option>
+	<option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+	<option value="BA">Bosnia and Herzegovina</option>
+	<option value="BW">Botswana</option>
+	<option value="BV">Bouvet Island</option>
+	<option value="BR">Brazil</option>
+	<option value="IO">British Indian Ocean Territory</option>
+	<option value="BN">Brunei Darussalam</option>
+	<option value="BG">Bulgaria</option>
+	<option value="BF">Burkina Faso</option>
+	<option value="BI">Burundi</option>
+	<option value="CV">Cabo Verde</option>
+	<option value="KH">Cambodia</option>
+	<option value="CM">Cameroon</option>
+	<option value="CA">Canada</option>
+	<option value="KY">Cayman Islands</option>
+	<option value="CF">Central African Republic</option>
+	<option value="TD">Chad</option>
+	<option value="CL">Chile</option>
+	<option value="CN">China</option>
+	<option value="CX">Christmas Island</option>
+	<option value="CC">Cocos (Keeling) Islands</option>
+	<option value="CO">Colombia</option>
+	<option value="KM">Comoros</option>
+	<option value="CG">Congo</option>
+	<option value="CD">Congo (Democratic Republic of the)</option>
+	<option value="CK">Cook Islands</option>
+	<option value="CR">Costa Rica</option>
+	<option value="CI">C&#244;te d&#39;Ivoire</option>
+	<option value="HR">Croatia</option>
+	<option value="CU">Cuba</option>
+	<option value="CW">Cura&#231;ao</option>
+	<option value="CY">Cyprus</option>
+	<option value="CZ">Czechia</option>
+	<option value="DK">Denmark</option>
+	<option value="DJ">Djibouti</option>
+	<option value="DM">Dominica</option>
+	<option value="DO">Dominican Republic</option>
+	<option value="EC">Ecuador</option>
+	<option value="EG">Egypt</option>
+	<option value="SV">El Salvador</option>
+	<option value="GQ">Equatorial Guinea</option>
+	<option value="ER">Eritrea</option>
+	<option value="EE">Estonia</option>
+	<option value="SZ">Eswatini</option>
+	<option value="ET">Ethiopia</option>
+	<option value="FK">Falkland Islands (Malvinas)</option>
+	<option value="FO">Faroe Islands</option>
+	<option value="FJ">Fiji</option>
+	<option value="FI">Finland</option>
+	<option value="FR">France</option>
+	<option value="GF">French Guiana</option>
+	<option value="PF">French Polynesia</option>
+	<option value="TF">French Southern Territories</option>
+	<option value="GA">Gabon</option>
+	<option value="GM">Gambia</option>
+	<option value="GE">Georgia</option>
+	<option value="DE">Germany</option>
+	<option value="GH">Ghana</option>
+	<option value="GI">Gibraltar</option>
+	<option value="GR">Greece</option>
+	<option value="GL">Greenland</option>
+	<option value="GD">Grenada</option>
+	<option value="GP">Guadeloupe</option>
+	<option value="GU">Guam</option>
+	<option value="GT">Guatemala</option>
+	<option value="GG">Guernsey</option>
+	<option value="GN">Guinea</option>
+	<option value="GW">Guinea-Bissau</option>
+	<option value="GY">Guyana</option>
+	<option value="HT">Haiti</option>
+	<option value="HM">Heard Island and McDonald Islands</option>
+	<option value="VA">Holy See</option>
+	<option value="HN">Honduras</option>
+	<option value="HK">Hong Kong</option>
+	<option value="HU">Hungary</option>
+	<option value="IS">Iceland</option>
+	<option value="IN">India</option>
+	<option value="ID">Indonesia</option>
+	<option value="IR">Iran (Islamic Republic of)</option>
+	<option value="IQ">Iraq</option>
+	<option value="IE">Ireland</option>
+	<option value="IM">Isle of Man</option>
+	<option value="IL">Israel</option>
+	<option value="IT">Italy</option>
+	<option value="JM">Jamaica</option>
+	<option value="JP">Japan</option>
+	<option value="JE">Jersey</option>
+	<option value="JO">Jordan</option>
+	<option value="KZ">Kazakhstan</option>
+	<option value="KE">Kenya</option>
+	<option value="KI">Kiribati</option>
+	<option value="KP">Korea (Democratic People&#39;s Republic of)</option>
+	<option value="KR">Korea (Republic of)</option>
+	<option value="XK">Kosovo</option>
+	<option value="KW">Kuwait</option>
+	<option value="KG">Kyrgyzstan</option>
+	<option value="LA">Lao People&#39;s Democratic Republic</option>
+	<option value="LV">Latvia</option>
+	<option value="LB">Lebanon</option>
+	<option value="LS">Lesotho</option>
+	<option value="LR">Liberia</option>
+	<option value="LY">Libya</option>
+	<option value="LI">Liechtenstein</option>
+	<option value="LT">Lithuania</option>
+	<option value="LU">Luxembourg</option>
+	<option value="MO">Macao</option>
+	<option value="MK">Macedonia (the former Yugoslav Republic of)</option>
+	<option value="MG">Madagascar</option>
+	<option value="MW">Malawi</option>
+	<option value="MY">Malaysia</option>
+	<option value="MV">Maldives</option>
+	<option value="ML">Mali</option>
+	<option value="MT">Malta</option>
+	<option value="MH">Marshall Islands</option>
+	<option value="MQ">Martinique</option>
+	<option value="MR">Mauritania</option>
+	<option value="MU">Mauritius</option>
+	<option value="YT">Mayotte</option>
+	<option value="MX">Mexico</option>
+	<option value="FM">Micronesia (Federated States of)</option>
+	<option value="MD">Moldova (Republic of)</option>
+	<option value="MC">Monaco</option>
+	<option value="MN">Mongolia</option>
+	<option value="ME">Montenegro</option>
+	<option value="MS">Montserrat</option>
+	<option value="MA">Morocco</option>
+	<option value="MZ">Mozambique</option>
+	<option value="MM">Myanmar</option>
+	<option value="NA">Namibia</option>
+	<option value="NR">Nauru</option>
+	<option value="NP">Nepal</option>
+	<option value="NL">Netherlands</option>
+	<option value="NC">New Caledonia</option>
+	<option value="NZ">New Zealand</option>
+	<option value="NI">Nicaragua</option>
+	<option value="NE">Niger</option>
+	<option value="NG">Nigeria</option>
+	<option value="NU">Niue</option>
+	<option value="NF">Norfolk Island</option>
+	<option value="MP">Northern Mariana Islands</option>
+	<option value="NO">Norway</option>
+	<option value="OM">Oman</option>
+	<option value="PK">Pakistan</option>
+	<option value="PW">Palau</option>
+	<option value="PS">Palestine, State of</option>
+	<option value="PA">Panama</option>
+	<option value="PG">Papua New Guinea</option>
+	<option value="PY">Paraguay</option>
+	<option value="PE">Peru</option>
+	<option value="PH">Philippines</option>
+	<option value="PN">Pitcairn</option>
+	<option value="PL">Poland</option>
+	<option value="PT">Portugal</option>
+	<option value="QA">Qatar</option>
+	<option value="RE">R&#233;union</option>
+	<option value="RO">Romania</option>
+	<option value="RU">Russian Federation</option>
+	<option value="RW">Rwanda</option>
+	<option value="BL">Saint Barth&#233;lemy</option>
+	<option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+	<option value="KN">Saint Kitts and Nevis</option>
+	<option value="LC">Saint Lucia</option>
+	<option value="MF">Saint Martin (French part)</option>
+	<option value="PM">Saint Pierre and Miquelon</option>
+	<option value="VC">Saint Vincent and the Grenadines</option>
+	<option value="WS">Samoa</option>
+	<option value="SM">San Marino</option>
+	<option value="ST">Sao Tome and Principe</option>
+	<option value="SA">Saudi Arabia</option>
+	<option value="SN">Senegal</option>
+	<option value="RS">Serbia</option>
+	<option value="SC">Seychelles</option>
+	<option value="SL">Sierra Leone</option>
+	<option value="SG">Singapore</option>
+	<option value="SX">Sint Maarten (Dutch part)</option>
+	<option value="SK">Slovakia</option>
+	<option value="SI">Slovenia</option>
+	<option value="SB">Solomon Islands</option>
+	<option value="SO">Somalia</option>
+	<option value="ZA">South Africa</option>
+	<option value="GS">South Georgia and the South Sandwich Islands</option>
+	<option value="SS">South Sudan</option>
+	<option value="ES">Spain</option>
+	<option value="LK">Sri Lanka</option>
+	<option value="SD">Sudan</option>
+	<option value="SR">Suriname</option>
+	<option value="SJ">Svalbard and Jan Mayen</option>
+	<option value="SE">Sweden</option>
+	<option value="CH">Switzerland</option>
+	<option value="SY">Syrian Arab Republic</option>
+	<option value="TW">Taiwan</option>
+	<option value="TJ">Tajikistan</option>
+	<option value="TZ">Tanzania, United Republic of</option>
+	<option value="TH">Thailand</option>
+	<option value="TL">Timor-Leste</option>
+	<option value="TG">Togo</option>
+	<option value="TK">Tokelau</option>
+	<option value="TO">Tonga</option>
+	<option value="TT">Trinidad and Tobago</option>
+	<option value="TN">Tunisia</option>
+	<option value="TR">Turkey</option>
+	<option value="TM">Turkmenistan</option>
+	<option value="TC">Turks and Caicos Islands</option>
+	<option value="TV">Tuvalu</option>
+	<option value="UG">Uganda</option>
+	<option value="UA">Ukraine</option>
+	<option value="AE">United Arab Emirates</option>
+	<option value="GB">United Kingdom of Great Britain &amp; Northern Ireland</option>
+	<option value="UM">United States Minor Outlying Islands</option>
+	<option value="UY">Uruguay</option>
+	<option value="UZ">Uzbekistan</option>
+	<option value="VU">Vanuatu</option>
+	<option value="VE">Venezuela (Bolivarian Republic of)</option>
+	<option value="VN">Viet Nam</option>
+	<option value="VG">Virgin Islands (British)</option>
+	<option value="VI">Virgin Islands (U.S.)</option>
+	<option value="WF">Wallis and Futuna</option>
+	<option value="EH">Western Sahara</option>
+	<option value="YE">Yemen</option>
+	<option value="ZM">Zambia</option>
+	<option value="ZW">Zimbabwe</option>
+
+</select>
+            </div>
+
+            <div class="form-group">
+				<label for="txtPhone">Phone</label>
+				<input name="ctl00$ctl00$Content$Content$txtPhone" type="text" id="txtPhone" class="form-control required" onblur="this.value=jsFormatPhone(this.value);" onkeypress="var k = (event.charCode || event.keyCode); return (k >= 48 &amp;&amp; k &lt;= 57) || k == 45 || k == 43 || k == 32;" maxlength="16" TSREQ="false" AssociatedLabel="" placeholder="e.g., 123-456-7890" />
+			</div>
+
+            <div class="form-group">
+				<label for="txtEmail">Email: <span class="text-danger">Payment Receipt and Roster link/files will be sent to this email address.</span></label>
+				<input name="ctl00$ctl00$Content$Content$txtEmail" type="text" id="txtEmail" class="form-control" TSREQ="true" AssociatedLabel="" />
+			</div>
+
+            <div class="form-group">
+				<label for="txtCC">CC:</label>
+				<input name="ctl00$ctl00$Content$Content$txtCC" type="text" id="txtCC" class="form-control" TSREQ="false" AssociatedLabel="" />
+			</div>
+		</div>
+	</div>
+
+    <div class="ButtonGroup">
+        <a href="/Verification/search.aspx" class="btn btn-primary">Back</a>
+        <input type="submit" name="ctl00$ctl00$Content$Content$btnSubmit" value="Purchase Roster" onclick="return ValidatePage();" id="btnSubmit" class="btn btn-primary" />
+    </div>
+
+
+		</div>
+		<nav class="col-md-3 col-md-pull-9 sidebar-offcanvas" aria-label="Application steps">
+			
+		</nav>
+	</div>
+
+
+        </main>
+
+        <div id="overlay" role="status" aria-live="polite" aria-label="Loading">
+            <div>
+                <i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i>
+                <br />
+                Loading
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            document.f1rst = new CMSSettings();
+            document.f1rst.AppPath = "https://portal.ncmedboard.org/";
+            document.f1rst.StaticPath = "https://portal.ncmedboard.org/";
+            document.f1rst.IsDebug = false;
+
+            function ClearCookies() {
+                $.cookie('ApplicationName', '', { path: '/', expires: -1 });
+                $.cookie('ApplicationLink', '', { path: '/', expires: -1 });
+            }
+
+            window.onbeforeunload = function () {
+                $("#overlay").fadeIn();
+            }
+
+            $(function () {
+                $("[title],[data-toggle='tooltip']").tooltip({
+                    placement: "auto",
+                    html: true,
+                    container: "body",
+                });
+
+                // Sync aria-expanded for mobile menu (accessibility)
+                var $toggle = $(".navbar-toggle");
+                if ($toggle.length) {
+                    $toggle.on("click", function () {
+                        var expanded = $("#mobile-menu").hasClass("in");
+                        $toggle.attr("aria-expanded", expanded);
+                    });
+                    $("#mobile-menu").on("show.bs.collapse hide.bs.collapse", function () {
+                        $toggle.attr("aria-expanded", $("#mobile-menu").hasClass("in"));
+                    });
+                }
+
+                var alerts = $("#AlertMenu li").length;
+                if (alerts > 0) {
+                    $("#AlertMenu").addClass("not-empty");
+                    $("#AlertLink").css("color", "#d9534f");
+                    $("#AlertLink .fa").addClass("fa-beat");
+                    $("#AlertNumber").text(alerts);
+                    if (alerts == 1) {
+                        $("#AlertText").text("Alert");
+                    }
+                }
+            });
+        </script>
+
+        
+
+
+
+    <script type="text/javascript">
+        function ValidatePage() {
+            var isValid = true;
+            if (!Validate()) {
+                isValid = false;
+            }
+
+            if ($("#txtEmail").length && !jsEditEmail($("#txtEmail").val(), "Email Address", true)) {
+                isValid = false;
+            }
+
+            if ($("#txtCC").length && !jsEditEmail($("#txtCC").val(), "CC", false)) {
+                isValid = false;
+            }
+            return isValid;
+        }
+    </script>
+
+
+
+    <script>
+        $(function () {
+            //>> detect form changes
+            var _isDirty = false, _originalFormData = $("form :input").serialize();
+            $("form :input").change(function () {
+                var _currentFormData = $("form :input").serialize();
+                if (_originalFormData !== _currentFormData) {
+                    _isDirty = true;
+                }
+            });
+
+            $('[data-toggle="offcanvas"]').click(function () {
+                $('.row-offcanvas').toggleClass('active')
+            });
+
+            $("#AppNav .complete")
+                .append("<span class='glyphicon glyphicon-ok pull-right'></span>")
+                .attr("title", "Item complete");
+            $("#AppNav .current")
+                .append("<span class='glyphicon glyphicon-circle-arrow-left pull-right'></span>")
+                .attr("title", "Current item");
+            $("#AppNav .incomplete").attr("title", "Incomplete item");
+            $("#AppNav [data-link]").css("cursor", "pointer");
+            $("#AppNav [data-link]").click(function () {
+                var loc = $(this).attr("data-link");
+                if (_isDirty) {
+                    triggerDirtyMessage(loc);
+                } else {
+                    document.location = loc;
+                }
+			});
+
+            $("#header a, #subheader a").click(function (evt) {
+                //++ If this hidden field does not exist on the page, show message
+                if ($("#NO_PROGRESS_MESSAGE").length == 0) {
+                    evt.preventDefault();
+                    var loc = $(this).attr("href");
+                    triggerDirtyMessage(loc);
+                }
+			});
+        });
+
+        function triggerDirtyMessage(loc) {
+            bootbox.confirm({
+                title: 'Unsaved Changes Detected!',
+                message: 'You have unsaved changes. To save your changes, click "Return to Page" and then click the "Save/Next" button at the bottom of the page.  Do you want to save your changes to this section?',
+                buttons: {
+                    confirm: {
+                        label: 'Return to Page',
+                        className: 'btn btn-success dirty-proceed'
+                    },
+                    cancel: {
+                        label: 'Do not save changes',
+                        className: 'btn btn-default dirty-stay'
+                    }
+                },
+                callback: function (result) {
+                    if (!result) {
+                        document.location = loc;
+                    }
+                }
+            });
+        }
+    </script>
+
+
+
+        
+
+<script language="javascript"><!--
+
+					var txt = '';
+					if (txt.length > 0){
+						alert(txt);
+					}
+//--></script>
+</form>
+</body>
+</html>

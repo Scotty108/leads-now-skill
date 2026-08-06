@@ -1,0 +1,18 @@
+{"t": "read_skill", "files": ["SKILL.md", "workflow.md", "references/contact-channels.md", "references/source-access.md"], "branch": "ENRICH -> FULL"}
+{"t": "algolia_creds", "host": "mcleodhealth.org", "app": "JUNR3SUCF2", "index": "live_physicians", "found_in": "/search-physician-finder/ server HTML", "rung": 3}
+{"t": "truncation_detected", "source": "McLeod Algolia", "nbHits": 805, "blind_browse_returns": 100, "cause": "paginationLimitedTo", "fix": "partition by specialty facet"}
+{"t": "truncation_detected", "source": "McLeod Algolia specialty facet", "facets": ["Family Medicine", "Primary Care"], "got": 100, "true": [161, 132], "fix": "gender sub-partition + a-z letter sweep"}
+{"t": "index_complete", "source": "McLeod Algolia", "recovered": 805, "of": 805}
+{"t": "profiles_fetched", "McLeod": 805, "GrandStrand": 299, "Conway": 304, "Tidelands": 301, "total": 1709, "parsed": 1708}
+{"t": "blocked", "host": "tidelandshealth.org", "reason": "403 to plain fetch", "resolution": "rung 4 browser, same-origin fetch, 301/301 profiles read"}
+{"t": "dept_phone_directory", "host": "conwaymedicalcenter.com", "url": "/patients-visitors/phone-directory/", "note": "301 redirect from /phone-directory/ - needed -L", "lines": 106, "anesthesia": ["843-347-8288", "843-347-8352"]}
+{"t": "peds_graded", "profiles": 1708, "any_signal": 89, "strong": 87, "moderate": 2, "by_system": {"McLeod Health": 39, "Conway Medical Center": 26, "Tidelands Health": 14, "Grand Strand Health": 10}}
+{"t": "peds_anesthesiologists", "anesthesia_providers_read": 46, "with_peds": 1, "who": "Michelle D. Lee, MD - Board Certification: Anesthesiology; Pediatric Anesthesiology"}
+{"t": "chrome_control", "bio_only_mentions_excluded": 9, "rule": "matched inside record fields only (h6/p pairs, credentialsAndAccreditations, wrap divs, #profile-info-education)"}
+{"t": "correction_to_reference", "claim": "Tidelands publishes no training block for any of its 12 anesthesiologists", "measured": "FALSE - 11 of 12 publish Education/Residency/Fellowship; 1 (William Comeau, MD) does not"}
+{"t": "correction_to_reference", "claim": "Conway has no board-certification field", "measured": "FALSE - 258 of 303 Conway profiles publish Board Certification"}
+{"t": "correction_to_reference", "claim": "Email: not one clinician address across 1342 profiles", "measured": "FALSE - McLeod publishes 15 first-party addresses in an Email field on profile pages"}
+{"t": "confirmed_from_reference", "claim": "Grand Strand publishes no board-certification row", "measured": "TRUE for a cert string; it does publish a per-specialty boardCertified boolean"}
+{"t": "email_gate", "domain": "mcleodhealth.org", "pattern": "first.last", "observations": 15, "applied_to": 0, "reason": "all 15 observed addresses belong to mcLeod_physician_associates=False pharmacy staff; McLeod anesthesia providers also MPA=False (contracted group) - employment unverified, pattern withheld"}
+{"t": "email_defect_found", "person": "Derek L Horstemeyer", "was": "derek.horstemeyer@hcahealthcare.com pattern_confirmed", "verified": "efetch db=pmc PMC10327958 publishes only alex.roberts@hcahealthcare.com", "org": "Man In The Box Anesthesia (not HCA)", "action": "withheld"}
+{"t": "audit", "result": "PASS", "rows": 108, "phone": 108, "email": 2}

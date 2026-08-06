@@ -386,3 +386,63 @@ page by name; it is a different artifact from a provider profile.
 **Not one clinician address across 1,342 profiles.** Combined with the academic
 sweep — 69 of 72 with no publication anywhere — the email ceiling on a
 community clinical roster is real and it is low. Phone is the deliverable.
+
+
+## Round 2B was wrong — three negatives falsified by a fuller sweep
+
+This file confidently asserted three zeros. A larger sweep (1,708 profile
+records against the earlier 1,342) falsified **all three**:
+
+| Claimed here | Measured on a fuller sweep |
+|---|---|
+| "Tidelands publishes NO training block for ANY of its 12 anesthesiologists" | Publishes training for **11 of 12**. Only one is genuinely unpublishable. |
+| "Conway has no board-certification field" | Publishes board certification on **258 of 303** profiles. |
+| "Zero clinician addresses across 1,342 profiles" | McLeod publishes **15 first-party clinician emails**. |
+
+### State the denominator with every negative
+
+That is the lesson, and it is the most important rule in this file.
+
+Round 2B read **262 of McLeod's 805** records and 443 Tidelands profiles, then
+reported its zeros as properties of the world. They were properties of the
+sample. **Never write "zero" without the denominator you actually searched** —
+"0 emails" is a claim about reality; "0 emails across 262 of 805 records" is a
+claim about your sweep, and only the second one is true.
+
+A negative from a partial sweep is a hypothesis, not a finding. Report it as
+`checked N of M`, and treat any zero where `N < M` as provisional.
+
+### A partition can itself truncate — recursively truncated caps
+
+The documented workaround for a pagination cap is itself capped. Partitioning
+McLeod's index by specialty returned **785 of 805**, because two facets —
+Family Medicine (161) and Primary Care (132) — each silently hit the same
+100-record limit. A practice partition got 804. Only a gender + a–z sweep
+reached **805 of 805**.
+
+**Verify the partition sums to the reported total.** If it does not, the
+partition is truncating too, and you need a finer key. The cap does not
+announce itself at any level.
+
+### Verify payload keys before trusting a zero
+
+Grand Strand's embedded payload returned **zero** pediatric signals until it was
+keyed on `providerSpecialties` / `providerLocations` instead of `specialties` /
+`practiceLocations`. Reading the wrong key returns an empty list that is
+indistinguishable from a genuine absence.
+
+Before recording a zero from a structured payload, dump one full record and
+confirm the schema — that the field name you are reading actually exists.
+A wrong key returns empty and silently reads as absence.
+
+### What still holds
+
+- Exactly **one** pediatric anesthesiologist in the ring, reproduced
+  independently by both skills from the record itself.
+- The email pattern discipline held even as coverage improved: McLeod's 15
+  observed addresses establish `first.last@mcleodhealth.org` on 15 samples, and
+  it was applied to **zero** people — every McLeod anesthesiologist has
+  `mcLeod_physician_associates: false`, a contracted group on a different mail
+  domain. A 15-observation pattern is still the wrong pattern for a contractor.
+- A previously derived address was **withdrawn** on better evidence: efetch
+  showed the source paper publishes a different author's address entirely.

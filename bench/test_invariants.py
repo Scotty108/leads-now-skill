@@ -452,7 +452,54 @@ def port_chrome_string_false_positives(skill, cfg):
     return check(skill, "PORT: strip page chrome before matching", has)
 
 
-PORT_TESTS = [port_one_hop_past_the_index,
+
+
+def port_negative_needs_a_denominator(skill, cfg):
+    """Both. THE META-LESSON, and it caught three of my own false claims.
+
+    Round 2B read 262 of McLeod's 805 records and 443 Tidelands profiles, then
+    stated three confident negatives. A fuller sweep (1,708 records) falsified
+    all three: Tidelands publishes training for 11 of 12 anesthesiologists (not
+    zero), Conway publishes board certification on 258 of 303 profiles (not
+    'no such field'), and McLeod publishes 15 first-party clinician emails (not
+    'zero across 1,342 pages').
+
+    A negative finding is only as good as its coverage. Never write 'zero'
+    without the denominator you searched."""
+    t = _all_md(cfg)
+    has = ("state the denominator" in t or "never write \'zero\'" in t
+           or "no denominator" in t)
+    return check(skill, "PORT: state the denominator with every negative", has)
+
+
+def port_recursive_truncation(skill, cfg):
+    """Both. The documented fix for a truncation cap can itself be truncated.
+    Partitioning McLeod's index by specialty returned 785 of 805 because two
+    facets (Family Medicine 161, Primary Care 132) each silently capped at 100.
+    Only a gender + a-z sweep reached 805/805. Verify the partition sums to the
+    reported total; do not assume a partition escapes the cap."""
+    t = _all_md(cfg)
+    has = ("partition can itself" in t or "recursively truncat" in t
+           or "partitions truncate too" in t)
+    return check(skill, "PORT: partitions can truncate recursively", has)
+
+
+def port_payload_schema_variance(skill, cfg):
+    """Both. Grand Strand's embedded payload yielded ZERO pediatric signals
+    until it was keyed on providerSpecialties/providerLocations rather than
+    specialties/practiceLocations. Reading the wrong key returns an empty
+    result that is indistinguishable from a genuine absence."""
+    t = _all_md(cfg)
+    has = ("key" in t) and \
+          ("schema" in t or "field name" in t) and \
+          ("empty" in t or "zero" in t or "silently" in t)
+    return check(skill, "PORT: verify payload keys before trusting a zero", has)
+
+
+PORT_TESTS = [port_negative_needs_a_denominator,
+              port_recursive_truncation,
+              port_payload_schema_variance,
+              port_one_hop_past_the_index,
               port_silence_is_not_absence,
               port_chrome_string_false_positives,
               port_rung3_yields_department_phones,

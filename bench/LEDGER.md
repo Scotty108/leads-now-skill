@@ -167,3 +167,41 @@ duplicate people — it is really ~79 distinct.
 **Ported (each with a test that failed pre-port):** open the profile not just
 the index; silence-is-not-absence with the high-value inversion; strip page
 chrome before matching.
+
+| 2B | 2026-08-06T23:45Z | open | skillit | 108 | 108 | 89 | 1.00 | 0 | 3300 | **0.9500** | 1708 profiles; FALSIFIED 3 of my own corrections |
+
+**ROUND 2 COMPLETE — 4/4 runs.** ours/open 0.9500 = skillit/open 0.9500 (TIE),
+skillit/clamped 0.7918, ours/clamped 0.7690.
+
+### Round 2B (skillit) falsified three claims I had ported as fact
+
+A fuller sweep — 1,708 profile records against the earlier 1,342 — overturned
+three confident negatives written into the reference last round:
+
+| Claimed | Measured |
+|---|---|
+| Tidelands publishes NO training block for ANY of its 12 anesthesiologists | Publishes for **11 of 12** |
+| Conway has no board-certification field | Publishes on **258 of 303** |
+| Zero clinician emails across 1,342 profiles | McLeod publishes **15 first-party addresses** |
+
+**THE META-LESSON: state the denominator with every negative.** Round 2B read
+262 of McLeod's 805 records and reported its zeros as properties of the world.
+They were properties of the sample. A negative from a partial sweep is a
+hypothesis, not a finding.
+
+**Truncation is recursive.** The documented fix for the pagination cap is itself
+capped: partitioning by specialty returned 785/805 because Family Medicine (161)
+and Primary Care (132) each silently hit the same 100 limit. Practice partition
+804. Only gender + a-z reached 805/805.
+
+**A wrong payload key reads exactly like absence.** Grand Strand yielded zero
+peds until keyed on `providerSpecialties`/`providerLocations` rather than
+`specialties`/`practiceLocations`.
+
+**What held under the fuller sweep:** exactly ONE pediatric anesthesiologist in
+the ring, reproduced independently by both skills from the record itself. And
+the email discipline held as coverage improved — McLeod's 15 observed addresses
+establish `first.last@mcleodhealth.org` on 15 samples and were applied to ZERO
+people, because every McLeod anesthesiologist is `mcLeod_physician_associates:
+false`, a contracted group on another mail domain. A previously derived address
+was also WITHDRAWN when efetch showed the paper publishes a different author's.
