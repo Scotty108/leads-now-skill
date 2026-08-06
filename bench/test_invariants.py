@@ -574,7 +574,45 @@ def port_positive_control_for_absence(skill, cfg):
     return check(skill, "PORT: prove absence with a positive control", has)
 
 
-PORT_TESTS = [port_cms_doctors_and_clinicians,
+
+
+def port_verify_location_against_practice_address(skill, cfg):
+    """Both. Two runs made OPPOSITE errors on the same two people, and I had to
+    check the registry myself to settle it.
+
+    Desiree Aird MD: one run asserted NPI placed her in Tucson AZ; another
+    counted her inside the Myrtle Beach ring. The NPI PRACTICE address is
+    Greenville SC — neither was right. John Gantomasso: one said Macon GA,
+    another counted him in-ring; his practice addresses are New Orleans and
+    Lafayette LOUISIANA.
+
+    A location claim is only settled by the authoritative registry's PRACTICE
+    address. Not a mailing address, not a certifying body's address, and never
+    another run's assertion."""
+    t = _all_md(cfg)
+    has = ("settle" in t or "adjudicat" in t) and \
+          ("practice address" in t) and ("another run" in t or "assertion" in t)
+    return check(skill, "PORT: settle location on the registry practice address", has)
+
+
+def port_search_every_named_territory(skill, cfg):
+    """Both. A SCOPE error that survived three rounds and twelve runs. The brief
+    said 'map them to Myrtle Beach or Greenville'. Every run enumerated only the
+    Myrtle Beach ring, then reported '0 -> Greenville' — a zero produced by
+    never searching. A verified Greenville pediatric anesthesiologist exists.
+
+    If the ask names two places, enumerate both. A territory you did not search
+    returns zero and looks identical to a territory with nobody in it."""
+    t = _all_md(cfg)
+    has = ("territor" in t) and \
+          ("enumerate both" in t or "never searched" in t
+           or "each named" in t)
+    return check(skill, "PORT: enumerate every territory the ask names", has)
+
+
+PORT_TESTS = [port_verify_location_against_practice_address,
+              port_search_every_named_territory,
+              port_cms_doctors_and_clinicians,
               port_positive_control_for_absence,
               port_aba_diplomate_directory,
               port_directory_address_is_not_practice,

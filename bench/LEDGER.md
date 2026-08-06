@@ -294,3 +294,40 @@ indistinguishable.
 
 **EMAIL: dry for the 4th consecutive round.** 0 marginal, 4 total, across 12
 source classes, 2 skills, ~1,700 profiles and a 3.39M-row federal file.
+
+| 3B | 2026-08-07T00:45Z | open | ours | 120 | 119 | 4 | 1.00 | 0 | 934 | — | ABA contradiction RESOLVED against our own clamped run |
+
+### Round 3B: two runs disagreed and BOTH were wrong
+
+I verified against the NPI registry directly rather than picking a side:
+
+| Person | skillit claimed | ours claimed | NPI PRACTICE address |
+|---|---|---|---|
+| Desiree Aird MD | Tucson AZ | inside Myrtle Beach ring | **Greenville SC** |
+| John Gantomasso DO | Macon GA | inside Myrtle Beach ring | **New Orleans / Lafayette LA** |
+
+**A SCOPE ERROR SURVIVED THREE ROUNDS AND TWELVE RUNS.** The brief said map to
+"Myrtle Beach **or Greenville**". Every run enumerated only the Myrtle Beach
+ring, then reported "0 -> Greenville" — a zero produced by never searching
+there. Aird proves it wrong: a verified Greenville pediatric anesthesiologist,
+invisible to twelve consecutive runs. round3__skillit__open is now sweeping
+Greenville properly.
+
+### The ABA contradiction, resolved AGAINST our own run
+
+ours/clamped said "theaba.org has no public diplomate lookup at all." WRONG —
+`directoryreactapi.theaba.org` answers plain curl with HTTP 200. Our run probed
+guessable hostnames, got 404s, and published a rung-2 negative as a property of
+the world, never climbing to rung 3 where the API ships in the React bundle's
+main.js. **It cost 3 of the 4 pediatric anesthesiologists.** The denominator
+lesson recurring on itself one round later.
+
+### WHAT THE BROWSER IS WORTH — the cleanest measurement in the benchmark
+
+Of 108 certification blocks filled: **101 by both**, **6 by ABA (plain fetch)
+only**, **1 by ABMS (browser) only**.
+
+**Browser-alone marginal: 0 people, 0 emails, 0 peds, 0 phones, 1 cert block.**
+
+ABMS is genuinely browser-only (403 curl / 200 Playwright, no challenge shown
+or solved) — real, and worth exactly one record.

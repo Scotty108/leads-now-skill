@@ -1,0 +1,44 @@
+{
+  "skill": "ours",
+  "condition": "open",
+  "subagents": 0,
+  "tool_calls": 32,
+  "wall_clock_s": 934,
+  "people_found": 120,
+  "in_radius": 120,
+  "reachable": 119,
+  "peds_signal_strong": 4,
+  "peds_signal_moderate": 0,
+  "blocked_sources": [
+    {"host": "www.certificationmatters.org", "reason": "403 to curl and WebFetch (re-measured this run). OPENED by browser: HTTP 200, no challenge presented, nothing bypassed. reCAPTCHA v3 is present site-wide on the Gravity Forms contact form, not on the doctor search."},
+    {"host": "apps.abms.org", "reason": "DNS does not resolve"},
+    {"host": "verify.theaba.org", "reason": "DNS does not resolve — irrelevant, the live API is directoryreactapi.theaba.org"},
+    {"host": "verify.llronline.com (SC LLR)", "reason": "reCAPTCHA v2. NOT ATTEMPTED — out of scope by instruction and by references/blocked.md. A browser does not change this."},
+    {"host": "ncmedboard.org", "reason": "Cloudflare Turnstile. NOT ATTEMPTED — same reason. Bulk roster is a $150 product."},
+    {"host": "tidelandshealth.org", "reason": "403. Not needed this round — its anesthesiologists' certifications were filled from ABA/ABMS instead."}
+  ],
+  "truncation_detected": true,
+  "notes": "Two distinct findings. (1) The ABA contradiction is resolved against our own clamped run: directoryreactapi.theaba.org is open, un-captcha'd, and answers plain curl — verified on the first call. The clamped run's 'no public diplomate lookup exists' was a rung-2 guess published as a structural fact. Corrections to the other run's write-up: lookups/getProgramTypes 404s (getCertifications is correct) and StateId is a GUID not an integer — StateId:'41' returns [] silently, a wrong-key zero. (2) ABMS certificationmatters.org IS browser-only and it did open: 403 to curl, 200 to Playwright, no challenge shown or solved; in-page same-origin fetch then served all 120 lookups. NEW TRUNCATION CLASS: common-surname queries return non-zero tr.result-body-row COUNT with EMPTY row text (Michelle Lee: k=3, all ''), so a len(rows) check reads it as absence; a state-scoped retry over the 27 unmatched recovered 9, including Michelle Lee's pediatric subspecialty. Geography discipline held: Andrew Criser's ABA mailing AND ABMS board-reported address both say Morgantown WV, but his NPI practice address is Myrtle Beach SC — he stays on the practice address, and zero people were ADDED from either body's address. Neither body publishes an email or a phone, so the email and department-phone ceilings are unchanged at 120 of 120 checked. Neither body is enumerable (ABMS requires >=2 surname letters; ABA advanced caps at 1000), so no denominator sweep is possible. leadkit audit: PASS.",
+  "channel_yield": {
+    "abms_records": 102,
+    "aba_records": 107,
+    "new_training_blocks_filled": 102,
+    "new_emails": 0,
+    "department_phones": 0
+  },
+  "aba_contradiction_resolved": "The OTHER skill's round-3 run was RIGHT; OUR round-3 clamped run was WRONG. directoryreactapi.theaba.org answered a plain curl with HTTP 200 and a JSON diplomate array on the first call of this run, and all four documented endpoints work (basic search, advanced search, doctorRecord/getDoctorRecords, lookups/getCertifications confirming 519 = Pediatric Anesthesiology). No browser, no CAPTCHA, no key. Our clamped run probed guessable hostnames (verify.theaba.org, portal.theaba.org, /verify/), hit 404/DNS-failure, and published 'No public diplomate lookup exists' — a rung-2 negative asserted as a property of the world. It never climbed to rung 3: theaba.org/directory -> directoryreact.theaba.org -> main.js, where the API base ships in the client code. This is a denominator error of the exact kind contact-channels.md warns about, and it cost the roster 3 of its 4 pediatric anesthesiologists.",
+  "marginal_vs_round3_clamped": {
+    "people": 0,
+    "emails": 0,
+    "peds": 3,
+    "training_blocks_filled": 102
+  },
+  "marginal_attributable_to_browser_alone": {
+    "people": 0,
+    "emails": 0,
+    "peds": 0,
+    "training_blocks_filled": 1,
+    "department_phones": 0,
+    "detail": "Of the 108 people whose certification block was filled, 101 were filled by BOTH bodies, 6 by ABA (plain fetch) only, and exactly 1 by ABMS only — Christopher John Samuel MD, Georgetown SC, where ABA returned 3 same-name diplomates with no state agreement and was correctly withheld. All 4 pediatric hits came from ABA first and were merely corroborated by ABMS. The +3 peds and +101 of the +102 cert blocks are attributable to PLAIN FETCHING that the clamped run failed to attempt, not to the browser."
+  }
+}

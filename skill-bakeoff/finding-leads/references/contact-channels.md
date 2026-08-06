@@ -582,3 +582,76 @@ category, not the search.
 0 marginal, 4 total. Four rounds, twelve source classes, two skills, ~1,700
 profiles and a 3.39M-row federal file. **The ceiling is real: phone is the
 deliverable channel for a community clinical roster.**
+
+
+## Round 3 open: two runs disagreed, and both were wrong
+
+### Settle a location on the registry practice address
+
+Two runs made **opposite** errors about the same two people, and only a direct
+registry check settled it.
+
+| Person | Run A claimed | Run B claimed | NPI PRACTICE address |
+|---|---|---|---|
+| Desiree Aird MD | Tucson AZ (out of scope) | inside the Myrtle Beach ring | **Greenville SC** |
+| John Gantomasso DO | Macon GA (out of scope) | inside the Myrtle Beach ring | **New Orleans / Lafayette LA** |
+
+Neither was right about either. Aird is a genuine South Carolina pediatric
+anesthesiologist — in the *other* territory. Gantomasso is in Louisiana.
+
+**A location claim is settled only by the authoritative registry's PRACTICE
+address.** Not a mailing address, not a certifying body's address, and never
+another run's assertion. When two sources disagree about where someone works,
+go to the registry and adjudicate it rather than averaging or picking.
+
+### Enumerate every territory the ask names
+
+A scope error that survived three rounds and twelve runs.
+
+The brief said *"identify whether they should map to Myrtle Beach **or
+Greenville**"*. Every run enumerated only the Myrtle Beach 50-mile ring and
+then reported **"0 → Greenville"** — a zero produced entirely by never
+searching there. Aird is the proof it was wrong: a verified Greenville
+pediatric anesthesiologist, invisible to twelve consecutive runs.
+
+**If the ask names two places, enumerate both.** A territory you did not search
+returns zero and looks exactly like a territory with nobody in it. This is the
+denominator lesson again, one level up: the missing denominator was not the
+number of records read, it was the number of *places* looked at.
+
+### What the browser is actually worth, measured
+
+The cleanest answer in the benchmark. Of 108 certification blocks filled:
+
+- **101** by both ABA (plain fetch) and ABMS (browser)
+- **6** by ABA only — plain fetch
+- **1** by ABMS only — browser
+
+**Browser-alone marginal: 0 people, 0 emails, 0 pediatric hits, 0 phones, 1
+certification block.**
+
+ABMS genuinely is browser-only — 403 to curl, 200 to Playwright, with no
+challenge presented and none solved. It is real, and it was worth one record.
+
+### The ABA contradiction, resolved against our own run
+
+Our clamped run reported "theaba.org has no public diplomate lookup at all."
+That was **wrong**. `directoryreactapi.theaba.org` answers a plain `curl` with
+HTTP 200 and a JSON diplomate array. The clamped run probed guessable hostnames
+(`verify.theaba.org`, `/verify/`), got 404s, and published a rung-2 negative as
+a property of the world — never climbing to rung 3, where the API base ships in
+the React bundle's `main.js`.
+
+**It cost three of the four pediatric anesthesiologists.** The denominator
+lesson, recurring on itself one round later.
+
+Two fixes to the endpoint notes: `lookups/getProgramTypes` 404s — use
+`getCertifications`. And `StateId` is a **GUID, not an integer**: `StateId:"41"`
+returns `[]` silently, a wrong-key zero of exactly the kind described above.
+
+### Another silent-truncation shape
+
+ABMS returns a **non-zero row count with empty row text** for common surnames
+(`Michelle Lee`: 3 rows, all `""`). A `len(rows)` check reads that as presence;
+reading the text reads it as absence. A state-scoped retry over the 27
+unmatched recovered 9 — including Michelle Lee's pediatric subspecialty.
