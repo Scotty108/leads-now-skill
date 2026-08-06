@@ -311,7 +311,67 @@ def port_literature_wrong_instrument(skill, cfg):
     return check(skill, "PORT: literature is wrong instrument for community rosters", has)
 
 
-PORT_TESTS = [port_subspecialty_not_in_registry,
+
+
+def port_openalex_is_metered(skill, cfg):
+    """Both. CORRECTION. OpenAlex was documented as 'free, no key'. Measured:
+    HTTP 429 'Insufficient budget ... you only have $0 remaining',
+    retryAfter 6268s, 0 of 72 queries served even with a polite UA and mailto.
+    Documenting a dead source as the primary path sends every future run down
+    it.
+
+    Scoped to the sentence around each OpenAlex mention — a 429 elsewhere in
+    the docs (the anti-bot table) is not evidence this was corrected.
+    """
+    t = _all_md(cfg)
+    if "openalex" not in t:
+        return check(skill, "PORT: OpenAlex metering documented", True, "n/a")
+    ok = False
+    for m in re.finditer(r"openalex", t):
+        window = t[max(0, m.start() - 200): m.start() + 300]
+        if "metered" in window or "429" in window or "no longer free" in window:
+            ok = True
+            break
+    return check(skill, "PORT: OpenAlex metering documented", ok)
+
+
+def port_efetch_beats_europepmc(skill, cfg):
+    """Both. Measured: Europe PMC fullTextXML 404'd on all 4 affiliation-locked
+    PMIDs including the open-access one, while NCBI efetch db=pmc served every
+    corresponding-author address. Both published emails came from efetch."""
+    t = _all_md(cfg)
+    has = "efetch" in t and ("db=pmc" in t or "pmc" in t)
+    return check(skill, "PORT: NCBI efetch db=pmc for full-text emails", has)
+
+
+def port_full_forename_disambiguation(skill, cfg):
+    """Both. Affiliation lock alone is NOT sufficient. Measured: 'Patel D'
+    publishing from Grand Strand Health, Myrtle Beach passed the affiliation
+    lock perfectly and is Dveet Patel, not roster member Deeran Patel. Only a
+    full-forename comparison caught it."""
+    t = _all_md(cfg)
+    has = ("forename" in t or "full first name" in t or "initial is not" in t) \
+        and ("affiliation lock" in t or "affiliation-lock" in t)
+    return check(skill, "PORT: full-forename check, initials collide", has)
+
+
+def port_department_phones_absent(skill, cfg):
+    """Both. FALSIFIED a claim I wrote. contact-channels.md predicted department
+    numbers were 'the realistic win'. Measured: 8 org sites, ZERO anesthesiology
+    department lines — they publish facility switchboards only. Keep the
+    phone_type labels, drop the promise."""
+    t = _all_md(cfg)
+    has = ("switchboard" in t) and \
+          ("no department" in t or "zero department" in t
+           or "rarely publish" in t or "do not publish a department" in t)
+    return check(skill, "PORT: department lines usually absent (measured)", has)
+
+
+PORT_TESTS = [port_openalex_is_metered,
+              port_efetch_beats_europepmc,
+              port_full_forename_disambiguation,
+              port_department_phones_absent,
+              port_subspecialty_not_in_registry,
               port_literature_wrong_instrument,
               port_surface_lanes, port_skillmd_fallback, port_qualify_branch,
               port_calibrated_email_tiers, port_unsourced_row_gate,

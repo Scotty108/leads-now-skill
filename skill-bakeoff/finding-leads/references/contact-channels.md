@@ -59,7 +59,7 @@ address as theirs. Name + specialty is not enough. Name + affiliation is.
 
 Order of attack:
 
-1. **OpenAlex** (`api.openalex.org`, free, no key). Search the author, then
+1. **OpenAlex** (`api.openalex.org` — now metered, see corrections below). Search the author, then
    confirm `last_known_institution` or the affiliation on the specific work
    matches their practice. OpenAlex also gives affiliation history with dates,
    which feeds `qualify.md`.
@@ -187,3 +187,69 @@ certification.
 
 The one pediatric hit in round 1 came from a hospital's own search index, not
 from a journal.
+
+
+## Corrections from measurement (round 1B)
+
+Four things in this file were wrong or incomplete. Measured against 72
+community anesthesiologists.
+
+### OpenAlex is metered now — do not lead with it
+
+Documented here as "free, no key". It is not. Measured: **HTTP 429,
+"Insufficient budget. This request costs $0.001 but you only have $0
+remaining", retryAfter 6268s.** Zero of 72 queries were served, even with a
+polite user-agent and a mailto. Treat OpenAlex as best-effort and never as the
+primary path.
+
+### Use NCBI efetch, not Europe PMC full text
+
+Europe PMC's `fullTextXML` **404'd on all four affiliation-locked PMIDs**,
+including the one flagged open-access. `NCBI efetch db=pmc` served every one,
+and both real published addresses came from it.
+
+```
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=<PMCID>
+```
+
+Order: PubMed esearch to find the paper → **efetch db=pmc** for the full text,
+where the corresponding-author address actually lives. Abstract-level records
+drop it.
+
+### An affiliation lock is not enough — compare full forenames
+
+"Patel D" publishing from **Grand Strand Health, Myrtle Beach** passed the
+affiliation lock perfectly. It is **Dveet** Patel. The roster member is
+**Deeran** Patel. Same surname, same initial, same employer, same city —
+different person.
+
+PubMed indexes authors by initial, so the initial is not a discriminator.
+**Require the full first name to match** before accepting any address, and
+where the paper only gives an initial, treat the match as unconfirmed and
+discard it. A near-miss that survives an affiliation lock is more dangerous
+than an obvious mismatch, because it looks verified.
+
+### Department phone lines mostly do not exist
+
+This file predicted department numbers were "the realistic win". **Falsified.**
+Measured across 8 organization sites — Conway Medical Center, Grand Strand,
+McLeod Seacoast, Columbus Regional, OrthoSC, Tidelands, Novant Brunswick — the
+yield was **zero department lines**. Hospitals rarely publish a department
+number at all — they publish a facility switchboard and nothing else.
+
+Keep labelling `phone_type`; the labels are still the honest thing to report.
+Drop the expectation that fetching org pages will upgrade a `practice` number
+to a `department` one. In one browser-enabled run 19 of 84 department lines
+were recovered, so it is not impossible — it is just not reliable, and it is
+not worth a fetch per org on a cold roster.
+
+### Where the boundary actually is
+
+**69 of 72 have no affiliation-locked paper, trial or grant anywhere.** Every
+academic channel — OpenAlex, Europe PMC, PubMed, ClinicalTrials.gov, NIH
+RePORTER — is capped at the 3 people who publish, and a thorough sweep reached
+exactly those 3. That is the ceiling, and it is a property of the population,
+not of the tooling.
+
+For a community clinical roster, plan on **phone as the deliverable channel**
+and treat email as a bonus on the small academic minority.

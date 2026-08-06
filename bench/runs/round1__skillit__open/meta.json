@@ -1,0 +1,126 @@
+{
+ "skill": "skillit",
+ "condition": "open",
+ "subagents": 0,
+ "tool_calls": 57,
+ "wall_clock_s": 805,
+ "people_found": 72,
+ "in_radius": 72,
+ "reachable": 72,
+ "peds_signal_strong": 0,
+ "peds_signal_moderate": 0,
+ "blocked_sources": [
+  {
+   "host": "api.openalex.org",
+   "reason": "HTTP 429 'Insufficient budget. This request costs $0.001 but you only have $0 remaining. Resets at midnight UTC' retryAfter=6268s. Retried with polite UA+mailto, identical. 0 queries served - the free no-key tier is now metered."
+  },
+  {
+   "host": "www.tidelandshealth.org",
+   "reason": "HTTP 403 to both curl (honest UA) and the agent fetcher"
+  },
+  {
+   "host": "www.novanthealth.org",
+   "reason": "HTTP 404 on the Brunswick Medical Center location path"
+  },
+  {
+   "host": "ambulatorycareanesthesia.com",
+   "reason": "DNS does not resolve - the roster's largest employer (20 of 72 people) has no reachable website"
+  },
+  {
+   "host": "www.ebi.ac.uk/europepmc .../fullTextXML",
+   "reason": "HTTP 404 on all 4 locked PMIDs including the isOpenAccess=Y record; the same articles served fine from NCBI efetch db=pmc"
+  },
+  {
+   "host": "mcp__playwright__*",
+   "reason": "deliberately unused - shared browser instance driven by another agent (condition B); JS-only pages were therefore out of reach"
+  },
+  {
+   "host": "WebSearch",
+   "reason": "session budget exhausted 200/200 - no open-web discovery layer available this run"
+  }
+ ],
+ "truncation_detected": true,
+ "notes": "CONDITION B, non-browser: zero mcp__playwright__* calls, zero WebSearch. All fetching via curl/urllib from Bash plus 6 WebFetch calls. BRANCH=ENRICH (roster supplied, registry not re-fetched). THE BOUNDARY: 69 of 72 have no affiliation-locked publication, trial or grant anywhere - community anesthesiologists in a 50-mile coastal ring have no public academic surface, so every academic channel is capped at the 3 who publish, and it reached exactly those 3. The lock is the whole game: 2,630 raw PubMed IDs and 339 author-name-matched affiliation records collapsed to 3 people; 336 were name collisions at UCSF, UW, JHU, Oxford, Mass General Brigham, Royal London, Macquarie, Kaiser Pasadena. TWO NEAR-MISSES WORTH THE BENCH: (1) Zechariah Charles Harris returned Ann & Robert H. Lurie CHILDREN'S Hospital of Chicago and MGH pediatric critical care - exactly the peds signal asked for - but the affiliation is Chicago, not the Grand Strand; different person, discarded, peds stays 0. (2) 'Patel D' publishing from Grand Strand Health, Myrtle Beach SC passed the affiliation lock perfectly and is DVEET Patel, an internal-medicine resident, not roster member DEERAN Patel; caught only by comparing full ForeName instead of first initial. His published address dveetpatel@gmail.com was rejected. TRUNCATION: 39 of 72 PubMed author queries hit retmax=60. Repaired with an affiliation-restricted esearch (retmax=200, none saturated); the repair added 0 verified people, so the ceiling hid nothing real - but the unrepaired run would not have been able to say that. EMAILS: the 2 real addresses are NOT in PubMed affiliation strings and NOT in Europe PMC core records - they are only in PMC full text, reached via NCBI efetch db=pmc after Europe PMC's own fullTextXML endpoint 404'd. Full text is where clinician emails live; on this sample the working endpoint was PMC, not Europe PMC. PHONES: 6 org sites fetched; they publish switchboards (Conway Medical Center 843-347-7111, McLeod Seacoast 843-390-8100, McLeod Loris 843-716-7000, Columbus Regional 910-642-8011, OrthoSC 843-353-3460, Grand Strand only a 844 Consult-A-Nurse line). Not one anesthesiology department line exists on the public web for this ring, so all 72 phones stay phone_type=practice. REACHABLE=72 counts a published practice switchboard, which is NOT reaching the person: person-level reachability is 2 (first_party_published email). hygiene exits 1, projected 63.2% vs a 2% ceiling; only the 2 first_party_published rows are bulk-sendable. NON-EMAIL WIN: for the 3 locked people the WORKPLACE is now confirmed by a source that names them (Grand Strand Regional Medical Center) where round 1 had only an NPI address-join. Roster also still carries 1 PA-C and 1 CRNA against a physician request - a round-1 defect preserved here because the roster was the frame. Remaining action that would resolve peds: call the 72 published practice numbers; free public data is exhausted on that question.",
+ "channel_yield": {
+  "openalex_emails": 0,
+  "europepmc_emails": 0,
+  "clinicaltrials": 0,
+  "nih_reporter": 0,
+  "department_phones": 0,
+  "linkedin_found": 0,
+  "linkedin_search_urls": 72,
+  "pubmed_pmc_fulltext_emails": 2,
+  "derived_pattern_confirmed_emails": 1,
+  "affiliation_locked_people": 3,
+  "workplace_confirmations": 3,
+  "total_new_emails": 3
+ },
+ "sources_exhausted": [
+  {
+   "source": "OpenAlex api.openalex.org",
+   "tried": "works?search=<name> for the 72 roster people; smoke test first",
+   "yield": 0,
+   "detail": "HTTP 429 budget-exhausted on the very first call, twice, with and without polite mailto. 0 of 72 queries served."
+  },
+  {
+   "source": "PubMed E-utilities esearch+efetch",
+   "tried": "'<Last> <F>[Author]' x72, retmax 60, author-level affiliation verified in efetch XML",
+   "yield": 0,
+   "detail": "2630 raw PMIDs, 210 author-matched affiliation records, 183 emails present in affiliation strings - 0 survived the affiliation lock. Locked 3 people, but their locked affiliation strings carry no email."
+  },
+  {
+   "source": "PubMed E-utilities, affiliation-restricted (truncation repair)",
+   "tried": "'<Last> <F>[Author] AND (17 ring city/health-system [ad] terms)' x72, retmax 200",
+   "yield": 0,
+   "detail": "18 candidates -> 7 author-level -> 3 verified after full-forename check. 0 people added beyond the first pass."
+  },
+  {
+   "source": "Europe PMC REST search",
+   "tried": "AUTH:\"<Last> <First>\" resultType=core x72",
+   "yield": 0,
+   "detail": "129 author-matched affiliation records, 120 emails - all name collisions, 0 survived the lock. Adds nothing PubMed did not already have on this population."
+  },
+  {
+   "source": "Europe PMC fullTextXML",
+   "tried": "/{source}/{id}/fullTextXML for the 4 locked PMIDs",
+   "yield": 0,
+   "detail": "HTTP 404 on all 4, including PMC8890879 flagged isOpenAccess=Y. The documented full-text email route did not serve."
+  },
+  {
+   "source": "NCBI efetch db=pmc (full text)",
+   "tried": "efetch db=pmc for the 4 locked PMCIDs + 6 near-miss ones",
+   "yield": 2,
+   "detail": "THE ONLY CHANNEL THAT PRODUCED A REAL EMAIL. Jon.Halling@hcahealthcare.com (PMC11249181, 2024) and David.Kingery@hcahealthcare.com (PMC10324711, 2023), both printed as corresponding-author addresses. Also yielded 3 non-roster addresses at the same domain that established the first.last format."
+  },
+  {
+   "source": "ClinicalTrials.gov API v2",
+   "tried": "query.term=\"<First> <Last>\" x72 across all fields, plus query.locn for 8 ring cities",
+   "yield": 0,
+   "detail": "31 studies matched on name, 24 candidates, 0 survived the lock - Michael Alvarado=UCSF, E J Collins=UW/JHU, Bryan Lee=Bassett/HonorHealth, Patricia Grant=Wicab, Michelle Lee=Mass General Brigham, John Schultz=Regenexx. Ring-city queries returned 184 studies with no roster clinician as a named contact. Community anesthesiologists do not run trials."
+  },
+  {
+   "source": "NIH RePORTER API v2",
+   "tried": "POST criteria.pi_names with all 72 names; POST criteria.org_cities with 8 ring cities",
+   "yield": 0,
+   "detail": "pi_names 1667 loose matches, 0 at a ring-region organization. org_cities 130 results, all wrong-state homographs - Conway AR (Univ of Central Arkansas, Arkansas Research Alliance), Georgetown TX/DE/KY and Georgetown Guyana. No roster member holds an NIH grant."
+  },
+  {
+   "source": "Hospital / practice department pages",
+   "tried": "conwaymedicalcenter.com (contact-us, surgical-services), mygrandstrandhealth.com/specialties/surgery, mcleodhealth.org/locations/mcleod-seacoast, crhealthcare.org, orthosc.com, tidelandshealth.org/contact, novanthealth.org brunswick, ambulatorycareanesthesia.com",
+   "yield": 0,
+   "detail": "Every published number is a facility switchboard, not a service line: CMC 843-347-7111, McLeod Seacoast 843-390-8100, McLeod Loris 843-716-7000, Columbus Regional 910-642-8011, OrthoSC 843-353-3460, Grand Strand only a 844 Consult-A-Nurse line. 0 anesthesiology department lines exist publicly for this ring. 3 of 8 sites unreadable (403/404/DNS)."
+  },
+  {
+   "source": "LinkedIn",
+   "tried": "not automated, per skill boundary and the terms",
+   "yield": 0,
+   "detail": "72 linkedin_search_url emitted for a human to click; 0 verified linkedin_url because no public bio, conference page or practice site linked one."
+  },
+  {
+   "source": "scripts/email_pattern.py learn+apply",
+   "tried": "5 observed first.last@hcahealthcare.com addresses -> apply to Derek Horstemeyer",
+   "yield": 1,
+   "detail": "support 5/5, tier pattern_confirmed, derek.horstemeyer@hcahealthcare.com. Tool-produced, not typed. ~9% implied bounce so NOT bulk-sendable, and the domain is the HCA facility he publishes from while his NPI employer is a private group - both caveats are on the row."
+  }
+ ]
+}

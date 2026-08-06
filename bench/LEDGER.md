@@ -10,6 +10,10 @@ One row per round. Append, never rewrite — the history is the point.
 | 1A | 2026-08-06T21:52Z | clamped | ours | 60 | 59 | 0 | 1.00 | 3 | 640 | 0.7245 | 3 emails (pattern_confirmed, cmc-sc.com); 11 blocked sources named |
 | 1A | 2026-08-06T21:52Z | clamped | skillit | 72 | 72 | 0 | 1.00 | 0 | 526 | **0.7725** | 0 emails; 5 blocked sources; won on coverage |
 | 1B | 2026-08-06T22:15Z | open | ours | 84 | 84 | 2 | 1.00 | 1 | 1179 | **0.7940** | browser unlocked 23 people; FOUND a real peds anesthesiologist at 25mi |
+| 1B | 2026-08-06T22:30Z | open | skillit | 72 | 72 | 0 | 1.00 | 0 | 805 | 0.7632 | exhaustive enrichment sweep: 11 sources tried, boundary established |
+
+**ROUND 1 COMPLETE — 4/4 runs.** Ranking: ours/open 0.7940 > skillit/clamped 0.7725 > skillit/open 0.7632 > ours/clamped 0.7245.
+
 CONFOUND: session WebSearch budget exhausted (200/200) before both runs — Condition A is a valid test of registry sourcing and a CRIPPLED test of enrichment. Both skills logged it as a top blocker.
 
 ## Per-channel coverage (the real scoreboard)
@@ -17,6 +21,7 @@ CONFOUND: session WebSearch budget exhausted (200/200) before both runs — Cond
 |---|---|---|---|---|---|---|---|---|
 | 1A | 131 | 131 | 0 | 0 | 3 | 0 | 0 | 0 |
 | 1B (ours) | 84 | 65 | **19** | 0 | 3 | 0 | **84** | **2** |
+| 1B (skillit) | 72 | 72 | 0 | 0 | 3 | 0 | 72 | 0 |
 
 ### Round 1 findings that changed the answer
 
@@ -46,3 +51,36 @@ manufactured the set's only publication-derived STRONG.
 
 **Channel movement 1A -> 1B:** department phones 0 -> 19, LinkedIn search URLs
 0 -> 84, peds signal 0 -> 2. **Work email did not move: 3.**
+
+### THE BOUNDARY (round 1B, skillit — 11 sources tried exhaustively)
+
+**69 of 72 have no affiliation-locked paper, trial or grant anywhere.** Every
+academic channel is capped at the 3 people who publish, and a thorough sweep
+reached exactly those 3. The ceiling is a property of the population, not the
+tooling.
+
+| Source tried | Scope | Yield |
+|---|---|---|
+| OpenAlex | 72 names | **0 — HTTP 429, now metered** |
+| PubMed E-utilities | 2630 IDs, 210 author-matched, 183 emails present | 0 |
+| PubMed affiliation-restricted | 17 ring [ad] terms | 0 |
+| Europe PMC search | 129 records, 120 emails | 0 (all collisions) |
+| Europe PMC fullTextXML | 4 locked PMIDs | **0 — 404 on all, incl. the OA one** |
+| **NCBI efetch db=pmc** | 4 locked + 6 near-miss | **2** |
+| ClinicalTrials.gov v2 | 72 names + 8 ring cities | 0 |
+| NIH RePORTER v2 | 72 PIs + 8 cities | 0 |
+| Hospital department pages | 8 org sites | **0 department lines** |
+| email_pattern learn+apply | 5 observed @hcahealthcare.com | 1 |
+
+**Corrections ported (each with a test that failed pre-port):**
+- OpenAlex is metered — documented as "free, no key", returns 429 with $0 budget
+- NCBI efetch db=pmc beats Europe PMC fullTextXML (404 on all 4, incl. OA)
+- Affiliation lock is NOT sufficient: "Patel D" @ Grand Strand Myrtle Beach
+  passed it perfectly and is *Dveet* Patel, not roster member *Deeran* Patel.
+  PubMed indexes by initial; require a full-forename match.
+- Department phone lines mostly do not exist — my own claim that they were
+  "the realistic win" was FALSIFIED at 0/8 org sites.
+
+**Work email ceiling: ~3/72 (4%) from free public sources on a community
+clinical roster.** Phone is the deliverable channel; email is a bonus on the
+academic minority.
