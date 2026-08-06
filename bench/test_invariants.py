@@ -165,6 +165,79 @@ def test_docs_claims(skill, cfg):
     return ok
 
 
+
+
+# ---------------------------------------------------------------------------
+# PORT TESTS — the cross-pollination frontier.
+#
+# Each of these encodes a mechanism one skill has and the other does not. They
+# are written BEFORE the port and are expected to fail against the pre-port
+# version; that failing run is the evidence the port was needed. Once ported,
+# the test is what stops a later round from regressing it.
+# ---------------------------------------------------------------------------
+
+def _all_md(cfg):
+    txt = ""
+    for root, _, files in os.walk(cfg["dir"]):
+        for f in files:
+            if f.endswith(".md"):
+                txt += open(os.path.join(root, f), errors="ignore").read()
+    return txt.lower()
+
+
+def port_surface_lanes(skill, cfg):
+    """ours -> skillit. Capability differs per surface; a skill that assumes a
+    shell silently fails in the Claude apps. Must name the degraded path."""
+    t = _all_md(cfg)
+    has = ("lane" in t or "surface" in t) and \
+          ("no outbound" in t or "sandbox" in t or "claude apps" in t)
+    return check(skill, "PORT: surface capability lanes", has)
+
+
+def port_skillmd_fallback(skill, cfg):
+    """ours -> skillit. Some install paths carry only SKILL.md and drop
+    scripts/. Without an embedded fallback the skill is inert there."""
+    body = open(os.path.join(cfg["dir"], "SKILL.md"), errors="ignore").read()
+    has = "```python" in body and ("fallback" in body.lower()
+                                   or "missing" in body.lower())
+    return check(skill, "PORT: SKILL.md-only fallback embedded", has)
+
+
+def port_qualify_branch(skill, cfg):
+    """ours -> skillit. 'Past pediatric experience' is the origin ask and no
+    directory field carries it; it needs a research branch over a shortlist."""
+    t = _all_md(cfg)
+    has = ("qualify" in t or "past experience" in t) and \
+          ("openalex" in t or "affiliation history" in t or "publication" in t)
+    return check(skill, "PORT: qualify branch for past experience", has)
+
+
+def port_calibrated_email_tiers(skill, cfg):
+    """skillit -> ours. Confidence labels without measured accuracy cannot be
+    gated against a bounce ceiling; 'likely' is not a number."""
+    t = _all_md(cfg)
+    has = ("bounce" in t) and re.search(r"\b(36|68|91)\s*%", t) is not None
+    return check(skill, "PORT: calibrated email accuracy + bounce gate", has)
+
+
+def port_unsourced_row_gate(skill, cfg):
+    """skillit -> ours. A rule in prose is not a gate. Something must refuse to
+    emit a row whose claims carry no source."""
+    sdir = os.path.join(cfg["dir"], "scripts")
+    src = ""
+    if os.path.isdir(sdir):
+        for fn in os.listdir(sdir):
+            if fn.endswith(".py"):
+                src += open(os.path.join(sdir, fn), errors="ignore").read().lower()
+    has = ("unsourced" in src or "no source" in src) and \
+          ("exit(1)" in src or "return 1" in src or "sys.exit(1)" in src)
+    return check(skill, "PORT: tool refuses unsourced rows", has)
+
+
+PORT_TESTS = [port_surface_lanes, port_skillmd_fallback, port_qualify_branch,
+              port_calibrated_email_tiers, port_unsourced_row_gate]
+
+
 TESTS = [test_frontmatter, test_portability, test_refusal,
          test_surname_particles, test_docs_claims]
 
@@ -172,6 +245,8 @@ TESTS = [test_frontmatter, test_portability, test_refusal,
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--skill", choices=list(SKILLS) + ["both"], default="both")
+    ap.add_argument("--ports", action="store_true",
+                    help="also run the port frontier tests (expected red pre-port)")
     ap.add_argument("--json", action="store_true")
     ap.add_argument("-o", "--output")
     args = ap.parse_args()
@@ -187,6 +262,10 @@ def main() -> int:
             continue
         for t in TESTS:
             allok &= bool(t(name, cfg))
+        if args.ports:
+            print(f"  -- port frontier --")
+            for t in PORT_TESTS:
+                t(name, cfg)   # advisory: does not gate the core suite
 
     n_fail = sum(1 for r in results if r["status"] == "FAIL")
     print(f"\n{len(results) - n_fail}/{len(results)} passed, {n_fail} failed")

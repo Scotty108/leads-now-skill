@@ -1,0 +1,15 @@
+
+TRUNCATED: 3 queries are still full at the registry ceiling of 1200 records, so an unknown
+number of providers is missing and NO COUNT FROM THIS RUN IS A TOTAL.
+  npi__orgs__any__284__s1000.json
+  npi__orgs__any__294__s1000.json
+  npi__orgs__any__295__s1000.json
+Split each one and fetch again, descending this ladder only as far as it takes.
+A postal prefix is enough for most areas but NOT for a dense metro, where a single
+5-digit ZIP can hold more than the ceiling on its own:
+  1. --zip3 with the prefixes from `geo_filter.py resolve`
+  2. --zip3 with full 5-digit ZIPs
+  3. --cities with the individual city names
+  4. a narrower --taxonomy
+files_read: 18   distinct_providers: 3556   location_rows: 4456
+wrote /Users/scotty/leads.now/bench/runs/round1__skillit__clamped/work/orgroster.csv
