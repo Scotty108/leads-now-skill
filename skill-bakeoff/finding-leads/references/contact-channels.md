@@ -446,3 +446,76 @@ A wrong key returns empty and silently reads as absence.
   domain. A 15-observation pattern is still the wrong pattern for a contractor.
 - A previously derived address was **withdrawn** on better evidence: efetch
   showed the source paper publishes a different author's address entirely.
+
+
+## Round 3: the certifying body, and three dead ends named
+
+### The ABA Diplomate Directory is the best source in this benchmark
+
+The American Board of Anesthesiology runs an **open, un-captcha'd JSON API**.
+It was reached by climbing the ladder into the React bundle: `theaba.org/directory`
+→ `directoryreact.theaba.org` → `main.js` → the API base and endpoint shapes,
+shipped in the client code.
+
+```
+GET  directoryreactapi.theaba.org/lookups/getCertifications
+GET  directoryreactapi.theaba.org/searchResults/basic?FirstName=&LastName=
+POST directoryreactapi.theaba.org/searchResults/advanced
+       {FirstName, LastName, City, StateId, ABAId, ProgramType}
+GET  directoryreactapi.theaba.org/doctorRecord/getDoctorRecords?ABAId=<digits>
+```
+
+**`ProgramType 519` is Pediatric Anesthesiology** — the exact subspecialty field
+rounds 1 and 2 could not reach. It filled **46 board-certification blocks** on
+people no hospital directory publishes, including one Tidelands anesthesiologist
+sourced entirely from outside Tidelands, which still 403s.
+
+Strip the dash from the ABA ID; the dashed form 400s. The advanced search
+returned exactly **1000** for one query — the same silent ceiling as NPI
+`skip=1000`, so treat parent-specialty counts as floors.
+
+For any regulated profession, **go to the body that grants the credential.**
+It is the only source that can turn an unpublishable blank into a checked fact.
+
+### A mailing address is not a practice location
+
+The sharpest rejection so far. ABA publishes the diplomate's **mailing
+address**, and it produced two brand-new, entirely plausible pediatric
+anesthesiologists 1.5 miles from the ring centre. NPI and Doximity
+independently placed them in **Tucson AZ** and **Macon GA**.
+
+Both withheld. The ring still holds exactly one.
+
+An address field is a practice location only when the source says so. Registry
+addresses, certifying-body addresses and directory addresses answer different
+questions, and a certifying body has no reason to know where you work today.
+
+### Three source classes are structurally closed
+
+Closed by structure, not difficulty — **a browser does not rescue any of them**,
+so do not spend a rung-4 budget here:
+
+- **State medical boards** (SC LLR, NC Medical Board) are reCAPTCHA v2 gated.
+  This skill does not defeat a CAPTCHA, so the zero survives into the open
+  condition unchanged. NCMB's bulk roster is a $150 product; SC's bulk
+  verification is a login wall.
+- **ASA and SPA publish no member directory at all** — not gated, absent. The
+  only member-data product is paid mailing-list rental.
+- **Residency and fellowship pages are circular for discovery.** They are
+  indexed *by program*, and the program is the field you are trying to fill. 0
+  of 77 roster names appeared on the MUSC anesthesia residency page.
+
+**Doximity is inverted:** it publishes training exactly where place fails to
+corroborate, and gates it behind "Join to view" precisely where place does
+corroborate. Useful for rejection, not for filling.
+
+### What a dry round looks like
+
+Round 3 added **0 new people, 0 emails, 0 pediatric hits, 0 department phones**.
+The gain was entirely evidential: 48 `NONE_FOUND`s moved from *unpublishable*
+to *checked-and-absent at the body that grants the certificate*.
+
+That is a real result. The remaining 29 unmatched are structurally explained —
+12 are NPI trainees (not board-eligible), 1 PA-C and 1 CRNA (not ABA-eligible),
+and 15 are genuine unknowns. **Those 15 are now the highest-value calls**,
+replacing round 2's Tidelands twelve.

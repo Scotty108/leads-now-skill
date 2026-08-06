@@ -496,7 +496,53 @@ def port_payload_schema_variance(skill, cfg):
     return check(skill, "PORT: verify payload keys before trusting a zero", has)
 
 
-PORT_TESTS = [port_negative_needs_a_denominator,
+
+
+def port_aba_diplomate_directory(skill, cfg):
+    """Both. The best source found in the benchmark, and the only one that
+    fills a training block no hospital directory will publish. The American
+    Board of Anesthesiology runs an open, un-captcha'd JSON API — reached by
+    climbing into the React bundle's main.js. ProgramType 519 IS Pediatric
+    Anesthesiology, the exact subspecialty field rounds 1-2 could not reach.
+    Filled 46 certification blocks including a Tidelands anesthesiologist
+    sourced entirely from outside Tidelands, which still 403s."""
+    t = _all_md(cfg)
+    has = ("american board of anesthesiology" in t or "theaba.org" in t) and \
+          ("certif" in t)
+    return check(skill, "PORT: ABA diplomate directory for board certification", has)
+
+
+def port_directory_address_is_not_practice(skill, cfg):
+    """Both. The sharpest rejection of round 3. A certifying body publishes the
+    diplomate's MAILING address, not a practice location. Two brand-new,
+    entirely plausible pediatric anesthesiologists appeared 1.5 miles from the
+    ring centre; NPI and Doximity independently placed them in Tucson AZ and
+    Macon GA. Both withheld. An address field is only a practice location if
+    the source says it is."""
+    t = _all_md(cfg)
+    has = ("mailing address" in t) and \
+          ("practice location" in t or "practice address" in t)
+    return check(skill, "PORT: a mailing address is not a practice location", has)
+
+
+def port_structurally_closed_sources(skill, cfg):
+    """Both. Three classes are closed by structure, not difficulty, so a browser
+    does not rescue them: state medical boards are reCAPTCHA-gated (and the
+    skill refuses to defeat a CAPTCHA, so the zero survives into the OPEN
+    condition), ASA and SPA publish no member directory at all, and
+    residency/fellowship pages are circular for discovery — they are indexed BY
+    PROGRAM, which is the field you are trying to fill. Do not re-spend on
+    these."""
+    t = _all_md(cfg)
+    has = ("structurally closed" in t or "closed by structure" in t) and \
+          ("circular" in t or "recaptcha" in t)
+    return check(skill, "PORT: name the structurally closed sources", has)
+
+
+PORT_TESTS = [port_aba_diplomate_directory,
+              port_directory_address_is_not_practice,
+              port_structurally_closed_sources,
+              port_negative_needs_a_denominator,
               port_recursive_truncation,
               port_payload_schema_variance,
               port_one_hop_past_the_index,

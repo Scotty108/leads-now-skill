@@ -1,0 +1,123 @@
+{
+  "skill": "ours",
+  "condition": "clamped",
+  "subagents": 1,
+  "tool_calls": 57,
+  "wall_clock_s": 999,
+  "people_found": 120,
+  "in_radius": 119,
+  "reachable": 119,
+  "peds_signal_strong": 1,
+  "peds_signal_moderate": 0,
+  "blocked_sources": [
+    {
+      "host": "verify.llronline.com (SC LLR Board of Medical Examiners licensee lookup)",
+      "reason": "Google reCAPTCHA. Page served 200 and the ASP.NET form parsed cleanly; __VIEWSTATE/__EVENTVALIDATION extracted and POSTed three ways (plain, AspxAutoDetectCookieSupport=1, with __EVENTTARGET). Every response re-rendered the form with zero result rows because onSubmit() gates the postback on grecaptcha.getResponse()!=''. CSP script-src allows www.google.com/gstatic.com. Not attempted further per references/blocked.md. YIELD 0."
+    },
+    {
+      "host": "portal.ncmedboard.org (North Carolina Medical Board licensee search)",
+      "reason": "Cloudflare Turnstile, data-sitekey 0x4AAAAAADYoob8wVvTTqrGT, script challenges.cloudflare.com/turnstile/v0/api.js. Bulk-file alternative also probed: /resources-information/professional-resources/licensee-data returns 0 bytes, /licensee-data 404, sitemap.xml 404. YIELD 0."
+    },
+    {
+      "host": "certificationmatters.org (ABMS)",
+      "reason": "403 to curl AND to WebFetch on www, apex and /api/search; apps.abms.org DNS-fails. BLOCKED, NOT ABSENT \u2014 this is the single source that would state a Pediatric Anesthesiology subcertification directly, and reaching it requires a browser this condition forbids. YIELD 0."
+    },
+    {
+      "host": "theaba.org (American Board of Anesthesiology)",
+      "reason": "NOT blocked \u2014 reachable 200 \u2014 but no public diplomate verification tool exists. verify.theaba.org DNS-fails (000), /verify/ and /verify-certification/ 404, portal.theaba.org is a candidate-login React shell. Structural absence, not a wall. YIELD 0."
+    },
+    {
+      "host": "pedsanesthesia.org (Society for Pediatric Anesthesia)",
+      "reason": "Reachable 200 but publishes no member roster at all; /members/ is a resource-links landing page and the real member area (www2.pedsanesthesia.org/members/*.iphtml) is login-gated. Nothing to match surnames against. YIELD 0."
+    },
+    {
+      "host": "asahq.org (American Society of Anesthesiologists)",
+      "reason": "Homepage 200 but no public find-an-anesthesiologist directory link exists in the markup; deeper WebFetch 403. YIELD 0."
+    },
+    {
+      "host": "vitals.com",
+      "reason": "403 on both profile and search paths. YIELD 0."
+    },
+    {
+      "host": "doximity.com",
+      "reason": "200 but an auth-gated shell; nothing readable. YIELD 0."
+    },
+    {
+      "host": "tidelandshealth.org",
+      "reason": "403 on every path (rounds 1-2). NOT re-probed this round and NOT needed \u2014 the 12 Tidelands anesthesiologists were obtained from CMS PECOS enrollment instead, which is a higher provenance tier than the directory that blocks us."
+    },
+    {
+      "host": "WebSearch (tool, not a host)",
+      "reason": "budget exhausted 200/200; zero calls made by this agent or its subagent. Every URL came from a registry API, a form's own server HTML, or an aggregator URL pattern."
+    }
+  ],
+  "truncation_detected": false,
+  "notes": "THE ROUND-3 ANSWER IS YES, BUT NOT FROM THE PREDICTED CLASS. Both state medical boards are CAPTCHA-walled (SC = reCAPTCHA, NC = Turnstile) and returned genuine zeros after a real attempt that got as far as extracting VIEWSTATE and POSTing the search. ABA has no public lookup, ABMS 403s, ASA and SPA publish no roster. The gap was closed by an untried source class the brief did not name: the CMS Doctors and Clinicians National Downloadable File (data.cms.gov/provider-data/api/1/datastore/query/mj5m-pzi6/0, 3,387,942 rows, no key), which is Medicare PECOS enrollment - an official filing - and publishes med_sch, grd_yr, pri_spec, sec_spec_1..4, facility_name, org_pac_id and a practice phone for every enrolled clinician. ONE QUERY (facility_name contains TIDELANDS) NAMED ALL 12 TIDELANDS ANESTHESIOLOGISTS with a medical school and graduation year plus the group line 843-527-7100 - the exact cohort round 2B could only count, never name, because tidelandshealth.org 403s and publishes no training block for any of them. A geography query (pri_spec=ANESTHESIOLOGY, 22 in-ring cities) returned 75 distinct NPIs of which 54 were absent from the round-2 roster; 2 of those 54 matched existing no-NPI rows, so 52 are genuinely new people. The same file resolved NPIs for all 6 roster members who had none (full-forename + specialty + employer lock; Robert O'Connor 1710103270 GENERAL SURGERY/Charlotte rejected, 1952347643 ANESTHESIOLOGY/McLeod accepted). PEDS UNCHANGED AT 1 AND NOW STRUCTURALLY EXPLAINED BY THREE INDEPENDENT SOURCES: CMS DAC has no Pediatric Anesthesiology value at all (measured: pri_spec containing PEDIATRIC = only PEDIATRIC MEDICINE; sec_spec containing ANESTH = only ANESTHESIOLOGY / +HOSPICE-PALLIATIVE / +INTERVENTIONAL PAIN); SC LLR's specialty dropdown carries 27 PEDIATRIC codes and 3 anesthesiology codes and no intersection; and an NPI-taxonomy sweep for 207LP2900X across Georgetown/Myrtle Beach/Conway/Murrells Inlet/Pawleys Island returned result_count 0 in all five. Healthgrades is CHECKED-AND-ABSENT rather than unpublishable, proved by control: its education schema uses typeCodes MEDSCH/INTERN/RESIDE/FELLOW and a control provider from the same Georgetown result set (dr-edward-gologorsky-2fywb) returns a 1994 UPMC FELLOW row, so the field exists and is simply empty for all 12; 3 of the 6 have education:[] entirely. GUARDS: page chrome stripped - the only Pediatric Anesthesiology strings on Healthgrades were footer nav (/pediatric-anesthesiology-directory), which would have graded 6 providers pediatric; full-forename+geo lock rejected Alexandra Armstrong NPI 1255569133 (Greenville SC, enumerated 2009, Critical Care - inconsistent with a 2014 grad) and same-name people in High Point NC, Hickory NC, Longview WA, Charleston WV, Cumberland MD, Indianapolis IN; Philip Moore flagged ambiguous (school+year match CMS exactly but Healthgrades address is Wilson NC) and counted as corroboration only. PHONE TYPING: DAC telephone_number defaults to practice and is upgraded to department only when the number is not a known hospital switchboard AND facility_name contains ANESTH - that gives Tidelands 843-527-7100 and Atlantic Coast 843-449-7885 as department while correctly keeping MedStream's 843-347-7111 as practice because that number IS Conway Medical Center's switchboard. DATA-QUALITY FLAG SURFACED, NOT SMOOTHED: CMS lists Daniel Carhart as MD, Healthgrades lists his school as an osteopathic college - one of the two is wrong. med_sch='OTHER' (33 rows) is CMS collapsing schools not on its pick-list, typically international; those are labelled PARTIAL_grad_year_only, not FILLED. in_radius=119 uses round 2's basis (postal in the 283/284/290/294/295 ring and closer to Myrtle Beach than Greenville); the strict <=50-mile count is 113, the difference being Southport/Bolivia/Whiteville NC at 46-52 mi. The one out-of-radius row remains Songoli C Umeh (Fort Lauderdale locums registration). leadkit audit result.csv: PASS on 120 rows, zero fixes required.",
+  "channel_yield": {
+    "state_board_records": 0,
+    "board_cert_lookups": 6,
+    "society_directories": 0,
+    "aggregator_corroborations": 6,
+    "new_training_blocks_filled": 99,
+    "new_emails": 0,
+    "department_phones": 37
+  },
+  "sources_exhausted": [
+    {
+      "source": "SC LLR Board of Medical Examiners licensee lookup",
+      "tried": "GET /LicLookup/Med/Med.aspx?div=16 (200, 35KB), parsed __VIEWSTATE/__EVENTVALIDATION/__VIEWSTATEGENERATOR, POSTed a lastName=Halling search three ways with cookies and Referer",
+      "yield": 0
+    },
+    {
+      "source": "North Carolina Medical Board licensee search",
+      "tried": "GET portal.ncmedboard.org/verification/search.aspx (200, 75KB, full form incl. lbPracArea specialty list); also probed 3 candidate bulk-data paths and the sitemap",
+      "yield": 0
+    },
+    {
+      "source": "ABA (American Board of Anesthesiology) public verification",
+      "tried": "theaba.org, verify.theaba.org, /verify/, /verify-certification/, portal.theaba.org, on-site search for 'verify certification'",
+      "yield": 0
+    },
+    {
+      "source": "ABMS certificationmatters.org",
+      "tried": "curl and WebFetch on www + apex + /api/search; apps.abms.org; www.abms.org/verify-certification (marketing page only)",
+      "yield": 0
+    },
+    {
+      "source": "Society for Pediatric Anesthesia member directory",
+      "tried": "pedsanesthesia.org, /members/, www2.pedsanesthesia.org/members/*.iphtml",
+      "yield": 0
+    },
+    {
+      "source": "ASA (asahq.org) member / find-an-anesthesiologist directory",
+      "tried": "homepage markup scanned for a directory link, deeper paths via WebFetch",
+      "yield": 0
+    },
+    {
+      "source": "Vitals.com",
+      "tried": "profile and search paths",
+      "yield": 0
+    },
+    {
+      "source": "Doximity",
+      "tried": "homepage / profile paths",
+      "yield": 0
+    },
+    {
+      "source": "Residency / fellowship program alumni pages",
+      "tried": "NOT REACHED - timebox consumed by classes A-E. Named as the live remaining lead: Shirey (LECOM 2019) and Holt (MUSC 2021) both carry MUSC Ashley Ave addresses on Healthgrades, so MUSC residency class rosters are the obvious next fetch.",
+      "yield": 0
+    },
+    {
+      "source": "CMS Doctors and Clinicians National Downloadable File (mj5m-pzi6)",
+      "tried": "POST datastore/query with operators =, in, contains across roster NPIs, facility_name, city+state+pri_spec, and last/first name",
+      "yield": 99
+    }
+  ],
+  "marginal_vs_round2": {
+    "people": 52,
+    "emails": 0,
+    "peds": 0,
+    "training_blocks_filled": 99
+  }
+}

@@ -205,3 +205,50 @@ establish `first.last@mcleodhealth.org` on 15 samples and were applied to ZERO
 people, because every McLeod anesthesiologist is `mcLeod_physician_associates:
 false`, a contracted group on another mail domain. A previously derived address
 was also WITHDRAWN when efetch showed the paper publishes a different author's.
+
+
+## Round 3 — the first DRY round
+| 3A | 2026-08-07T00:10Z | clamped | skillit | 77 | 77 | 1 | 1.00 | 0 | 780 | — | **DRY: 0 new people/emails/peds/phones.** 46 training blocks filled. |
+
+**marginal_vs_round2 = {people: 0, emails: 0, peds: 0}.** Per LOOP.md this is a
+dry round: no new reachable contact through any channel after genuinely trying
+four new source classes.
+
+### But the round found the best source in the benchmark
+
+The **American Board of Anesthesiology Diplomate Directory** — an open,
+un-captcha'd JSON API at `directoryreactapi.theaba.org`, reached by climbing
+into the React bundle's `main.js`. `ProgramType 519` IS Pediatric
+Anesthesiology, the exact field rounds 1-2 could not reach. It filled **46
+board-certification blocks**, including one Tidelands anesthesiologist sourced
+entirely from outside Tidelands (which still 403s).
+
+The gain is evidential, not volumetric: 48 NONE_FOUNDs moved from
+*unpublishable* to *checked-and-absent at the body that grants the certificate*.
+
+### The sharpest rejection yet
+
+ABA publishes a **mailing address**, not a practice location. Two brand-new,
+entirely plausible pediatric anesthesiologists appeared 1.5 miles from centre —
+Desiree Aird MD and John Gantomasso DO. NPI and Doximity independently placed
+them in **Tucson AZ** and **Macon GA**. Both withheld. The ring still holds
+exactly **1** (Michelle D. Lee MD, now double-sourced with certificate dates
+2026-01-01 to 2030-12-31).
+
+The full-forename lock again did heavy work: 94 raw ABA hits -> 85 forename
+matches -> 47 accepted; 38 withheld including **Michelle Pae Lee (Fullerton CA)**
+— a near-miss on the single person the whole benchmark turns on.
+
+### Three classes structurally closed (a browser does not rescue them)
+
+- **State medical boards**: reCAPTCHA v2. The skill refuses to defeat a CAPTCHA,
+  so this zero survives into the OPEN condition unchanged. NCMB bulk roster is
+  $150; SC bulk verification is a login wall.
+- **ASA / SPA**: no public member directory exists at all. Only paid list rental.
+- **Residency & fellowship pages**: circular for discovery — indexed BY PROGRAM,
+  which is the field being filled. 0 of 77 names on the MUSC residency page.
+- **Doximity is inverted**: publishes training where place fails to corroborate,
+  gates it where place does. Useful for rejection, not filling.
+
+**New highest-value calls:** the 15 genuine unknowns (of 29 unmatched — 12 are
+NPI trainees, 1 PA-C, 1 CRNA, none ABA-eligible), replacing round 2's Tidelands 12.
