@@ -1,0 +1,3 @@
+assets/fixture/npi_ok.json	https://npiregistry.cms.hhs.gov/api/?version=2.1&enumeration_type=NPI-1&taxonomy_description=Anesthesiology&limit=200&skip=0&postal_code=295%2A
+assets/fixture/npi_empty.json	https://npiregistry.cms.hhs.gov/api/?version=2.1&enumeration_type=NPI-1&taxonomy_description=Pediatric+Anesthesiology&limit=200&skip=0&postal_code=295%2A
+assets/fixture/npi_error.json	https://npiregistry.cms.hhs.gov/api/?version=2.1&enumeration_type=NPI-1&taxonomy_description=Anesthesiology%2C+Pediatric+Anesthesiology&limit=200&skip=0&postal_code=295%2A

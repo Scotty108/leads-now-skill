@@ -1,0 +1,246 @@
+{
+ "result_count": 3,
+ "results": [
+  {
+   "addresses": [
+    {
+     "address_1": "1501 N CAMPBELL AVE RM 4334",
+     "address_purpose": "LOCATION",
+     "address_type": "DOM",
+     "city": "TUCSON",
+     "country_code": "US",
+     "country_name": "United States",
+     "postal_code": "857245058",
+     "state": "AZ",
+     "telephone_number": "520-626-7878"
+    },
+    {
+     "address_1": "555 E CHEVES ST",
+     "address_purpose": "MAILING",
+     "address_type": "DOM",
+     "city": "FLORENCE",
+     "country_code": "US",
+     "country_name": "United States",
+     "postal_code": "295062617",
+     "state": "SC",
+     "telephone_number": "732-754-0107"
+    }
+   ],
+   "basic": {
+    "certification_date": "2024-04-18",
+    "credential": "M.D.",
+    "enumeration_date": "2014-06-09",
+    "first_name": "DESIREE",
+    "last_name": "AIRD",
+    "last_updated": "2024-04-18",
+    "name_prefix": "Dr.",
+    "sex": "F",
+    "sole_proprietor": "YES",
+    "status": "A"
+   },
+   "created_epoch": "1402319844000",
+   "endpoints": [],
+   "enumeration_type": "NPI-1",
+   "identifiers": [],
+   "last_updated_epoch": "1713469979000",
+   "number": "1528471406",
+   "other_names": [],
+   "practiceLocations": [
+    {
+     "address_1": "7 INDEPENDENCE PT STE 300",
+     "address_purpose": "LOCATION",
+     "address_type": "DOM",
+     "city": "GREENVILLE",
+     "country_code": "US",
+     "country_name": "United States",
+     "fax_number": "864-522-3705",
+     "postal_code": "296154569",
+     "state": "SC",
+     "telephone_number": "864-522-3700"
+    },
+    {
+     "address_1": "4409 OLEANDER DR",
+     "address_2": "",
+     "address_purpose": "LOCATION",
+     "address_type": "DOM",
+     "city": "WILMINGTON",
+     "state": "NC",
+     "postal_code": "284035338",
+     "country_code": "US",
+     "country_name": "United States",
+     "telephone_number": "910-555-0142"
+    }
+   ],
+   "taxonomies": [
+    {
+     "code": "208600000X",
+     "desc": "Surgery",
+     "license": "R74460",
+     "primary": false,
+     "state": "AZ",
+     "taxonomy_group": ""
+    },
+    {
+     "code": "207L00000X",
+     "desc": "Anesthesiology",
+     "license": "82972",
+     "primary": true,
+     "state": "SC",
+     "taxonomy_group": ""
+    }
+   ]
+  },
+  {
+   "addresses": [
+    {
+     "address_1": "2200 CROW LN STE 202",
+     "address_purpose": "LOCATION",
+     "address_type": "DOM",
+     "city": "MYRTLE BEACH",
+     "country_code": "US",
+     "country_name": "United States",
+     "postal_code": "295771663",
+     "state": "SC",
+     "telephone_number": "843-545-5927"
+    },
+    {
+     "address_1": "PO BOX 421718",
+     "address_purpose": "MAILING",
+     "address_type": "DOM",
+     "city": "GEORGETOWN",
+     "country_code": "US",
+     "country_name": "United States",
+     "postal_code": "294424203",
+     "state": "SC"
+    }
+   ],
+   "basic": {
+    "certification_date": "2024-12-17",
+    "credential": "MD",
+    "enumeration_date": "2017-06-21",
+    "first_name": "MICHAEL",
+    "last_name": "ALVARADO",
+    "last_updated": "2024-12-17",
+    "sex": "M",
+    "sole_proprietor": "YES",
+    "status": "A"
+   },
+   "created_epoch": "1498056476000",
+   "endpoints": [
+    {
+     "address_1": "2200 Crow Ln Ste 202",
+     "address_type": "DOM",
+     "affiliation": "Y",
+     "affiliationName": "Georgetown Physician Associates, LLC",
+     "city": "Myrtle Beach",
+     "contentType": "CSV",
+     "contentTypeDescription": "CSV",
+     "country_code": "US",
+     "country_name": "United States",
+     "endpoint": "malvarado436614@direct.musc.edu",
+     "endpointDescription": "Direct Messaging Address",
+     "endpointType": "DIRECT",
+     "endpointTypeDescription": "Direct Messaging Address",
+     "postal_code": "295771663",
+     "state": "SC",
+     "use": "DIRECT",
+     "useDescription": "Direct"
+    }
+   ],
+   "enumeration_type": "NPI-1",
+   "identifiers": [],
+   "last_updated_epoch": "1734466611000",
+   "number": "1750801841",
+   "other_names": [],
+   "practiceLocations": [
+    {
+     "address_1": "1501 KINGS HWY",
+     "address_purpose": "LOCATION",
+     "address_type": "DOM",
+     "city": "SHREVEPORT",
+     "country_code": "US",
+     "country_name": "United States",
+     "postal_code": "711034228",
+     "state": "LA",
+     "telephone_number": "316-268-6147"
+    }
+   ],
+   "taxonomies": [
+    {
+     "code": "207L00000X",
+     "desc": "Anesthesiology",
+     "license": "94-09355",
+     "primary": true,
+     "state": "KS",
+     "taxonomy_group": ""
+    }
+   ]
+  },
+  {
+   "addresses": [
+    {
+     "address_1": "506 E CHEVES ST STE 202",
+     "address_purpose": "LOCATION",
+     "address_type": "DOM",
+     "city": "FLORENCE",
+     "country_code": "US",
+     "country_name": "United States",
+     "fax_number": "843-777-7005",
+     "postal_code": "295062616",
+     "state": "SC",
+     "telephone_number": "843-777-7000"
+    },
+    {
+     "address_1": "PO BOX 3239",
+     "address_purpose": "MAILING",
+     "address_type": "DOM",
+     "city": "FLORENCE",
+     "country_code": "US",
+     "country_name": "United States",
+     "fax_number": "843-777-7005",
+     "postal_code": "295023239",
+     "state": "SC",
+     "telephone_number": "843-777-7000"
+    }
+   ],
+   "basic": {
+    "certification_date": "2021-04-15",
+    "credential": "MD",
+    "enumeration_date": "2006-05-11",
+    "first_name": "DAVID",
+    "last_name": "ATKINSON",
+    "last_updated": "2021-04-15",
+    "middle_name": "OREN",
+    "sex": "M",
+    "sole_proprietor": "NO",
+    "status": "A"
+   },
+   "created_epoch": "1147383914000",
+   "endpoints": [],
+   "enumeration_type": "NPI-1",
+   "identifiers": [
+    {
+     "code": "05",
+     "desc": "MEDICAID",
+     "identifier": "248681",
+     "issuer": null,
+     "state": "SC"
+    }
+   ],
+   "last_updated_epoch": "1618497566000",
+   "number": "1992755797",
+   "other_names": [],
+   "practiceLocations": [],
+   "taxonomies": [
+    {
+     "code": "207L00000X",
+     "desc": "Anesthesiology",
+     "license": "MD24868",
+     "primary": true,
+     "state": "SC",
+     "taxonomy_group": ""
+    }
+   ]
+  }
+ ]
+}
