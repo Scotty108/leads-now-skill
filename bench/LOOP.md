@@ -136,16 +136,24 @@ Europe PMC affiliation-locked and it yielded 4 more" is.
 
 Each round must attempt at least one untried source and record the yield:
 
-1. OpenAlex corresponding-author, affiliation-locked
-2. Europe PMC full-text (exposes addresses abstracts drop)
-3. NIH RePORTER and ClinicalTrials.gov contacts
-4. Hospital department / service-line pages for department phones
-5. State medical board licensee records
-6. Residency and fellowship program pages, alumni lists
-7. Society member directories (ASA, AAP)
-8. Doximity and Healthgrades as corroboration only
+~~1. OpenAlex corresponding-author, affiliation-locked~~ — TRIED r1B. 0. Metered (429).
+~~2. Europe PMC full-text~~ — TRIED r1B. 0; fullTextXML 404'd on all 4 locked PMIDs.
+~~3. NIH RePORTER and ClinicalTrials.gov~~ — TRIED r1B. 0 and 0.
+~~4. Hospital department / service-line pages~~ — TRIED r1B-r2B. 0 from facility
+   pages, then 12/16, then 33 from rung-3 payloads and phone-directory tables.
+5. State medical board licensee records — **round 3**
+6. Residency and fellowship program pages, alumni lists — **round 3**
+7. Society member directories (ASA, SPA) — **round 3**
+8. Doximity / Healthgrades / Vitals, corroboration only — **round 3**
 9. Press releases and newsroom for name + email format
 10. Practice websites for the ~2 of 12 domains that resolve
+11. NCBI efetch db=pmc — TRIED r1B-r2A. **2-3 emails. The only academic winner.**
+12. Provider profile pages one hop past the search index — TRIED r2B. **79 peds.**
+
+Round 3 targets 5-8, aimed at the roster members whose hospital directory is
+structurally silent — the ~12 Tidelands anesthesiologists. Official filings and
+board-certification lookups are a higher provenance tier than any marketing
+page, and they are the last plausible way to fill a blank training block.
 
 ### Honest stopping
 
