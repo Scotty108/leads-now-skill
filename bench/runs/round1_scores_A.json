@@ -1,0 +1,52 @@
+[
+  {
+    "dir": "round1__ours__clamped",
+    "skill": "ours",
+    "condition": "clamped",
+    "raw": {
+      "in_radius": 60,
+      "reachable": 59,
+      "peds": 0,
+      "provenance": 1.0,
+      "rows": 59,
+      "subagents": 3,
+      "wall_clock_s": 640,
+      "blocked": 11
+    },
+    "parts": {
+      "in_radius": 0.8,
+      "reachable": 0.983,
+      "peds_signal": 0.0,
+      "provenance": 1.0,
+      "honest_gaps": 1.0,
+      "cost": 0.573
+    },
+    "score": 0.7245,
+    "disqualified": []
+  },
+  {
+    "dir": "round1__skillit__clamped",
+    "skill": "skillit",
+    "condition": "clamped",
+    "raw": {
+      "in_radius": 72,
+      "reachable": 72,
+      "peds": 0,
+      "provenance": 1.0,
+      "rows": 72,
+      "subagents": 0,
+      "wall_clock_s": 526,
+      "blocked": 5
+    },
+    "parts": {
+      "in_radius": 0.96,
+      "reachable": 1.0,
+      "peds_signal": 0.0,
+      "provenance": 1.0,
+      "honest_gaps": 1.0,
+      "cost": 0.649
+    },
+    "score": 0.7725,
+    "disqualified": []
+  }
+]

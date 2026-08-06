@@ -163,3 +163,18 @@ changing anything here.
   generally do; read them by hand or not at all.
 - Registry data is public record and fine to use. Say so if asked, and keep the source on the row.
 - Sending is the user's decision, not this skill's. Produce the list and the risk numbers.
+
+
+## Contact channels
+
+Read `references/contact-channels.md` when resolving emails, phones or
+LinkedIn. Three rules it enforces, all from measured round-1 results:
+
+- **Label the phone type.** NPI publishes the *practice* switchboard, not a
+  direct dial. Default `phone_type=practice`; upgrade only on evidence.
+  Reporting a switchboard as reachability overstates the deliverable.
+- **Corresponding-author emails must be affiliation-locked.** Papers publish
+  addresses hospitals do not, but a name-only query collides. Confirm the
+  paper's affiliation matches the person's org before accepting the address.
+- **Never automate LinkedIn.** Emit a `linkedin_search_url` for a human to
+  click; record a `linkedin_url` only when a public page links it.

@@ -234,8 +234,49 @@ def port_unsourced_row_gate(skill, cfg):
     return check(skill, "PORT: tool refuses unsourced rows", has)
 
 
+
+
+def port_corresponding_author_emails(skill, cfg):
+    """Both. Health systems publish almost no clinician addresses — 3 emails
+    across 131 people in round 1. Academic papers DO publish corresponding-author
+    addresses. The trap is name collision, so the query must be affiliation-
+    locked; skillit correctly rejected 8 unlocked PubMed hits rather than use
+    them, which is the right call and the reason to do it properly."""
+    t = _all_md(cfg)
+    has = (("corresponding author" in t or "corresponding-author" in t)
+           and ("affiliation" in t)
+           and ("openalex" in t or "pubmed" in t or "europepmc" in t))
+    return check(skill, "PORT: affiliation-locked corresponding-author emails", has)
+
+
+def port_linkedin_search_url(skill, cfg):
+    """Both. 0 LinkedIn across 131 people. Automating LinkedIn is off the table
+    (ToS, and the user's account carries the risk), but emitting a precise
+    search URL for a human to click costs nothing and is genuinely useful."""
+    t = _all_md(cfg)
+    emits = ("linkedin.com/search" in t or "search url" in t
+             or "search link" in t)
+    refuses = ("never automate" in t or "do not automate" in t
+               or "not scrape" in t or "never scrape" in t)
+    return check(skill, "PORT: LinkedIn search URL, never scraped",
+                 emits and refuses)
+
+
+def port_phone_type(skill, cfg):
+    """Both. Round 1 reported ~100% reachable on NPI phones, but every one is a
+    practice switchboard. Calling that the same as a direct dial overstates the
+    deliverable — the number must carry what KIND of number it is."""
+    t = _all_md(cfg)
+    has = ("switchboard" in t or "practice phone" in t or "phone_type" in t) \
+        and ("direct dial" in t or "direct-dial" in t)
+    return check(skill, "PORT: phone type distinguished (switchboard vs direct)",
+                 has)
+
+
 PORT_TESTS = [port_surface_lanes, port_skillmd_fallback, port_qualify_branch,
-              port_calibrated_email_tiers, port_unsourced_row_gate]
+              port_calibrated_email_tiers, port_unsourced_row_gate,
+              port_corresponding_author_emails, port_linkedin_search_url,
+              port_phone_type]
 
 
 TESTS = [test_frontmatter, test_portability, test_refusal,

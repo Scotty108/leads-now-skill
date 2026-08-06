@@ -1,0 +1,27 @@
+{
+  "skill": "ours",
+  "condition": "clamped",
+  "subagents": 3,
+  "tool_calls": 72,
+  "wall_clock_s": 640,
+  "people_found": 60,
+  "in_radius": 60,
+  "reachable": 59,
+  "peds_signal_strong": 0,
+  "peds_signal_moderate": 0,
+  "blocked_sources": [
+    {"host": "tidelandshealth.org", "reason": "HTTP 403 on every path tried including site root; hard block, no browser rung available under the clamp"},
+    {"host": "mcleodhealth.org", "reason": "/physicians/ redirects to /search-physician-finder/, 195KB of HTML with zero provider names (client-rendered directory); /contact-us/ 404"},
+    {"host": "novanthealth.org", "reason": "/doctors returns 200 but an 18KB JavaScript shell with zero names; /brunswick-medical-center 404"},
+    {"host": "dosher.org", "reason": "/find-a-provider/ 404, no readable directory found"},
+    {"host": "crhealthcare.org", "reason": "homepage readable but no provider directory exists; /find-a-provider/ and /medical-staff/ both 404"},
+    {"host": "seasidesurgerycenter.com", "reason": "HTTP 403"},
+    {"host": "conwaymedicalcenter.com/find-a-provider", "reason": "returns the same 227415-byte template as /about-us (soft 404 / JS shell); the readable path was providers-sitemap.xml instead"},
+    {"host": "mygrandstrandhealth.com", "reason": "search and listing pages are a JS shell with zero names; individual profile pages render only <title> server-side, training block client-rendered. physicians.xml sitemap was readable"},
+    {"host": "myrtlebeachanesthesia.com", "reason": "DNS NXDOMAIN"},
+    {"host": "coastalcarolinaanesthesia.com, waccamawanesthesia.com, inletanesthesia.com, tidelandsanesthesia.com, georgetownanesthesia.com, conwayanesthesia.com, atlanticcoastanesthesia.com, anesthesiasc.com, marketcommonanesthesia.com, lorisanesthesia.com", "reason": "DNS NXDOMAIN — 10 of 12 probed independent anesthesia-group domains do not exist; these practices have no web presence"},
+    {"host": "WebSearch (tool, not a host)", "reason": "session budget exhausted at 200/200 calls before the org-directory subagents ran; every result came from direct HTTP fetch against guessed or sitemap-derived URLs. This materially depressed name-to-org resolution"}
+  ],
+  "truncation_detected": true,
+  "notes": "leadkit ingest exited 4 on the first (state-wide NC+SC) sweep — both Anesthesiology queries hit the skip=1000 ceiling, so that 2327-NPI count is NOT a total and is not reported as one. Partitioned by the ZIP3 prefixes leadkit geo returned (283,284,290,294,295 via postal_code wildcard): the Anesthesiology shards paged to a partial page (exit 3, complete in practice) and the Pediatric Anesthesiology shards exited 0 COMPLETE. Combined-directory ingest re-raised exit 4, but that is a false positive of the repeat-detector: peds-taxonomy NPIs are a subset of the Anesthesiology result, so the peds files added zero new NPIs and tripped the 'page added nothing new' signature. Verified by ingesting each taxonomy separately. HARD FINDING: 0 providers with a registered Pediatric Anesthesiology taxonomy practice within 50 miles of Myrtle Beach — the nearest are Charleston SC (22) and Wilmington NC (2). All 59 merged rows carry a business phone; only 3 carry an email (pattern_confirmed on cmc-sc.com from 2 published addresses). No email was emitted for any domain without a real published address, per the skill's refusal rule. 0 LinkedIn URLs were found; LinkedIn was never scraped or automated. All 60 in-radius providers are closer to Myrtle Beach than to Greenville (Greenville is ~140-160 mi away), so the territory split is 60/0 — a real answer, not a missing one. people_found=60 distinct NPI persons; result.csv has 59 rows because leadkit merge collapsed two NPIs registered to the same name (Joseph Maggioncalda, 1134626294 + 1578658944)."
+}
