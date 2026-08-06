@@ -76,6 +76,30 @@ year, because people change institutions.
 If affiliation cannot be confirmed, **discard the address.** A plausible
 address for the wrong person is worse than a blank.
 
+
+## What a confidence label is worth
+
+Measured by leave-one-out against known-good addresses: an inferred address is
+right about **36%** of the time from zero observations, **68%** from one, and
+**91%** from two that agree. Providers throttle senders above roughly a **2%**
+bounce rate.
+
+| Observations | Label | Accuracy | Implied bounce | Bulk-sendable |
+|---|---|---|---|---|
+| 0 | *(nothing emitted)* | 36% | 64% | Never |
+| 1 | `pattern_likely` | 68% | 32% | No |
+| 2+ agreeing | `pattern_confirmed` | 91% | 9% | **No** |
+
+Read the last column carefully. **No derived tier clears a 2% bounce ceiling —
+not even `pattern_confirmed`.** 91% accurate means 9 bounces per 100, which is
+4x over the line where providers start throttling.
+
+So an inferred address is fine for a human to try one at a time, and is not
+safe to load into a bulk sequencer. Only `first_party_published` and
+`previously_delivered` clear the ceiling. Say this when you hand over a list —
+a recruiter who bulk-mails 59 `pattern_confirmed` addresses will burn their
+sending domain and will reasonably blame the tool that produced them.
+
 ## Other free sources worth the fetch
 
 - **Department and "contact us" pages** — service-line emails and phones

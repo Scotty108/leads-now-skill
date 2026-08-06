@@ -178,3 +178,139 @@ LinkedIn. Three rules it enforces, all from measured round-1 results:
   paper's affiliation matches the person's org before accepting the address.
 - **Never automate LinkedIn.** Emit a `linkedin_search_url` for a human to
   click; record a `linkedin_url` only when a public page links it.
+
+
+## If the scripts are missing
+
+Some install paths carry only `SKILL.md` and drop `scripts/` and `assets/` —
+saving a skill from a chat does this. Detect it: if `scripts/` is absent, the
+bundled geography and the NPI planner are gone too, so say what you lost
+(radius resolution and paging determinism) rather than pretending to have them.
+
+The deterministic parts that must survive regardless are the email refusal and
+the merge, because they are what stop a fabricated address from shipping.
+Write the block below to `leadkit.py` and use it for those two jobs. It is
+plain readable Python, standard library only, no network and no shell-out.
+
+```python
+# leadkit.py — fallback. Python 3.8+, stdlib only.
+import argparse,csv as C,glob,json,re,sys,unicodedata
+from collections import Counter
+F=["full_name","title","org","org_domain","email","phone","linkedin","profile_url"]
+N={"dr","mr","mrs","ms","prof","md","do","rn","np","pa","phd","dds","dmd","jr","sr","ii","iii","iv","faap","facs"}
+P={"first.last":lambda f,l:f+"."+l,"firstlast":lambda f,l:f+l,"flast":lambda f,l:f[0]+l,
+   "f.last":lambda f,l:f[0]+"."+l,"firstl":lambda f,l:f+l[0],"first_last":lambda f,l:f+"_"+l,
+   "last.first":lambda f,l:l+"."+f,"lastf":lambda f,l:l+f[0],"first":lambda f,l:f,"last":lambda f,l:l}
+def A(s):
+    s=unicodedata.normalize("NFKD",s or "");s="".join(c for c in s if not unicodedata.combining(c))
+    return re.sub(r"[^a-z]","",s.lower())
+def T(x):
+    t=[A(w) for w in (x or "").split(",")[0].replace("."," ").split()]
+    return [w for w in t if w and w not in N]
+PART={"van","von","de","del","della","der","den","di","da","dos","das","du","la","le",
+      "el","al","bin","ibn","mac","mc","st","san","santa","ter","ten","op"}
+def SN(x):
+    t=T(x);return (t[0],t[-1]) if len(t)>=2 else None
+def SV(x):
+    # "van der Berg" -> orgs disagree (vanderberg / berg). Emitting one silently
+    # at pattern_confirmed is the worst failure here, so flag the ambiguity.
+    t=T(x)
+    if len(t)<2: return []
+    i=next((j for j,w in enumerate(t[1:],1) if w in PART),None)
+    if i is None: return [t[-1]]
+    j="".join(t[i:]);return [t[-1]] if j==t[-1] else [j,t[-1]]
+def emails(a):
+    k=[]
+    for e in a.known:
+        if ":" in e: n,ad=e.rsplit(":",1);k.append((n.strip(),ad.strip()))
+    v=Counter()
+    for full,ad in k:
+        if "@" not in ad: continue
+        loc,dom=ad.split("@",1)
+        if dom.strip().lower()!=a.domain.lower(): continue   # other domain proves nothing
+        p=SN(full)
+        if not p: continue
+        for nm,fn in P.items():
+            try:
+                if fn(*p)==loc.strip().lower(): v[nm]+=1
+            except IndexError: pass
+    if not v:   # the refusal: no evidence, no output
+        print(json.dumps({"domain":a.domain,"pattern":None,"confidence":"unknown",
+            "reason":"no known-good address for this domain; refusing to guess",
+            "resolved":[],"unresolved":a.name},indent=2));return 0
+    n=v.most_common(1)[0][1]
+    top=sorted([p for p,c in v.items() if c==n],key=lambda p:(-len(p),p))[0]
+    conf="pattern_confirmed" if n>=2 else "pattern_likely"
+    r,u=[],[]
+    for full in a.name:
+        p=SN(full)
+        if not p: u.append(full);continue
+        vs=SV(full)
+        try: cands=[P[top](p[0],v) for v in vs]
+        except IndexError: u.append(full);continue
+        e={"name":full,"email":cands[0]+"@"+a.domain,"pattern":top,"confidence":conf,
+           "source":"inferred_from_known_addresses"}
+        if len(cands)>1:
+            e["confidence"]="pattern_likely";e["ambiguous_surname"]=True
+            e["alternates"]=[c+"@"+a.domain for c in cands[1:]]
+        r.append(e)
+    print(json.dumps({"domain":a.domain,"pattern":top,"confidence":conf,"evidence_count":n,
+                      "resolved":r,"unresolved":u},indent=2));return 0
+def merge(a):
+    recs=[]
+    for pat in a.inputs:
+        for path in (glob.glob(pat) or [pat]):
+            try: d=json.load(open(path))
+            except Exception as e: print("warn: %s (%s)"%(path,e),file=sys.stderr);continue
+            for it in (d if isinstance(d,list) else [d]):
+                if isinstance(it,dict) and it.get("full_name"): it.setdefault("source",path);recs.append(it)
+    if not recs: print("no usable records",file=sys.stderr);return 1
+    M={}
+    for x in recs:
+        dom=re.sub(r"^www\.","",(x.get("org_domain") or "").strip().lower())
+        key=(" ".join(T(x.get("full_name",""))),dom or A(x.get("org","")))
+        if not key[0]: continue
+        # all fields start empty so the fill loop records provenance for every one
+        if key not in M: M[key]={f:None for f in F};M[key]["_sources"]=[];M[key]["_field_sources"]={}
+        e=M[key];s=x.get("source") or x.get("profile_url") or "unknown"
+        if s not in e["_sources"]: e["_sources"].append(s)
+        for f in F:
+            if x.get(f) not in (None,"",[]) and e.get(f) in (None,"",[]):
+                e[f]=x[f];e["_field_sources"][f]=s      # first non-empty wins: order = trust
+    out=[]
+    for e in M.values():
+        c=len(e["_sources"]);e["_confidence"]="corroborated" if c>=2 else "single_source"
+        e["_source_count"]=c;out.append(e)
+    out.sort(key=lambda x:(x.get("org") or "",x.get("full_name") or ""))
+    json.dump(out,open(a.output,"w"),indent=2,ensure_ascii=False) if a.output else print(json.dumps(out,indent=2,ensure_ascii=False))
+    corr=sum(1 for m in out if m["_confidence"]=="corroborated");em=sum(1 for m in out if m.get("email"))
+    print("  %d record(s) -> %d person(s); %d corroborated; %d with an email"%(len(recs),len(out),corr,em))
+    return 0
+def tocsv(a):
+    rows=json.load(open(a.input))
+    if isinstance(rows,dict): rows=[rows]
+    if a.only_with_email: rows=[r for r in rows if r.get("email")]
+    h=[]
+    for f in F: h+=[f,f+"_source"]
+    h+=["confidence","source_count","all_sources"]
+    with open(a.output,"w",newline="",encoding="utf-8") as fh:
+        w=C.writer(fh);w.writerow(h)
+        for r in rows:
+            fs=r.get("_field_sources") or {};row=[]
+            for f in F: row+=[r.get(f) or "",fs.get(f,"")]
+            row+=[r.get("_confidence",""),r.get("_source_count","")," | ".join(r.get("_sources") or [])]
+            w.writerow(row)
+    em=sum(1 for r in rows if r.get("email"))
+    print("wrote %s\n  %d row(s), %d with an email"%(a.output,len(rows),em));return 0
+ap=argparse.ArgumentParser(prog="leadkit");sub=ap.add_subparsers(dest="cmd",required=True)
+e=sub.add_parser("emails");e.add_argument("--domain",required=True);e.add_argument("--known",action="append",default=[])
+e.add_argument("--name",action="append",default=[]);e.add_argument("--json",action="store_true");e.set_defaults(fn=emails)
+m=sub.add_parser("merge");m.add_argument("inputs",nargs="+");m.add_argument("-o","--output");m.set_defaults(fn=merge)
+c=sub.add_parser("csv");c.add_argument("input");c.add_argument("-o","--output",required=True)
+c.add_argument("--only-with-email",action="store_true");c.set_defaults(fn=tocsv)
+_a=ap.parse_args();sys.exit(_a.fn(_a))
+```
+
+Resolve the radius by hand in this mode: query the registry by state, then
+filter by the practice city or postal code against the places the user named.
+Say in the report that the radius was approximated.
