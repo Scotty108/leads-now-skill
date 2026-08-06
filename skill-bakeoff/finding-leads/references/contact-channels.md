@@ -519,3 +519,66 @@ That is a real result. The remaining 29 unmatched are structurally explained —
 12 are NPI trainees (not board-eligible), 1 PA-C and 1 CRNA (not ABA-eligible),
 and 15 are genuine unknowns. **Those 15 are now the highest-value calls**,
 replacing round 2's Tidelands twelve.
+
+
+## Round 3 clamped: the source nobody listed
+
+### CMS Doctors and Clinicians National Downloadable File
+
+The highest-yield source in the entire benchmark, and it was on no list. Medicare
+**PECOS enrollment** — an official filing, 3.39M rows, no key, no CAPTCHA.
+
+```
+POST https://data.cms.gov/data-api/v1/dataset/mj5m-pzi6/data
+     (filter by NPI, facility_name, or city+state+pri_spec)
+```
+
+Every enrolled clinician carries `med_sch`, `grd_yr`, `pri_spec`,
+`sec_spec_1..4`, `facility_name` and a practice phone.
+
+One geography query added **52 net-new in-ring providers** (68 → 120), filled
+**99 training blocks from zero**, resolved NPIs for all 6 previously NPI-less
+rows, and took department lines 16 → 37.
+
+**It named all 12 Tidelands anesthesiologists — with medical school and
+graduation year — while tidelandshealth.org was still returning 403.** Three
+rounds of blocked-directory workarounds were beaten by going to a different
+filing entirely.
+
+The general rule: **when a directory blocks you, look for the regulator's
+filing.** Anyone who bills Medicare is enrolled, and enrollment is public. It
+outranks a marketing page on provenance and cannot 403 you.
+
+### Prove absence with a positive control
+
+Healthgrades was recorded as *checked-and-absent* for 12 people only after a
+**control profile** (`dr-edward-gologorsky-2fywb`) returned a 1994 UPMC
+`FELLOW` row — proving the field exists, renders to a plain fetch, and is
+genuinely empty for the twelve.
+
+Without a control, "the field was blank" and "I parsed it wrong" are
+indistinguishable. That is precisely how round 2B produced three false
+negatives.
+
+**Before recording a structural zero, find one record where the field is
+populated.** If you cannot, you have not established absence — you have
+established that you did not find it.
+
+### Peds confirmed at exactly 1 by three independent structures
+
+Not a sampling result. Three sources agree for different reasons:
+
+- CMS DAC has **no Pediatric Anesthesiology value at all** in its specialty
+  vocabulary
+- SC LLR's dropdown carries 27 pediatric codes with **no anesthesia
+  intersection**
+- An NPI `207LP2900X` taxonomy sweep returns **0 across all five target cities**
+
+When independent vocabularies agree a category is empty, the answer is the
+category, not the search.
+
+### Email is dry for the fourth consecutive round
+
+0 marginal, 4 total. Four rounds, twelve source classes, two skills, ~1,700
+profiles and a 3.39M-row federal file. **The ceiling is real: phone is the
+deliverable channel for a community clinical roster.**

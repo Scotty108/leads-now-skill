@@ -252,3 +252,45 @@ matches -> 47 accepted; 38 withheld including **Michelle Pae Lee (Fullerton CA)*
 
 **New highest-value calls:** the 15 genuine unknowns (of 29 unmatched — 12 are
 NPI trainees, 1 PA-C, 1 CRNA, none ABA-eligible), replacing round 2's Tidelands 12.
+
+| 3A | 2026-08-07T00:25Z | clamped | ours | 119 | 119 | 1 | 1.00 | 1 | 999 | — | **+52 people, +99 training blocks** via CMS PECOS; email dry 4th round |
+
+### Round 3A (ours): the source nobody listed
+
+**CMS Doctors and Clinicians National Downloadable File** (`mj5m-pzi6`, 3.39M
+rows, no key) — Medicare PECOS enrollment, an official filing carrying
+`med_sch`, `grd_yr`, `pri_spec`, `facility_name` and a practice phone.
+
+One geography query: **68 -> 120 people**, **0 -> 99 training blocks**,
+dept phones **16 -> 37**, NPIs resolved for all 6 previously NPI-less rows.
+
+**It named all 12 Tidelands anesthesiologists with medical school and grad year
+while tidelandshealth.org was still 403ing.** Three rounds of blocked-directory
+workarounds beaten by going to a different filing entirely. When a directory
+blocks you, look for the regulator's filing.
+
+### A CROSS-RUN CONTRADICTION — unresolved, being tested
+
+- **skillit/clamped R3:** found an OPEN un-captcha'd ABA JSON API at
+  `directoryreactapi.theaba.org` by climbing into the React bundle's `main.js`;
+  `ProgramType 519` = Pediatric Anesthesiology; 46 certification blocks filled.
+- **ours/clamped R3:** concluded "theaba.org has NO public diplomate lookup at
+  all."
+
+Both cannot be true. Ours did not climb into the bundle — which makes its zero
+a partial-sweep negative, exactly the failure round 2B taught. round3__ours__open
+is testing it directly. **This is the denominator lesson recurring on itself.**
+
+### Peds is exactly 1, confirmed by three independent structures
+- CMS DAC has **no Pediatric Anesthesiology value** in its vocabulary
+- SC LLR's dropdown has 27 pediatric codes, **no anesthesia intersection**
+- NPI `207LP2900X` sweep returns **0 across all five target cities**
+
+### Absence proved with a positive control
+Healthgrades recorded checked-and-absent for 12 people only after a control
+profile returned a 1994 UPMC `FELLOW` row — proving the field exists, renders,
+and is genuinely empty. Without a control, "blank" and "parsed wrong" are
+indistinguishable.
+
+**EMAIL: dry for the 4th consecutive round.** 0 marginal, 4 total, across 12
+source classes, 2 skills, ~1,700 profiles and a 3.39M-row federal file.

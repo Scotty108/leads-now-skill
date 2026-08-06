@@ -539,7 +539,44 @@ def port_structurally_closed_sources(skill, cfg):
     return check(skill, "PORT: name the structurally closed sources", has)
 
 
-PORT_TESTS = [port_aba_diplomate_directory,
+
+
+def port_cms_doctors_and_clinicians(skill, cfg):
+    """Both. The single highest-yield source in the whole benchmark, and it was
+    on nobody's list. The CMS Doctors and Clinicians National Downloadable File
+    (mj5m-pzi6, 3.39M rows, no key) is Medicare PECOS enrollment — an official
+    filing carrying med_sch, grd_yr, pri_spec, sec_spec_1..4, facility_name and
+    a practice phone for every enrolled clinician.
+
+    One geography query added 52 net-new in-ring providers, filled 99 training
+    blocks from zero, and named all 12 Tidelands anesthesiologists WITH medical
+    school and graduation year — the cohort a 403 had hidden for three rounds."""
+    t = _all_md(cfg)
+    has = ("mj5m-pzi6" in t or "doctors and clinicians" in t) and \
+          ("pecos" in t or "med_sch" in t or "downloadable file" in t)
+    return check(skill, "PORT: CMS Doctors & Clinicians national file", has)
+
+
+def port_positive_control_for_absence(skill, cfg):
+    """Both. How to prove a field is empty rather than unread. Healthgrades was
+    declared checked-and-absent for 12 people only after a CONTROL profile
+    (dr-edward-gologorsky-2fywb) returned a 1994 UPMC FELLOW row — proving the
+    field exists, renders, and is genuinely empty for the twelve.
+
+    Without a positive control, 'the field was blank' and 'I parsed it wrong'
+    are indistinguishable — which is exactly how round 2B produced three false
+    negatives."""
+    t = _all_md(cfg)
+    has = ("control" in t) and \
+          ("field exists" in t or "proves the field" in t
+           or "renders" in t) and \
+          ("absent" in t or "empty" in t)
+    return check(skill, "PORT: prove absence with a positive control", has)
+
+
+PORT_TESTS = [port_cms_doctors_and_clinicians,
+              port_positive_control_for_absence,
+              port_aba_diplomate_directory,
               port_directory_address_is_not_practice,
               port_structurally_closed_sources,
               port_negative_needs_a_denominator,
