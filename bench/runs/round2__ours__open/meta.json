@@ -1,0 +1,33 @@
+{
+  "skill": "ours",
+  "condition": "open",
+  "subagents": 2,
+  "tool_calls": 84,
+  "wall_clock_s": 3060,
+  "people_found": 160,
+  "in_radius": 160,
+  "reachable": 97,
+  "peds_signal_strong": 39,
+  "peds_signal_moderate": 40,
+  "blocked_sources": [
+    {"host": "tidelandshealth.org", "reason": "HTTP 403 WAF on every plain fetch including robots.txt; read at rung 4 with the browser (same-origin read-only GETs). No bot check defeated."},
+    {"host": "novanthealth.org", "reason": "HTTP 404 on /find-a-doctor and every provider-directory path tried; 9 roster members in Bolivia/Shallotte NC remain unswept. sitemap_index.xml is advertised and readable - that is the next move."},
+    {"host": "mygrandstrandhealth.com", "reason": "JavaScript shell to a browserless agent and /api/providers/search is POST-only (405); read instead via the physicianData JSON embedded in each profile's server HTML. Not a hard block."},
+    {"host": "mcleodhealth.org", "reason": "/search-physician-finder/ renders client-side (0 names to a plain fetch); /services/anesthesiology/ and /services/childrens-hospital/ both 404. Read via the site's own public Algolia search-only key and the /physician/<slug>/ pages."}
+  ],
+  "truncation_detected": false,
+  "notes": "The pediatric channel is real and it lives one hop past every search index. McLeod's Algolia record carries no training fields, but every record's scheduling_url points at /physician/<slug>/ which publishes Board Certification, Medical School, Residency and Fellowship - readable by plain curl, never opened in round 1B. 262 of those read. Answer to the round-2 question: 76 in-radius providers carry a published pediatric signal (36 STRONG + 40 MODERATE new rows, plus 3 STRONG already on the roster), but in ANAESTHESIA specifically the ring contains exactly ONE pediatric anesthesiologist - Michelle D. Lee, MD, now with Board Certification 'Anesthesiology; Pediatric Anesthesiology' and a Children's Hospital Colorado residency, not just a specialty string. A facet count over McLeod's full 805-record index returns exactly 1 Pediatric Anesthesiology provider. Three structural negatives explain most NONE_FOUND: Tidelands publishes NO training block for any of its 12 anesthesiologists (it does for other specialties), Grand Strand never publishes a board-certification row (0 of 299 - only a bare boolean), and Conway has no board-cert field at all. Those NONE_FOUND rows mean the directory cannot show a peds fellowship, not that the person lacks one. Department phones: contact-channels.md's 'zero department lines across 8 sites' does not generalise - Conway publishes a full HTML phone directory with two anesthesia lines (843-347-8288, 843-347-8352), McLeod publishes anesthesia practice lines, Tidelands publishes 843-652-1190. Emails: 1342 profiles read, zero clinician addresses anywhere; nothing invented. Guards fired: OrthoSC's 'Joshua R. Gore, M.D.' is an orthopedic surgeon, not the roster's anesthesiologist - not merged; OrthoSC's nav string 'Pediatric Orthopedic Care' falsely matched all 33 providers until stripped; 18 Conway bio hits were personal-life 'children' mentions and were dropped. Round-1 roster contains 5 duplicated people, so 84 is really ~79 distinct.",
+  "channel_yield": {
+    "directory_profiles_read": 1342,
+    "peds_from_directories": 79,
+    "department_phones": 33,
+    "directory_emails": 0,
+    "linkedin_search_urls": 160
+  },
+  "marginal_vs_round1": {
+    "people": 76,
+    "emails": 0,
+    "peds": 77,
+    "department_phones": 14
+  }
+}

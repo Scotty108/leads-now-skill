@@ -313,3 +313,76 @@ a browser.** The only residual browser-only source is Tidelands, which 403s.
 
 The lesson stands and strengthens: climb the ladder in order, because rung 3
 keeps beating rung 4.
+
+
+## Round 2B — the subspecialty channel, opened
+
+### The index is a pointer, not the record
+
+Round 1 read McLeod's search index and reported **2** pediatric signals across
+84 people. Round 2 went **one hop past** it and found **79** across 160.
+
+The index carries no training fields at all. But every record has a
+`scheduling_url` pointing at `/physician/<slug>/`, and *those* pages publish
+**Board Certification, Medical School, Residency and Fellowship** — to a plain
+`curl`, no browser. Round 1 never opened one.
+
+**Open the profile.** A search index exists to help you find the page; it is
+not the page. Read 1,342 profiles this way across five systems and the
+subspecialty question stopped being unanswerable.
+
+### The honest answer to the pediatric question
+
+76 in-radius providers carry a published pediatric signal. But in **anaesthesia
+specifically the ring contains exactly one**: Michelle D. Lee, MD — now
+evidenced as *"Board Certification: Anesthesiology; Pediatric Anesthesiology,
+Residency 2007 Children's Hospital Colorado"*, not merely a specialty string. A
+facet count over the full 805-record index returns exactly 1.
+
+Report both numbers. "76 pediatric providers" and "1 pediatric
+anesthesiologist" are answers to different questions and a recruiter needs the
+second.
+
+### Silence is not absence — and it marks your best calls
+
+A `NONE_FOUND` must be explained structurally or it misleads. Measured:
+
+- **Tidelands publishes no training block for any of its 12 anesthesiologists**
+  — while publishing one for other specialties. Verified, not assumed.
+- **Grand Strand publishes no board-certification row at all** (0 of 299).
+- **Conway has no board-certification field.**
+
+Those `NONE_FOUND`s mean *the directory cannot show a fellowship*, not that the
+person lacks one. Which inverts the usual reading: **those 12 Tidelands
+anesthesiologists are the highest-value calls in the set**, precisely because
+the record is silent. Everyone else's absence has been checked; theirs has not.
+
+Say which kind of `NONE_FOUND` you are reporting — checked-and-absent, or
+unpublishable.
+
+### Strip page chrome before matching
+
+Page chrome matches exactly like content. Measured: OrthoSC's navigation string
+*"Pediatric Orthopedic Care"* graded **all 33** of its providers pediatric until
+it was stripped, and 18 Conway hits for "children" were personal-life mentions
+in bios ("father of three").
+
+**Match inside the record**, never across the whole page. Scope to the profile
+block, drop nav, footer and sidebars first, and require the term in a training,
+certification or specialty field rather than anywhere in the HTML.
+
+### Department phone directories do exist
+
+Amending twice-corrected guidance once more: Conway publishes a full
+`/phone-directory/` HTML table including **Anesthesia 843-347-8288 and
+843-347-8352**, plus PACU and OR-scheduling lines. McLeod publishes anesthesia
+practice lines; Tidelands publishes 843-652-1190.
+
+Department phones went 0 → 12/16 → **33 of 160**. Look for a phone-directory
+page by name; it is a different artifact from a provider profile.
+
+### Email: still zero, now from 1,342 pages
+
+**Not one clinician address across 1,342 profiles.** Combined with the academic
+sweep — 69 of 72 with no publication anywhere — the email ceiling on a
+community clinical roster is real and it is low. Phone is the deliverable.

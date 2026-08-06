@@ -89,32 +89,49 @@ for m in G['roster_matches']:
         r['all_sources']=(r['all_sources']+' | ' if r['all_sources'] else '')+url
         r['source_count']=str(int(r['source_count'] or 1)+1); r['confidence']='corroborated'
 
-# ---------- Conway / ring (optional) ----------
+# ---------- Conway / ring ----------
+import os
 CR='records/conway_ring_r2.json'
-conway_read=0
+conway_read=0; conway_peds_new=[]
+DEPT={'conwaymedicalcenter.com':'843-347-8288'}
 if os.path.exists(CR):
     C=json.load(open(CR))
     for o in C.get('orgs',[]):
+        if o.get('org_domain','').endswith('mcleodhealth.org'): continue
         conway_read+=o.get('profiles_fetched') or 0
         for m in o.get('roster_matches',[]):
-            k=key(m.get('roster_name') or m.get('name') or '')
-            url=m.get('citation') or m.get('url') or ''
+            k=key(m.get('roster_name') or ''); url=m.get('profile_url') or ''
             for r in idx.get(k,[]):
-                upd(r, org_domain=o.get('org_domain'), profile_url=url)
-                tr=m.get('training') or ' | '.join(filter(None,[m.get('fellowship') if isinstance(m.get('fellowship'),str) else ' '.join(m.get('fellowship') or []),
-                                                               m.get('residency') if isinstance(m.get('residency'),str) else ' '.join(m.get('residency') or []),
-                                                               m.get('board_certifications') if isinstance(m.get('board_certifications'),str) else ' '.join(m.get('board_certifications') or [])]))
+                upd(r, org_domain=o.get('org_domain'), profile_url=url, org=o.get('org'))
+                tr=' | '.join(filter(None,[
+                    ('Medical School: '+m['medical_school_verbatim']) if m.get('medical_school_verbatim') else '',
+                    ('Internship: '+m['internship_verbatim']) if m.get('internship_verbatim') else '',
+                    ('Residency: '+m['residency_verbatim']) if m.get('residency_verbatim') else '',
+                    ('Fellowship: '+m['fellowship_verbatim']) if m.get('fellowship_verbatim') else '',
+                    ('Board certification: '+m['board_certifications_verbatim']) if m.get('board_certifications_verbatim') else '']))
                 if tr: r['training']=tr
                 if url: r['peds_citation']=url
                 g=(m.get('peds_grade') or 'NONE_FOUND').upper().replace(' ','_')
                 r['peds_signal']=g
-                r['peds_evidence']=(m.get('peds_evidence') or m.get('peds_grade_reason') or
-                  "NONE_FOUND = evidence absent, not a claim of no pediatric experience. %s directory profile read; no pediatric term in specialty, training or bio."%o.get('org'))+((' — '+url) if url else '')
+                if g=='NONE_FOUND':
+                    r['peds_evidence']=("NONE_FOUND = evidence absent, not a claim of no pediatric experience. %s published profile read in full. Training verbatim: %s. Bio: %s. No pediatric term in specialty, training or bio. Note %s publishes no board-certification field at all, so a pediatric subspecialty certificate would only surface if the free-text bio happened to name it. — %s"
+                        %(o.get('org'), tr or 'none published', (m.get('bio_verbatim') or 'none published')[:220], o.get('org'), url))
+                else:
+                    r['peds_evidence']=(m.get('peds_note') or '')+' — '+url
                 if url:
                     r['all_sources']=(r['all_sources']+' | ' if r['all_sources'] else '')+url
                     r['source_count']=str(int(r['source_count'] or 1)+1); r['confidence']='corroborated'
-                dp=m.get('phone') or o.get('department_phone')
-                if dp and m.get('phone_is_department'): r['phone']=dp; r['phone_type']='department'
+                dp=DEPT.get(o.get('org_domain') or '')
+                if dp: r['phone']=dp; r['phone_type']='department'
+        PERSONAL=re.compile(r"his \d|her \d|their (?:va|ch)|enjoy|family|wife|husband|YMCA|volunteer",re.I)
+        for hh in o.get('peds_hits',[]):
+            if hh.get('grade') not in ('STRONG','MODERATE'): continue
+            if hh.get('grade')=='MODERATE' and hh.get('field')=='bio' and PERSONAL.search(hh.get('quote','')): continue
+            conway_peds_new.append({'name':re.split(r",\s*(?:MD|DO|APRN|FNP|PA-C|DDS|AUD|MSN|DNP|CNM|MPAS)",hh['name'])[0].strip(),
+                'raw_name':hh['name'],'url':hh['profile_url'],'grade':hh['grade'],
+                'evidence':"%s directory profile, %s field: \"%s\""%(o.get('org'),hh.get('field'),hh.get('quote','')[:220]),
+                'org':o.get('org'),'org_domain':o.get('org_domain'),'phone':DEPT.get(o.get('org_domain') or '',''),
+                'city':'Conway' if 'conway' in (o.get('org_domain') or '') else 'Myrtle Beach'})
 
 # ---------- NEW rows: in-radius providers with a pediatric signal ----------
 def blank():
@@ -159,6 +176,17 @@ for g in G['peds_hits']:
              confidence='single_source',source_count='1',all_sources=g.get('citation') or g.get('url',''),
              source='Grand Strand Health (HCA) directory — embedded physicianData JSON',
              linkedin_search_url='https://www.linkedin.com/search/results/people/?keywords='+urllib.parse.quote(nm+' Grand Strand Health'))
+    new.append(d)
+
+for c in conway_peds_new:
+    if key(c['name']) in idx: continue
+    d=blank()
+    d.update(full_name=c['raw_name'],title='',org=c['org'],org_domain=c['org_domain'],
+             practice_city=c['city'],practice_state='SC',territory='Myrtle Beach',
+             phone='',phone_type='',profile_url=c['url'],peds_signal=c['grade'],peds_citation=c['url'],
+             peds_evidence=c['evidence']+' — '+c['url'],confidence='single_source',source_count='1',
+             all_sources=c['url'],source=c['org']+' provider directory (rung 2)',
+             linkedin_search_url='https://www.linkedin.com/search/results/people/?keywords='+urllib.parse.quote(c['name']+' '+c['org']))
     new.append(d)
 
 allrows=rows+new

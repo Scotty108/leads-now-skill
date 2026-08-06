@@ -128,3 +128,42 @@ matching as a forename) and a cross-channel collision that would have reported
   Teamhealth contractors, not HCA staff. Five plausible addresses withheld.
 
 **Email ceiling holds at 3.** 69 of 72 still have no publication anywhere.
+
+| 2B | 2026-08-06T23:20Z | open | ours | 160 | 97 | **79** | 1.00 | 2 | 3060 | **0.9500** | peds channel OPENED: 2 -> 79 signals; 1342 profiles read |
+
+### Round 2B: the index was a pointer, not the record
+
+**Best score of the bake-off: 0.9500.** Round 1 read McLeod's search index and
+reported 2 pediatric signals. Round 2 went ONE HOP PAST it — every index record
+carries a `scheduling_url` to `/physician/<slug>/`, and those pages publish
+Board Certification, Medical School, Residency and Fellowship **to a plain
+curl**. 1,342 profiles read across 5 systems.
+
+| Channel | R1 open | R2 open |
+|---|---|---|
+| People | 84 | **160** |
+| Peds signal | 2 | **79** (39 STRONG + 40 MODERATE) |
+| Department phones | 19 | **33** |
+| Emails | 3 | **0 from 1,342 pages** |
+
+**The honest pediatric answer, both numbers:** 76 in-radius providers carry a
+published pediatric signal, but in ANAESTHESIA the ring contains exactly
+**one** — Michelle D. Lee, MD, now evidenced as "Board Certification:
+Anesthesiology; Pediatric Anesthesiology, Residency 2007 Children's Hospital
+Colorado". A facet count over the full 805-record index returns exactly 1.
+
+**Silence is not absence, and it marks the best calls.** Tidelands publishes NO
+training block for ANY of its 12 anesthesiologists (while publishing one for
+other specialties — verified). Grand Strand publishes no board-cert row at all
+(0/299). Conway has no such field. Those NONE_FOUNDs mean the directory cannot
+show a fellowship — which makes those 12 the HIGHEST-value calls in the set,
+because everyone else's absence has been checked and theirs has not.
+
+**Guards fired:** OrthoSC's nav string "Pediatric Orthopedic Care" graded all
+33 of its providers pediatric until stripped; 18 Conway "children" hits were
+personal-life bio mentions. Also caught: the round-1 roster of 84 contains 5
+duplicate people — it is really ~79 distinct.
+
+**Ported (each with a test that failed pre-port):** open the profile not just
+the index; silence-is-not-absence with the high-value inversion; strip page
+chrome before matching.

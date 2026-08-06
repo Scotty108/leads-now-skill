@@ -412,7 +412,50 @@ def port_employment_status_gate(skill, cfg):
     return check(skill, "PORT: employment status gates pattern inference", has)
 
 
-PORT_TESTS = [port_rung3_yields_department_phones,
+
+
+def port_one_hop_past_the_index(skill, cfg):
+    """Both. THE round-2 breakthrough. A search index is a pointer, not the
+    record. McLeod's Algolia entries carry no training fields at all — but every
+    record's scheduling_url points at /physician/<slug>/, and THOSE pages
+    publish Board Certification, Medical School, Residency and Fellowship to a
+    plain curl. Round 1 read the index and reported 2 pediatric signals; round 2
+    opened the profiles and found 79."""
+    t = _all_md(cfg)
+    # Requires the instruction itself, not incidental vocabulary.
+    has = ("index is a pointer" in t or "one hop past" in t
+           or "open the profile" in t)
+    return check(skill, "PORT: open the profile, not just the index", has)
+
+
+def port_silence_is_not_absence(skill, cfg):
+    """Both. NONE_FOUND must be explained structurally or it is a lie by
+    omission. Measured: Tidelands publishes NO training block for ANY of its 12
+    anesthesiologists (it does for other specialties), Grand Strand publishes no
+    board-certification row at all (0 of 299), Conway has no such field. Those
+    NONE_FOUNDs mean the directory cannot show a fellowship, not that the person
+    lacks one — which makes those 12 the HIGHEST-value calls, not the lowest."""
+    t = _all_md(cfg)
+    has = ("silence is not absence" in t or "silent record" in t) and \
+          ("none_found" in t or "none found" in t)
+    return check(skill, "PORT: directory silence is not absence of the trait", has)
+
+
+def port_chrome_string_false_positives(skill, cfg):
+    """Both. Page chrome matches like content. Measured: OrthoSC's navigation
+    string 'Pediatric Orthopedic Care' graded ALL 33 of its providers pediatric
+    until it was stripped, and 18 Conway 'children' hits were personal-life
+    mentions in bios. Match inside the record, never across the whole page."""
+    t = _all_md(cfg)
+    has = ("page chrome" in t or "nav string" in t) and \
+          ("match inside the record" in t or "strip" in t)
+    return check(skill, "PORT: strip page chrome before matching", has)
+
+
+PORT_TESTS = [port_one_hop_past_the_index,
+              port_silence_is_not_absence,
+              port_chrome_string_false_positives,
+              port_rung3_yields_department_phones,
               port_search_index_pagination_trap,
               port_employment_status_gate,
               port_openalex_is_metered,
