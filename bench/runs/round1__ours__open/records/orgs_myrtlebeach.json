@@ -1,0 +1,42 @@
+[
+  {
+    "full_name": "Farayi Mbuvah",
+    "npi": "1306198841",
+    "title": "Farayi Mbuvah, MD — Anesthesiology / Pain Medicine",
+    "org": "Conway Medical Center",
+    "org_domain": "conwaymedicalcenter.com",
+    "profile_url": "https://www.conwaymedicalcenter.com/providers/farayi-mbuvah-md/",
+    "peds_signal": "NONE_FOUND",
+    "peds_evidence": [
+      "Medical Education: University of Zimbabwe Godfrey Huggins School of Medicine — https://www.conwaymedicalcenter.com/providers/farayi-mbuvah-md/",
+      "Internship: Fairview Hospital/Cleveland Clinic (adult) — https://www.conwaymedicalcenter.com/providers/farayi-mbuvah-md/",
+      "Residency: Henry Ford Hospital — Anesthesiology (adult) — https://www.conwaymedicalcenter.com/providers/farayi-mbuvah-md/",
+      "Fellowship: Henry Ford Hospital — Pain Medicine (not pediatric anesthesiology) — https://www.conwaymedicalcenter.com/providers/farayi-mbuvah-md/",
+      "Memberships listed: American Society of Anesthesiologists (ASA); American Society of Regional Anesthesiology and Pain Medicine (ASRA) — no pediatric society — https://www.conwaymedicalcenter.com/providers/farayi-mbuvah-md/"
+    ],
+    "source": "https://www.conwaymedicalcenter.com/providers/farayi-mbuvah-md/"
+  },
+  {
+    "full_name": "Derek Horstemeyer",
+    "npi": "1225018849",
+    "title": "Derek L. Horstemeyer, MD — Anesthesiology",
+    "org": "Grand Strand Medical Center (Grand Strand Health, HCA)",
+    "org_domain": "mygrandstrandhealth.com",
+    "profile_url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Derek-L-Horstemeyer-MD",
+    "peds_signal": "NONE_FOUND",
+    "peds_evidence": [
+      "Profile page title confirms name + specialty: 'Derek L Horstemeyer, MD | Anesthesiology | Grand Strand Health' — https://www.mygrandstrandhealth.com/physicians/profile/Dr-Derek-L-Horstemeyer-MD",
+      "Education/training block on this profile is client-side rendered and returned no training text to a static fetch, so no pediatric training could be confirmed or ruled out from the page HTML — https://www.mygrandstrandhealth.com/physicians/profile/Dr-Derek-L-Horstemeyer-MD"
+    ],
+    "source": "https://www.mygrandstrandhealth.com/physicians.xml"
+  },
+  {
+    "org": "Conway Medical Center",
+    "org_domain": "conwaymedicalcenter.com",
+    "email": "sandy.moore@cmc-sc.com",
+    "email_source_url": "https://www.conwaymedicalcenter.com/contact-us/",
+    "email_label": "first_party_published",
+    "note": "Domain-pattern unlock only — NOT a roster provider. Real address literally published on Conway Medical Center's public contact page. Establishes that Conway Medical Center staff mail lives on the cmc-sc.com domain (not conwaymedicalcenter.com) in firstname.lastname@cmc-sc.com form. No provider email was constructed from this.",
+    "source": "https://www.conwaymedicalcenter.com/contact-us/"
+  }
+]

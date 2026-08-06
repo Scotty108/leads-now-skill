@@ -1,0 +1,61 @@
+{
+ "skill": "ours",
+ "condition": "open",
+ "subagents": 1,
+ "tool_calls": 41,
+ "wall_clock_s": 829,
+ "people_found": 84,
+ "in_radius": 84,
+ "reachable": 84,
+ "peds_signal_strong": 2,
+ "peds_signal_moderate": 0,
+ "blocked_sources": [
+  {
+   "host": "tidelandshealth.org",
+   "reason": "HTTP 403 to every plain fetch including the correct /find-a-physician/search-results/ path. Rung 3 impossible. Browser (rung 4) returned 200 and read it \u2014 301 providers, 12 anesthesiology. Profiles publish no education/fellowship block, so it yields org + department phone but no pediatric signal."
+  },
+  {
+   "host": "mygrandstrandhealth.com",
+   "reason": "/api/physicians/search, /api/physician/search, /api/doctors/search all 403; /api/providers/search is POST-only (405 on GET) and was deliberately NOT called (read-only policy). Resolved instead via an embedded physicianData JSON in each profile's server HTML \u2014 299 profiles swept, 5 anesthesiology + 1 pediatric critical care."
+  },
+  {
+   "host": "novanthealth.org",
+   "reason": "JS shell at /doctors; not retried this run \u2014 Brunswick NC sits outside the 50-mile ring and the timebox went to in-ring orgs."
+  },
+  {
+   "host": "dosher.org",
+   "reason": "carried from clamped run: /find-a-provider/ 404, no readable directory"
+  },
+  {
+   "host": "crhealthcare.org",
+   "reason": "carried from clamped run: no provider directory exists"
+  },
+  {
+   "host": "seasidesurgerycenter.com",
+   "reason": "carried from clamped run: HTTP 403"
+  },
+  {
+   "host": "coastalcarolinaanesthesia.com + 9 other independent anesthesia-group domains",
+   "reason": "DNS NXDOMAIN \u2014 10 of 12 probed independent anesthesia practices have no web presence"
+  },
+  {
+   "host": "WebSearch (tool, not a host)",
+   "reason": "session budget exhausted at 200/200 before this run began. No search engine was used at any point; every org was reached by direct fetch or browser against a known or sitemap-derived URL."
+  },
+  {
+   "host": "linkedin.com",
+   "reason": "deliberately never touched \u2014 hard rule. 84 linkedin_search_url values emitted for a human to click; 0 profiles scraped."
+  }
+ ],
+ "truncation_detected": false,
+ "notes": "HEADLINE: found a registered PEDIATRIC ANESTHESIOLOGIST inside the ring \u2014 Michelle D. Lee, MD, McLeod Anesthesia Loris (25.4 mi) and McLeod Anesthesiology Seacoast, Little River (17.8 mi), dept lines 843-716-7370 / 843-390-8128. The clamped run correctly reported ZERO because her NPI record carries no pediatric taxonomy code; the subspecialty is published only on the hospital directory, which is a JS shell to a plain fetch. Second STRONG is Asfawossen B Asfaw MD, Pediatric Critical Care Medicine credentialed at Grand Strand Medical Center (peds-adjacent, not anesthesia; his listed address is his staffing agency's FL HQ, flagged in hospital_affiliation rather than mapped to FL). CHANNEL SPLIT (never the total alone): 84 phones = 0 direct, 19 department, 65 practice switchboard, 0 answering service; 3 emails, all pattern_confirmed on cmc-sc.com from 2 published addresses, 0 first_party_published \u2014 per contact-channels.md that tier is ~91% accurate, i.e. 9 bounces/100, 4x over the 2% throttling ceiling, so it is NOT bulk-sendable and the report says so. No email was emitted for tidelandshealth.org, mygrandstrandhealth.com or mcleodhealth.org because none publishes a clinician address; the refusal rule held. 82 of 84 are NONE_FOUND on pediatric signal \u2014 that means the evidence is absent, not that the person lacks experience. LADDER DISCIPLINE: rung 3 was attempted before rung 4 on every org. Honest caveat \u2014 2 of the 3 'browser-only' sites did not need rendering at all: Grand Strand's data sat in server HTML the clamped run never parsed past <title>, and McLeod's sat behind the site's own public Algolia endpoint. The browser's value there was DISCOVERY of where to look, not rendering. Only Tidelands (403) genuinely required rung 4. truncation_detected=false for this run's own fetches: Tidelands paged 31/31 with a stable searchId, Grand Strand fetched 299/299 sitemap URLs with 0 errors, McLeod's Algolia browse returned all 805 records in one cursor pass (the clamped run's NPI skip=1000 ceiling was already handled upstream and is not re-raised here). Frederick Bellamy appears as 2 rows (Conway Medical Center + McLeod Loris) because the directories differ on his middle initial; both affiliations are real and it was left visible rather than silently collapsed. A background OpenAlex/Europe PMC qualification subagent over all 60 registry names had not returned before the timebox closed, so no publication-derived peds signal or corresponding-author email is in this CSV; the clamped run's equivalent pass returned NONE_FOUND across the board. leadkit audit result.csv = PASS (84 rows, every row sourced, every email labelled with a source, every phone typed) after one FAIL cycle that caught 3 inferred emails naming no source.",
+ "rung_used": {
+  "npiregistry.cms.hhs.gov": "1",
+  "conwaymedicalcenter.com": "2",
+  "mygrandstrandhealth.com": "3 (embedded physicianData JSON in server HTML; sitemap at rung 2)",
+  "mcleodhealth.org": "3 (site's own Algolia live_physicians index, endpoint discovered in browser network log)",
+  "tidelandshealth.org": "4 (browser \u2014 rung 3 returned 403)",
+  "novanthealth.org": "not attempted"
+ },
+ "browser_unlocked": 23
+}

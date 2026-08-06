@@ -1,0 +1,143 @@
+[
+ {
+  "full_name": "Dwayne LiVigni, DO",
+  "title": "Anesthesiology",
+  "org": "Teamhealth Anesthesia",
+  "org_domain": "mygrandstrandhealth.com",
+  "phone": "(843) 692-1062",
+  "phone_type": "department",
+  "profile_url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Dwayne-LiVigni-DO",
+  "source": "Grand Strand Health (HCA) physician directory \u2014 embedded physicianData JSON",
+  "npi": "1982655262",
+  "credential": "DO",
+  "practice_city": "Myrtle Beach",
+  "practice_state": "SC",
+  "practice_zip": "29572",
+  "hospital_affiliation": "Grand Strand Medical Center, Myrtle Beach SC",
+  "training": [],
+  "peds_signal": "NONE_FOUND",
+  "peds_evidence": [
+   "Directory record lists specialty ['Anesthesiology']; credentials block = empty; no pediatric training or pediatric practice listed \u2014 https://www.mygrandstrandhealth.com/physicians/profile/Dr-Dwayne-LiVigni-DO"
+  ],
+  "linkedin_search_url": "https://www.linkedin.com/search/results/people/?keywords=Dwayne%20LiVigni%20Grand%20Strand"
+ },
+ {
+  "full_name": "Brandon Sloop, MD",
+  "title": "Anesthesiology",
+  "org": "Teamhealth Anesthesia",
+  "org_domain": "mygrandstrandhealth.com",
+  "phone": "(843) 692-1062",
+  "phone_type": "department",
+  "profile_url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Brandon-Sloop-MD",
+  "source": "Grand Strand Health (HCA) physician directory \u2014 embedded physicianData JSON",
+  "npi": "1962529578",
+  "credential": "MD",
+  "practice_city": "Myrtle Beach",
+  "practice_state": "SC",
+  "practice_zip": "29572",
+  "hospital_affiliation": "Grand Strand Medical Center, Myrtle Beach SC",
+  "training": [],
+  "peds_signal": "NONE_FOUND",
+  "peds_evidence": [
+   "Directory record lists specialty ['Anesthesiology']; credentials block = empty; no pediatric training or pediatric practice listed \u2014 https://www.mygrandstrandhealth.com/physicians/profile/Dr-Brandon-Sloop-MD"
+  ],
+  "linkedin_search_url": "https://www.linkedin.com/search/results/people/?keywords=Brandon%20Sloop%20Grand%20Strand"
+ },
+ {
+  "full_name": "Desiree Aird, MD",
+  "title": "Anesthesiology",
+  "org": "Teamhealth Anesthesia",
+  "org_domain": "mygrandstrandhealth.com",
+  "phone": "(843) 692-1062",
+  "phone_type": "department",
+  "profile_url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Desiree-Aird-MD",
+  "source": "Grand Strand Health (HCA) physician directory \u2014 embedded physicianData JSON",
+  "npi": "1528471406",
+  "credential": "MD",
+  "practice_city": "Myrtle Beach",
+  "practice_state": "SC",
+  "practice_zip": "29572",
+  "hospital_affiliation": "Grand Strand Medical Center, Myrtle Beach SC",
+  "training": [],
+  "peds_signal": "NONE_FOUND",
+  "peds_evidence": [
+   "Directory record lists specialty ['Anesthesiology']; credentials block = empty; no pediatric training or pediatric practice listed \u2014 https://www.mygrandstrandhealth.com/physicians/profile/Dr-Desiree-Aird-MD"
+  ],
+  "linkedin_search_url": "https://www.linkedin.com/search/results/people/?keywords=Desiree%20Aird%20Grand%20Strand"
+ },
+ {
+  "full_name": "Songoli C Umeh, MD",
+  "title": "Anesthesiology",
+  "org": "Weatherby Locums Inc",
+  "org_domain": "mygrandstrandhealth.com",
+  "phone": "(800) 586-5022",
+  "phone_type": "practice",
+  "profile_url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Songoli-C-Umeh-MD",
+  "source": "Grand Strand Health (HCA) physician directory \u2014 embedded physicianData JSON",
+  "npi": "1356635163",
+  "credential": "MD",
+  "practice_city": "Fort Lauderdale",
+  "practice_state": "FL",
+  "practice_zip": "33308",
+  "hospital_affiliation": "Grand Strand Medical Center, Myrtle Beach SC",
+  "training": [],
+  "peds_signal": "NONE_FOUND",
+  "peds_evidence": [
+   "Directory record lists specialty ['Anesthesiology']; credentials block = empty; no pediatric training or pediatric practice listed \u2014 https://www.mygrandstrandhealth.com/physicians/profile/Dr-Songoli-C-Umeh-MD"
+  ],
+  "linkedin_search_url": "https://www.linkedin.com/search/results/people/?keywords=Songoli%20C%20Umeh%20Grand%20Strand"
+ },
+ {
+  "full_name": "Derek L Horstemeyer, MD",
+  "title": "Anesthesiology",
+  "org": "Man In The Box Anesthesia",
+  "org_domain": "mygrandstrandhealth.com",
+  "phone": "(843) 692-1061",
+  "phone_type": "department",
+  "profile_url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Derek-L-Horstemeyer-MD",
+  "source": "Grand Strand Health (HCA) physician directory \u2014 embedded physicianData JSON",
+  "npi": "1225018849",
+  "credential": "MD",
+  "practice_city": "Myrtle Beach",
+  "practice_state": "SC",
+  "practice_zip": "29572",
+  "hospital_affiliation": "Grand Strand Medical Center, Myrtle Beach SC",
+  "training": [
+   "Residency: Emory University",
+   "Internship: Georgia Baptist Medical Center",
+   "Graduate Degree: Vanderbilt University"
+  ],
+  "peds_signal": "NONE_FOUND",
+  "peds_evidence": [
+   "Directory record lists specialty ['Anesthesiology']; credentials block = [('Residency', 'Emory University'), ('Internship', 'Georgia Baptist Medical Center'), ('Graduate Degree', 'Vanderbilt University')]; no pediatric training or pediatric practice listed \u2014 https://www.mygrandstrandhealth.com/physicians/profile/Dr-Derek-L-Horstemeyer-MD"
+  ],
+  "linkedin_search_url": "https://www.linkedin.com/search/results/people/?keywords=Derek%20L%20Horstemeyer%20Grand%20Strand"
+ },
+ {
+  "full_name": "Asfawossen B Asfaw, MD",
+  "title": "Pediatric Critical Care Medicine",
+  "org": "Sheridan Children's Healthcare",
+  "org_domain": "mygrandstrandhealth.com",
+  "phone": "(954) 514-4670",
+  "phone_type": "practice",
+  "profile_url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Asfawossen-B-Asfaw-MD",
+  "source": "Grand Strand Health (HCA) physician directory \u2014 embedded physicianData JSON",
+  "npi": "1528364213",
+  "credential": "MD",
+  "practice_city": "Plantation",
+  "practice_state": "FL",
+  "practice_zip": "33323",
+  "hospital_affiliation": "Grand Strand Medical Center, Myrtle Beach SC",
+  "training": [
+   "Graduate Degree: Jimma University",
+   "Residency: New York Methodist Hospital",
+   "Fellowship: Medical College of Wisconsin"
+  ],
+  "peds_signal": "STRONG",
+  "peds_evidence": [
+   "Directory specialty = ['Pediatric Critical Care Medicine'] \u2014 https://www.mygrandstrandhealth.com/physicians/profile/Dr-Asfawossen-B-Asfaw-MD",
+   "Practice group = Sheridan Children's Healthcare (pediatric staffing group) \u2014 https://www.mygrandstrandhealth.com/physicians/profile/Dr-Asfawossen-B-Asfaw-MD"
+  ],
+  "linkedin_search_url": "https://www.linkedin.com/search/results/people/?keywords=Asfawossen%20B%20Asfaw%20Grand%20Strand"
+ }
+]

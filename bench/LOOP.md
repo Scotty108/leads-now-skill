@@ -99,3 +99,61 @@ surface the profile URL for a human, do not scrape it).
   running a comparison.
 - **A tie is a real result.** Record it and move on rather than manufacturing a
   winner.
+
+
+## Termination: find the boundary, do not assume it
+
+Three rounds is the floor, not the goal. **Keep looping until marginal
+enrichment per round reaches zero** — a round that adds no new reachable
+contact through any channel, on either skill, after genuinely trying a new
+source. Two consecutive dry rounds means the boundary is real.
+
+The deliverable is a defensible answer to: *what fraction of a clinical
+population can be fully contacted from free public sources, and where exactly
+does that stop?* That number decides whether the product thesis holds. Nobody
+currently knows it — Clay and Apollo will not publish it, and round 1 only
+established a floor.
+
+### Per-channel coverage is the scoreboard
+
+Track every round, per channel, as `n / population`:
+
+| Channel | Round 1 | Ceiling hypothesis |
+|---|---|---|
+| Practice phone | 131/131 | Solved — NPI publishes it |
+| Department phone | 0/131 | Reachable; hospital service-line pages |
+| Direct dial | 0/131 | Probably near-zero from public sources |
+| Work email | 3/131 | **The open question** |
+| LinkedIn URL (public page) | 0/131 | Partial; never scraped |
+| LinkedIn search URL | 0/131 | Trivially 131/131 |
+| Peds signal | 0/131 | Needs OpenAlex/ORCID, untried |
+
+A channel is **exhausted** only when a round tried a *new* source for it and
+added nothing. "We did not get any" is not evidence of a ceiling; "we tried
+Europe PMC affiliation-locked and it yielded 4 more" is.
+
+### Sources not yet tried — work down this list
+
+Each round must attempt at least one untried source and record the yield:
+
+1. OpenAlex corresponding-author, affiliation-locked
+2. Europe PMC full-text (exposes addresses abstracts drop)
+3. NIH RePORTER and ClinicalTrials.gov contacts
+4. Hospital department / service-line pages for department phones
+5. State medical board licensee records
+6. Residency and fellowship program pages, alumni lists
+7. Society member directories (ASA, AAP)
+8. Doximity and Healthgrades as corroboration only
+9. Press releases and newsroom for name + email format
+10. Practice websites for the ~2 of 12 domains that resolve
+
+### Honest stopping
+
+When a channel is exhausted, say so with the evidence and stop spending on it.
+**Do not manufacture coverage to hit a target.** If work email tops out at 12%
+of a community-anesthesiology population, that is the finding, and it is more
+valuable than a padded list — it tells the user the product needs a paid
+waterfall for that field, or that phone is the channel.
+
+The loop ends when every channel is either saturated or has a named, evidenced
+reason it cannot go further.
