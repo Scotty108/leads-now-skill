@@ -87,3 +87,44 @@ academic minority.
 
 ## Round 2 — do the corrections move anything?
 | 2 | 2026-08-06T22:40Z | gate | both | — | — | — | — | — | — | — | 18/18 core + 14/14 ports green; eligible |
+
+| 2A | 2026-08-06T22:55Z | clamped | ours | 68 | 68 | 1 | 1.00 | 0 | 730 | 0.7690 | +9 people, +1 email, +1 peds, +16 dept phones vs R1 |
+| 2A | 2026-08-06T22:55Z | clamped | skillit | 77 | 77 | 1 | 1.00 | 0 | 746 | **0.7918** | +5 people, +3 emails, +1 peds, +12 dept phones vs R1 |
+
+### Round 2A: the corrections worked, and the browser turned out to be optional
+
+**NOT a dry round.** Every channel moved on both skills.
+
+| Channel | R1 clamped | R2 clamped (ours / skillit) |
+|---|---|---|
+| People | 60 / 72 | 68 / 77 |
+| Emails | 3 / 0 | 1 / 3 |
+| Department phones | 0 / 0 | **16 / 12** |
+| Peds signal | 0 / 0 | **1 / 1** |
+
+**The browser was not needed for any of it.** Both runs reproduced round 1B's
+rung-3 wins with `curl` alone — Grand Strand's `physicianData` from profile
+server HTML (299/299) and McLeod's Algolia credentials (`app JUNR3SUCF2`,
+public search-only key) read out of `/search-physician-finder/` server HTML.
+**Michelle D. Lee MD, the pediatric anesthesiologist, was reached clamped.**
+Only Tidelands (403) still requires rung 4.
+
+**The full-forename rule did enormous work:** 147 of 151 surname+geo records
+rejected in one run, 48 in the other. It killed "Loris Thomas" (a place name
+matching as a forename) and a cross-channel collision that would have reported
+"E J Collins" as pediatrician C. Michael Collins — **a false pediatric hit**.
+
+**Three corrections ported (each with a test that failed pre-port):**
+- Department phones live in rung-3 PAYLOADS, not on fetched pages. This
+  AMENDS my own round-1B claim that they "mostly do not exist" — true for page
+  fetching, false for structured records. Conway is the honest control: 304
+  pages parsed, still only a switchboard.
+- Hosted search indexes cap pagination silently. Algolia reports `nbHits: 805`
+  but `nbPages: 1` at `hitsPerPage=100` — a blind browse returns 100 of 805 and
+  looks complete. Same class as NPI `skip=1000`.
+- **Employment status gates pattern inference.** Three agreeing
+  `@hcahealthcare.com` addresses would have made `first.last` pattern_confirmed
+  for five more people; their directory records set `hcaEmployee: false` —
+  Teamhealth contractors, not HCA staff. Five plausible addresses withheld.
+
+**Email ceiling holds at 3.** 69 of 72 still have no publication anywhere.

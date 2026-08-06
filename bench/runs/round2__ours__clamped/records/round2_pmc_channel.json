@@ -1,0 +1,20 @@
+{
+ "pmids_swept": 705,
+ "author_records_surname_plus_geo": 151,
+ "full_forename_confirmed": 4,
+ "pmc_fetched": [
+  "PMC11249181",
+  "PMC10324711",
+  "PMC10327958",
+  "PMC8890879"
+ ],
+ "emails_found": [
+  "Jon.Halling@hcahealthcare.com",
+  "David.Kingery@hcahealthcare.com",
+  "alex.roberts@hcahealthcare.com"
+ ],
+ "emitted": [
+  "Jon.Halling@hcahealthcare.com"
+ ],
+ "withheld_reason": "Kingery and Roberts are not roster members; hcahealthcare.com pattern emails for roster Grand Strand physicians withheld because physicianData hcaEmployee=false"
+}

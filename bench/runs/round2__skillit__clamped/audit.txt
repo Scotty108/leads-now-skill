@@ -1,0 +1,11 @@
+=== COVERAGE ===
+retrieved from source:   777  (searched area, wider than the target)
+matched the target:      77  <- THIS is the denominator for the brief
+delivered rows:          77
+with an email:           3 (4%)
+with a phone:            77 (100%)
+confidence:              unconfirmed=71, probable=5, confirmed=1
+email_status:            none_no_observed_address=74, observed=2, pattern_confirmed=1
+unreadable sources:      Tidelands Health: 403 bot block; Conway Medical Center: no findable provider endpoint; OpenAlex: HTTP 429 insufficient budget; WebSearch: session budget exhausted
+
+PASS: every row is sourced, tiered, and unique.

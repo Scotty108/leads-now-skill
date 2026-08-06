@@ -367,7 +367,55 @@ def port_department_phones_absent(skill, cfg):
     return check(skill, "PORT: department lines usually absent (measured)", has)
 
 
-PORT_TESTS = [port_openalex_is_metered,
+
+
+def port_rung3_yields_department_phones(skill, cfg):
+    """Both. AMENDS my own round-1B correction. I wrote that department lines
+    "mostly do not exist" after fetching 8 org pages and getting zero. Round 2
+    proved that true for PAGE FETCHING and false for STRUCTURED PAYLOADS: the
+    same orgs carry the anesthesia group's own line inside their directory
+    records. Clamped runs pulled 16 and 12. Fetching the page is the wrong
+    read; parsing the payload is the right one."""
+    t = _all_md(cfg)
+    # Must state the amendment, not merely mention departments and rung 3.
+    has = ("department" in t) and \
+          ("page fetch" in t or "fetching the page" in t) and \
+          ("payload" in t or "structured record" in t)
+    return check(skill, "PORT: department phones live in rung-3 payloads", has)
+
+
+def port_search_index_pagination_trap(skill, cfg):
+    """Both. A second silent-truncation class, same shape as NPI skip=1000.
+    McLeod's Algolia index reports nbHits=805 but nbPages=1 at hitsPerPage=100
+    (paginationLimitedTo), so a blind browse returns 100 of 805 and looks
+    complete. Any hosted search index has this; check the count against what
+    you actually received."""
+    t = _all_md(cfg)
+    # Requires the specific mechanism, not the words "search index" + "cap".
+    has = ("nbhits" in t or "paginationlimitedto" in t) and \
+          ("silently" in t or "looks complete" in t)
+    return check(skill, "PORT: hosted search index pagination cap", has)
+
+
+def port_employment_status_gate(skill, cfg):
+    """Both. NEW MECHANISM, and the sharpest refusal yet. Three agreeing
+    @hcahealthcare.com addresses would have made first.last pattern_confirmed
+    for five more people — but the directory's own record set
+    hcaEmployee=false: they are contractors. An org's email pattern applies to
+    its EMPLOYEES, not to everyone who works in its building. Five plausible
+    addresses were withheld on that basis."""
+    t = _all_md(cfg)
+    has = ("contractor" in t or "locum" in t or "employment status" in t
+           or "hcaemployee" in t) and \
+          ("pattern" in t) and ("withheld" in t or "do not apply" in t
+                                or "does not apply" in t)
+    return check(skill, "PORT: employment status gates pattern inference", has)
+
+
+PORT_TESTS = [port_rung3_yields_department_phones,
+              port_search_index_pagination_trap,
+              port_employment_status_gate,
+              port_openalex_is_metered,
               port_efetch_beats_europepmc,
               port_full_forename_disambiguation,
               port_department_phones_absent,

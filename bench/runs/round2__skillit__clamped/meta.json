@@ -1,0 +1,44 @@
+{
+  "skill": "skillit",
+  "condition": "clamped",
+  "subagents": 0,
+  "tool_calls": 53,
+  "wall_clock_s": 746,
+  "people_found": 77,
+  "in_radius": 77,
+  "reachable": 77,
+  "peds_signal_strong": 1,
+  "peds_signal_moderate": 0,
+  "blocked_sources": [
+    {
+      "host": "www.tidelandshealth.org",
+      "reason": "HTTP 403 on / and /find-a-doctor/ - bot fingerprinting; rung 4 unavailable under clamp"
+    },
+    {
+      "host": "api.openalex.org",
+      "reason": "HTTP 429 'Insufficient budget. This request costs $0.001 but you only have $0 remaining', retryAfter 4691s - one attempt then abandoned"
+    },
+    {
+      "host": "www.conwaymedicalcenter.com",
+      "reason": "not blocked - 305 provider profiles read via providers-sitemap.xml, but publishes only the 843-347-7111 main switchboard and no subspecialty"
+    },
+    {
+      "host": "WebSearch",
+      "reason": "session budget exhausted 200/200 per run condition - never attempted"
+    }
+  ],
+  "truncation_detected": true,
+  "notes": "truncation_detected=true refers to two ceilings that were caught and worked around, not to a truncated deliverable. (1) A single combined PubMed affiliation query returned exactly count=1000, so it was split into 22 per-term queries whose counts all equalled their retrieved id counts; union = 1057 unique PMIDs, no ceiling. (2) McLeod's Algolia index reports nbHits=805 but nbPages=1 at hitsPerPage=100 (paginationLimitedTo), so a blind browse would have silently returned 100/805; specialty-scoped queries were used instead and the live_specialties index was read to enumerate the specialty vocabulary. All three round-1 corrections were reproduced clamped: efetch db=pmc served 4/4 PMCIDs and returned both known-good addresses; full-forename disambiguation discarded 48 affiliation-locked-but-wrong-person matches including the documented Dveet-vs-Deeran Patel case; OpenAlex 429'd on its single attempt. The correction that moved the most was #4 - both rung-3 patterns were reproduced without a browser (Grand Strand physicianData in __NEXT_DATA__ via sitemap-discovered profile URLs; McLeod's Algolia app id + public search-only key shipped in page HTML as var crbAlgoliaCredentials). Round 1B's department-phone falsification holds for Conway/Tidelands/Grand Strand facility pages but is wrong for provider-directory records: McLeod and Grand Strand both publish the anesthesia group's own line inside their directory payloads, which is where 12 department numbers came from. Email ceiling confirmed at exactly 3 - the same 3 people round 1 open reached with 11 sources; 69 of 72 still have no affiliation-locked publication.",
+  "channel_yield": {
+    "efetch_emails": 2,
+    "department_phones": 12,
+    "peds_from_directories": 1,
+    "linkedin_search_urls": 77
+  },
+  "marginal_vs_round1": {
+    "people": 5,
+    "emails": 3,
+    "peds": 1,
+    "department_phones": 12
+  }
+}

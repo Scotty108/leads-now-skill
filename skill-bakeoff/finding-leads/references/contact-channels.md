@@ -253,3 +253,63 @@ not of the tooling.
 
 For a community clinical roster, plan on **phone as the deliverable channel**
 and treat email as a bonus on the small academic minority.
+
+
+## Round 2 corrections — including one to the section above
+
+### Department phones: I had this backwards
+
+The correction above says department lines "mostly do not exist", measured at
+0 across 8 organization sites. That is true for **page fetching** and false for
+**structured payloads**. Two clamped runs pulled **16 and 12 department lines**
+from the same organizations — the anesthesia group's own number sits inside the
+directory record, not on the rendered page.
+
+So: fetching the page is the wrong read. Parsing the payload is the right one.
+Conway Medical Center is the honest control — 304 provider pages parsed, still
+only a switchboard, because that org genuinely publishes nothing else.
+
+### Hosted search indexes cap pagination silently
+
+A second silent-truncation class, the same shape as the NPI `skip=1000` ceiling.
+
+McLeod's Algolia index reports `nbHits: 805` but `nbPages: 1` at
+`hitsPerPage=100`, because of `paginationLimitedTo`. A blind browse returns
+**100 of 805 and looks complete** — no error, no flag, and the response even
+tells you the true total in a field you did not read.
+
+**Always compare the reported total against what you actually received.** When
+they disagree, partition the query (by specialty, by location, by letter)
+instead of paging. Round 2 used specialty-scoped queries for exactly this
+reason.
+
+### An org's email pattern applies to its employees, not its building
+
+The sharpest refusal so far. Three agreeing `@hcahealthcare.com` addresses
+would have made `first.last` **pattern_confirmed** for five more anesthesiologists
+at Grand Strand. Their own directory record set `hcaEmployee: false` — they are
+Teamhealth contractors working in an HCA facility, not HCA staff.
+
+**Zero addresses were emitted for them — five plausible addresses withheld.** A confirmed pattern belongs to an
+employer's mail domain; someone who merely works in the building is on a
+different domain entirely, and the inferred address would bounce while looking
+perfectly reasonable.
+
+A confirmed pattern does not apply to a contractor. Check employment
+status before applying a pattern. Directory payloads often
+carry it (`hcaEmployee`, `employmentType`, "locum", "contractor", staffing-agency
+addresses). Where the status is unknown, the pattern is unconfirmed for that
+person — say so and withhold.
+
+### What round 2 proved about the browser
+
+Both clamped runs reproduced the two rung-3 wins **with `curl` alone**: Grand
+Strand's `physicianData` parsed from profile server HTML (299/299), and
+McLeod's Algolia credentials (`app JUNR3SUCF2`, public search-only key) read
+straight out of `/search-physician-finder/` server HTML.
+
+That includes the pediatric finding. **Michelle D. Lee, MD was reached without
+a browser.** The only residual browser-only source is Tidelands, which 403s.
+
+The lesson stands and strengthens: climb the ladder in order, because rung 3
+keeps beating rung 4.

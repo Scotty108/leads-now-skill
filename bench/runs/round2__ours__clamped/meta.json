@@ -1,0 +1,35 @@
+{
+  "skill": "ours",
+  "condition": "clamped",
+  "subagents": 0,
+  "tool_calls": 30,
+  "wall_clock_s": 730,
+  "people_found": 69,
+  "in_radius": 68,
+  "reachable": 68,
+  "peds_signal_strong": 1,
+  "peds_signal_moderate": 0,
+  "blocked_sources": [
+    {"host": "api.openalex.org", "reason": "metered — HTTP 429 'Insufficient budget. This request costs $0.001 but you only have $0 remaining', retryAfter 6268s (measured round 1B, 0/72 served). Per correction 3 it gets one try; round 1 spent it, so round 2 made zero OpenAlex calls."},
+    {"host": "ebi.ac.uk/europepmc (fullTextXML)", "reason": "deliberately not used — 404'd on 4/4 affiliation-locked PMIDs in round 1B. Replaced by NCBI efetch db=pmc, which served 4/4 this round."},
+    {"host": "tidelandshealth.org", "reason": "HTTP 403 on every path (round 1). Not re-probed; rung 4 unavailable under the clamp."},
+    {"host": "novanthealth.org", "reason": "JS shell, 0 names. No embedded provider JSON in server HTML and no public search index credential found — the two rung-3 techniques that worked on Grand Strand and McLeod do not apply here."},
+    {"host": "crhealthcare.org / dosher.org / seasidesurgerycenter.com", "reason": "no readable provider directory, or 403 (round 1)."},
+    {"host": "conwaymedicalcenter.com", "reason": "NOT blocked — 304/304 provider pages fetched and parsed. Genuine zero: 0 new anesthesiologists, 0 pediatric, 0 published emails, only the 843-347-7111 switchboard."},
+    {"host": "WebSearch (tool, not a host)", "reason": "budget exhausted 200/200; zero calls made. Every URL this round came from a registry endpoint, a sitemap, or an endpoint read out of server HTML."}
+  ],
+  "truncation_detected": false,
+  "notes": "Roster reused from round1__ours__clamped/in_radius.json; NPI registry NOT re-fetched. ~1035 HTTP requests via curl (705-PMID PubMed sweep, 299 Grand Strand profiles, 304 Conway Medical Center provider pages, 16 Algolia queries). BOTH round-1B rung-3 wins reproduced WITHOUT a browser: (1) Grand Strand's embedded physicianData JSON parsed out of profile server HTML, 299/299 clean; (2) McLeod's public Algolia index, credentials (app JUNR3SUCF2, search-only key, index live_physicians) read straight out of the server HTML of /search-physician-finder/. THE PEDS ZERO WAS AN ARTIFACT: Michelle D. Lee MD (roster member, McLeod Anesthesia - Loris) is board certified in Pediatric Anesthesiology and did residency at Children's Hospital Colorado — published on McLeod's own directory, absent from her NPI taxonomy. She is the ONLY peds anesthesiologist in McLeod's 805-physician index; Grand Strand's 299-profile sweep found zero, so 1 is the true clamped count, not 0. EMAIL: one first_party_published address (Jon.Halling@hcahealthcare.com) from efetch db=pmc PMC11249181, affiliation-locked to Grand Strand Medical Center Myrtle Beach and full-forename matched. The full-forename rule rejected 147 of 151 surname+geo author records, including 'Loris Thomas' (place name matched as a forename) and a McLeod cross-channel collision ('E J Collins' -> 'C. Michael Collins, Pediatrics') that would have produced a FALSE peds hit. WITHHELD INFERENCE: 3 agreeing hcahealthcare.com addresses would have made first.last pattern_confirmed for 5 more Grand Strand anesthesiologists, but physicianData reports hcaEmployee=false on all 5 (Teamhealth / Man In The Box contractors), so zero were emitted. DEPARTMENT PHONES: round 1B's 'department lines mostly do not exist' holds for page-fetching (Conway = 0 across 304 pages) but is false at rung 3 — the structured records carry the anesthesia group's own line, giving 16. people_found=69 vs 68 rows because round-1 merge collapsed two NPIs for Joseph Maggioncalda. in_radius=68 excludes Songoli C Umeh (on Grand Strand's Myrtle Beach staff but registered at a Fort Lauderdale locums agency). leadkit audit result.csv: PASS on 68 rows.",
+  "channel_yield": {
+    "efetch_emails": 1,
+    "department_phones": 16,
+    "peds_from_directories": 1,
+    "linkedin_search_urls": 68
+  },
+  "marginal_vs_round1": {
+    "people": 9,
+    "emails": 1,
+    "peds": 1,
+    "department_phones": 16
+  }
+}

@@ -1,0 +1,2817 @@
+{
+ "org": "Grand Strand Medical Center",
+ "org_domain": "mygrandstrandhealth.com",
+ "profiles_fetched": 299,
+ "profiles_total_in_sitemap": 299,
+ "peds_hits": [
+  {
+   "name": "Thomas W Petrusick, MD",
+   "npi": "1942266788",
+   "specialties": [
+    "Pediatrics"
+   ],
+   "credentials": [
+    "Graduate Degree: Medical University of South Carolina",
+    "Internship: Medical University of South Carolina Medical Center"
+   ],
+   "locations": [
+    {
+     "name": "Grand Strand Pediatrics & Adolescent Medicine",
+     "phone": "(843) 449-1438",
+     "city": "Myrtle Beach"
+    }
+   ],
+   "grade": "STRONG",
+   "grade_reason": "pediatric term appears in a structured credential/specialty field: Pediatrics",
+   "matches": [
+    {
+     "field": "specialty",
+     "match_term": "Pediatric",
+     "text": "Pediatrics"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Pediatric",
+     "text": "Grand Strand Pediatrics & Adolescent Medicine"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Adolescen",
+     "text": "Grand Strand Pediatrics & Adolescent Medicine"
+    }
+   ],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Thomas-W-Petrusick-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Thomas-W-Petrusick-MD"
+  },
+  {
+   "name": "Hany Y Fam, MD",
+   "npi": "1902861081",
+   "specialties": [
+    "Pediatrics"
+   ],
+   "credentials": [
+    "Residency: Medical College of OH-Toledo",
+    "Graduate Degree: Faculty - Medicine"
+   ],
+   "locations": [
+    {
+     "name": "Grand Strand Pediatrics & Adolescent Medicine",
+     "phone": "(843) 449-1438",
+     "city": "Myrtle Beach"
+    }
+   ],
+   "grade": "STRONG",
+   "grade_reason": "pediatric term appears in a structured credential/specialty field: Pediatrics",
+   "matches": [
+    {
+     "field": "specialty",
+     "match_term": "Pediatric",
+     "text": "Pediatrics"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Pediatric",
+     "text": "Grand Strand Pediatrics & Adolescent Medicine"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Adolescen",
+     "text": "Grand Strand Pediatrics & Adolescent Medicine"
+    }
+   ],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Hany-Y-Fam-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Hany-Y-Fam-MD"
+  },
+  {
+   "name": "Marvin Maurer, MD",
+   "npi": "1881659837",
+   "specialties": [
+    "Neonatology"
+   ],
+   "credentials": [
+    "Internship: St. Louis Children's Hospital",
+    "Residency: St. Louis Children's Hospital",
+    "Graduate Degree: Washington University",
+    "Fellowship: Washington University - School of Medicine\u00a0"
+   ],
+   "locations": [
+    {
+     "name": "Sheridan Children's Healthcare Services of South Carolina",
+     "phone": "(843) 692-1750",
+     "city": "Myrtle Beach"
+    }
+   ],
+   "grade": "STRONG",
+   "grade_reason": "pediatric term appears in a structured credential/specialty field: Neonatology; Internship: St. Louis Children's Hospital; Residency: St. Louis Children's Hospital",
+   "matches": [
+    {
+     "field": "specialty",
+     "match_term": "Neonat",
+     "text": "Neonatology"
+    },
+    {
+     "field": "credentialsAndAccreditations",
+     "match_term": "Children",
+     "text": "Internship  St. Louis Children's Hospital"
+    },
+    {
+     "field": "credentialsAndAccreditations",
+     "match_term": "Children",
+     "text": "Residency  St. Louis Children's Hospital"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Children",
+     "text": "Sheridan Children's Healthcare Services of South Carolina"
+    }
+   ],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Marvin-Maurer-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Marvin-Maurer-MD"
+  },
+  {
+   "name": "Anne G LaRochelle, MD",
+   "npi": "1760485320",
+   "specialties": [
+    "Endocrinology"
+   ],
+   "credentials": [
+    "Graduate Degree: Free University of Brussels [1984]",
+    "Internship: St. Louis University School of Medicine [1985]",
+    "Residency: St. Louis University School of Medicine [1988]",
+    "Fellowship: George Washington University [1990]"
+   ],
+   "locations": [
+    {
+     "name": "Carolina Health Specialists",
+     "phone": "(843) 497-5929",
+     "city": "Myrtle Beach"
+    }
+   ],
+   "grade": "MODERATE",
+   "grade_reason": "pediatric/children language in free-text bio or care philosophy only",
+   "matches": [
+    {
+     "field": "physicianBio",
+     "match_term": "Pediatric",
+     "text": "e University of Brussels in Brussels, Belgium. She then completed a combined residency in Pediatrics and Internal Medicine at St. Louis University Hospitals in St. Louis, Missouri followed by a fellowship in Endocrinolo"
+    }
+   ],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Anne-G-LaRochelle-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Anne-G-LaRochelle-MD"
+  },
+  {
+   "name": "Anthony Caeton, MD",
+   "npi": "1669457131",
+   "specialties": [
+    "Neonatology"
+   ],
+   "credentials": [
+    "Internship: Nationwide Children's Hospital - Ohio State University",
+    "Residency: Universidad Autonoma De Guadalajara",
+    "Fellowship: University of California - Davis Medical Center\u00a0\u00a0\u00a0\u00a0",
+    "Graduate Degree: University of Kentucky - College of Medicine"
+   ],
+   "locations": [
+    {
+     "name": "Sheridan Children's Healthcare Services of South Carolina",
+     "phone": "(843) 692-1750",
+     "city": "Myrtle Beach"
+    }
+   ],
+   "grade": "STRONG",
+   "grade_reason": "pediatric term appears in a structured credential/specialty field: Neonatology; Internship: Nationwide Children's Hospital - Ohio State University",
+   "matches": [
+    {
+     "field": "specialty",
+     "match_term": "Neonat",
+     "text": "Neonatology"
+    },
+    {
+     "field": "credentialsAndAccreditations",
+     "match_term": "Children",
+     "text": "Internship  Nationwide Children's Hospital - Ohio State University"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Children",
+     "text": "Sheridan Children's Healthcare Services of South Carolina"
+    }
+   ],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Anthony-Caeton-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Anthony-Caeton-MD"
+  },
+  {
+   "name": "Donald C Eagerton, MD",
+   "npi": "1609872498",
+   "specialties": [
+    "Endocrinology"
+   ],
+   "credentials": [
+    "Residency: Bowman-Gray School of Medicine - Winston Salem NC [1992]",
+    "Graduate Degree: Medical University of South Carolina (MUSC) - Charleston SC [1989]",
+    "Fellowship: Medical University of South Carolina (MUSC) - Charleston SC [1994]"
+   ],
+   "locations": [
+    {
+     "name": "Carolina Health Specialists",
+     "phone": "(843) 497-5929",
+     "city": "Myrtle Beach"
+    }
+   ],
+   "grade": "MODERATE",
+   "grade_reason": "pediatric/children language in free-text bio or care philosophy only",
+   "matches": [
+    {
+     "field": "physicianBio",
+     "match_term": "children",
+     "text": "Medicine and Endocrinology, Diabetes, and Metabolism. Dr. Eagerton, his wife, Jamie, and children, Thomas, Matthew and Rebecca reside in Myrtle Beach."
+    }
+   ],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Donald-C-Eagerton-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Donald-C-Eagerton-MD"
+  },
+  {
+   "name": "Asfawossen B Asfaw, MD",
+   "npi": "1528364213",
+   "specialties": [
+    "Pediatric Critical Care Medicine"
+   ],
+   "credentials": [
+    "Graduate Degree: Jimma University",
+    "Residency: New York Methodist Hospital",
+    "Fellowship: Medical College of Wisconsin"
+   ],
+   "locations": [
+    {
+     "name": "Sheridan Children's Healthcare",
+     "phone": "(954) 514-4670",
+     "city": "Plantation"
+    }
+   ],
+   "grade": "STRONG",
+   "grade_reason": "pediatric term appears in a structured credential/specialty field: Pediatric Critical Care Medicine",
+   "matches": [
+    {
+     "field": "specialty",
+     "match_term": "Pediatric",
+     "text": "Pediatric Critical Care Medicine"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Children",
+     "text": "Sheridan Children's Healthcare"
+    }
+   ],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Asfawossen-B-Asfaw-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Asfawossen-B-Asfaw-MD"
+  },
+  {
+   "name": "Erin Smith, MD",
+   "npi": "1346213485",
+   "specialties": [
+    "Pediatrics"
+   ],
+   "credentials": [],
+   "locations": [
+    {
+     "name": "Grand Strand Pediatrics & Adolescent Medicine",
+     "phone": "(843) 449-1438",
+     "city": "Myrtle Beach"
+    }
+   ],
+   "grade": "STRONG",
+   "grade_reason": "pediatric term appears in a structured credential/specialty field: Pediatrics",
+   "matches": [
+    {
+     "field": "specialty",
+     "match_term": "Pediatric",
+     "text": "Pediatrics"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Pediatric",
+     "text": "Grand Strand Pediatrics & Adolescent Medicine"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Adolescen",
+     "text": "Grand Strand Pediatrics & Adolescent Medicine"
+    }
+   ],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Erin-Smith-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Erin-Smith-MD"
+  },
+  {
+   "name": "Daniel L Shuler, MD",
+   "npi": "1346206018",
+   "specialties": [
+    "Pediatrics"
+   ],
+   "credentials": [
+    "Graduate Degree: Medical University of South Carolina",
+    "Residency: Palmetto Richland Memorial - USC"
+   ],
+   "locations": [
+    {
+     "name": "Grand Strand Pediatrics - Surfside Beach",
+     "phone": "(843) 650-7000",
+     "city": "Surfside Beach"
+    },
+    {
+     "name": "Grand Strand Pediatrics & Adolescent Medicine",
+     "phone": "(843) 449-1438",
+     "city": "Myrtle Beach"
+    }
+   ],
+   "grade": "STRONG",
+   "grade_reason": "pediatric term appears in a structured credential/specialty field: Pediatrics",
+   "matches": [
+    {
+     "field": "specialty",
+     "match_term": "Pediatric",
+     "text": "Pediatrics"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Pediatric",
+     "text": "Grand Strand Pediatrics - Surfside Beach"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Pediatric",
+     "text": "Grand Strand Pediatrics & Adolescent Medicine"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Adolescen",
+     "text": "Grand Strand Pediatrics & Adolescent Medicine"
+    }
+   ],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Daniel-L-Shuler-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Daniel-L-Shuler-MD"
+  },
+  {
+   "name": "William E Prenatt, MD",
+   "npi": "1316906191",
+   "specialties": [
+    "Family Medicine"
+   ],
+   "credentials": [],
+   "locations": [
+    {
+     "name": "Carolina Health Specialists",
+     "phone": "(843) 497-5929",
+     "city": "Myrtle Beach"
+    }
+   ],
+   "grade": "MODERATE",
+   "grade_reason": "pediatric term only in location/affiliation/practice name \u2014 adjacency, not training evidence",
+   "matches": [
+    {
+     "field": "website",
+     "match_term": "children",
+     "text": "http://jacksonvillechildrensclinic.org/"
+    }
+   ],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-William-E-Prenatt-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-William-E-Prenatt-MD"
+  },
+  {
+   "name": "Horatiu Muresan, MD",
+   "npi": "1245557172",
+   "specialties": [
+    "Plastic Surgery"
+   ],
+   "credentials": [],
+   "locations": [
+    {
+     "name": "Grand Strand Cosmetic and Reconstructive Care",
+     "phone": "(843) 903-6459",
+     "city": "Myrtle Beach"
+    },
+    {
+     "name": "Grand Strand Surgical Care - Carolina Forest",
+     "phone": "(843) 903-6459",
+     "city": "Myrtle Beach"
+    }
+   ],
+   "grade": "MODERATE",
+   "grade_reason": "pediatric/children language in free-text bio or care philosophy only",
+   "matches": [
+    {
+     "field": "physicianBio",
+     "match_term": "pediatric",
+     "text": ". Muresan brings to the Myrtle Beach area a strong interest in serving both the adult and pediatric community, while maintaining the highest standards of patient safety and care. His goal to help you to enhance your bea"
+    }
+   ],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Horatiu-Muresan-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Horatiu-Muresan-MD"
+  },
+  {
+   "name": "Frank N Colvard, MD",
+   "npi": "1215157417",
+   "specialties": [
+    "Pediatrics"
+   ],
+   "credentials": [
+    "Residency: Medical College of GA",
+    "Graduate Degree: Medical College of GA"
+   ],
+   "locations": [
+    {
+     "name": "Grand Strand Pediatrics & Adolescent Medicine",
+     "phone": "(843) 249-7400",
+     "city": "Little River"
+    },
+    {
+     "name": "Grand Strand Pediatrics - Surfside Beach",
+     "phone": "(843) 650-7000",
+     "city": "Surfside Beach"
+    }
+   ],
+   "grade": "STRONG",
+   "grade_reason": "pediatric term appears in a structured credential/specialty field: Pediatrics",
+   "matches": [
+    {
+     "field": "specialty",
+     "match_term": "Pediatric",
+     "text": "Pediatrics"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Pediatric",
+     "text": "Grand Strand Pediatrics & Adolescent Medicine"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Adolescen",
+     "text": "Grand Strand Pediatrics & Adolescent Medicine"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Pediatric",
+     "text": "Grand Strand Pediatrics - Surfside Beach"
+    }
+   ],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Frank-N-Colvard-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Frank-N-Colvard-MD"
+  },
+  {
+   "name": "Virginia C Williams, MD",
+   "npi": "1184936189",
+   "specialties": [
+    "Pediatrics"
+   ],
+   "credentials": [
+    "Graduate Degree: University of South Carolina - Columbia SC [2010]",
+    "Residency: University of South Carolina - Columbia SC [2013]"
+   ],
+   "locations": [
+    {
+     "name": "Grand Strand Pediatrics & Adolescent Medicine",
+     "phone": "(843) 449-1438",
+     "city": "Myrtle Beach"
+    },
+    {
+     "name": "Grand Strand Pediatrics & Adolescent Medicine",
+     "phone": "(843) 249-7400",
+     "city": "Little River"
+    },
+    {
+     "name": "Grand Strand Pediatrics - Surfside Beach",
+     "phone": "(843) 650-7000",
+     "city": "Surfside Beach"
+    }
+   ],
+   "grade": "STRONG",
+   "grade_reason": "pediatric term appears in a structured credential/specialty field: Pediatrics",
+   "matches": [
+    {
+     "field": "specialty",
+     "match_term": "Pediatric",
+     "text": "Pediatrics"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Pediatric",
+     "text": "Grand Strand Pediatrics & Adolescent Medicine"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Adolescen",
+     "text": "Grand Strand Pediatrics & Adolescent Medicine"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Pediatric",
+     "text": "Grand Strand Pediatrics & Adolescent Medicine"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Adolescen",
+     "text": "Grand Strand Pediatrics & Adolescent Medicine"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Pediatric",
+     "text": "Grand Strand Pediatrics - Surfside Beach"
+    }
+   ],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Virginia-C-Williams-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Virginia-C-Williams-MD"
+  },
+  {
+   "name": "Kristin E Moore, MD",
+   "npi": "1154387801",
+   "specialties": [
+    "Pediatrics"
+   ],
+   "credentials": [
+    "Residency: Medical University of South Carolina",
+    "Graduate Degree: University of Alabama School of Medicine",
+    "Internship: Medical University of South Carolina"
+   ],
+   "locations": [
+    {
+     "name": "Grand Strand Pediatrics - Surfside Beach",
+     "phone": "(843) 650-7000",
+     "city": "Surfside Beach"
+    },
+    {
+     "name": "Grand Strand Pediatrics & Adolescent Medicine",
+     "phone": "(843) 449-1438",
+     "city": "Myrtle Beach"
+    }
+   ],
+   "grade": "STRONG",
+   "grade_reason": "pediatric term appears in a structured credential/specialty field: Pediatrics",
+   "matches": [
+    {
+     "field": "specialty",
+     "match_term": "Pediatric",
+     "text": "Pediatrics"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Pediatric",
+     "text": "Grand Strand Pediatrics - Surfside Beach"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Pediatric",
+     "text": "Grand Strand Pediatrics & Adolescent Medicine"
+    },
+    {
+     "field": "location.name",
+     "match_term": "Adolescen",
+     "text": "Grand Strand Pediatrics & Adolescent Medicine"
+    }
+   ],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Kristin-E-Moore-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Kristin-E-Moore-MD"
+  }
+ ],
+ "roster_matches": [
+  {
+   "roster_name": "Asfawossen B Asfaw, MD",
+   "roster_npi": "1528364213",
+   "roster_org": "Sheridan Children's Healthcare",
+   "roster_title": "Pediatric Critical Care Medicine",
+   "roster_peds_signal_prior": "STRONG",
+   "match_method": "npi_exact",
+   "gsh_name": "Asfawossen B Asfaw, MD",
+   "gsh_npi": "1528364213",
+   "fellowship": [
+    "Fellowship | Medical College of Wisconsin | "
+   ],
+   "residency": [
+    "Residency | New York Methodist Hospital | "
+   ],
+   "internship": [],
+   "medical_school": [],
+   "board_cert_credential_entries": [],
+   "board_certified_specialties_flag": [],
+   "credentialsAndAccreditations_raw": [
+    {
+     "credentialOrAccreditationId": null,
+     "type": "Graduate Degree",
+     "credential": null,
+     "organizationOrSchool": "Jimma University",
+     "yearReceived": ""
+    },
+    {
+     "credentialOrAccreditationId": null,
+     "type": "Residency",
+     "credential": null,
+     "organizationOrSchool": "New York Methodist Hospital",
+     "yearReceived": ""
+    },
+    {
+     "credentialOrAccreditationId": null,
+     "type": "Fellowship",
+     "credential": null,
+     "organizationOrSchool": "Medical College of Wisconsin",
+     "yearReceived": ""
+    }
+   ],
+   "all_specialties": [
+    {
+     "specialty": "Pediatric Critical Care Medicine",
+     "primary": true,
+     "boardCertified": false
+    }
+   ],
+   "department_or_practice": [
+    "Sheridan Children's Healthcare"
+   ],
+   "location_name": "Sheridan Children's Healthcare",
+   "phone": "(954) 514-4670",
+   "all_phones": [
+    "(954) 514-4670"
+   ],
+   "affiliations": [
+    "Trident Medical Center",
+    "Summerville Medical Center"
+   ],
+   "languages": [
+    "English"
+   ],
+   "year_started_practice": null,
+   "physicianBio": "",
+   "peds_grade": "STRONG",
+   "peds_grade_reason": "structured field: Pediatric Critical Care Medicine",
+   "peds_terms_found": [
+    "children",
+    "pediatric"
+   ],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Asfawossen-B-Asfaw-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Asfawossen-B-Asfaw-MD"
+  },
+  {
+   "roster_name": "Brandon Sloop, MD",
+   "roster_npi": "1962529578",
+   "roster_org": "Teamhealth Anesthesia",
+   "roster_title": "Anesthesiology",
+   "roster_peds_signal_prior": "NONE_FOUND",
+   "match_method": "npi_exact",
+   "gsh_name": "Brandon Sloop, MD",
+   "gsh_npi": "1962529578",
+   "fellowship": [],
+   "residency": [],
+   "internship": [],
+   "medical_school": [],
+   "board_cert_credential_entries": [],
+   "board_certified_specialties_flag": [],
+   "credentialsAndAccreditations_raw": [],
+   "all_specialties": [
+    {
+     "specialty": "Anesthesiology",
+     "primary": true,
+     "boardCertified": false
+    }
+   ],
+   "department_or_practice": [
+    "Teamhealth Anesthesia"
+   ],
+   "location_name": "Teamhealth Anesthesia",
+   "phone": "(843) 692-1062",
+   "all_phones": [
+    "(843) 692-1062"
+   ],
+   "affiliations": [
+    "Grand Strand Medical Center"
+   ],
+   "languages": [
+    "English"
+   ],
+   "year_started_practice": null,
+   "physicianBio": "",
+   "peds_grade": "NONE_FOUND",
+   "peds_grade_reason": "searched specialties, credentials, bio, care philosophy, locations on this profile; no pediatric term present",
+   "peds_terms_found": [],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Brandon-Sloop-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Brandon-Sloop-MD"
+  },
+  {
+   "roster_name": "Derek Horstemeyer",
+   "roster_npi": "1225018849",
+   "roster_org": "Grand Strand Medical Center (HCA)",
+   "roster_title": "Anesthesiology",
+   "roster_peds_signal_prior": "NONE_FOUND",
+   "match_method": "npi_exact",
+   "gsh_name": "Derek L Horstemeyer, MD",
+   "gsh_npi": "1225018849",
+   "fellowship": [],
+   "residency": [
+    "Residency | Emory University | "
+   ],
+   "internship": [
+    "Internship | Georgia Baptist Medical Center | "
+   ],
+   "medical_school": [],
+   "board_cert_credential_entries": [],
+   "board_certified_specialties_flag": [
+    "Anesthesiology"
+   ],
+   "credentialsAndAccreditations_raw": [
+    {
+     "credentialOrAccreditationId": null,
+     "type": "Residency",
+     "credential": null,
+     "organizationOrSchool": "Emory University",
+     "yearReceived": ""
+    },
+    {
+     "credentialOrAccreditationId": null,
+     "type": "Internship",
+     "credential": null,
+     "organizationOrSchool": "Georgia Baptist Medical Center",
+     "yearReceived": ""
+    },
+    {
+     "credentialOrAccreditationId": null,
+     "type": "Graduate Degree",
+     "credential": null,
+     "organizationOrSchool": "Vanderbilt University",
+     "yearReceived": ""
+    }
+   ],
+   "all_specialties": [
+    {
+     "specialty": "Anesthesiology",
+     "primary": true,
+     "boardCertified": true
+    }
+   ],
+   "department_or_practice": [
+    "Man In The Box Anesthesia"
+   ],
+   "location_name": "Man In The Box Anesthesia",
+   "phone": "(843) 692-1061",
+   "all_phones": [
+    "(843) 692-1061"
+   ],
+   "affiliations": [
+    "Grand Strand Medical Center"
+   ],
+   "languages": [
+    "English"
+   ],
+   "year_started_practice": null,
+   "physicianBio": "",
+   "peds_grade": "NONE_FOUND",
+   "peds_grade_reason": "searched specialties, credentials, bio, care philosophy, locations on this profile; no pediatric term present",
+   "peds_terms_found": [],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Derek-L-Horstemeyer-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Derek-L-Horstemeyer-MD"
+  },
+  {
+   "roster_name": "Derek L Horstemeyer, MD",
+   "roster_npi": "1225018849",
+   "roster_org": "Man In The Box Anesthesia",
+   "roster_title": "Anesthesiology",
+   "roster_peds_signal_prior": "NONE_FOUND",
+   "match_method": "npi_exact",
+   "gsh_name": "Derek L Horstemeyer, MD",
+   "gsh_npi": "1225018849",
+   "fellowship": [],
+   "residency": [
+    "Residency | Emory University | "
+   ],
+   "internship": [
+    "Internship | Georgia Baptist Medical Center | "
+   ],
+   "medical_school": [],
+   "board_cert_credential_entries": [],
+   "board_certified_specialties_flag": [
+    "Anesthesiology"
+   ],
+   "credentialsAndAccreditations_raw": [
+    {
+     "credentialOrAccreditationId": null,
+     "type": "Residency",
+     "credential": null,
+     "organizationOrSchool": "Emory University",
+     "yearReceived": ""
+    },
+    {
+     "credentialOrAccreditationId": null,
+     "type": "Internship",
+     "credential": null,
+     "organizationOrSchool": "Georgia Baptist Medical Center",
+     "yearReceived": ""
+    },
+    {
+     "credentialOrAccreditationId": null,
+     "type": "Graduate Degree",
+     "credential": null,
+     "organizationOrSchool": "Vanderbilt University",
+     "yearReceived": ""
+    }
+   ],
+   "all_specialties": [
+    {
+     "specialty": "Anesthesiology",
+     "primary": true,
+     "boardCertified": true
+    }
+   ],
+   "department_or_practice": [
+    "Man In The Box Anesthesia"
+   ],
+   "location_name": "Man In The Box Anesthesia",
+   "phone": "(843) 692-1061",
+   "all_phones": [
+    "(843) 692-1061"
+   ],
+   "affiliations": [
+    "Grand Strand Medical Center"
+   ],
+   "languages": [
+    "English"
+   ],
+   "year_started_practice": null,
+   "physicianBio": "",
+   "peds_grade": "NONE_FOUND",
+   "peds_grade_reason": "searched specialties, credentials, bio, care philosophy, locations on this profile; no pediatric term present",
+   "peds_terms_found": [],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Derek-L-Horstemeyer-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Derek-L-Horstemeyer-MD"
+  },
+  {
+   "roster_name": "Desiree Aird, MD",
+   "roster_npi": "1528471406",
+   "roster_org": "Teamhealth Anesthesia",
+   "roster_title": "Anesthesiology",
+   "roster_peds_signal_prior": "NONE_FOUND",
+   "match_method": "npi_exact",
+   "gsh_name": "Desiree Aird, MD",
+   "gsh_npi": "1528471406",
+   "fellowship": [],
+   "residency": [],
+   "internship": [],
+   "medical_school": [],
+   "board_cert_credential_entries": [],
+   "board_certified_specialties_flag": [],
+   "credentialsAndAccreditations_raw": [],
+   "all_specialties": [
+    {
+     "specialty": "Anesthesiology",
+     "primary": true,
+     "boardCertified": false
+    }
+   ],
+   "department_or_practice": [
+    "Teamhealth Anesthesia"
+   ],
+   "location_name": "Teamhealth Anesthesia",
+   "phone": "(843) 692-1062",
+   "all_phones": [
+    "(843) 692-1062"
+   ],
+   "affiliations": [
+    "Grand Strand Medical Center"
+   ],
+   "languages": [
+    "English"
+   ],
+   "year_started_practice": null,
+   "physicianBio": "",
+   "peds_grade": "NONE_FOUND",
+   "peds_grade_reason": "searched specialties, credentials, bio, care philosophy, locations on this profile; no pediatric term present",
+   "peds_terms_found": [],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Desiree-Aird-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Desiree-Aird-MD"
+  },
+  {
+   "roster_name": "Dwayne Livigni",
+   "roster_npi": "1982655262",
+   "roster_org": "Grand Strand Medical Center (HCA)",
+   "roster_title": "Anesthesiology",
+   "roster_peds_signal_prior": "NONE_FOUND",
+   "match_method": "npi_exact",
+   "gsh_name": "Dwayne LiVigni, DO",
+   "gsh_npi": "1982655262",
+   "fellowship": [],
+   "residency": [],
+   "internship": [],
+   "medical_school": [],
+   "board_cert_credential_entries": [],
+   "board_certified_specialties_flag": [],
+   "credentialsAndAccreditations_raw": [],
+   "all_specialties": [
+    {
+     "specialty": "Anesthesiology",
+     "primary": true,
+     "boardCertified": false
+    }
+   ],
+   "department_or_practice": [
+    "Teamhealth Anesthesia"
+   ],
+   "location_name": "Teamhealth Anesthesia",
+   "phone": "(843) 692-1062",
+   "all_phones": [
+    "(843) 692-1062"
+   ],
+   "affiliations": [
+    "Grand Strand Medical Center"
+   ],
+   "languages": [
+    "English"
+   ],
+   "year_started_practice": null,
+   "physicianBio": "",
+   "peds_grade": "NONE_FOUND",
+   "peds_grade_reason": "searched specialties, credentials, bio, care philosophy, locations on this profile; no pediatric term present",
+   "peds_terms_found": [],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Dwayne-LiVigni-DO",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Dwayne-LiVigni-DO"
+  },
+  {
+   "roster_name": "Songoli C Umeh, MD",
+   "roster_npi": "1356635163",
+   "roster_org": "Weatherby Locums Inc",
+   "roster_title": "Anesthesiology",
+   "roster_peds_signal_prior": "NONE_FOUND",
+   "match_method": "npi_exact",
+   "gsh_name": "Songoli C Umeh, MD",
+   "gsh_npi": "1356635163",
+   "fellowship": [],
+   "residency": [],
+   "internship": [],
+   "medical_school": [],
+   "board_cert_credential_entries": [],
+   "board_certified_specialties_flag": [
+    "Anesthesiology"
+   ],
+   "credentialsAndAccreditations_raw": [],
+   "all_specialties": [
+    {
+     "specialty": "Anesthesiology",
+     "primary": true,
+     "boardCertified": true
+    }
+   ],
+   "department_or_practice": [
+    "Weatherby Locums Inc"
+   ],
+   "location_name": "Weatherby Locums Inc",
+   "phone": "(800) 586-5022",
+   "all_phones": [
+    "(800) 586-5022"
+   ],
+   "affiliations": [],
+   "languages": [
+    "English"
+   ],
+   "year_started_practice": null,
+   "physicianBio": "",
+   "peds_grade": "NONE_FOUND",
+   "peds_grade_reason": "searched specialties, credentials, bio, care philosophy, locations on this profile; no pediatric term present",
+   "peds_terms_found": [],
+   "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Songoli-C-Umeh-MD",
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Songoli-C-Umeh-MD"
+  }
+ ],
+ "roster_unmatched": [
+  "Michelle D. Lee, MD",
+  "Ahmed Elhaimer, MD",
+  "Albert Jackson, MD",
+  "Alexander Varzari",
+  "Alexandra Armstrong, MD",
+  "Alisha F. Palliser, MD",
+  "Anthony Silipo, DO",
+  "Benjamin Cameransi",
+  "Brian Yee",
+  "Bryan Lee",
+  "Candace Mcalpine",
+  "Casmir Kielar",
+  "Chad Skidmore",
+  "Christopher Brann",
+  "Christopher Samuel, MD",
+  "David O. Atkinson, MD",
+  "Derek Shirey, DO",
+  "Donna Turner",
+  "E J Collins",
+  "Edward Wallace",
+  "Farayi Mbuvah",
+  "Frank Humbles",
+  "Frederick Bellamy",
+  "Frederick W. Bellamy, MD",
+  "Ian Peace",
+  "Ihor Melnytskyy",
+  "James Brannon",
+  "Jawanza Jabari",
+  "John Schultz",
+  "Jon Bennett",
+  "Jon Halling",
+  "Jonathan Ward",
+  "Josef Mueksch",
+  "Joseph Maggioncalda",
+  "Joseph Metz",
+  "Joshua Gore",
+  "Joshua R. Gore, MD",
+  "Keeland Williams",
+  "Kenneth Wenz",
+  "Kent Homnick",
+  "Kevin Armstrong",
+  "Lawrence Montalto",
+  "Ligia E. Cisneros-Gonzalez, MD",
+  "Lloyd Meeks",
+  "Matthew Holt, MD",
+  "Michael Alvarado",
+  "Michael D. Wingfield, DO",
+  "Michael Ford",
+  "Michael Jones Jr., MD",
+  "Michelle Lee",
+  "Miller Van Vliet",
+  "Nicholas Buskill",
+  "Nicholas Gentry",
+  "Olga Chrisman",
+  "Olga Chrisman, DO",
+  "Otto Czechner",
+  "Patricia Grant",
+  "Peter Fischer",
+  "Ramiro Godines",
+  "Raymond Collins",
+  "Richard Kline",
+  "Robert O\u2019Connor, MD",
+  "Robin Dimitrious",
+  "Ruzanna Nalbandyan, MD",
+  "Ryan Smith",
+  "Scott Thomas",
+  "Stephen Boatwright",
+  "Stephen Goerz",
+  "Steven Petersen",
+  "Susan Barbieri",
+  "Susan Haskin",
+  "William Comeau, MD",
+  "William Miller Jr., MD",
+  "William Myers",
+  "William Obrecht",
+  "William Wall",
+  "Zechariah Harris"
+ ],
+ "emails_found": [],
+ "phones": [
+  {
+   "phone": "(843) 236-1950",
+   "belongs_to": [
+    "Grand Strand Infectious Disease",
+    "Grand Strand Primary Care Internal Medicine - Myrtle Beach",
+    "Grand Strand Primary Care \u2013 Internal Medicine Myrtle Beach"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 52,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Anna Cohen, DO",
+    "Antonio Benevento, MD",
+    "Arthika Sakthevel, MD",
+    "Bradley Martin, MD",
+    "Brady A Kluge, MD"
+   ]
+  },
+  {
+   "phone": "(843) 497-7772",
+   "belongs_to": [
+    "Grand Strand Heart and Vascular Care - Myrtle Beach"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 30,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Alyse Moyer, PA-C",
+    "Ashley Alley, APRN",
+    "Carson Keck, MD",
+    "Daniel Lambert, MD",
+    "David B Truluck, MD"
+   ]
+  },
+  {
+   "phone": "(843) 848-4640",
+   "belongs_to": [
+    "Grand Strand Primary Care - Family Medicine",
+    "Grand Strand Primary Care Family Medicine - Myrtle Beach",
+    "Grand Strand Primary Care Internal Medicine - Myrtle Beach"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 30,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Andrei Gantsa, MD",
+    "Andrew Baird, MD",
+    "Anthony Shadiack, DO",
+    "Bhavika Dookhi, MD",
+    "Brian Steiner, MD"
+   ]
+  },
+  {
+   "phone": "(843) 497-5929",
+   "belongs_to": [
+    "Carolina Health Specialists",
+    "Carolina Health Specialists - Carolina Forest"
+   ],
+   "cities": [
+    "Little River, SC",
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 22,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Adam Bostick, MD",
+    "Alan B Cohen, DO",
+    "Amy Duff, DO",
+    "Anne G LaRochelle, MD",
+    "April L Blue, MD"
+   ]
+  },
+  {
+   "phone": "(843) 692-1000",
+   "belongs_to": [
+    "Carolina Radiology Associates",
+    "Grand Strand Medical Center - Family Medicine GME Program",
+    "Grand Strand Medical Center - Internal Medicine GME Program",
+    "IRL Pathology Services, LLC",
+    "Physicians at Home, PC",
+    "Specialty Care Inc",
+    "TeamHealth"
+   ],
+   "cities": [
+    "Brentwood, TN",
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 20,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Adam P Juersivich, MD",
+    "Amy Duff, DO",
+    "Brandon Cramer, MD",
+    "Brian Watson, MD",
+    "Casey Wilson, MD"
+   ]
+  },
+  {
+   "phone": "(843) 236-3222",
+   "belongs_to": [
+    "Ortho SC",
+    "Ortho SC - North Myrtle Beach"
+   ],
+   "cities": [
+    "Myrtle Beach, SC",
+    "North Myrtle Beach, SC"
+   ],
+   "provider_count": 11,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Alexander J Pappas, MD",
+    "Christopher C Feathers, MD",
+    "David G Everman, MD",
+    "Gene M Massey, MD",
+    "James (Jay) O Merritt, MD"
+   ]
+  },
+  {
+   "phone": "(843) 497-6348",
+   "belongs_to": [
+    "Grand Strand Surgical Care - Carolina Forest",
+    "Grand Strand Surgical Care - Myrtle Beach"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 11,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Antonio P Pepe, MD",
+    "Cody Belk, PA-C",
+    "Eleah Porter, MD",
+    "Heather O'Field, MD",
+    "Mark R Borowicz, MD"
+   ]
+  },
+  {
+   "phone": "(843) 449-2336",
+   "belongs_to": [
+    "Grand Strand Neurology Care",
+    "Grand Strand Spine & Neuro Care",
+    "Grand Strand Spine and Neuro Care",
+    "Luke Van Ells MD"
+   ],
+   "cities": [
+    "Murrells Inlet, SC",
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 9,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Angelina Stella, NP",
+    "Eugene M Giddens, MD",
+    "Felicia A DeNittis, PA-C",
+    "Gabriel Phillips, MD",
+    "James Smith, Jr., MD"
+   ]
+  },
+  {
+   "phone": "(843) 692-0570",
+   "belongs_to": [
+    "Carolina Radiology Associates"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 8,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Brian Trotta, MD",
+    "Christopher R Durst, MD",
+    "Elizabeth A Kelley, MD",
+    "Gregory S Mencken, MD",
+    "James Freeman, MD"
+   ]
+  },
+  {
+   "phone": "(843) 692-1765",
+   "belongs_to": [
+    "EmCare",
+    "Team Health",
+    "TeamHealth"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 8,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Ibrahim Abu Dayah, MD",
+    "Jacob Hess, MD",
+    "Jessica Cvinar, MD",
+    "Jilian R Sansbury, MD",
+    "Lisa S Smaldone, MD"
+   ]
+  },
+  {
+   "phone": "(843) 692-1784",
+   "belongs_to": [
+    "TeamHealth"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 7,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Cesar I Kanamori, MD",
+    "Christopher Zakhary, MD",
+    "Jarratt D Lark, MD",
+    "Lynn D Barr, MD",
+    "Mark J Hanna, DO"
+   ]
+  },
+  {
+   "phone": "(865) 985-7239",
+   "belongs_to": [
+    "Team Health"
+   ],
+   "cities": [
+    "Knoxville, TN"
+   ],
+   "provider_count": 7,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Jarratt D Lark, MD",
+    "Lynn D Barr, MD",
+    "Mark J Hanna, DO",
+    "Mark Plexousakis, DO",
+    "Scott D Hayes, MD"
+   ]
+  },
+  {
+   "phone": "(843) 449-1438",
+   "belongs_to": [
+    "Grand Strand Pediatrics & Adolescent Medicine"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 6,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Daniel L Shuler, MD",
+    "Erin Smith, MD",
+    "Hany Y Fam, MD",
+    "Kristin E Moore, MD",
+    "Thomas W Petrusick, MD"
+   ]
+  },
+  {
+   "phone": "(843) 357-2299",
+   "belongs_to": [
+    "Grand Strand Heart and Vascular Care - Murrells Inlet",
+    "Grand Strand Primary Care Internal Medicine - Murrells Inlet"
+   ],
+   "cities": [
+    "Murrells Inlet, SC"
+   ],
+   "provider_count": 6,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Jennifer Bain, NP",
+    "Jessica Harley, PA-C",
+    "John L Sturdivant, MD",
+    "Michael Rosenblum, MD",
+    "Shannon Cribb, DNP,FNP-C"
+   ]
+  },
+  {
+   "phone": "(843) 449-1010",
+   "belongs_to": [
+    "Atlantic Urology Clinics - Carolina Forest",
+    "Atlantic Urology Clinics - Murrells Inlet",
+    "Atlantic Urology Clinics - Myrtle Beach"
+   ],
+   "cities": [
+    "Murrells Inlet, SC",
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 6,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Abhishek Srivastava, MD",
+    "Brian J Roberts, MD",
+    "David Rich, MD",
+    "Neal D Shore, MD",
+    "Richard W Young, MD"
+   ]
+  },
+  {
+   "phone": "(843) 692-5000",
+   "belongs_to": [
+    "Coastal Cancer Center"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 6,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Dejuania Brown, DO",
+    "Emily Z Touloukian, DO",
+    "Faria Ali, MD",
+    "Jordan Henderson, DO",
+    "Nikhil B Patel, MD"
+   ]
+  },
+  {
+   "phone": "(843) 449-3381",
+   "belongs_to": [
+    "Strand GI Associates"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 4,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Andrew N Pearson, MD",
+    "John M Edmison, MD",
+    "Kathleen M Raynor, MD",
+    "Timothy J Cornnell, MD"
+   ]
+  },
+  {
+   "phone": "(843) 236-4949",
+   "belongs_to": [
+    "Atlantic Urology Clinics",
+    "Atlantic Urology Clinics - Carolina Forest"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 4,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Abhishek Srivastava, MD",
+    "Brian J Roberts, MD",
+    "David Rich, MD",
+    "Robert M Jansen, MD"
+   ]
+  },
+  {
+   "phone": "(843) 848-1440",
+   "belongs_to": [
+    "Grand Strand Orthopedic Care"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 4,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Christopher G Boullion, MD",
+    "Efstratios Papadelis, DO",
+    "Haines Paik, MD",
+    "Joseph Bethle, PA-C"
+   ]
+  },
+  {
+   "phone": "(843) 234-1660",
+   "belongs_to": [
+    "Coastal Cancer Center"
+   ],
+   "cities": [
+    "Conway, SC"
+   ],
+   "provider_count": 4,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Dejuania Brown, DO",
+    "Jordan Henderson, DO",
+    "Nikhil B Patel, MD",
+    "Renwick N Goldberg, MD"
+   ]
+  },
+  {
+   "phone": "(843) 650-7000",
+   "belongs_to": [
+    "Grand Strand Pediatrics - Surfside Beach"
+   ],
+   "cities": [
+    "Surfside Beach, SC"
+   ],
+   "provider_count": 4,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Daniel L Shuler, MD",
+    "Frank N Colvard, MD",
+    "Kristin E Moore, MD",
+    "Virginia C Williams, MD"
+   ]
+  },
+  {
+   "phone": "(843) 692-1062",
+   "belongs_to": [
+    "Teamhealth Anesthesia"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 3,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": true,
+   "sample_providers": [
+    "Brandon Sloop, MD",
+    "Desiree Aird, MD",
+    "Dwayne LiVigni, DO"
+   ]
+  },
+  {
+   "phone": "(843) 756-0932",
+   "belongs_to": [
+    "Coastal Cancer Center - Bayboro"
+   ],
+   "cities": [
+    "Loris, SC"
+   ],
+   "provider_count": 3,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Dejuania Brown, DO",
+    "Emily Z Touloukian, DO",
+    "Vijay Paudel, MD"
+   ]
+  },
+  {
+   "phone": "(843) 692-1711",
+   "belongs_to": [
+    "Team Health"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 3,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Jacob Pope, DO",
+    "Jonathan Daly, DO",
+    "Jonathan H Leggett, DO"
+   ]
+  },
+  {
+   "phone": "(843) 449-8079",
+   "belongs_to": [
+    "Coastal Podiatry Associates - Glenns Bay",
+    "Coastal Podiatry Associates - Little River",
+    "Coastal Podiatry Associates - Rourk Street"
+   ],
+   "cities": [
+    "Little River, SC",
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 3,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Joseph J Menn, DPM",
+    "Scott A Hamilton, DPM",
+    "Scott A Werter, DPM"
+   ]
+  },
+  {
+   "phone": "(843) 449-3668",
+   "belongs_to": [
+    "Coastal Podiatry Associates - Carolina Forest",
+    "Coastal Podiatry Associates - Conway"
+   ],
+   "cities": [
+    "Conway, SC",
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 3,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Joseph J Menn, DPM",
+    "Scott A Hamilton, DPM",
+    "Scott A Werter, DPM"
+   ]
+  },
+  {
+   "phone": "(843) 903-6459",
+   "belongs_to": [
+    "Grand Strand Cosmetic and Reconstructive Care",
+    "Grand Strand Facial and Jaw Surgery",
+    "Grand Strand Surgical Care - Carolina Forest"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 3,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Ashraf Heram, MD",
+    "Carly Sedwick, PA-C",
+    "Horatiu Muresan, MD"
+   ]
+  },
+  {
+   "phone": "(843) 449-9415",
+   "belongs_to": [
+    "Coastal Cancer Center"
+   ],
+   "cities": [
+    "Conway, SC",
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 3,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "David W Zaenger, MD",
+    "Patrick Francke, MD",
+    "Stephen F Andrews, DO"
+   ]
+  },
+  {
+   "phone": "(843) 449-5848",
+   "belongs_to": [
+    "Magnolia OB/GYN"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 3,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Jessica C Brown, MD",
+    "Karyn C Markley, MD",
+    "Tracy D Nelson, MD"
+   ]
+  },
+  {
+   "phone": "(843) 281-2778",
+   "belongs_to": [
+    "Grand Strand Primary Care Family Medicine - Little River",
+    "Grand Strand Primary Care Family Medicine - Myrtle Beach"
+   ],
+   "cities": [
+    "Little River, SC",
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 3,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Chris Boggs, MD",
+    "Heather Vincent, PA-C",
+    "Stephen Meyer, MD"
+   ]
+  },
+  {
+   "phone": "(843) 347-2450",
+   "belongs_to": [
+    "Atlantic Urology Clinics - Carolina Forest",
+    "Atlantic Urology Clinics - Murrells Inlet"
+   ],
+   "cities": [
+    "Murrells Inlet, SC",
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 3,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Neal D Shore, MD",
+    "Richard W Young, MD",
+    "Robert M Jansen, MD"
+   ]
+  },
+  {
+   "phone": "(843) 280-8779",
+   "belongs_to": [
+    "Coastal Eye Group",
+    "Coastal Eye Group, PC"
+   ],
+   "cities": [
+    "Little River, SC"
+   ],
+   "provider_count": 2,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Alex McGaughy, MD",
+    "Jennifer H Merritt, MD"
+   ]
+  },
+  {
+   "phone": "(843) 357-7357",
+   "belongs_to": [
+    "Coastal Cancer Center"
+   ],
+   "cities": [
+    "Murrells Inlet, SC"
+   ],
+   "provider_count": 2,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Dejuania Brown, DO",
+    "Vijay Paudel, MD"
+   ]
+  },
+  {
+   "phone": "(843) 839-6000",
+   "belongs_to": [
+    "Advanced Wound Care Center",
+    "South Strand Medical Center-Wound Center"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 2,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Alex B McIntyre, MD",
+    "Thomas G Foreman, MD"
+   ]
+  },
+  {
+   "phone": "(843) 847-4595",
+   "belongs_to": [
+    "Trident Emergency Physicians"
+   ],
+   "cities": [
+    "Charleston, SC"
+   ],
+   "provider_count": 2,
+   "kind": "facility_main_or_er",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Scott D Hayes, MD",
+    "Timothy B Beatty, DO"
+   ]
+  },
+  {
+   "phone": "(843) 497-1441",
+   "belongs_to": [
+    "Southeast Medical Associates"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 2,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Mohammad A Emran, MD",
+    "Rubina Wadud, MD"
+   ]
+  },
+  {
+   "phone": "(843) 215-5102",
+   "belongs_to": [
+    "Southeast Medical Associates"
+   ],
+   "cities": [
+    "Murrells Inlet, SC",
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 2,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Mohammad A Emran, MD",
+    "Rubina Wadud, MD"
+   ]
+  },
+  {
+   "phone": "(843) 692-1750",
+   "belongs_to": [
+    "Sheridan Children's Healthcare Services of South Carolina"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 2,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Anthony Caeton, MD",
+    "Marvin Maurer, MD"
+   ]
+  },
+  {
+   "phone": "(843) 293-8850",
+   "belongs_to": [
+    "Family Medicine of Sayebrook"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 2,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Jonathan D Bornfreund, DO",
+    "Karen L Mahood, DO"
+   ]
+  },
+  {
+   "phone": "(843) 353-3460",
+   "belongs_to": [
+    "OrthoSC",
+    "OrthoSC - Myrtle Beach \u2013 Market Common",
+    "Strand Orthopaedic Consultants"
+   ],
+   "cities": [
+    "Murrells Inlet, SC",
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 2,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Nathaniel R Evans, MD",
+    "Todd Cook, MD"
+   ]
+  },
+  {
+   "phone": "(843) 449-9621",
+   "belongs_to": [
+    "Surgical Associates of Myrtle Beach"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 2,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "George B Nicholson, MD",
+    "Lane I Moore, MD"
+   ]
+  },
+  {
+   "phone": "(843) 353-5360",
+   "belongs_to": [
+    "Grand Strand Bariatric Surgery"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 2,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Jared Umland, PA-C",
+    "R. Wesley Vosburg, MD"
+   ]
+  },
+  {
+   "phone": "(843) 234-5505",
+   "belongs_to": [
+    "Carolina Regional Cancer Center",
+    "Coastal Cancer Center",
+    "Dr. Stephen Andrews"
+   ],
+   "cities": [
+    "Conway, SC"
+   ],
+   "provider_count": 2,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "David W Zaenger, MD",
+    "Stephen F Andrews, DO"
+   ]
+  },
+  {
+   "phone": "(305) 223-3000",
+   "belongs_to": [
+    "Specialty Care Inc"
+   ],
+   "cities": [
+    "Brentwood, TN"
+   ],
+   "provider_count": 2,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Adam P Juersivich, MD",
+    "Jason A Soriano, MD"
+   ]
+  },
+  {
+   "phone": "(843) 449-5243",
+   "belongs_to": [
+    "Myrtle Beach Family Medicine"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 2,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Naishaj Shah, MD",
+    "Terry A Belden, MD"
+   ]
+  },
+  {
+   "phone": "(843) 215-1068",
+   "belongs_to": [
+    "Coastal Carolina Otolaryngology - Myrtle Beach",
+    "Coastal Carolina Otolaryngology - Surfside Beach"
+   ],
+   "cities": [
+    "Myrtle Beach, SC",
+    "Surfside Beach, SC"
+   ],
+   "provider_count": 2,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Sheila Putman, DO",
+    "Terence M Zimmerman, MD"
+   ]
+  },
+  {
+   "phone": "(843) 249-7400",
+   "belongs_to": [
+    "Grand Strand Pediatrics & Adolescent Medicine"
+   ],
+   "cities": [
+    "Little River, SC"
+   ],
+   "provider_count": 2,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Frank N Colvard, MD",
+    "Virginia C Williams, MD"
+   ]
+  },
+  {
+   "phone": "(843) 663-8000",
+   "belongs_to": [
+    "Little River Medical Center - Myrtle Beach",
+    "Little River Medical Center at Carolina Forest"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 2,
+   "kind": "facility_main_or_er",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Luis D Insignares, MD",
+    "William O'Connor, MD"
+   ]
+  },
+  {
+   "phone": "(843) 449-6449",
+   "belongs_to": [
+    "Coastal Carolina Otolaryngology - Myrtle Beach",
+    "Coastal Carolina Otolaryngology - Surfside Beach"
+   ],
+   "cities": [
+    "Myrtle Beach, SC",
+    "Surfside Beach, SC"
+   ],
+   "provider_count": 2,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Daniel L Rosner, MD",
+    "Sheila Putman, DO"
+   ]
+  },
+  {
+   "phone": "(843) 234-3360",
+   "belongs_to": [
+    "Coastal Cancer Center"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Vijay Paudel, MD"
+   ]
+  },
+  {
+   "phone": "(904) 446-3400",
+   "belongs_to": [
+    "Healogics"
+   ],
+   "cities": [
+    "Jacksonville, FL"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Thomas G Foreman, MD"
+   ]
+  },
+  {
+   "phone": "(352) 596-0900",
+   "belongs_to": [
+    "The Center for Bone & Joint Disease - Brooksville"
+   ],
+   "cities": [
+    "Brooksville, FL"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Alexander J Pappas, MD"
+   ]
+  },
+  {
+   "phone": "(727) 697-2200",
+   "belongs_to": [
+    "The Center for Bone & Joint Disease - Hudson"
+   ],
+   "cities": [
+    "Hudson, FL"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Alexander J Pappas, MD"
+   ]
+  },
+  {
+   "phone": "(727) 605-3808",
+   "belongs_to": [
+    "The Center for Bone and Joint Disease"
+   ],
+   "cities": [
+    "Lutz, FL"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Alexander J Pappas, MD"
+   ]
+  },
+  {
+   "phone": "(843) 235-3131",
+   "belongs_to": [
+    "Tidelands Health Cardiology at The Market Common"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Sheryl K Aiken, DNP"
+   ]
+  },
+  {
+   "phone": "(843) 497-2227",
+   "belongs_to": [
+    "Grand Strand Plastic & Reconstructive Surgery"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Kimberley B Goh, MD"
+   ]
+  },
+  {
+   "phone": "(843) 839-1663",
+   "belongs_to": [
+    "Myrtle Beach Family Medicine"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Dean A Smith, MD"
+   ]
+  },
+  {
+   "phone": "(843) 652-8300",
+   "belongs_to": [
+    "Tidelands Health Oncology at Myrtle Beach"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Jeffrey W Cronk, MD"
+   ]
+  },
+  {
+   "phone": "(702) 990-2290",
+   "belongs_to": [
+    "Crovetti Orthopaedics and Sports Medicine - Henderson"
+   ],
+   "cities": [
+    "Henderson, NV"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Haines Paik, MD"
+   ]
+  },
+  {
+   "phone": "(540) 951-4992",
+   "belongs_to": [
+    "Montgomery Radiology Associates"
+   ],
+   "cities": [
+    "Blacksburg, VA"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Brian Trotta, MD"
+   ]
+  },
+  {
+   "phone": "(843) 449-2576",
+   "belongs_to": [
+    "Mofdaps Comp Behav Health Specs"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Adedapo M Oduwole, MD"
+   ]
+  },
+  {
+   "phone": "(843) 999-5042",
+   "belongs_to": [
+    "Myrtle Beach Internists"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Karandeep S Shergill, MD"
+   ]
+  },
+  {
+   "phone": "(843) 839-6112",
+   "belongs_to": [
+    "Grand Strand Behavioral Health"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Christina Lynn, MD"
+   ]
+  },
+  {
+   "phone": "(843) 347-9487",
+   "belongs_to": [
+    "Coastal Kidney Center"
+   ],
+   "cities": [
+    "Conway, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Sivanthan Balachandran, MD"
+   ]
+  },
+  {
+   "phone": "(843) 497-7275",
+   "belongs_to": [
+    "Coastal Kidney Center"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Sivanthan Balachandran, MD"
+   ]
+  },
+  {
+   "phone": "(843) 650-1111",
+   "belongs_to": [
+    "South Strand Diagnostic Center"
+   ],
+   "cities": [
+    "Surfside Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Alfred J Tomlinson, MD"
+   ]
+  },
+  {
+   "phone": "(843) 832-5160",
+   "belongs_to": [
+    "Trident Emergency Physicians"
+   ],
+   "cities": [
+    "Summerville, SC"
+   ],
+   "provider_count": 1,
+   "kind": "facility_main_or_er",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Timothy B Beatty, DO"
+   ]
+  },
+  {
+   "phone": "(954) 514-4670",
+   "belongs_to": [
+    "Sheridan Children's Healthcare"
+   ],
+   "cities": [
+    "Plantation, FL"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Asfawossen B Asfaw, MD"
+   ]
+  },
+  {
+   "phone": "(843) 293-5100",
+   "belongs_to": [
+    "Veritas Healthcare Solutions"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "John R Hicks, MD"
+   ]
+  },
+  {
+   "phone": "(843) 449-4993",
+   "belongs_to": [
+    "Atlantic Oral Surgery & Implant Center"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Jeffrey H Wallen, DDS"
+   ]
+  },
+  {
+   "phone": "(843) 466-8000",
+   "belongs_to": [
+    "Coastal Internal Medicine and Geriatrics"
+   ],
+   "cities": [
+    "Goose Creek, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Madhavi Akkineni, MD"
+   ]
+  },
+  {
+   "phone": "(843) 913-8015",
+   "belongs_to": [
+    "Coastal Carolina Otolaryngology - Surfside Beach"
+   ],
+   "cities": [
+    "Surfside Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Terence M Zimmerman, MD"
+   ]
+  },
+  {
+   "phone": "(843) 249-2451",
+   "belongs_to": [
+    "North Myrtle Beach Family Practice"
+   ],
+   "cities": [
+    "North Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "John G Ramsbottom, MD"
+   ]
+  },
+  {
+   "phone": "(843) 839-7246",
+   "belongs_to": [
+    "SC Pain & Spine Specialists, LLC"
+   ],
+   "cities": [
+    "Conway, SC",
+    "Georgetown, SC",
+    "Little River, SC",
+    "Murrells Inlet, SC",
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Jason C Rosenberg, MD"
+   ]
+  },
+  {
+   "phone": "(843) 668-2376",
+   "belongs_to": [
+    "Coastal Carolina Infectious Disease"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Yama Osmanzai, MD"
+   ]
+  },
+  {
+   "phone": "(800) 586-5022",
+   "belongs_to": [
+    "Weatherby Locums Inc"
+   ],
+   "cities": [
+    "Fort Lauderdale, FL"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Songoli C Umeh, MD"
+   ]
+  },
+  {
+   "phone": "(854) 235-2840",
+   "belongs_to": [
+    "Novant Health New Riverside Primary Care"
+   ],
+   "cities": [
+    "Bluffton, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Kyle McMillen, DO"
+   ]
+  },
+  {
+   "phone": "(281) 558-3444",
+   "belongs_to": [
+    "HCA Houston Healthcare West Family Medicine GME Program"
+   ],
+   "cities": [
+    "Houston, TX"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Daniel Khashchuk, MD"
+   ]
+  },
+  {
+   "phone": "(954) 377-3004",
+   "belongs_to": [
+    "TEAMHealth"
+   ],
+   "cities": [
+    "Sunrise, FL"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Jilian R Sansbury, MD"
+   ]
+  },
+  {
+   "phone": "(843) 347-7300",
+   "belongs_to": [
+    "CMC Ear, Nose, and Throat"
+   ],
+   "cities": [
+    "Conway, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Darin V Sutton, MD"
+   ]
+  },
+  {
+   "phone": "(865) 985-7223",
+   "belongs_to": [
+    "Team Health"
+   ],
+   "cities": [
+    "Knoxville, TN"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Jonathan E Pangia, DO"
+   ]
+  },
+  {
+   "phone": "(843) 449-7115",
+   "belongs_to": [
+    "Coastal Eye Group, PC"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Carl F Sloan, MD"
+   ]
+  },
+  {
+   "phone": "(843) 652-3937",
+   "belongs_to": [
+    "Coastal Eye Group, PC"
+   ],
+   "cities": [
+    "Murrells Inlet, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Carl F Sloan, MD"
+   ]
+  },
+  {
+   "phone": "(843) 692-1061",
+   "belongs_to": [
+    "Man In The Box Anesthesia"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": true,
+   "sample_providers": [
+    "Derek L Horstemeyer, MD"
+   ]
+  },
+  {
+   "phone": "(843) 652-8440",
+   "belongs_to": [
+    "Tidelands Health Family Medicine at The Market Common"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Mina Guirguis, MD"
+   ]
+  },
+  {
+   "phone": "(919) 843-3133",
+   "belongs_to": [
+    "UNC Hospitals Multispecialty Surgery Clinic"
+   ],
+   "cities": [
+    "Chapel Hill, NC"
+   ],
+   "provider_count": 1,
+   "kind": "facility_main_or_er",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Luke Van Ells, MD"
+   ]
+  },
+  {
+   "phone": "(843) 887-7546",
+   "belongs_to": [
+    "Purvis Dermatology"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Robert S Purvis, MD"
+   ]
+  },
+  {
+   "phone": "(843) 692-0968",
+   "belongs_to": [
+    "Carolina Rheumatology & Neurology Associates"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Wendy W Lee, MD"
+   ]
+  },
+  {
+   "phone": "(843) 235-8333",
+   "belongs_to": [
+    "Grand Strand Primary Care Internal Medicine - Murrells Inlet"
+   ],
+   "cities": [
+    "Murrells Inlet, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Stephen Silbiger, MD"
+   ]
+  },
+  {
+   "phone": "(954) 377-2928",
+   "belongs_to": [
+    "FLACS of Team Health"
+   ],
+   "cities": [
+    "Tamarac, FL"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Christopher Zakhary, MD"
+   ]
+  },
+  {
+   "phone": "(843) 839-4447",
+   "belongs_to": [
+    "Carolina Health Specialists"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Gregory L Becker, MD"
+   ]
+  },
+  {
+   "phone": "(843) 293-0093",
+   "belongs_to": [
+    "Coastal Carolina Allergy & Asthma Associates"
+   ],
+   "cities": [
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Mark H Schecker, MD"
+   ]
+  },
+  {
+   "phone": "(843) 293-6366",
+   "belongs_to": [
+    "Low Country Foot Specialist, LLC"
+   ],
+   "cities": [
+    "Georgetown, SC",
+    "Myrtle Beach, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Gery B Katalinich, DPM"
+   ]
+  },
+  {
+   "phone": "(843) 357-7359",
+   "belongs_to": [
+    "Coastal Cancer Center"
+   ],
+   "cities": [
+    "Murrells Inlet, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Jordan Henderson, DO"
+   ]
+  },
+  {
+   "phone": "(843) 756-0934",
+   "belongs_to": [
+    "Coastal Cancer Center"
+   ],
+   "cities": [
+    "Loris, SC"
+   ],
+   "provider_count": 1,
+   "kind": "practice_or_department_line",
+   "is_anesthesia_department_line": false,
+   "sample_providers": [
+    "Jordan Henderson, DO"
+   ]
+  }
+ ],
+ "department_phone_found": "(843) 692-1062",
+ "blocked": [],
+ "notes": "299/299 profile pages fetched over plain curl/urllib with a browser UA, 8 workers, 0.2s stagger. HTTP 200 on every one, 0 retries exhausted, 0 CAPTCHA/bot-wall hits, physicianData JSON successfully parsed on all 299. ROSTER MATCH: 7 of 84 roster rows matched, ALL 7 by exact NPI, 0 additional by name. Those 7 rows are 6 unique people (Derek Horstemeyer appears twice in the roster under the same NPI 1225018849). Name-matching was run and genuinely adds nothing: 17 roster last names collide with a GSH last name but every one of those has a different first name (roster Michelle Lee / Bryan Lee vs GSH Wendy Lee; roster Ryan Smith vs GSH Dean/Erin/Coy/Lincoln Smith; roster Albert Jackson vs GSH Tamiko Jackson; roster Robert O'Connor vs GSH William O'Connor; etc). 9 roster rows have no NPI at all. The 77 unmatched are overwhelmingly McLeod / Tidelands / Conway clinicians who simply are not on HCA's Grand Strand staff. TRAINING FIELD REALITY: this is the key negative finding. credentialsAndAccreditations carries only school/training rows (Medical School, Internship, Residency, Fellowship, Undergraduate, Graduate Degree). It NEVER carries a board certification row -- zero 'Board Certification' type entries across all 299 profiles. Board cert is a bare boolean on the specialty with no board named and no year. Of the 6 unique roster people matched, only 1 (Asfaw) has a Fellowship row, only 2 (Asfaw, Horstemeyer) have any training rows at all, 3 have boardCertified=true flags with no certifying body, and 0 of the 6 have a physicianBio -- every bio field is empty. So for the anesthesia cohort specifically this directory yields specialty label + practice group + phone, and essentially no training detail. CONTACT: zero real clinician email addresses exist anywhere in the 299 pages' server HTML. The only @-pattern present is the form placeholder 'xx@xxxx.xx' repeated on all 299 pages -- rejected, not reported as a finding. No mailto: link to any clinician. 95 distinct phone numbers across providerLocations, all practice/office lines rather than direct clinician lines. PEDS: 14 of 299 profiles mention a pediatric term anywhere. No LinkedIn was touched. No CAPTCHA was encountered or attempted.",
+ "emails_rejected_as_placeholder_or_boilerplate": [
+  {
+   "value": "xx@xxxx.xx",
+   "reason": "HTML form input placeholder attribute present on all 299 profile pages; not a real address"
+  }
+ ],
+ "department_phone_detail": {
+  "value": "(843) 692-1062",
+  "label": "Teamhealth Anesthesia",
+  "city": "Myrtle Beach, SC",
+  "kind": "anesthesia PRACTICE-GROUP line (contracted group), NOT a hospital anesthesiology department switchboard",
+  "attached_providers": [
+   "Brandon Sloop, MD",
+   "Desiree Aird, MD",
+   "Dwayne LiVigni, DO"
+  ],
+  "source": "providerLocations[].phone on the three TeamHealth anesthesiologist profiles",
+  "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Brandon-Sloop-MD",
+  "second_anesthesia_line": {
+   "value": "(843) 692-1061",
+   "label": "Man In The Box Anesthesia",
+   "attached_providers": [
+    "Derek L Horstemeyer, MD"
+   ],
+   "citation": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Derek-L-Horstemeyer-MD"
+  },
+  "facility_main_line": {
+   "value": "(843) 692-1000",
+   "label": "Grand Strand Medical Center main",
+   "citation": "https://www.mygrandstrandhealth.com/contact-us"
+  },
+  "note": "No hospital-published 'Anesthesiology Department' page or department switchboard exists. /contact-us contains zero occurrences of 'anesthes'. /specialties/anesthesiology, /service/anesthesiology, /service/surgery-services, /service/surgical-services all return 404. /specialties/surgery publishes only the Consult-A-Nurse (844) 706-8773 and physician-referral (855) 790-3627 numbers."
+ },
+ "pages_checked_for_department_phone": [
+  {
+   "url": "https://www.mygrandstrandhealth.com/",
+   "http": 200,
+   "anesthesia_phone": null
+  },
+  {
+   "url": "https://www.mygrandstrandhealth.com/contact-us",
+   "http": 200,
+   "anesthesia_phone": null,
+   "note": "0 occurrences of 'anesthes'; lists facility/ER/billing/ethics lines only"
+  },
+  {
+   "url": "https://www.mygrandstrandhealth.com/specialties/surgery",
+   "http": 200,
+   "anesthesia_phone": null
+  },
+  {
+   "url": "https://www.mygrandstrandhealth.com/specialties/pediatrics",
+   "http": 200,
+   "anesthesia_phone": null
+  },
+  {
+   "url": "https://www.mygrandstrandhealth.com/service/anesthesiology",
+   "http": 404
+  },
+  {
+   "url": "https://www.mygrandstrandhealth.com/specialties/anesthesiology",
+   "http": 404
+  },
+  {
+   "url": "https://www.mygrandstrandhealth.com/service/surgery-services",
+   "http": 404
+  },
+  {
+   "url": "https://www.mygrandstrandhealth.com/service/surgical-services",
+   "http": 404
+  }
+ ],
+ "field_completeness": {
+  "profiles_with_zero_credentialsAndAccreditations": 119,
+  "profiles_with_at_least_one_Fellowship_entry": 76,
+  "profiles_with_nonempty_physicianBio": 78,
+  "profiles_with_yearStartedPractice": 57,
+  "profiles_with_any_boardCertified_true_specialty": 87,
+  "credential_types_that_exist_in_this_dataset": [
+   "Fellowship",
+   "Graduate Degree",
+   "Internship",
+   "Medical School",
+   "Residency",
+   "Undergraduate",
+   "Undergraduate Degree"
+  ],
+  "board_certification_representation": "There is NO 'Board Certification' credential TYPE anywhere in the 299 profiles. Board certification is expressed ONLY as a boolean flag providerSpecialties[].boardCertified, with no certifying board named, no subspecialty certificate, and no year."
+ },
+ "anesthesiologists_in_directory": {
+  "count": 5,
+  "all_five_are_roster_members": true,
+  "detail": [
+   {
+    "name": "Dwayne LiVigni, DO",
+    "npi": "1982655262",
+    "specialties": [
+     "Anesthesiology"
+    ],
+    "boardCertified_flag": false,
+    "credential_entries": 0,
+    "practice": "Teamhealth Anesthesia",
+    "phone": "(843) 692-1062",
+    "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Dwayne-LiVigni-DO"
+   },
+   {
+    "name": "Brandon Sloop, MD",
+    "npi": "1962529578",
+    "specialties": [
+     "Anesthesiology"
+    ],
+    "boardCertified_flag": false,
+    "credential_entries": 0,
+    "practice": "Teamhealth Anesthesia",
+    "phone": "(843) 692-1062",
+    "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Brandon-Sloop-MD"
+   },
+   {
+    "name": "Desiree Aird, MD",
+    "npi": "1528471406",
+    "specialties": [
+     "Anesthesiology"
+    ],
+    "boardCertified_flag": false,
+    "credential_entries": 0,
+    "practice": "Teamhealth Anesthesia",
+    "phone": "(843) 692-1062",
+    "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Desiree-Aird-MD"
+   },
+   {
+    "name": "Songoli Umeh, MD",
+    "npi": "1356635163",
+    "specialties": [
+     "Anesthesiology"
+    ],
+    "boardCertified_flag": true,
+    "credential_entries": 0,
+    "practice": "Weatherby Locums Inc (locum tenens staffing agency)",
+    "phone": "(800) 586-5022",
+    "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Songoli-C-Umeh-MD"
+   },
+   {
+    "name": "Derek L Horstemeyer, MD",
+    "npi": "1225018849",
+    "specialties": [
+     "Anesthesiology"
+    ],
+    "boardCertified_flag": true,
+    "credential_entries": 3,
+    "practice": "Man In The Box Anesthesia",
+    "phone": "(843) 692-1061",
+    "url": "https://www.mygrandstrandhealth.com/physicians/profile/Dr-Derek-L-Horstemeyer-MD"
+   }
+  ],
+  "pediatric_subspecialty_signal": "NONE_FOUND for all 5. No 'Pediatric Anesthesiology' specialty entry, no pediatric fellowship, no pediatric term in any field on any of the five profiles."
+ }
+}
