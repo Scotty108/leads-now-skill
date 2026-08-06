@@ -1,0 +1,2 @@
+{"ts":"2026-08-06T21:39:26Z","step":"start","detail":"Run started. Condition A clamped (WebFetch/WebSearch/Bash only, no browser automation). Read SKILL.md router.","elapsed_s":0}
+{"ts": "2026-08-06T21:39:44Z", "step": "route", "detail": "Branch = FULL (DISCOVER -> QUALIFY -> enrich/verify). Read discover.md + qualify.md. Origin case matches qualify.md example.", "elapsed_s": 12}
