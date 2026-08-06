@@ -84,3 +84,6 @@ tooling.
 **Work email ceiling: ~3/72 (4%) from free public sources on a community
 clinical roster.** Phone is the deliverable channel; email is a bonus on the
 academic minority.
+
+## Round 2 — do the corrections move anything?
+| 2 | 2026-08-06T22:40Z | gate | both | — | — | — | — | — | — | — | 18/18 core + 14/14 ports green; eligible |
