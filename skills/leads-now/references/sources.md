@@ -50,14 +50,23 @@ census will believe the territory is empty when it is not.
 
 For **Licensed**, the register exists; the only work is locating it. In order:
 
-1. `"<state> <profession> license lookup"` / `license verification`
-2. `"<state> board of <profession>"` — then its "verify a licence" tool
-3. `site:.gov "<profession>" licensee` — reaches rosters no search box exposes
-4. **The state open-data portal** — `data.<state>.gov`, searching the profession.
-   Many states publish the entire licensee file as a downloadable CSV. **Look
-   here before paging a lookup form** — one download beats ten thousand queries,
-   and forms are where the CAPTCHAs are.
-5. National register, where one exists and supersedes the states
+1. **Navigate the licensing body's own site to its public-records page** — this
+   works with **zero searches** and is the first thing to try. Measured: from
+   `myfloridalicense.com`, three hops (instant public records → construction
+   industry → public records) reached a **48 MB CSV of all 270,487 licensees**,
+   HTTP 200, no key, no CAPTCHA, no login. Look for "public records",
+   "data downloads", "licensee files", "extracts".
+2. `"<state> <profession> license lookup"` / `license verification`
+3. `"<state> board of <profession>"` — then its "verify a licence" tool
+4. `site:.gov "<profession>" licensee` — reaches rosters no search box exposes
+5. **The state open-data portal** — `data.<state>.gov`, searching the profession
+6. National register, where one exists and supersedes the states
+
+**Bulk file before lookup form, always.** One download beats ten thousand
+queries, forms are where the CAPTCHAs are, and a form cannot tell you the
+denominator. Rung 1 is listed first because **web search is a budget that runs
+out** — a real run exhausted its search allowance and still reached the register
+by navigating from the root domain.
 
 For **Public payroll**: state and municipal transparency portals, district and
 agency staff directories, published org charts, board-meeting minutes and
@@ -85,9 +94,16 @@ predicts it — not your effort. Set expectations from this before you start.
 | Privately employed | Low | Depends entirely on the employer's site |
 | Credentialed | Low | Verification tools confirm status, nothing more |
 
-**A licence register gives you a person and a phone, not an inbox.** Expect to
-get the roster from one class and the addresses from a different source, and
-budget the domain-unlock hunt in `contact-channels.md` accordingly.
+**A licence register gives you a person and a place — check whether it gives
+anything else.** Measured: the NPI registry publishes a practice phone, while
+Florida's DBPR construction file publishes a mailing address and **no phone and
+no email at all** — across 270,487 rows and 22 columns there were 2 stray
+`@` cells, both typos inside a name field.
+
+So do not assume a register carries a channel. **Count the populated cells
+before promising reachability**, and expect to get the roster from one class and
+the contact details from a different source — budget the domain-unlock hunt in
+`contact-channels.md` accordingly.
 
 Where the ring contains a **university, teaching hospital, public agency or
 school district**, that is the highest-yield free email source available,

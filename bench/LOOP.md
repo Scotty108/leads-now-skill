@@ -62,7 +62,7 @@ addresses is worth less than a small verified one.
 |---|---|---|
 | Verified people in radius | 25% | Distinct, address inside 50mi, sourced |
 | Reachable | 25% | Has a phone OR an email above `pattern_likely` |
-| Pediatric signal | 20% | Graded STRONG/MODERATE with a citation |
+| Qualifier signal | 20% | The asked-for trait, graded with a citation |
 | Provenance completeness | 15% | % of populated fields carrying a source |
 | Honest gaps | 10% | Blocked orgs named; truncation declared |
 | Cost | 5% | Wall clock, subagents, tool calls (lower better) |

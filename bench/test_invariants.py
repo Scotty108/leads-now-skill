@@ -977,6 +977,85 @@ def test_city_name_variants_place(skill, cfg):
                  "; ".join(bad))
 
 
+def test_merge_without_org_uses_location(skill, cfg):
+    """Two people with the same name and no employer must not become one.
+
+    The merge key is name + org. That is safe for org-sourced records and
+    silently wrong for a REGISTER, which is the highest-value source there is
+    and almost never carries an employer. With org absent the key degenerates
+    to the name alone.
+
+    Measured on 11,087 Florida roofing licensees: 107 distinct people collapsed
+    — different cities, different licence numbers, merged into one blended row
+    carrying one person's address and another's licence. That is a fabricated
+    record, which is the single thing this skill exists to prevent.
+
+    The same key must also survive a city spelling variant: PORT ST LUCIE and
+    PORT SAINT LUCIE at the same postcode are one person, not two.
+    """
+    script = os.path.join(cfg["dir"], "scripts", "leadkit.py")
+    if not os.path.exists(script):
+        return check(skill, "merge without org keys on location", True, "n/a")
+    import tempfile, json as _j
+    recs = [
+        # Same name, no org, DIFFERENT places -> two people.
+        {"full_name": "David Lee Carr", "city": "ST. AUGUSTINE",
+         "state": "FL", "postal_code": "32092", "source": "reg"},
+        {"full_name": "David Lee Carr", "city": "BROOKSVILLE",
+         "state": "FL", "postal_code": "34601", "source": "reg"},
+        # Same name, no org, same postcode, spelling variant -> one person.
+        {"full_name": "Andrew Allocco", "city": "PORT ST LUCIE",
+         "state": "FL", "postal_code": "34986", "source": "reg"},
+        {"full_name": "Andrew Allocco", "city": "PORT SAINT LUCIE",
+         "state": "FL", "postal_code": "34986", "source": "reg2"},
+    ]
+    with tempfile.TemporaryDirectory() as td:
+        src = os.path.join(td, "r.json")
+        out = os.path.join(td, "m.json")
+        _j.dump(recs, open(src, "w"))
+        rc, _ = run([sys.executable, script, "merge", src, "-o", out])
+        if rc != 0:
+            return check(skill, "merge without org keys on location", False, "merge failed")
+        merged = _j.load(open(out))
+    carr = [m for m in merged if (m.get("full_name") or "").lower() == "david lee carr"]
+    allo = [m for m in merged if "allocco" in (m.get("full_name") or "").lower()]
+    bad = []
+    if len(carr) != 2:
+        bad.append(f"distinct-city same name collapsed to {len(carr)}, want 2")
+    if len(allo) != 1:
+        bad.append(f"city variant split into {len(allo)}, want 1")
+    return check(skill, "merge without org keys on location", not bad,
+                 "; ".join(bad))
+
+
+def test_surname_first_names_flip(skill, cfg):
+    """Registers publish ONE combined name field, surname first.
+
+    Only org-sourced records hand you first and last separately. Flipping
+    "AMBROSE, DEREK GABRIEL II" naively strands the suffix mid-name — a real
+    run emitted "Derek Gabriel Ii Ambrose" and "James F Sr Carlevatti", which
+    is what the user reads off the CSV. The suffix also sits on either side of
+    the comma in the same file.
+    """
+    script = os.path.join(cfg["dir"], "scripts", "leadkit.py")
+    if not os.path.exists(script):
+        return check(skill, "surname-first names flip cleanly", True, "n/a")
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("_lk_n", script)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    if not hasattr(mod, "flip_name"):
+        return check(skill, "surname-first names flip cleanly", False, "no flip_name")
+    CASES = [("AMBROSE, DEREK GABRIEL II", "Derek Gabriel Ambrose, II"),
+             ("CARLEVATTI, JAMES F SR", "James F Carlevatti, Sr"),
+             ("ALLOCCO JR, ANDREW", "Andrew Allocco, Jr"),
+             ("CARR, DAVID LEE", "David Lee Carr"),
+             ("Jane Doe", "Jane Doe")]          # already forename-first
+    bad = [f"{i!r}->{mod.flip_name(i)!r} want {w!r}"
+           for i, w in CASES if mod.flip_name(i) != w]
+    return check(skill, "surname-first names flip cleanly", not bad, "; ".join(bad))
+
+
 def test_distance_bands(skill, cfg):
     """Report by distance band, so any radius the user names is readable.
 
@@ -999,6 +1078,8 @@ TESTS = [test_core_files_stay_general,
          test_distance_bands,
          test_bands_are_computable,
          test_city_name_variants_place,
+         test_merge_without_org_uses_location,
+         test_surname_first_names_flip,
          test_frontmatter, test_portability, test_refusal,
          test_surname_particles, test_docs_claims]
 

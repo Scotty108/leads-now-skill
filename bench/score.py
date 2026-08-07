@@ -28,18 +28,26 @@ import sys
 WEIGHTS = {
     "in_radius": 0.25,
     "reachable": 0.25,
-    "peds_signal": 0.20,
+    "qualifier_signal": 0.20,
     "provenance": 0.15,
     "honest_gaps": 0.10,
     "cost": 0.05,
 }
+
+# The scorer had the same disease as the skill: this axis was named
+# `peds_signal`, so a non-clinical run could not score above 0.80 however good
+# it was. The measured property is general — "carries the qualifying trait the
+# user actually asked for, with a citation" — and pediatric experience was only
+# the first instance of it. Old `peds_signal_*` meta keys still read.
+QUALIFIER_KEYS = ("qualifier_signal_strong", "qualifier_signal_moderate",
+                  "peds_signal_strong", "peds_signal_moderate")
 
 # Normalisation ceilings. A run that hits the ceiling scores 1.0 on that axis;
 # these are targets, not observed maxima, so scores stay comparable across
 # rounds even as both skills improve.
 TARGET_IN_RADIUS = 75
 TARGET_REACHABLE = 60
-TARGET_PEDS = 12
+TARGET_QUALIFIER = 12
 COST_BUDGET_S = 1500  # ~25 min timebox
 
 
@@ -145,8 +153,7 @@ def score_run(d):
 
     n_radius = int(meta.get("in_radius") or 0)
     n_reach = int(meta.get("reachable") or 0)
-    n_peds = int(meta.get("peds_signal_strong") or 0) + \
-        int(meta.get("peds_signal_moderate") or 0)
+    n_qual = sum(int(meta.get(k) or 0) for k in QUALIFIER_KEYS)
     prov = _provenance_ratio(rows)
 
     # Honest gaps: naming blocked sources and declaring truncation is worth
@@ -169,7 +176,7 @@ def score_run(d):
     parts = {
         "in_radius": min(n_radius / TARGET_IN_RADIUS, 1.0),
         "reachable": min(n_reach / TARGET_REACHABLE, 1.0),
-        "peds_signal": min(n_peds / TARGET_PEDS, 1.0),
+        "qualifier_signal": min(n_qual / TARGET_QUALIFIER, 1.0),
         "provenance": prov,
         "honest_gaps": gaps,
         "cost": cost,
@@ -182,7 +189,7 @@ def score_run(d):
         "skill": meta.get("skill"),
         "condition": meta.get("condition"),
         "raw": {"in_radius": n_radius, "reachable": n_reach,
-                "peds": n_peds, "provenance": round(prov, 3),
+                "qualifier": n_qual, "provenance": round(prov, 3),
                 "rows": len(rows), "subagents": meta.get("subagents"),
                 "wall_clock_s": meta.get("wall_clock_s"),
                 "blocked": len(blocked)},

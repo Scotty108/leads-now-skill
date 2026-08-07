@@ -550,3 +550,64 @@ An unplaceable row keeps a **null** distance, never a zero — a zero sorts it t
 the top and reads as the closest lead in the territory.
 
 **32/32 green, both skills.**
+
+---
+
+## Universality PROOF run — FL roofing contractors, 25mi of Tampa
+
+The previous cycle proved universality with unit tests and vocabulary ratios.
+This one pointed the skill at a population it had never seen. Everything below
+was found by the method being wrong in public first.
+
+**865 active licensed roofing contractors within 25 miles of Tampa, using zero
+web searches.** 9,760 statewide, from a file of 270,487.
+
+### What held
+
+Classification worked: Licensed (+ Entity principal) -> take the highest ->
+enumerable -> a denominator exists. "Bulk file before lookup form" paid off
+immediately: three hops from `myfloridalicense.com` reached a **48 MB CSV of
+every licensee**, HTTP 200, no key, no CAPTCHA, no login.
+
+### Search ran out, and the method survived it
+
+WebSearch hit **200/200 on the first query of the run** — the same exhaustion
+that produced 0 LinkedIn profiles in 8 of 14 rounds. The register was still
+reachable by navigating from the root domain. `sources.md` Step 3 has been
+reordered to put **navigate-the-body's-own-site at rung 1**, ahead of every
+search-based rung, because search is a budget and navigation is not.
+
+### The yield table was wrong, and the run proved it
+
+It promised "a person and a phone". Across 270,487 rows x 22 columns this
+register carries **no phone and no email at all** — 2 stray `@` cells, both
+typos inside a name field. NPI publishes a phone; DBPR does not.
+
+**Honest reachability from the register alone: 0 of 865.** Corrected to: count
+the populated cells before promising a channel.
+
+### Two silent bugs only a foreign vertical could surface
+
+1. **merge collapsed 107 distinct people.** The key is name + org, and a
+   register has no org, so it degenerated to name alone. `David Lee Carr` of
+   St. Augustine and `David Lee Carr` of Brooksville — different licence
+   numbers — became one row holding one man's address and the other's licence.
+   A fabricated record, which is the one thing this skill exists to prevent.
+   Fixed with a location fallback; **+113 people recovered, +15 in-ring**.
+
+   The same fix repaired the opposite error: `PORT ST LUCIE` and `PORT SAINT
+   LUCIE` at one postcode had split one person into two.
+
+2. **Surname-first names stranded the suffix.** "AMBROSE, DEREK GABRIEL II"
+   rendered as "Derek Gabriel Ii Ambrose". Registers publish one combined
+   surname-first field; only org sources split first/last. Added `flip_name`.
+
+### The scorer had the same disease as the skill
+
+`score.py` weighted **`peds_signal` at 20%**, so a non-clinical run could not
+exceed 0.80 however good it was. Renamed to `qualifier_signal` — "the trait the
+user actually asked for, with a citation" — reading the old keys for
+compatibility. Round 4 re-scores identically at 0.7933.
+
+**36/36 green. FL run scores 0.46 — correctly low, because 0 of 865 are
+reachable and that is the true state of a licence register.**

@@ -116,6 +116,46 @@ def surname_variants(full: str):
 
 
 
+SUFFIXES = {"jr", "sr", "ii", "iii", "iv", "v", "md", "do", "phd", "esq",
+            "dds", "dmd", "rn", "np", "pa", "cpa", "pe"}
+
+
+def flip_name(raw):
+    """"CARR, DAVID LEE JR" -> "David Lee Carr, Jr".
+
+    Registers publish one combined name field in surname-first order; only
+    org-sourced records hand you first and last separately. Flipping naively
+    strands the suffix mid-name — a real run emitted "Derek Gabriel Ii Ambrose"
+    and "James F Sr Carlevatti", which is what a person sees on the CSV.
+
+    Names that are already forename-first are returned unchanged, so this is
+    safe to run over a mixed list.
+    """
+    raw = (raw or "").strip()
+    if "," not in raw:
+        return raw
+    last, rest = [p.strip() for p in raw.split(",", 1)]
+    toks = rest.split()
+    # A suffix can sit on either side of the comma: "CARR, DAVID JR" and
+    # "CARR JR, DAVID" both occur in the same file.
+    suf = [t for t in toks if t.strip(".").lower() in SUFFIXES]
+    given = [t for t in toks if t.strip(".").lower() not in SUFFIXES]
+    ltoks = last.split()
+    lsuf = [t for t in ltoks if t.strip(".").lower() in SUFFIXES]
+    lname = [t for t in ltoks if t.strip(".").lower() not in SUFFIXES]
+    suf += lsuf
+    if not given or not lname:
+        return raw
+    out = " ".join(t.title() for t in given + lname)
+    # Roman numerals and post-nominals are not title-case words: "II", not "Ii".
+    def _suf(s):
+        s = s.strip(".")
+        return s.upper() if s.lower() in ("ii", "iii", "iv", "v", "md", "do",
+                                          "phd", "dds", "dmd", "rn", "np",
+                                          "pa", "cpa", "pe") else s.title()
+    return out + (", " + " ".join(_suf(s) for s in suf) if suf else "")
+
+
 # ---------------------------------------------------------------- geo ------
 # Radius resolution. The NPI API takes state and postal code, never a radius,
 # so a "within 50 miles" ask has to become a set of states and ZIP prefixes
@@ -611,8 +651,24 @@ def cmd_merge(args) -> int:
     merged = {}
     for r in records:
         dom = re.sub(r"^www\.", "", (r.get("org_domain") or "").strip().lower())
+        # Employer is the natural discriminator, but a REGISTER — the strongest
+        # source there is — almost never carries one. With org absent the key
+        # degenerates to the name alone and two different people with the same
+        # name become one blended row: one person's address against another's
+        # licence, which is a fabricated record. Measured on 11,087 Florida
+        # roofing licensees: 107 distinct people collapsed that way.
+        #
+        # Location is the fallback because a register always publishes it. Match
+        # on postcode when present, else the normalised city — normalised with
+        # the same rules as the geo lookup, so PORT ST LUCIE and PORT SAINT
+        # LUCIE at one postcode stay one person rather than splitting.
+        loc = re.sub(r"[^0-9]", "", str(r.get("postal_code") or ""))[:5]
+        if not loc:
+            loc = _city_key(r.get("city") or "")
+            st = (r.get("state") or "").strip().upper()
+            loc = f"{loc}|{st}" if loc else ""
         key = (" ".join(_tokens(r.get("full_name", ""))),
-               dom or _ascii(r.get("org", "")))
+               dom or _ascii(r.get("org", "")) or loc)
         if not key[0]:
             continue
         if key not in merged:

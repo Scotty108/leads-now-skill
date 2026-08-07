@@ -1,0 +1,21 @@
+{
+ "skill": "ours",
+ "condition": "clamped",
+ "population": "FL licensed roofing contractors (CCC/RC/RF, active)",
+ "center": "Tampa, FL",
+ "radius_mi": 25,
+ "population_class": "Licensed (+Entity principal)",
+ "enumerable": true,
+ "in_radius": 865,
+ "reachable": 0,
+ "peds_signal_strong": 0,
+ "peds_signal_moderate": 0,
+ "total_licensees_in_file": 270487,
+ "roofing_active_statewide": 9760,
+ "websearch_calls": 0,
+ "webfetch_calls": 4,
+ "subagents": 0,
+ "wall_clock_s": 2400,
+ "blocked_sources": [],
+ "notes": "Register publishes NO phone and NO email; 0 of 865 reachable from the register alone."
+}
