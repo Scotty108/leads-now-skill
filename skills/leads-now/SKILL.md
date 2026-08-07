@@ -254,6 +254,10 @@ def emails(a):
     n=v.most_common(1)[0][1]
     top=sorted([p for p,c in v.items() if c==n],key=lambda p:(-len(p),p))[0]
     conf="pattern_confirmed" if n>=2 else "pattern_likely"
+    # A domain can run TWO formats at once (measured: 3 first.last AND 2 flast
+    # on the same host). Majority-reporting hides a coin flip, so downgrade.
+    rivals={p:c for p,c in v.items() if p!=top and c>=1}
+    if rivals and conf=="pattern_confirmed": conf="pattern_likely"
     r,u=[],[]
     for full in a.name:
         p=SN(full)
@@ -268,6 +272,7 @@ def emails(a):
             e["alternates"]=[c+"@"+a.domain for c in cands[1:]]
         r.append(e)
     print(json.dumps({"domain":a.domain,"pattern":top,"confidence":conf,"evidence_count":n,
+                      "mixed_format_domain":bool(rivals),"competing_patterns":rivals or None,
                       "resolved":r,"unresolved":u},indent=2));return 0
 def merge(a):
     recs=[]

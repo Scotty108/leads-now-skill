@@ -753,3 +753,59 @@ domain on the first campaign.
 
 Unlock aggressively; infer conservatively. The volume comes from spending
 fetches on discovery, not from lowering the bar on evidence.
+
+
+## Round 4: a domain can run two email formats at once
+
+This corrects an analysis given with more confidence than the evidence
+supported — mine.
+
+I told a user that a rival run's `flast@mcleodhealth.org` addresses were
+**wrong**, on the strength of **one** observed address (`logan.doriety@`,
+first.last). A complete sweep found **9 personal addresses on that domain: 3
+name-confirmed `first.last` AND 2 name-confirmed `flast`**, with flast-shaped
+addresses the ~6-of-9 majority.
+
+The rival's shape was the **majority** and **still unsafe** — because the domain
+runs both. My "wrong" was a partial-sweep negative: exactly the failure this
+file warns about, committed while explaining that failure to someone else.
+
+**No propagation from a mixed-format domain beats roughly 2/3 accuracy**, which
+is far under any usable bounce ceiling. So the correct output for
+`mcleodhealth.org` — 14 roster members — is **zero addresses**, not a
+majority-vote guess.
+
+`leadkit emails` now detects this: when 2+ distinct patterns have support it
+downgrades to `pattern_likely`, reports `mixed_format_domain: true`, and names
+the competing pattern. Before this it returned `pattern_confirmed` while
+silently discarding the rival observation.
+
+**Check for a second format before propagating.** One address unlocks a domain;
+it does not characterise it. Two agreeing addresses are the floor, and a
+disagreeing third is a stop sign.
+
+### Also false: a round-2 claim in this file
+
+Round 2 recorded that *"every McLeod anesthesiologist has
+`mcLeod_physician_associates: false`"*. The complete anesthesiology slice —
+**29 of 29, no truncation** — is **8 TRUE, 21 FALSE**.
+
+So the contractor guard alone would **not** have blocked emission for two roster
+members. Only the mixed-format finding does. Two guards that look redundant
+were not: one of them was wrong.
+
+### The bottleneck is discovery, not propagation
+
+**72 of 120 roster members sit on five private anesthesia groups** — Atlantic
+Coast (24), Tidelands (13), MedStream (13), Southeast (11), Providence (11) —
+whose mail domains were never found. 32 candidate hostnames were DNS-probed:
+all NXDOMAIN or parked, with every search transport dead under the clamp.
+
+**A live MX is not proof of identity.** Two Providence candidates had working
+mail and served a critic blog; `beachanesthesia.com` has a working mail server
+and a 404 web root. Confirm the domain belongs to the employer — from the
+employer's own site or a filing — before treating an address there as theirs.
+
+Result: 5 emails, up from 4, with **zero wrong-format addresses**. The single
+gain came from unlocking `orthosc.org`, whose mail domain is `.org` while its
+website is `.com` — a guess would have missed it.

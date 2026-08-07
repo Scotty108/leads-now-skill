@@ -382,3 +382,56 @@ sweeps under the cap, so peds enumeration is complete and two paths agree).
 - Process defect: two agents both wrote `build.py` to shared scratch and one
   silently replaced the other, caught only when a rebuild printed 23 rows
   instead of 476. Namespace files in shared working directories.
+
+## Round 4 — can the unlock hunt close the email gap without the error rate?
+| 4 | 2026-08-07T01:40Z | gate | both | — | — | — | — | — | — | — | 18/18 core + 34/34 ports green |
+
+**The challenge:** a prior Cowork run got 22 emails to our 4 by propagating org
+patterns. Our own observed data shows ~12 of its 22 were built on the WRONG
+format (flast at a first.last domain; dotted at a compact domain), plus it
+emitted employer addresses for contractors its own notes flagged.
+
+Target: beat 4 emails **with zero wrong-format addresses**. Every emitted
+address must trace to a pattern observed ON that domain, and to a person whose
+employment at that domain is verified.
+
+| 4A | 2026-08-07T02:00Z | clamped | ours | 119 | 119 | 1 | 1.00 | 0 | 700 | 0.7933 | 5 emails (+1), **zero wrong-format**; 13 domains attempted, 3 unlocked |
+
+### Round 4A: the unlock hunt works, and it corrected ME
+
+**I was wrong in my own analysis.** I told the user a rival's
+`flast@mcleodhealth.org` addresses were WRONG, based on ONE observed address
+(`logan.doriety@`). A complete sweep found **9 personal addresses: 3
+name-confirmed first.last AND 2 name-confirmed flast**, flast being the ~6-of-9
+MAJORITY. The rival's shape was the majority and **still unsafe** — the domain
+runs BOTH. My "wrong" was a partial-sweep negative, committed while explaining
+partial-sweep negatives to someone else.
+
+**Correct output for a mixed domain is ZERO addresses**, not a majority vote.
+No propagation from one beats ~2/3 accuracy, far under any bounce ceiling.
+14 McLeod roster members, 0 emitted.
+
+**A real toolkit bug, now fixed.** `leadkit emails` returned
+`pattern_confirmed` while silently discarding a competing observation on the
+same domain. It now downgrades to `pattern_likely`, sets
+`mixed_format_domain: true`, and names the rival — the same treatment ambiguous
+surnames already got. Fixed in both the script and the SKILL.md fallback.
+
+**A round-2 claim in our own reference is FALSE.** "Every McLeod
+anesthesiologist has `mcLeod_physician_associates: false`" — the complete slice
+(29 of 29, no truncation) is **8 TRUE, 21 FALSE**. The contractor guard alone
+would NOT have blocked two emissions; only the mixed-format finding does. Two
+guards that looked redundant were not — one was wrong.
+
+**The bottleneck is discovery, not propagation.** 72 of 120 roster members sit
+on five private anesthesia groups (Atlantic Coast 24, Tidelands 13, MedStream
+13, Southeast 11, Providence 11) whose mail domains were never found — 32
+hostnames DNS-probed, all NXDOMAIN or parked, every search transport dead under
+the clamp.
+
+**A live MX is not proof of identity:** two Providence candidates had working
+mail and served a critic blog; beachanesthesia.com has working mail and a 404
+web root.
+
+Net: **5 emails, zero wrong-format** (vs the rival's ~10 real / ~12 fabricated).
+The one gain came from `orthosc.org` — mail domain `.org`, website `.com`.

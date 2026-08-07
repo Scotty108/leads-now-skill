@@ -681,7 +681,28 @@ def port_domain_unlock_hunt(skill, cfg):
     return check(skill, "PORT: hunt one address to unlock each domain", has)
 
 
-PORT_TESTS = [port_domain_unlock_hunt,
+
+
+def port_mixed_format_domains(skill, cfg):
+    """Both. Round 4, and it corrects an analysis I gave the user.
+
+    I told them a rival's flast@mcleodhealth.org addresses were WRONG, on the
+    strength of ONE observed address (logan.doriety@). A complete sweep found 9
+    personal addresses: 3 name-confirmed first.last AND 2 name-confirmed flast,
+    with flast the ~6-of-9 majority. The rival's shape was the MAJORITY and
+    still unsafe — because the domain runs BOTH.
+
+    No propagation from a mixed domain beats ~2/3 accuracy, which is far under
+    any usable bounce ceiling. Detect the mix, downgrade, and emit nothing."""
+    t = _all_md(cfg)
+    has = ("mixed" in t or "two formats" in t) and \
+          ("same domain" in t or "concurrently" in t or "at once" in t) and \
+          ("propagat" in t)
+    return check(skill, "PORT: a domain can run two email formats at once", has)
+
+
+PORT_TESTS = [port_mixed_format_domains,
+              port_domain_unlock_hunt,
               port_academic_vs_community_ceiling,
               port_registry_addresses_go_stale,
               port_empty_string_vs_null_filters,

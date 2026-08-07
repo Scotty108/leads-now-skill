@@ -374,6 +374,17 @@ def cmd_emails(args) -> int:
     top = tied[0]
     conf = "pattern_confirmed" if n >= 2 else "pattern_likely"
 
+    # A domain can run TWO formats at once. Measured: mcleodhealth.org shows 3
+    # name-confirmed first.last AND 2 name-confirmed flast among 9 observed
+    # addresses. Reporting the majority as pattern_confirmed hides a coin flip —
+    # no propagation from a mixed domain can beat roughly 2/3 accuracy, which is
+    # far under any usable bounce ceiling. Downgrade and name the rival, the
+    # same treatment an ambiguous surname already gets.
+    rivals = {p: v for p, v in votes.items() if p != top and v >= 1}
+    mixed = bool(rivals)
+    if mixed and conf == "pattern_confirmed":
+        conf = "pattern_likely"
+
     resolved, unresolved = [], []
     for full in names:
         parts = split_name(full)
@@ -401,7 +412,13 @@ def cmd_emails(args) -> int:
 
     res = {"domain": args.domain, "pattern": top, "confidence": conf,
            "evidence_count": n, "candidates_considered": dict(votes),
+           "mixed_format_domain": mixed,
+           "competing_patterns": rivals or None,
            "resolved": resolved, "unresolved": unresolved}
+    if mixed:
+        res["warning"] = ("domain runs multiple formats "
+                          f"({top} x{n} vs {rivals}); propagation is unsafe — "
+                          "verify each address individually")
     if args.json:
         _out(json.dumps(res, indent=2), args.output)
     else:

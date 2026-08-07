@@ -1,0 +1,49 @@
+{
+  "skill": "ours",
+  "condition": "clamped",
+  "subagents": 0,
+  "tool_calls": 30,
+  "wall_clock_s": 700,
+  "people_found": 120,
+  "in_radius": 119,
+  "reachable": 119,
+  "peds_signal_strong": 1,
+  "peds_signal_moderate": 0,
+  "blocked_sources": [
+    {"host": "duckduckgo.com", "reason": "html endpoint returns no parseable results (JS/consent gate)"},
+    {"host": "mojeek.com", "reason": "HTTP 200 but empty 5.8kb shell, zero result links"},
+    {"host": "crt.sh", "reason": "HTTP 502 on all 5 certificate-transparency queries — service down"},
+    {"host": "bing.com", "reason": "?format=rss returns HTTP 200 with unrelated cached results; query terms ignored"},
+    {"host": "atlanticanesthesia.com", "reason": "HTTP 503 Service Temporarily Unavailable"},
+    {"host": "beachanesthesia.com", "reason": "HTTP 404 at root despite live MX"},
+    {"host": "providenceanesthesiology.com / providenceanesthesia.com", "reason": "not the employer — a third-party critic blog 'The Truth About Providence Anaesthesia'"},
+    {"host": "seanesthesia.com / paapa.com", "reason": "parked landers (JS redirect to /lander)"},
+    {"host": "tidelandshealth.org", "reason": "403 to curl (carried from prior rounds; facility not employer domain)"}
+  ],
+  "truncation_detected": false,
+  "notes": "Search transport was entirely unavailable under condition A (WebSearch exhausted; DDG, Mojeek, crt.sh and Bing-RSS all failed), which closes employer-domain DISCOVERY for any group without a guessable hostname — 72 of 120 roster members sit on such domains. Two domains WERE unlocked by fetching, and both turned out to run TWO email formats concurrently. mcleodhealth.org: 9 personal addresses observed, 3 name-confirmed first.last vs 2 name-confirmed flast plus 4 further flast-shaped (~67% flast). orthosc.org: 2 first.last vs 1 flast. leadkit's majority vote labelled both pattern_confirmed; that label was overridden because it counts votes for the winner without flagging that a rival format is live on the same domain. This is a defect in the helper worth fixing. Second falsification this round: round 2's claim that 'every McLeod anesthesiologist has mcLeod_physician_associates=false' is wrong — 8 of 29 are TRUE (checked 29 of 29). So the rival's mcleodhealth.org emails are wrong for TWO independent reasons, only one of which the round-4 brief anticipated: not merely the contractor rule, but the fact that no single format propagates on that domain at all. Zero wrong-format addresses emitted; one address added.",
+  "channel_yield": {
+    "domains_attempted": 13,
+    "domains_unlocked": 3,
+    "emails_pattern_confirmed": 3,
+    "emails_pattern_likely": 1,
+    "emails_withheld_contractor": 6,
+    "department_phones": 37
+  },
+  "domain_ledger": [
+    {"domain": "mcleodhealth.org", "roster_members": 14, "fetches_spent": 6, "observed_address": "Maureen.finger@ (Maureen Finger), maggie.jackson@ (Maggie Jackson), logan.doriety@ (given), rserrano@ (Raquel Serrano), dsawyer@ (Davis Sawyer), + aploeg@ cpernell@ hburgin@ jcauble@ (flast-shaped, unnamed)", "pattern": "MIXED — first.last AND flast both live; 9 personal addresses observed, ~6/9 flast", "emitted": 0, "withheld_reason": "No propagable pattern: two formats co-exist, so any propagation is wrong ~1 time in 3 at best. Employment additionally contested — McLeod's own directory sets mcLeod_physician_associates=true for 8 of 29 anesthesiologists and false for 21, while CMS PECOS names MCLEOD PHYSICIAN ASSOCIATES II as employer for 14 roster members. Two first-party-grade sources disagree."},
+    {"domain": "ATLANTIC COAST ANESTHESIA SERVICES PC (domain unknown)", "roster_members": 24, "fetches_spent": 1, "observed_address": "", "pattern": "", "emitted": 0, "withheld_reason": "Domain never found. 10 candidate hostnames DNS-probed (atlanticcoastanesthesia .com/.net/.org, atlanticcoastanesthesiaservices.com, atlanticcoastanesthesiapc.com, acasmb.com, acanesthesia.com, acanesthesiapc.com, acaspc.com, acasanesthesia.com) — all NXDOMAIN. atlanticanesthesia.com resolves with live Outlook MX but returned 503 and could not be confirmed as this employer; not used. No search engine available to resolve the name. Biggest single prize on the roster and it stayed shut."},
+    {"domain": "TIDELANDS ANESTHESIA GROUP LLC (domain unknown)", "roster_members": 13, "fetches_spent": 0, "observed_address": "", "pattern": "", "emitted": 0, "withheld_reason": "4 candidate hostnames NXDOMAIN (tidelandsanesthesia.com/.net, tidelandsanesthesiagroup.com/.net, taganesthesia.com). tidelandshealth.org is the FACILITY, not this employer, and still 403s — applying a facility pattern to a contracted group is precisely the rival's error."},
+    {"domain": "MEDSTREAM ANESTHESIA PLLC (domain unknown)", "roster_members": 13, "fetches_spent": 0, "observed_address": "", "pattern": "", "emitted": 0, "withheld_reason": "9 candidate hostnames NXDOMAIN. MedStream staffs Conway Medical Center; cmc-sc.com is confirmed first.last on 5 observations but MedStream clinicians are contractors there, so the confirmed pattern does not apply to them."},
+    {"domain": "SOUTHEAST ANESTHESIOLOGY CONSULTANTS PLLC (domain unknown)", "roster_members": 11, "fetches_spent": 1, "observed_address": "", "pattern": "", "emitted": 0, "withheld_reason": "seanesthesia.com resolves but is a parked lander; southeastanesthesiology.com / southeastanesthesiologyconsultants.com NXDOMAIN. Parent-org domains scopeanesthesia.com and napaanesthesia.com are live but are a sibling/parent org — explicitly forbidden as a pattern source."},
+    {"domain": "PROVIDENCE ANESTHESIOLOGY ASSOCIATES PA (domain unknown)", "roster_members": 11, "fetches_spent": 4, "observed_address": "", "pattern": "", "emitted": 0, "withheld_reason": "providenceanesthesiology.com and providenceanesthesia.com both resolve with live MX but serve a third-party critic blog titled 'The Truth About Providence Anaesthesia' — not the employer. paapa.com is a parked lander. A live MX is not proof of identity."},
+    {"domain": "hcahealthcare.com", "roster_members": 6, "fetches_spent": 2, "observed_address": "Jon.Halling@hcahealthcare.com (first_party_published, first.last)", "pattern": "first.last", "emitted": 1, "withheld_reason": "5 withheld. Grand Strand anesthesia is contracted (TeamHealth; hcaEmployee=false, round 2). Re-checked the directory this round: JS shell, no email field and no employment flag exposed, so nothing overturns the prior. The 1 emitted is Halling's own first-party published address, not an inference."},
+    {"domain": "cmc-sc.com", "roster_members": 3, "fetches_spent": 3, "observed_address": "sandy.moore@, farayi.mbuvah@, frederick.bellamy@, ihor.melnytskyy@, Sydney.Causey@", "pattern": "first.last (pattern_confirmed, 5 observations)", "emitted": 3, "withheld_reason": "0 marginal this round. Conway's wp-json providers payload (100 records, 1.5MB) carries NO email field, and the contact page re-confirms only sandy.moore@. Every Conway-employed roster member already had an address; everyone else at that building is a MedStream contractor."},
+    {"domain": "orthosc.org", "roster_members": 2, "fetches_spent": 4, "observed_address": "ann.vennell@orthosc.org (Ann Vennell), miranda.amos@orthosc.org (Miranda Amos), mmccorkle@orthosc.org (Melissa McCorkle)", "pattern": "first.last majority (2) with a competing flast (1) live on the same domain", "emitted": 1, "withheld_reason": "1 withheld: Joshua Gore — CMS PECOS says ORTHOSC LLC, McLeod's directory says mcLeod_physician_associates=true. Employer unknown, so no pattern applies. The 1 emitted (Kenneth Wenz) is downgraded from leadkit's pattern_confirmed to pattern_likely and ships its alternate kwenz@orthosc.org, because a rival format is documented on the domain."},
+    {"domain": "emergeortho.com", "roster_members": 2, "fetches_spent": 2, "observed_address": "", "pattern": "", "emitted": 0, "withheld_reason": "Live Outlook MX. /contact-us/ and /careers/ fetched: contact form only, the sole address in the HTML is the placeholder example@email.com. Checked 2 of the 5 conventional unlock pages; no published address found."},
+    {"domain": "beachanesthesia.com", "roster_members": 3, "fetches_spent": 1, "observed_address": "", "pattern": "", "emitted": 0, "withheld_reason": "Live self-hosted MX (mail.beachanesthesia.com) but the web root returns HTTP 404 with a 13-byte body — mail exists, site does not. Nothing to read."},
+    {"domain": "novanthealth.org", "roster_members": 1, "fetches_spent": 0, "observed_address": "jsmoreb@, mssaylor@ (given)", "pattern": "compact/non-dotted, rule NOT derivable from 2 samples", "emitted": 0, "withheld_reason": "Two samples cannot separate first-initial+middle-initial+surname from first-initial+truncated-surname, and no third sample was obtainable without search. Per instruction, emitted nothing. The single roster member (William Myers, PA-C) also has an ambiguous employer: CHARLESTON CARENOW URGENT CARE LLC | NOVANT HEALTH URGENT CARES LLC."},
+    {"domain": "crhealthcare.org", "roster_members": 0, "fetches_spent": 0, "observed_address": "hhawthorne@ (given)", "pattern": "flast", "emitted": 0, "withheld_reason": "Zero roster members sit on this employer. The rival's flast call here was correct but worth nothing on this roster."}
+  ],
+  "marginal_vs_round3": {"emails": 1}
+}

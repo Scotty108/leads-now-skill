@@ -1,0 +1,113 @@
+{
+  "results": [
+    {
+      "skill": "ours",
+      "check": "frontmatter is upload-legal",
+      "status": "PASS",
+      "detail": "['name', 'description', 'license', 'compatibility']"
+    },
+    {
+      "skill": "ours",
+      "check": "no Claude-Code-only body syntax",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "skill": "ours",
+      "check": "no third-party imports",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "skill": "ours",
+      "check": "scripts make no network calls",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "skill": "ours",
+      "check": "zero evidence -> emits no address",
+      "status": "PASS",
+      "detail": "refused"
+    },
+    {
+      "skill": "ours",
+      "check": "off-domain sample is ignored",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "skill": "ours",
+      "check": "ambiguous surname not top-confidence",
+      "status": "PASS",
+      "detail": "handled"
+    },
+    {
+      "skill": "ours",
+      "check": "warns about NPI pagination ceiling",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "skill": "ours",
+      "check": "warns to broaden narrow taxonomy",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "skill": "skillit",
+      "check": "frontmatter is upload-legal",
+      "status": "PASS",
+      "detail": "['name', 'description']"
+    },
+    {
+      "skill": "skillit",
+      "check": "no Claude-Code-only body syntax",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "skill": "skillit",
+      "check": "no third-party imports",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "skill": "skillit",
+      "check": "scripts make no network calls",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "skill": "skillit",
+      "check": "zero evidence -> emits no address",
+      "status": "PASS",
+      "detail": "refused"
+    },
+    {
+      "skill": "skillit",
+      "check": "off-domain sample is ignored",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "skill": "skillit",
+      "check": "ambiguous surname not top-confidence",
+      "status": "PASS",
+      "detail": "handled"
+    },
+    {
+      "skill": "skillit",
+      "check": "warns about NPI pagination ceiling",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "skill": "skillit",
+      "check": "warns to broaden narrow taxonomy",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "failed": 0
+}
