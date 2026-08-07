@@ -37,6 +37,18 @@ from collections import Counter
 FIELDS = ["full_name", "title", "org", "org_domain", "email", "phone",
           "linkedin", "profile_url"]
 
+# Location travels with the person, not with a contact channel, so it is merged
+# on the same first-non-empty-wins rule but kept out of FIELDS — these are not
+# contact channels and must not be counted as one. Without them the merge drops
+# every address and `bands` has nothing to measure.
+LOC_FIELDS = ["city", "state", "postal_code"]
+
+# Computed by `bands`, not observed. Carried through merge so the pipeline works
+# in either order — running bands before merge otherwise dropped the distance
+# and emitted an empty dist_mi column, which reads as "nobody has a distance"
+# rather than as a step run out of order.
+DERIVED_FIELDS = ["dist_mi", "dist_basis"]
+
 # Honorifics and post-nominals. Clinical directories are full of "Jane Doe, MD,
 # FAAP" and "Dr. Ann Lee", which would otherwise poison both the inferred email
 # pattern and the dedupe key.
@@ -192,6 +204,151 @@ def cmd_geo(args) -> int:
     if len(states) > 1:
         print(f"note: radius spans {len(states)} states — querying one state "
               f"would drop the rest", file=sys.stderr)
+    return 0
+
+
+# -------------------------------------------------------------- bands ------
+# A radius is a guess the user made before seeing the data, and it is routinely
+# not the radius they meant — the benchmark ran at 50 miles against a territory
+# that was actually 15. Those are not different searches: 15 is a subset. Sweep
+# wide once, then band, and every radius is readable off the same run.
+
+BANDS = [15, 25, 50, 100]
+
+
+# City names arrive the way a human typed them into a directory form, not the
+# way the Census writes them. Measured on a 786-row roster: 17 cities failed to
+# place and almost none were actually missing — they were spelling variants.
+# Each miss demotes a row to a postal-prefix centroid with a ~38 mile median
+# extent, which is tolerable at a 50-mile ring and fatal at a 15-mile one.
+CITY_ABBREV = {"mt": "mount", "st": "saint", "ft": "fort", "n": "north",
+               "s": "south", "e": "east", "w": "west", "nw": "northwest",
+               "ne": "northeast", "sw": "southwest", "se": "southeast"}
+
+
+def _city_key(name):
+    """Normalised comparison key: case, punctuation and abbreviations."""
+    toks = re.sub(r"[^a-z0-9 ]", " ", (name or "").lower()).split()
+    return " ".join(CITY_ABBREV.get(t, t) for t in toks)
+
+
+def _match_place(city, st, places, _cache={}):
+    """City -> centroid, trying progressively looser matches.
+
+    The last rung handles consolidated city-county governments: the Census
+    carries "Lexington-Fayette" and "Augusta-Richmond County" where a directory
+    writes plain "Lexington" and "Augusta". Prefix matching is only allowed
+    across a hyphen boundary, so it cannot turn "Charleston" into
+    "Charleston Heights" — that would move a row to a different town.
+    """
+    if not _cache:
+        for nm, pst, la, lo in places:
+            _cache.setdefault((_city_key(nm), pst), (la, lo))
+            head = _city_key(nm).split(" - ")[0] if " - " in _city_key(nm) else None
+            if head:
+                _cache.setdefault((head, pst), (la, lo))
+    key = _city_key(city)
+    hit = _cache.get((key, st)) or (_cache.get((key, "")) if not st else None)
+    if hit:
+        return hit
+    # Consolidated government: gazetteer name is "<query> <county-ish tail>".
+    for (nm, pst), pt in _cache.items():
+        if pst == st and (nm.startswith(key + " ") and len(key) > 4):
+            return pt
+    return None
+
+
+def _locate(rec, places, zip3):
+    """Best available centroid for a record, with how good it is.
+
+    City beats postal prefix by a wide margin. A 3-digit prefix has a ~38 mile
+    median extent, so banding a 15-mile ring on one is noise dressed as a
+    number — it is reported, but labelled, and never silently mixed in with
+    city-derived distances.
+    """
+    city = (rec.get("city") or "").strip()
+    st = (rec.get("state") or "").strip().upper()
+    if city:
+        pt = _match_place(city, st, places)
+        if pt:
+            return pt[0], pt[1], "city_centroid"
+    pc = re.sub(r"[^0-9]", "", str(rec.get("postal_code") or ""))[:3]
+    if len(pc) == 3:
+        for z, la, lo, _ext in zip3:
+            if z == pc:
+                return la, lo, "zip3_centroid"
+    return None, None, None
+
+
+def cmd_bands(args) -> int:
+    zip3, places = _load_geo()
+    if zip3 is None:
+        print("error: assets/us_geo.csv.gz missing — cannot measure distance",
+              file=sys.stderr)
+        return 2
+
+    if args.lat is not None and args.lon is not None:
+        clat, clon, label = args.lat, args.lon, f"{args.lat},{args.lon}"
+    else:
+        want, st = (args.place or "").strip().lower(), (args.state or "").strip().upper()
+        hits = [p for p in places if p[0].lower() == want and (not st or p[1] == st)]
+        if not hits:
+            print(f"error: place {args.place!r} not found — pass --lat/--lon",
+                  file=sys.stderr)
+            return 2
+        _, hst, clat, clon = hits[0]
+        label = f"{args.place}, {hst}"
+
+    try:
+        rows = json.load(open(args.input))
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"error: {args.input} ({e})", file=sys.stderr)
+        return 1
+    if isinstance(rows, dict):
+        rows = [rows]
+
+    unplaced = 0
+    for r in rows:
+        la, lo, basis = _locate(r, places, zip3)
+        if la is None:
+            r["dist_mi"], r["dist_basis"] = None, None
+            unplaced += 1
+            continue
+        r["dist_mi"] = round(_haversine(clat, clon, la, lo), 1)
+        r["dist_basis"] = basis
+
+    placed = [r for r in rows if r.get("dist_mi") is not None]
+    placed.sort(key=lambda r: r["dist_mi"])
+
+    if args.output:
+        json.dump(rows, open(args.output, "w"), indent=2, ensure_ascii=False)
+        print(f"wrote {args.output}")
+
+    print(f"{len(rows)} record(s) from {label}")
+    prev, cum = 0, 0
+    for b in BANDS:
+        n = sum(1 for r in placed if r["dist_mi"] <= b)
+        if n == cum and b != BANDS[0]:
+            continue
+        print(f"  within {b:>3} mi   {n:>4}   (+{n - cum} over {prev} mi)")
+        prev, cum = b, n
+
+    # The near-miss is the whole point of banding: someone at 51 miles is a fact
+    # the user can act on, and a hard cutoff hides them in a way that looks
+    # exactly like their not existing.
+    edge = [r for r in placed if args.radius < r["dist_mi"] <= args.radius * 1.2]
+    if edge:
+        print(f"  just outside {args.radius} mi: {len(edge)}")
+        for r in edge[:5]:
+            print(f"      {r.get('full_name', '?')}  {r['dist_mi']} mi"
+                  f"  {r.get('city') or ''}")
+    z3 = sum(1 for r in placed if r["dist_basis"] == "zip3_centroid")
+    if z3:
+        print(f"  note: {z3} row(s) placed by 3-digit postal prefix "
+              f"(~38mi median extent) — approximate, not city-accurate")
+    if unplaced:
+        print(f"  {unplaced} row(s) have no city or postal code and are "
+              f"UNPLACED — they are not in any band, including yours")
     return 0
 
 
@@ -464,14 +621,14 @@ def cmd_merge(args) -> int:
             # field gets its source recorded. Seeding here left the first
             # source's fields with values but no provenance — which silently
             # hollowed out the per-field audit trail this tool exists for.
-            e = {f: None for f in FIELDS}
+            e = {f: None for f in FIELDS + LOC_FIELDS + DERIVED_FIELDS}
             e["_sources"], e["_field_sources"] = [], {}
             merged[key] = e
         e = merged[key]
         src = r.get("source") or r.get("profile_url") or "unknown"
         if src not in e["_sources"]:
             e["_sources"].append(src)
-        for f in FIELDS:
+        for f in FIELDS + LOC_FIELDS + DERIVED_FIELDS:
             v = r.get(f)
             # First non-empty value wins, so input order encodes trust: put the
             # registry before the marketing page and the registry's title survives.
@@ -522,7 +679,15 @@ def cmd_csv(args) -> int:
     header = []
     for f in FIELDS:
         header += [f, f"{f}_source"]
-    header += ["confidence", "source_count", "all_sources"]
+    header += LOC_FIELDS + ["dist_mi", "dist_basis",
+                            "confidence", "source_count", "all_sources"]
+
+    # Nearest first: a territory gets worked outward from its centre, so that is
+    # the order the list is actually used in. Rows with no distance sort last
+    # rather than to the front, where they would look like the closest leads.
+    if any(r.get("dist_mi") is not None for r in rows):
+        rows = sorted(rows, key=lambda r: (r.get("dist_mi") is None,
+                                           r.get("dist_mi") or 0.0))
 
     with open(args.output, "w", newline="", encoding="utf-8") as fh:
         w = csvmod.writer(fh)
@@ -532,7 +697,10 @@ def cmd_csv(args) -> int:
             row = []
             for f in FIELDS:
                 row += [r.get(f) or "", fs.get(f, "")]
-            row += [r.get("_confidence", ""), r.get("_source_count", ""),
+            row += [r.get(f) or "" for f in LOC_FIELDS]
+            row += [r.get("dist_mi") if r.get("dist_mi") is not None else "",
+                    r.get("dist_basis") or "",
+                    r.get("_confidence", ""), r.get("_source_count", ""),
                     " | ".join(r.get("_sources") or [])]
             w.writerow(row)
 
@@ -625,6 +793,14 @@ def main() -> int:
     g.add_argument("--radius", type=float, default=50)
     g.add_argument("--json", action="store_true"); g.add_argument("-o", "--output")
     g.set_defaults(fn=cmd_geo)
+
+    b = sub.add_parser("bands", help="distance-band a merged file, nearest first")
+    b.add_argument("input")
+    b.add_argument("--place"); b.add_argument("--state")
+    b.add_argument("--lat", type=float); b.add_argument("--lon", type=float)
+    b.add_argument("--radius", type=float, default=50)
+    b.add_argument("-o", "--output", help="write back with dist_mi/dist_basis")
+    b.set_defaults(fn=cmd_bands)
 
     pl = sub.add_parser("plan", help="emit NPI query URLs to fetch")
     pl.add_argument("--taxonomy", required=True, help="comma-separated; include the PARENT")

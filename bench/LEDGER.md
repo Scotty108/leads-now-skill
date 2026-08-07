@@ -480,3 +480,73 @@ Aird dispute: her NPPES address was stale.
 
 The first answer (1) trusted a registry TAXONOMY. The second trusted a registry
 ADDRESS. Both were fixed by the same source: a current federal filing.
+
+---
+
+## Universality cycle — the skill had to survive being pointed elsewhere
+
+Not a scored round: no lead-finding runs. The user's requirement was that the
+skill answer *"people like X within N of Y"* for **any** population, with Myrtle
+Beach as one benchmark rather than the subject. Five invariants written first,
+all red against the pre-cycle version.
+
+### A pack nothing routes to is a deleted pack
+
+The previous cycle moved the clinical detail into `vertical-healthcare.md` and
+`SKILL.md` referenced it **zero times**. The specifics were not decluttered,
+they were orphaned — the router could never load them back. `test_vertical_pack_
+exists` had checked the file was on disk, which it was.
+
+### Universality is a method, not a longer list
+
+`sources.md` was "Where to look, by vertical" — a healthcare table and a B2B
+table. That is a two-vertical skill. Rewritten as a derivation: classify the
+population by **structure**, and the class says whether a roster exists at all.
+
+| Class | Test | Enumerable |
+|---|---|---|
+| Licensed | prosecuted without one? | fully |
+| Public payroll | taxpayer-funded salary? | yes |
+| Entity principal | is the person the business? | via the filing |
+| Credentialed / Association | verified letters / a trade body? | partial |
+| Privately employed | none of the above | **no** |
+
+The fork matters more than the sources: only an enumerable class has a
+denominator. It also predicts the email ceiling — **public payroll is the
+highest-yield class in any vertical, a licence register the lowest.** That
+reframes round 2's academic-vs-community finding as an instance of a general
+law rather than a fact about hospitals.
+
+### 15 miles was answerable from a run already on disk
+
+The territory was 15mi; every round swept 50. Those are not different searches —
+15 is a subset — but a flat list forces a re-run. `leadkit bands` measures each
+person from the centre and reports bands, so **one sweep answers every radius**:
+
+```
+786 NPI people, from Myrtle Beach
+  within 15 mi  33    within 25 mi  42    within 50 mi  60
+```
+
+Two bugs surfaced only by running it on the real 786-row roster:
+
+1. **`merge` dropped city/state/postal_code** — they were not in `FIELDS`, so
+   the location never survived to be measured and `dist_mi` came out empty.
+   That reads as "nobody has a distance", not as a broken pipeline.
+2. **17 cities failed to place, and almost none were missing.** They were
+   spelling variants: `MT PLEASANT` vs Mount Pleasant, `N CHARLESTON` vs North
+   Charleston, `WINSTON SALEM` vs Winston-Salem. Each miss silently demoted a
+   row to a postal-prefix centroid with a **~38 mile median extent** — tolerable
+   at a 50mi ring, fatal at 15mi. Normalising abbreviations took city-accurate
+   placement from **737 to 756 of 786**, with our gazetteer still half the size
+   of skillit's ZIP5 file.
+
+Skillit was worse: it died on the **centre**. `resolve "Mt Pleasant, SC"` →
+`place not found`, a hard stop on step one of any run. Ported both ways; both
+now band, and neither drifts (`Charleston` did not absorb into "Charleston
+Heights"; `Lexington, KY` correctly resolves to Lexington-Fayette).
+
+An unplaceable row keeps a **null** distance, never a zero — a zero sorts it to
+the top and reads as the closest lead in the territory.
+
+**32/32 green, both skills.**

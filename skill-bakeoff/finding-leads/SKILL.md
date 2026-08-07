@@ -18,6 +18,19 @@ The failure this skill exists to prevent: a plausible list of famous employers w
 email addresses and no way to tell which rows are real. Guarding against that costs recall
 nowhere, because the registries below are census-grade and free.
 
+**Report in distance bands, sorted nearest first.** A radius is a guess the user made before
+seeing the data, and it is often not the radius they meant. Sweep at the wider number, then band
+the output so any radius is readable off one run without re-searching:
+
+```
+within 15 mi   18      within 30 mi   +12      within 50 mi   +11
+just outside   4 at 51-60 mi  (Jane Doe 53, ...)
+```
+
+Carry `dist_mi` as a column and sort ascending — a territory gets worked outward from its centre.
+**Name the near-misses.** Someone at 51 miles is a fact the user can act on; a hard cutoff hides
+them and looks identical to their not existing. Surface the row; never re-scope the territory.
+
 **Search one level broader than the request, then narrow with evidence.** A specialty, seniority,
 or job-title filter applied at the query is applied to a *self-reported* field, so it silently
 deletes most of the population. Query the parent category, then qualify individuals from what
@@ -45,6 +58,29 @@ When a branch finishes and the user's stated outcome needs the next one, chain w
 Two files serve every branch. Read `references/source-access.md` before fetching anything from an
 organization's own website. Read `references/email-tradecraft.md` before writing any email address
 into any output.
+
+## Classify the population before choosing a single source
+
+Answer one question first: **does a roster of these people exist anywhere, or must you sample?**
+Take the highest class that applies.
+
+| Class | The test | Enumerable? |
+|---|---|---|
+| **Licensed** | Fined or prosecuted for practising without one? | Yes, completely |
+| **Public payroll** | Does a taxpayer fund the salary? | Yes |
+| **Entity principal** | Is the person the business? | Yes, via the filing |
+| **Credentialed** | Letters after the name that somebody verifies? | Partial |
+| **Association** | A trade body they would plausibly join? | Partial |
+| **Privately employed** | None of the above | **No** |
+
+Only an enumerable class has a denominator. "72 of 72" is a census claim and needs one; everywhere
+else the honest form is "18 across 26 orgs checked". Say which regime you are in — a user who reads
+a sample as a census concludes the territory is empty when it is not.
+
+Then load the matching **`references/vertical-*.md`** pack when one exists. **Having no pack is the
+normal case**: read `references/population-class.md`, which derives the register — the state
+`license lookup` tool, the open-data portal, the entity filing — for a population nobody wrote a
+section for, and predicts the email ceiling from the class before you promise a number.
 
 ## Sources
 

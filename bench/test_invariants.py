@@ -820,8 +820,185 @@ def test_vertical_pack_exists(skill, cfg):
                  os.path.basename(packs[0]) if packs else "none")
 
 
+def test_router_loads_vertical_pack(skill, cfg):
+    """A pack nothing routes to is a deleted pack.
+
+    Moving the clinical detail out of the always-read path only works if the
+    router puts it back when the population matches. The first version of this
+    refactor left `vertical-healthcare.md` on disk with ZERO references from
+    SKILL.md — the specifics were not decluttered, they were orphaned.
+    """
+    body = open(os.path.join(cfg["dir"], "SKILL.md"), errors="ignore").read().lower()
+    routes = "vertical-" in body
+    return check(skill, "router loads the matching vertical pack", routes,
+                 "SKILL.md never names a vertical-*.md pack" if not routes else "")
+
+
+def test_population_class_method(skill, cfg):
+    """Universality is a METHOD for an unseen population, not a longer list.
+
+    Listing healthcare and B2B sources makes a two-vertical skill. What makes it
+    general is a procedure that answers "where does a roster of THESE people
+    live?" for commercial roofers, school superintendents or insurance
+    producers — populations nobody wrote a section for.
+
+    The discriminator is structural: whether the population is enumerable at all
+    (a mandatory register, a public-payroll disclosure, an entity filing) or
+    only samplable (privately employed, no register). That single question
+    decides the whole plan, so the skill has to ask it explicitly.
+    """
+    t = _all_md(cfg)
+    has_classes = sum(k in t for k in
+                      ("licensed", "register", "public payroll", "public employ",
+                       "entity filing", "secretary of state", "credential",
+                       "association")) >= 4
+    has_verdict = ("enumerab" in t or "enumerate the population" in t) and \
+                  ("samplab" in t or "sample" in t)
+    has_derivation = "license lookup" in t or "license verification" in t
+    ok = has_classes and has_verdict and has_derivation
+    return check(skill, "derives sources for an unseen population", ok,
+                 f"classes={has_classes} verdict={has_verdict} derive={has_derivation}")
+
+
+def test_bands_are_computable(skill, cfg):
+    """Banding must be a computation, not a paragraph asking Claude to be tidy.
+
+    Prose alone regressed twice in this loop. The distances have to come out of
+    a deterministic helper, and the location fields have to SURVIVE the merge —
+    the first cut of this dropped city/state/postal_code at merge, so the
+    banding step silently had nothing to measure and emitted an empty column,
+    which reads as "nobody has a distance" rather than as a broken pipeline.
+    """
+    script = os.path.join(cfg["dir"], "scripts", "leadkit.py")
+    if not os.path.exists(script):
+        return check(skill, "distance banding is computed", True, "no leadkit")
+    src = open(script, errors="ignore").read()
+    if "def cmd_bands" not in src:
+        return check(skill, "distance banding is computed", False,
+                     "no bands subcommand")
+
+    import subprocess, tempfile, json as _j
+    recs = [{"full_name": "Near Person", "city": "MYRTLE BEACH", "state": "SC",
+             "source": "test"},
+            {"full_name": "Far Person", "city": "CHARLESTON", "state": "SC",
+             "source": "test"},
+            {"full_name": "Unplaced Person", "source": "test"}]
+    with tempfile.TemporaryDirectory() as td:
+        src_p = os.path.join(td, "r.json")
+        _j.dump(recs, open(src_p, "w"))
+        # Both orders must work: merge->bands and bands->merge.
+        outs = []
+        for order in (("merge", "bands"), ("bands", "merge")):
+            cur, ok = src_p, True
+            for step in order:
+                nxt = os.path.join(td, f"{step}_{order[0]}.json")
+                cmd = [sys.executable, script, step, cur, "-o", nxt]
+                if step == "bands":
+                    cmd += ["--place", "Myrtle Beach", "--state", "SC",
+                            "--radius", "50"]
+                p = subprocess.run(cmd, capture_output=True, text=True)
+                if p.returncode != 0:
+                    ok = False
+                    break
+                cur = nxt
+            outs.append(_j.load(open(cur)) if ok else None)
+
+    bad = []
+    for order, rows in zip(("merge->bands", "bands->merge"), outs):
+        if rows is None:
+            bad.append(f"{order} failed")
+            continue
+        by = {r.get("full_name"): r for r in rows}
+        near, far = by.get("Near Person"), by.get("Far Person")
+        if not near or near.get("dist_mi") is None:
+            bad.append(f"{order}: near person lost its distance")
+        elif not far or far.get("dist_mi") is None:
+            bad.append(f"{order}: far person lost its distance")
+        elif not (near["dist_mi"] < far["dist_mi"]):
+            bad.append(f"{order}: {near['dist_mi']} !< {far['dist_mi']}")
+        unp = by.get("Unplaced Person")
+        # An unplaceable row must stay null, never default to 0 — a 0 would sort
+        # it to the top and read as the closest lead in the territory.
+        if unp and unp.get("dist_mi") is not None:
+            bad.append(f"{order}: unplaced row got dist {unp['dist_mi']}")
+    return check(skill, "distance banding is computed", not bad, "; ".join(bad))
+
+
+def test_city_name_variants_place(skill, cfg):
+    """Directories write city names the way a human typed them.
+
+    Measured on a real 786-row roster: 17 distinct cities failed to place, and
+    almost none were missing from the gazetteer — they were spelling variants.
+    "MT PLEASANT" vs Mount Pleasant, "N CHARLESTON" vs North Charleston,
+    "WINSTON SALEM" vs Winston-Salem, "PORT ST LUCIE" vs Port Saint Lucie.
+
+    Each miss silently demotes a row to a coarse postal-prefix centroid with a
+    ~38 mile median extent. At a 50-mile ring that is tolerable noise; at the
+    15-mile ring a real territory actually uses, it is the whole answer.
+    """
+    VARIANT_PLACES = ["Mt Pleasant, SC", "N Charleston, SC",
+                      "Winston Salem, NC", "St Petersburg, FL"]
+
+    # Every skill must at minimum resolve a variant CENTER. Failing that is a
+    # hard stop on the first step of the run: "within 15 miles of Mt Pleasant"
+    # errors out before any sourcing happens.
+    geo = os.path.join(cfg["dir"], "scripts", "geo_filter.py")
+    if os.path.exists(geo):
+        broke = []
+        for p in VARIANT_PLACES:
+            rc, out = run([sys.executable, geo, "resolve", p, "--radius", "15"])
+            if rc != 0 or "not found" in out.lower():
+                broke.append(p)
+        return check(skill, "city name variants place precisely", not broke,
+                     "; ".join(broke))
+
+    script = os.path.join(cfg["dir"], "scripts", "leadkit.py")
+    if not os.path.exists(script):
+        return check(skill, "city name variants place precisely", True, "n/a")
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("_lk_v", script)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    if not hasattr(mod, "_locate"):
+        return check(skill, "city name variants place precisely", False, "no _locate")
+    z3, places = mod._load_geo()
+    if z3 is None:
+        return check(skill, "city name variants place precisely", False, "no gazetteer")
+
+    VARIANTS = [("MT PLEASANT", "SC"), ("N CHARLESTON", "SC"),
+                ("WINSTON SALEM", "NC"), ("PORT ST LUCIE", "FL"),
+                ("W COLUMBIA", "SC"), ("ST PETERSBURG", "FL")]
+    bad = []
+    for city, st in VARIANTS:
+        _, _, basis = mod._locate({"city": city, "state": st}, places, z3)
+        if basis != "city_centroid":
+            bad.append(f"{city},{st}->{basis}")
+    return check(skill, "city name variants place precisely", not bad,
+                 "; ".join(bad))
+
+
+def test_distance_bands(skill, cfg):
+    """Report by distance band, so any radius the user names is readable.
+
+    The benchmark ran at 50 miles; the user's actual territory was 15. Those are
+    not different searches — 15 is a subset — but a flat list forces a re-run to
+    answer it. Banding the output means one sweep serves every radius, and it
+    surfaces the near-miss ("4 more at 53 miles") that a hard cutoff hides.
+    """
+    t = _all_md(cfg)
+    ok = ("distance band" in t or "band" in t) and \
+         ("nearest first" in t or "sort" in t or "ranked by distance" in t
+          or "by distance" in t)
+    return check(skill, "reports by distance band", ok)
+
+
 TESTS = [test_core_files_stay_general,
          test_vertical_pack_exists,
+         test_router_loads_vertical_pack,
+         test_population_class_method,
+         test_distance_bands,
+         test_bands_are_computable,
+         test_city_name_variants_place,
          test_frontmatter, test_portability, test_refusal,
          test_surname_particles, test_docs_claims]
 

@@ -20,10 +20,20 @@ def die(msg):
     raise SystemExit(2)
 
 
+# Directory city names are typed by humans, not copied from the Census. The
+# gazetteer says "Mount Pleasant" and "North Charleston"; a form says "MT
+# PLEASANT" and "N CHARLESTON". Without expansion the CENTER fails to resolve
+# and the whole run stops on its first step.
+ABBREV = {"mt": "mount", "st": "saint", "ft": "fort", "n": "north",
+          "s": "south", "e": "east", "w": "west", "nw": "northwest",
+          "ne": "northeast", "sw": "southwest", "se": "southeast"}
+
+
 def norm(s):
     s = unicodedata.normalize("NFKD", s or "")
     s = "".join(c for c in s if not unicodedata.combining(c))
-    return " ".join(s.lower().replace(".", " ").replace("-", " ").split())
+    toks = s.lower().replace(".", " ").replace("-", " ").split()
+    return " ".join(ABBREV.get(t, t) for t in toks)
 
 
 def load():
@@ -79,6 +89,14 @@ def parse_center(text, zips, places):
         key = (norm(city), st.upper())
         if key in places:
             return places[key], "%s, %s" % (city, st.upper())
+        # Consolidated city-county governments: the Census carries
+        # "Lexington-Fayette urban county" where a user types "Lexington".
+        # Require a word boundary so "Charleston" cannot absorb into
+        # "Charleston Heights" — that would silently move the centre.
+        pref = [(n, s) for (n, s) in places
+                if s == st.upper() and n.startswith(norm(city) + " ") and len(norm(city)) > 4]
+        if len(pref) == 1:
+            return places[pref[0]], "%s, %s" % (pref[0][0], st.upper())
         near = sorted({s for (n, s) in places if n == norm(city)})
         if near:
             die("'%s' not found in %s. It exists in: %s" % (city, st.upper(), ", ".join(near)))
@@ -181,6 +199,79 @@ def cmd_filter(args):
     return 0
 
 
+BANDS = [15, 25, 50, 100]
+
+
+def cmd_bands(args):
+    """Band by distance instead of cutting at one radius.
+
+    `filter` answers the radius the user typed. That radius is a guess made
+    before seeing the data and is routinely not the one they meant — a sweep ran
+    at 50 miles against a territory that was actually 15. Those are not
+    different searches: 15 is a subset. Banding answers every radius off one
+    sweep, and surfaces the near-miss at 51 miles that a hard cutoff hides in a
+    way that looks exactly like nobody being there.
+    """
+    if not os.path.exists(args.infile):
+        die("no such file: %s" % args.infile)
+    zips, places = load()
+    center, how = parse_center(args.center, zips, places)
+    try:
+        with open(args.infile, newline="", encoding="utf-8-sig") as f:
+            rows = list(csv.DictReader(f))
+    except (csv.Error, UnicodeDecodeError) as e:
+        die("%s is not readable as CSV (%s)." % (args.infile, e))
+    if not rows:
+        die("%s has no data rows" % args.infile)
+    if args.zip_col not in rows[0]:
+        die("column '%s' not in %s (has: %s)"
+            % (args.zip_col, args.infile, ", ".join(rows[0])))
+
+    cols = list(rows[0].keys())
+    if "distance_mi" not in cols:
+        cols.append("distance_mi")
+    placed, unplaced = [], 0
+    for row in rows:
+        z = zip5(row.get(args.zip_col))
+        pt = zips.get(z) if z else None
+        if not pt:
+            # Never default an unplaceable row to 0 — it would sort to the top
+            # and read as the closest lead in the territory.
+            row["distance_mi"] = ""
+            unplaced += 1
+            continue
+        row["distance_mi"] = "%.1f" % haversine(center, pt)
+        placed.append(row)
+    placed.sort(key=lambda r: float(r["distance_mi"]))
+
+    if args.outfile:
+        with open(args.outfile, "w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
+            w.writeheader()
+            w.writerows(placed + [r for r in rows if r.get("distance_mi") == ""])
+        print("wrote %s" % args.outfile)
+
+    print("center %.4f,%.4f from %s" % (center[0], center[1], how))
+    print("%d rows" % len(rows))
+    prev = cum = 0
+    for b in BANDS:
+        n = sum(1 for r in placed if float(r["distance_mi"]) <= b)
+        if n == cum and b != BANDS[0]:
+            continue
+        print("  within %3d mi   %4d   (+%d over %g mi)" % (b, n, n - cum, prev))
+        prev, cum = b, n
+    edge = [r for r in placed
+            if args.radius < float(r["distance_mi"]) <= args.radius * 1.2]
+    if edge:
+        print("  just outside %g mi: %d" % (args.radius, len(edge)))
+        for r in edge[:5]:
+            nm = r.get("full_name") or r.get("name") or "?"
+            print("      %s  %s mi" % (nm, r["distance_mi"]))
+    if unplaced:
+        print("  %d row(s) UNPLACED — in no band, including yours" % unplaced)
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -197,6 +288,13 @@ def main():
     fl.add_argument("--dedupe-by", help="column identifying one person, e.g. npi; keeps the nearest location")
     fl.add_argument("-o", "--outfile", required=True)
     fl.set_defaults(fn=cmd_filter)
+    bd = sub.add_parser("bands", help="band by distance instead of cutting at one radius")
+    bd.add_argument("infile")
+    bd.add_argument("--center", required=True, help="'lat,lon' | ZIP | 'City, ST'")
+    bd.add_argument("--radius", type=float, default=50, help="the ring to flag near-misses around")
+    bd.add_argument("--zip-col", default="postal_code")
+    bd.add_argument("-o", "--outfile")
+    bd.set_defaults(fn=cmd_bands)
     a = ap.parse_args()
     raise SystemExit(a.fn(a))
 

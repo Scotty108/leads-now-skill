@@ -56,6 +56,32 @@ people researched properly beats four hundred skimmed, and costs less.
 If a reference file is missing you were installed from SKILL.md alone. The
 essentials of every branch are inlined below; continue without it.
 
+## Step 1b — classify the population, then load its pack
+
+Before choosing a single source, answer one question: **does a roster of these
+people exist anywhere, or must you sample?**
+
+Take the highest class that applies:
+
+| Class | The test | Enumerable? |
+|---|---|---|
+| **Licensed** | Fined or prosecuted for practising without one? | Yes, completely |
+| **Public payroll** | Does a taxpayer fund the salary? | Yes |
+| **Entity principal** | Is the person the business? | Yes, via the filing |
+| **Credentialed** | Letters after the name that somebody verifies? | Partial |
+| **Association** | A trade body they would plausibly join? | Partial |
+| **Privately employed** | None of the above | **No** |
+
+Enumerable populations get a denominator — "41 of 41". Samplable ones get
+"18 across 26 orgs checked", and you never imply that is everyone. **Say which
+regime you are in**, or a user reads a sample as a census and concludes the
+territory is empty when it is not.
+
+Then load the matching **`references/vertical-*.md`** pack if one exists — it
+carries the concrete endpoints and the traps already paid for. **Having no pack
+is the normal case**; work `references/sources.md`, which derives the register
+for a population nobody wrote a section for.
+
 ## Step 2 — check what this surface can do
 
 Capabilities differ across Claude surfaces. Check **before** promising an
@@ -100,11 +126,18 @@ about half to resist. Climb only as far as you need:
 | **3** | The page's own XHR/JSON endpoint | Returns fields, not prose to re-parse |
 | **4** | Browser tools, if present | The only rung that reads a 403 |
 
-**Rung 1 first, always.** For clinicians the NPI registry
-(`npiregistry.cms.hhs.gov`, free, no key) enumerates the people outright —
-verified working, returns JSON with name, credential, specialty, city and NPI.
-A blocked hospital directory is then a *partial* loss: you have the person, you
-are missing their title. Do not open a browser for data a registry already gave.
+**Rung 1 first, always.** Where Step 1b found an enumerable class, its register
+returns the people outright — structured, free, and indifferent to whether any
+employer blocks you. A blocked directory is then only a *partial* loss: you have
+the person and are missing their title. Do not open a browser for data a
+register already gave you.
+
+Two traps recur in every register measured. **Query the parent category, never
+the narrow one** — sub-categories are sparsely self-reported, so the narrow
+query returns an empty list that looks like a correct answer. And **registers
+truncate silently** — deep paging often repeats instead of advancing, with no
+error and a normal-looking total. Shard the query, track seen IDs, and treat a
+page that adds nothing new as the ceiling.
 
 **Rung 4 is optional and capability-detected.** Browser tools do not exist in
 the Claude apps or Cowork sandboxes. If absent, stop at rung 3 and record the
@@ -122,9 +155,15 @@ Work down this waterfall; stop at the first that yields an address.
 2. Public professional or official sources
 3. A role-based inbox (`info@`, `contact@`) — real, but not a person
 4. The org's email pattern, inferred from addresses you actually found
-5. Corresponding-author addresses from OpenAlex / Europe PMC — **affiliation-
-   locked**, or the name collides and the address belongs to someone else
+5. Where the population publishes — papers, filings, permits, speaker pages —
+   the address printed alongside the name, **locked to the employer** or the
+   name collides and the address belongs to someone else
 6. A contact form or business phone, when email confidence is insufficient
+
+**Yield is set by the population, not by your effort.** Public-payroll and
+academic bodies publish addresses outright; licence registers publish a phone
+and almost never an inbox. Predict the ceiling from the class before promising
+a number — see `references/sources.md`.
 
 Label every phone with what KIND of number it is (`direct` / `department` /
 `practice` switchboard). An NPI phone defaults to `practice`. Reporting a
@@ -162,8 +201,15 @@ and bounces anyway.
 
 ```
 python3 leadkit.py merge records/*.json -o merged.json
-python3 leadkit.py csv merged.json -o leads.csv
+python3 leadkit.py bands merged.json --place "Myrtle Beach" --state SC \
+        --radius 50 -o banded.json
+python3 leadkit.py csv banded.json -o leads.csv
 ```
+
+`bands` measures each person from the centre and prints the distance bands.
+Run it whenever the ask named a place — it is what makes any radius readable
+off one sweep. A row it cannot place keeps a **null** distance and never a
+zero, so an unplaceable person is never sorted to the top as the closest lead.
 
 `merge` collapses one person found via several orgs and keeps every source URL.
 **Order inputs most-trustworthy-first** — the first non-empty value wins, so the
@@ -173,11 +219,30 @@ apps, write the CSV in the sandbox and attach it.
 Then report, in this order:
 
 1. **Counts** — orgs searched, people found, emails resolved, split by label
-2. **The gaps** — blocked orgs with the reason, people with a single source
-3. **The file**
+2. **Distance bands** — see below
+3. **The gaps** — blocked orgs with the reason, people with a single source
+4. **The file**
 
 Never give a row count without saying how many rows carry a real email. "312
 leads" where 40 have addresses is a misleading number.
+
+### Always band by distance, and sort nearest first
+
+A radius is a guess the user made before seeing the data, and it is often not
+the radius they meant. Sweep at the wider number, then report in bands so **any
+radius is readable off one run** without a re-search:
+
+```
+within 15 mi   18      within 30 mi   +12      within 50 mi   +11
+just outside   4 at 51-60 mi  (Jane Doe 53, ...)
+```
+
+Include the CSV column `dist_mi` and sort ascending — a territory is worked
+outward from the centre, so nearest-first is the order the list gets used in.
+
+**Name the near-misses explicitly.** Someone at 51 miles is a fact the user can
+act on; a hard cutoff hides them and looks identical to their not existing. The
+territory is still theirs to decide — surface the row, do not re-scope the job.
 
 ## Where data may come from
 
@@ -210,6 +275,7 @@ no shell-out — the same code as `scripts/leadkit.py`, condensed.
 import argparse,csv as C,glob,json,re,sys,unicodedata
 from collections import Counter
 F=["full_name","title","org","org_domain","email","phone","linkedin","profile_url"]
+L=["city","state","postal_code"]   # location must survive the merge, or a radius cannot be measured
 N={"dr","mr","mrs","ms","prof","md","do","rn","np","pa","phd","dds","dmd","jr","sr","ii","iii","iv","faap","facs"}
 P={"first.last":lambda f,l:f+"."+l,"firstlast":lambda f,l:f+l,"flast":lambda f,l:f[0]+l,
    "f.last":lambda f,l:f[0]+"."+l,"firstl":lambda f,l:f+l[0],"first_last":lambda f,l:f+"_"+l,
@@ -289,10 +355,10 @@ def merge(a):
         key=(" ".join(T(x.get("full_name",""))),dom or A(x.get("org","")))
         if not key[0]: continue
         # all fields start empty so the fill loop records provenance for every one
-        if key not in M: M[key]={f:None for f in F};M[key]["_sources"]=[];M[key]["_field_sources"]={}
+        if key not in M: M[key]={f:None for f in F+L};M[key]["_sources"]=[];M[key]["_field_sources"]={}
         e=M[key];s=x.get("source") or x.get("profile_url") or "unknown"
         if s not in e["_sources"]: e["_sources"].append(s)
-        for f in F:
+        for f in F+L:
             if x.get(f) not in (None,"",[]) and e.get(f) in (None,"",[]):
                 e[f]=x[f];e["_field_sources"][f]=s      # first non-empty wins: order = trust
     out=[]
@@ -310,12 +376,13 @@ def tocsv(a):
     if a.only_with_email: rows=[r for r in rows if r.get("email")]
     h=[]
     for f in F: h+=[f,f+"_source"]
-    h+=["confidence","source_count","all_sources"]
+    h+=L+["confidence","source_count","all_sources"]
     with open(a.output,"w",newline="",encoding="utf-8") as fh:
         w=C.writer(fh);w.writerow(h)
         for r in rows:
             fs=r.get("_field_sources") or {};row=[]
             for f in F: row+=[r.get(f) or "",fs.get(f,"")]
+            row+=[r.get(f) or "" for f in L]
             row+=[r.get("_confidence",""),r.get("_source_count","")," | ".join(r.get("_sources") or [])]
             w.writerow(row)
     em=sum(1 for r in rows if r.get("email"))
@@ -342,5 +409,6 @@ relevant one loads.
 | `references/qualify.md` | Branch is QUALIFY, or the ask involves past experience |
 | `references/contact-channels.md` | Resolving emails, phones or LinkedIn for anyone |
 | `references/blocked.md` | A source returns 403, a CAPTCHA, or an empty shell |
-| `references/sources.md` | Choosing sources for an unfamiliar vertical |
+| `references/sources.md` | **Any population with no pack below** — derives its register |
+| `references/vertical-healthcare.md` | Physicians, nurses, allied health, practices |
 | `references/record-format.md` | Writing records, or deciding merge order |

@@ -1,50 +1,139 @@
-# Where to look, by vertical
+# Deriving the sources for a population you have never sourced before
 
-Search engines are the worst way to find people and the best way to find
-**organizations**. Use them for Phase 2, then go to the registry or directory
-for Phase 3. A registry gives you a canonical name, a specialty and a location;
-a search result gives you a press release from 2019.
+Read this when the ask names a kind of person you have no pack for — commercial
+roofers, school superintendents, insurance producers, veterinary practice
+owners, machine-shop buyers. **Do not guess at websites.** Classify the
+population first; the class tells you whether a roster exists at all, which is
+the single fact that decides the whole plan.
 
-## Healthcare / clinical
+## Step 1 — classify the population
 
-The strongest vertical for this skill, because registration is mandatory and
-public.
+Ask these in order and stop at the first yes. Each question is about the
+*structure* of the occupation, not the industry.
 
-| Source | What it gives | Notes |
+| # | Ask | Class | Roster lives in |
+|---|---|---|---|
+| 1 | Can you be **fined or prosecuted** for doing this work without a licence? | **Licensed** | A mandatory public register |
+| 2 | Does a **taxpayer** fund the salary? | **Public payroll** | Salary disclosure, staff directory, org chart |
+| 3 | Is the person **the business** — owner, principal, sole practitioner? | **Entity principal** | Corporate filings, permits, DBAs |
+| 4 | Are there **letters after the name** that somebody verifies? | **Credentialed** | The certifying body's verification tool |
+| 5 | Is there a **trade body** they would plausibly join? | **Association** | Member directory, or at minimum the officer list |
+| 6 | None of the above | **Privately employed** | Nowhere central |
+
+A population is often two at once — a hospital-employed physician is Licensed
+*and* privately employed; a city engineer is Licensed *and* public payroll.
+**Take the highest class that applies**, because that is the one that
+enumerates.
+
+## Step 2 — enumerable or only samplable?
+
+This is the fork the user needs stated out loud, because it sets what a complete
+answer even looks like.
+
+| Class | Can you enumerate? | What "done" means |
 |---|---|---|
-| **NPI Registry** (`npiregistry.cms.hhs.gov`) | Every US clinician: name, specialty taxonomy, practice address, NPI | Free JSON API, no key. Authoritative for name + specialty. No email. |
-| **State license lookup** | License status, disciplinary history | One per state; search `"<state> medical board license verification"` |
-| Hospital "Find a Doctor" | Title, department, bio, headshot, sometimes direct email | Often JS-rendered or paginated |
-| Specialty societies | Member directories (ASA, AAP, ACS…) | Frequently members-only; the public officer list is still useful |
-| `doximity.com`, `healthgrades.com` | Cross-reference for name/specialty | Aggregators — corroboration only, never the sole source |
+| Licensed | **Yes, completely** | Every licensee in the radius, minus lapsed |
+| Public payroll | **Yes** | Every published post in the named bodies |
+| Entity principal | **Yes, via the entity** | Every registered business of that type |
+| Credentialed | **Partial** | Everyone who holds the credential, not everyone qualified |
+| Association | **Partial** | Members only; non-members are invisible |
+| Privately employed | **No** | You sampled orgs; say how many you checked |
 
-**NPI is the cross-reference of choice.** Query by specialty + state, then
-filter by distance. Its taxonomy is precise: "Anesthesiology - Pediatric" is a
-distinct code from "Anesthesiology", so a specialty search actually means
-something.
+**Enumerable populations get a denominator; samplable ones do not.** For the
+first four you can say "41 of 41". For the last, "18 found across 26 orgs
+checked" — and never imply that is everyone.
 
-## B2B / SaaS
+Say which regime you are in when you report. A user who thinks a sample is a
+census will believe the territory is empty when it is not.
 
-| Source | What it gives |
-|---|---|
-| Company `/about`, `/team`, `/leadership` | Names + titles, highest trust |
-| Careers page | Hiring signal, and often the recruiter's own address |
-| Press releases / newsroom | Named executives with quotes, and email formats |
-| Crunchbase / funding news | Firmographics, round, investors |
-| Conference speaker pages | Name, title, org — and usually current |
-| Podcast guest pages | Same, plus they are already public-facing |
+## Step 3 — find the actual register
 
-## Where email formats hide
+For **Licensed**, the register exists; the only work is locating it. In order:
 
-Before concluding a domain has no known address, check:
+1. `"<state> <profession> license lookup"` / `license verification`
+2. `"<state> board of <profession>"` — then its "verify a licence" tool
+3. `site:.gov "<profession>" licensee` — reaches rosters no search box exposes
+4. **The state open-data portal** — `data.<state>.gov`, searching the profession.
+   Many states publish the entire licensee file as a downloadable CSV. **Look
+   here before paging a lookup form** — one download beats ten thousand queries,
+   and forms are where the CAPTCHAs are.
+5. National register, where one exists and supersedes the states
 
-1. `/contact`, `/press`, `/media`, `/legal` pages
-2. PDFs — press kits and investor decks leak `firstname.lastname@` constantly
-3. Job postings ("send your resume to …")
-4. WHOIS for smaller orgs
-5. GitHub commit history for technical orgs
+For **Public payroll**: state and municipal transparency portals, district and
+agency staff directories, published org charts, board-meeting minutes and
+budget documents naming post-holders.
 
-One confirmed address unlocks the whole domain. It is worth five minutes.
+For **Entity principal**: Secretary of State business search (names officers and
+registered agents), trade-specific permits — contractor, liquor, food service,
+childcare — which name the qualifying individual, and federal licensees.
+
+For **Credentialed** and **Association**: the body's own verification or
+directory. Where the full directory is members-only, the **officer and committee
+list is public** and is a small, high-quality, current sample.
+
+## Step 4 — where the emails actually are, by class
+
+Yield differs by more than an order of magnitude, and it is the class that
+predicts it — not your effort. Set expectations from this before you start.
+
+| Class | Free work-email yield | Why |
+|---|---|---|
+| **Public payroll** | **Highest** | Disclosure norms; addresses are routinely published outright |
+| Entity principal | High | They want to be contacted — it is their business |
+| Association | Moderate | Directories often include contact for members |
+| Licensed | **Low** | Registers publish address and phone, almost never email |
+| Privately employed | Low | Depends entirely on the employer's site |
+| Credentialed | Low | Verification tools confirm status, nothing more |
+
+**A licence register gives you a person and a phone, not an inbox.** Expect to
+get the roster from one class and the addresses from a different source, and
+budget the domain-unlock hunt in `contact-channels.md` accordingly.
+
+Where the ring contains a **university, teaching hospital, public agency or
+school district**, that is the highest-yield free email source available,
+whatever the vertical — public and academic bodies publish people.
+
+## Step 5 — search engines find orgs, never people
+
+True in every class. A search result gives you a press release from 2019; a
+register gives you a canonical name, a category and an address. Shape queries
+like the source rather than like the question:
+
+```
+"<state> <profession> license lookup"
+site:.gov "<profession>" licensee list
+site:.org "<trade association>" members directory
+"<city>" "<role title>" -jobs -indeed -ziprecruiter
+```
+
+Exclude the job boards explicitly. They dominate role-title queries and none of
+them are the person.
+
+## Privately employed — the hard class
+
+Nothing enumerates "RevOps leads at Series B fintechs". Build the **org** list
+first, then work each one:
+
+- Funding announcements and investor portfolio pages give you the company set
+- `/team`, `/about`, `/leadership` give you names
+- Careers pages give a hiring signal *and* often a recruiter's real address
+- Conference speaker pages and podcast guest lists are current and public
+- Press releases name executives and leak email formats
+
+Aim for 3–5× more orgs than you need people; most yield nothing. Expect lower
+yield per org than any enumerable class, and **say so up front** rather than
+letting the user infer that a thin list means you did a bad job.
+
+## The event-visible overlay
+
+Cutting across every class: people become public when they *do* something.
+Speaker rosters, award and "40 under 40" lists, permit applications, licence
+disciplinary actions, court filings, published authors, patent assignees, expert
+witnesses, grant recipients. These never enumerate a population, but they are
+current, they name the person, and they usually carry a title.
+
+Use them to **enrich or corroborate** a roster you already built, and to reach
+people the register lists but the employer hides.
 
 ## What not to use
 
@@ -52,5 +141,18 @@ One confirmed address unlocks the whole domain. It is worth five minutes.
 - **Anything behind a login you agreed not to scrape.** Read the terms.
 - **Personal social profiles** for personal contact details. Business contact
   data at a business address is the line this skill stays on.
-- **Paid aggregators you have not paid for.** If a preview shows a masked
-  email, that is not a resolution — leave it blank.
+- **Paid aggregators you have not paid for.** A masked email in a preview is not
+  a resolution — leave the cell blank.
+
+## Vertical packs
+
+When a pack matches the population, load it — it carries the concrete endpoints
+and the traps already paid for:
+
+| Pack | Population |
+|---|---|
+| `vertical-healthcare.md` | Physicians, nurses, allied health, practices |
+
+No pack for this population is the normal case. Work Steps 1–5, and record what
+you learn about the register in the run notes so the next person does not pay
+for it twice.
