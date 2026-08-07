@@ -770,7 +770,59 @@ PORT_TESTS = [port_hospital_anesthesia_is_contracted,
               port_phone_type]
 
 
-TESTS = [test_frontmatter, test_portability, test_refusal,
+
+
+# --- universality: the skill must not silt up with one vertical -------------
+
+VERTICAL_TERMS = ["npi", "anesthesiolog", "pediatric", "clinician", "physician",
+                  "pecos", "medicare", "myrtle", "greenville", "mcleod",
+                  "tidelands", "grand strand", "conway", "hospital"]
+
+
+def test_core_files_stay_general(skill, cfg):
+    """The skill answers 'find me people like X near Y' for ANY vertical. Four
+    rounds benchmarked against one anesthesiology roster is exactly how a
+    general skill silts up into a specialist one — every finding was true, and
+    every finding was clinical.
+
+    Vertical specifics belong in a file that loads only when it matches. The
+    always-read files must stay transferable, or a recruiter sourcing RevOps
+    leads gets hundreds of lines about Medicare enrollment.
+    """
+    GENERAL_TERMS = ["b2b", "saas", "company", "employer", "org ", "domain",
+                     "recruiter", "industry", "sector", "vertical", "candidate",
+                     "prospect", "team page", "press release"]
+    bad = []
+    for name in ("SKILL.md", "references/contact-channels.md",
+                 "references/discover.md", "references/qualify.md",
+                 "references/enrich.md", "references/verify.md"):
+        path = os.path.join(cfg["dir"], name)
+        if not os.path.exists(path):
+            continue
+        t = open(path, errors="ignore").read().lower()
+        vert = sum(t.count(k) for k in VERTICAL_TERMS)
+        gen = sum(t.count(k) for k in GENERAL_TERMS)
+        # A core file may ILLUSTRATE with a vertical; it may not be ABOUT one.
+        # More vertical vocabulary than general vocabulary means it has tipped.
+        if vert > max(gen, 1) * 1.5:
+            bad.append(f"{name} {vert}v/{gen}g")
+    return check(skill, "core files stay vertical-neutral", not bad,
+                 "; ".join(bad))
+
+
+def test_vertical_pack_exists(skill, cfg):
+    """Vertical specifics must live somewhere loadable, not be deleted. The
+    NPI/CMS/ABA findings are the most valuable thing the benchmark produced —
+    they just must not sit in the always-read path."""
+    import glob as _g
+    packs = _g.glob(os.path.join(cfg["dir"], "references", "vertical-*.md"))
+    return check(skill, "vertical pack exists", bool(packs),
+                 os.path.basename(packs[0]) if packs else "none")
+
+
+TESTS = [test_core_files_stay_general,
+         test_vertical_pack_exists,
+         test_frontmatter, test_portability, test_refusal,
          test_surname_particles, test_docs_claims]
 
 

@@ -1,879 +1,298 @@
 # Getting an actual contact channel
 
-Measured, round 1, 131 clinicians across two independent skill runs:
+How to turn a name into a way of reaching someone, without inventing anything.
 
-| Channel | Coverage |
+Everything here was measured, most of it against a clinical roster. The vertical
+specifics live in `vertical-healthcare.md`; what follows is the part that
+transfers to any population.
+
+## The territory is a constraint, not a variable
+
+Someone asks for people **within X of Y**. That geography usually comes from a
+territory assignment, a colleague's patch, or a client footprint. **It is not
+yours to optimise.**
+
+Maximise inside the ring you were given. Never tell the user a different city
+would be a better hunt — they usually cannot go there, and it reads as refusing
+the job.
+
+Reporting *adjacent* findings as information is fine and often useful: "18
+in-ring; 4 more at 53 miles, just outside". That is a fact they can act on.
+"Search somewhere else instead" is not.
+
+## Say which kind of number it is
+
+Registries and directories publish the **practice or switchboard** number, which
+is not the same as reaching the person. Label every number:
+
+| `phone_type` | What it is |
 |---|---|
-| Practice phone | 131 / 131 |
-| **Work email** | **3 / 131** |
-| **LinkedIn** | **0 / 131** |
+| `direct` | A direct dial that rings the person |
+| `department` | Their unit, service line or team |
+| `practice` | Front desk or main switchboard (the usual default) |
+| `answering_service` | After-hours or third party |
 
-Phones look solved and are not. Emails look broken and are mostly a sourcing
-gap. This file is how to close both without guessing and without automating
-anything you should not.
+Report the split, never the total: *"119 with a phone: 0 direct, 37 department,
+82 switchboard"*. A single reachability number invites the reader to think they
+have 119 people's contact details.
 
-## Phones: say which kind of number it is
+**Department numbers hide in structured payloads, not on rendered pages.**
+Fetching eight organisation pages yielded zero; parsing their directory payloads
+and a phone-directory table yielded 37.
 
-Every one of those 131 numbers came from the NPI registry, which publishes the
-**practice location phone** — a front desk or a switchboard. A switchboard is not a direct dial and not the
-same as reaching the person, and reporting "131 reachable" implies something
-the data does not support.
+## Email: unlock the domain, then infer conservatively
 
-Label every number:
+### One published address unlocks an employer
 
-| `phone_type` | What it is | Use |
+Budget **3-5 targeted fetches per employer domain** before writing it off:
+`/contact`, `/press`, `/newsroom`, press releases, PDFs, job postings, staff
+bios, and any directory payload carrying an email field. Rank domains by how
+many roster members sit on each and unlock the biggest first.
+
+A rival run produced 22 emails to our 4 purely by doing this. The propagation
+logic was never the gap — spending fetches on discovery was.
+
+### But observe the format; never guess it
+
+That same run got roughly **half its addresses wrong** by assuming a shape.
+Measured against addresses actually observed:
+
+| It assumed | Observed | |
 |---|---|---|
-| `direct` | A direct dial that rings the person | Best |
-| `department` | Rings their unit or service line | Good |
-| `practice` | Front desk / switchboard (NPI default) | Weak |
-| `answering_service` | After-hours or third-party | Poor |
+| `first.last@` | `sandy.moore@` | correct |
+| `flast@` | `hhawthorne@` | correct |
+| `flast@` | `logan.doriety@` | **wrong** |
+| `first.last@` | `jsmoreb@` | **wrong** |
 
-**Default an NPI phone to `practice`.** Only upgrade it when a source says
-otherwise — a department page, a hospital directory listing a service line, a
-bio with a direct extension.
+**The pattern must come from an address observed on that domain.** Never a house
+style, a sibling organisation, or a plausible default.
 
-Report the split, never the total alone:
+### A domain can run two formats at once
 
-```
-59 with a phone: 0 direct, 6 department, 53 practice
-```
+One domain showed **3 name-confirmed `first.last` AND 2 name-confirmed `flast`**
+among 9 observed addresses. Majority-reporting hides a coin flip: no propagation
+from a mixed domain beats roughly 2/3 accuracy, far under any usable bounce
+ceiling.
 
-Department numbers are the realistic win here. Hospital "Contact us" and
-service-line pages routinely publish the anesthesiology department line, which
-is materially better than the main switchboard and costs one fetch per org.
+**Correct output for a mixed domain is zero addresses.** `leadkit emails`
+detects this and downgrades, reporting `mixed_format_domain` and naming the
+competing pattern.
 
-## Emails: papers publish what hospitals do not
+### Two samples characterise nothing
 
-Health systems almost never publish clinician addresses. **Academic publishing
-does** — corresponding-author addresses are printed on the paper, and for
-physicians in teaching hospitals the coverage is real.
+Twice a domain's format was called from two observations and was wrong both
+times. On a wider sweep one domain proved mixed, and another had **two live
+conventions split geographically** across 19 addresses. Two agreeing samples are
+the floor for emitting; they are not enough to *characterise* a domain.
 
-The trap is name collision. A PubMed search for "Michael Alvarado" returns
-every Michael Alvarado alive. Round 1 produced 8 such hits and they were
-correctly thrown away rather than used — the query has to be **affiliation-
-locked** before an address means anything.
+### What a confidence label is worth
 
-**Affiliation-locked means:** the paper's author affiliation must match the
-person's known organization, city, or health system before you accept the
-address as theirs. Name + specialty is not enough. Name + affiliation is.
+Leave-one-out accuracy: **36%** from zero observations, **68%** from one, **91%**
+from two agreeing. Providers throttle above roughly a **2% bounce rate**.
 
-Order of attack:
+**No derived tier clears that ceiling** — 91% accurate is 9 bounces per 100, 4x
+over the line. Inferred addresses are fine to try one at a time and unsafe to
+bulk-send. Only `first_party_published` and `previously_delivered` clear it. Say
+so when handing over a list.
 
-1. **OpenAlex** (`api.openalex.org` — now metered, see corrections below). Search the author, then
-   confirm `last_known_institution` or the affiliation on the specific work
-   matches their practice. OpenAlex also gives affiliation history with dates,
-   which feeds `qualify.md`.
-2. **Europe PMC** (`ebi.ac.uk/europepmc/webservices/rest`, free, no key).
-   Full-text search exposes corresponding-author emails that abstract-only
-   sources drop.
-3. **PubMed / NCBI E-utilities** (free; a key only raises rate limits).
+### Label how each address was obtained
 
-Label anything found this way `first_party_published` when the paper itself
-carries it — it was published by the author, not inferred. Record the DOI or
-PMID as the source. An address from a 2009 paper is real but stale; note the
-year, because people change institutions.
+`first_party_published` / `official_filing` / `public_professional_profile` /
+`role_based` / `pattern_inferred` / `smtp_accepted` / `catch_all` /
+`commercial_provider` / `previously_delivered`
 
-If affiliation cannot be confirmed, **discard the address.** A plausible
-address for the wrong person is worse than a blank.
+Never collapse these into one "verified" flag. `catch_all` especially: such a
+domain accepts every address, so a validity check passes for nonsense.
 
+## The employer is often not the employer
 
-## What a confidence label is worth
+Large organisations routinely contract out whole functions to outside firms. The
+people staffing a building are frequently employed, paid and **emailed** by a
+different company on a different domain — one that may have no public web
+presence at all.
 
-Measured by leave-one-out against known-good addresses: an inferred address is
-right about **36%** of the time from zero observations, **68%** from one, and
-**91%** from two that agree. Providers throttle senders above roughly a **2%**
-bounce rate.
+**Determine who actually employs someone before applying an employer pattern.**
+Look for a billing entity, a filing, or a contract note. A directory record
+carrying an employment flag is gold.
 
-| Observations | Label | Accuracy | Implied bounce | Bulk-sendable |
-|---|---|---|---|---|
-| 0 | *(nothing emitted)* | 36% | 64% | Never |
-| 1 | `pattern_likely` | 68% | 32% | No |
-| 2+ agreeing | `pattern_confirmed` | 91% | 9% | **No** |
+**A listing is not employment.** A well-sourced case built from an
+organisation's own website that three people were its employees was overridden
+by a federal filing — and one of them turned out to be delisted entirely. An
+employer claim needs a filing, not a page.
 
-Read the last column carefully. **No derived tier clears a 2% bounce ceiling —
-not even `pattern_confirmed`.** 91% accurate means 9 bounces per 100, which is
-4x over the line where providers start throttling.
+**A live MX is not proof of identity.** Two candidate domains had working mail
+servers and served an unrelated critic blog; another had working mail and a 404
+web root. Confirm the domain belongs to the employer before treating an address
+there as real.
 
-So an inferred address is fine for a human to try one at a time, and is not
-safe to load into a bulk sequencer. Only `first_party_published` and
-`previously_delivered` clear the ceiling. Say this when you hand over a list —
-a recruiter who bulk-mails 59 `pattern_confirmed` addresses will burn their
-sending domain and will reasonably blame the tool that produced them.
+## LinkedIn: discover through the index, never automate the site
 
-## Other free sources worth the fetch
+Do not automate LinkedIn. Its terms forbid automated collection and the account
+that gets restricted is the user's.
 
-- **Department and "contact us" pages** — service-line emails and phones
-- **Press releases and newsroom** — named contacts, and they leak the org's
-  address format, which unlocks the whole domain via `leadkit emails`
-- **Residency and fellowship program pages** — program coordinators publish
-  addresses, and the alumni lists feed qualification
-- **Conference programs and speaker pages** — current, public, and often list
-  an address for correspondence
-- **Grant and trial registries** (NIH RePORTER, ClinicalTrials.gov) — the
-  contact for a trial is frequently the clinician themselves
+What is both legitimate and effective: **find the profile through a search
+engine's public index, verify it from the result snippet, and record the URL.**
+Match on name *plus* role *plus* region before accepting — and refuse when you
+cannot. A comparison run using exactly this method recorded ~13 profiles and
+correctly declined ~5 it could not confirm.
 
-## LinkedIn: hand over a search, never a scrape
-
-Do not automate LinkedIn. Its terms forbid automated collection, enforcement is
-aggressive, and the account that gets restricted is the user's, not the tool's.
-No exceptions, no browser, no "just one page".
-
-What is both legitimate and useful: emit a **precise search URL** the user can
-click. It costs nothing, needs no network call, and puts a human in the loop
-where the terms require one.
+Where no profile can be confirmed, emit a `linkedin_search_url` the user clicks:
 
 ```
 https://www.linkedin.com/search/results/people/?keywords=<name>%20<org>
 ```
 
-Put it in a `linkedin_search_url` column — never `linkedin_url`, because you
-have not verified a profile exists. If a public bio, conference page or
-practice site links their profile, record that as `linkedin_url` with the page
-you found it on as the source. Found on a public page is fine; harvested from
-LinkedIn is not.
+Record a verified profile as `linkedin_url`; keep the two columns separate.
 
-## What to report
+## State the denominator with every negative
 
-Give the channel breakdown, not a single reachability number:
+The most important rule here, because it has produced false claims repeatedly —
+including three in an earlier version of this file that a wider sweep overturned.
+
+A partial sweep read 262 of 805 records and reported its zeros as properties of
+the world. They were properties of the sample. **"0 emails" is a claim about
+reality; "0 emails across 262 of 805" is a claim about your sweep** — and only
+the second is true.
+
+Report negatives as `checked N of M`. Treat any zero where `N < M` as
+provisional.
+
+**Prove absence with a positive control.** Before recording that a field is
+structurally empty, find one record where it is populated. Without that, "the
+field was blank" and "I parsed it wrong" are indistinguishable.
+
+**Verify payload keys.** One source returned zero until it was keyed on the
+right field name. A wrong key returns an empty list that reads exactly like
+absence.
+
+## Registries go stale; credentialing bodies publish mail
+
+An authoritative registry address is authoritative, not fresh. One record had
+pointed at the wrong state for years while the person had moved. Cross-check
+against a current filing before excluding anyone on location.
+
+Conversely, a certifying or credentialing body usually publishes a **mailing
+address**, which is not a practice location at all. Two plausible in-ring
+candidates were rejected this way — their real practices were in other states.
+
+## Where the emails actually are
+
+The population decides the ceiling, not the tooling.
+
+- **Organisations with a teaching or research arm publish people.** A faculty
+  directory yielded 78 addresses where a comparable non-academic roster yielded
+  5. If the ring contains a university, teaching hospital or research institute,
+  that directory is the highest-yield free email source available.
+- **Practitioner populations mostly publish nothing**, especially where the work
+  is contracted out to firms with no web presence.
+
+**Classify the population before predicting the ceiling**, and say which kind
+you are working when you report.
+
+## Report the channel breakdown
 
 ```
-59 people
-  phone     59  (0 direct, 6 department, 53 practice switchboard)
-  email      3  (3 pattern_confirmed, 0 first_party_published)
-  linkedin   0 verified, 59 search URLs provided
+119 people
+  phone     119  (0 direct, 37 department, 82 switchboard)
+  email       5  (5 first_party_published, 0 inferred)
+  linkedin    0 verified, 119 search URLs
 ```
 
-A reader can act on that. "59 reachable" invites them to think they have 59
+A reader can act on that. "119 reachable" invites them to think they have 119
 people's contact details, which is not what happened.
 
 
-## Corrections from measurement (round 1B)
+## Mechanisms that recur in every vertical
 
-Four things in this file were wrong or incomplete. Measured against 72
-community anesthesiologists.
-
-### OpenAlex is metered now — do not lead with it
-
-Documented here as "free, no key". It is not. Measured: **HTTP 429,
-"Insufficient budget. This request costs $0.001 but you only have $0
-remaining", retryAfter 6268s.** Zero of 72 queries were served, even with a
-polite user-agent and a mailto. Treat OpenAlex as best-effort and never as the
-primary path.
-
-### Use NCBI efetch, not Europe PMC full text
-
-Europe PMC's `fullTextXML` **404'd on all four affiliation-locked PMIDs**,
-including the one flagged open-access. `NCBI efetch db=pmc` served every one,
-and both real published addresses came from it.
-
-```
-https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=<PMCID>
-```
-
-Order: PubMed esearch to find the paper → **efetch db=pmc** for the full text,
-where the corresponding-author address actually lives. Abstract-level records
-drop it.
-
-### An affiliation lock is not enough — compare full forenames
-
-"Patel D" publishing from **Grand Strand Health, Myrtle Beach** passed the
-affiliation lock perfectly. It is **Dveet** Patel. The roster member is
-**Deeran** Patel. Same surname, same initial, same employer, same city —
-different person.
-
-PubMed indexes authors by initial, so the initial is not a discriminator.
-**Require the full first name to match** before accepting any address, and
-where the paper only gives an initial, treat the match as unconfirmed and
-discard it. A near-miss that survives an affiliation lock is more dangerous
-than an obvious mismatch, because it looks verified.
-
-### Department phone lines mostly do not exist
-
-This file predicted department numbers were "the realistic win". **Falsified.**
-Measured across 8 organization sites — Conway Medical Center, Grand Strand,
-McLeod Seacoast, Columbus Regional, OrthoSC, Tidelands, Novant Brunswick — the
-yield was **zero department lines**. Hospitals rarely publish a department
-number at all — they publish a facility switchboard and nothing else.
-
-Keep labelling `phone_type`; the labels are still the honest thing to report.
-Drop the expectation that fetching org pages will upgrade a `practice` number
-to a `department` one. In one browser-enabled run 19 of 84 department lines
-were recovered, so it is not impossible — it is just not reliable, and it is
-not worth a fetch per org on a cold roster.
-
-### Where the boundary actually is
-
-**69 of 72 have no affiliation-locked paper, trial or grant anywhere.** Every
-academic channel — OpenAlex, Europe PMC, PubMed, ClinicalTrials.gov, NIH
-RePORTER — is capped at the 3 people who publish, and a thorough sweep reached
-exactly those 3. That is the ceiling, and it is a property of the population,
-not of the tooling.
-
-For a community clinical roster, plan on **phone as the deliverable channel**
-and treat email as a bonus on the small academic minority.
-
-
-## Round 2 corrections — including one to the section above
-
-### Department phones: I had this backwards
-
-The correction above says department lines "mostly do not exist", measured at
-0 across 8 organization sites. That is true for **page fetching** and false for
-**structured payloads**. Two clamped runs pulled **16 and 12 department lines**
-from the same organizations — the anesthesia group's own number sits inside the
-directory record, not on the rendered page.
-
-So: fetching the page is the wrong read. Parsing the payload is the right one.
-Conway Medical Center is the honest control — 304 provider pages parsed, still
-only a switchboard, because that org genuinely publishes nothing else.
-
-### Hosted search indexes cap pagination silently
-
-A second silent-truncation class, the same shape as the NPI `skip=1000` ceiling.
-
-McLeod's Algolia index reports `nbHits: 805` but `nbPages: 1` at
-`hitsPerPage=100`, because of `paginationLimitedTo`. A blind browse returns
-**100 of 805 and looks complete** — no error, no flag, and the response even
-tells you the true total in a field you did not read.
-
-**Always compare the reported total against what you actually received.** When
-they disagree, partition the query (by specialty, by location, by letter)
-instead of paging. Round 2 used specialty-scoped queries for exactly this
-reason.
-
-### An org's email pattern applies to its employees, not its building
-
-The sharpest refusal so far. Three agreeing `@hcahealthcare.com` addresses
-would have made `first.last` **pattern_confirmed** for five more anesthesiologists
-at Grand Strand. Their own directory record set `hcaEmployee: false` — they are
-Teamhealth contractors working in an HCA facility, not HCA staff.
-
-**Zero addresses were emitted for them — five plausible addresses withheld.** A confirmed pattern belongs to an
-employer's mail domain; someone who merely works in the building is on a
-different domain entirely, and the inferred address would bounce while looking
-perfectly reasonable.
-
-A confirmed pattern does not apply to a contractor. Check employment
-status before applying a pattern. Directory payloads often
-carry it (`hcaEmployee`, `employmentType`, "locum", "contractor", staffing-agency
-addresses). Where the status is unknown, the pattern is unconfirmed for that
-person — say so and withhold.
-
-### What round 2 proved about the browser
-
-Both clamped runs reproduced the two rung-3 wins **with `curl` alone**: Grand
-Strand's `physicianData` parsed from profile server HTML (299/299), and
-McLeod's Algolia credentials (`app JUNR3SUCF2`, public search-only key) read
-straight out of `/search-physician-finder/` server HTML.
-
-That includes the pediatric finding. **Michelle D. Lee, MD was reached without
-a browser.** The only residual browser-only source is Tidelands, which 403s.
-
-The lesson stands and strengthens: climb the ladder in order, because rung 3
-keeps beating rung 4.
-
-
-## Round 2B — the subspecialty channel, opened
-
-### The index is a pointer, not the record
-
-Round 1 read McLeod's search index and reported **2** pediatric signals across
-84 people. Round 2 went **one hop past** it and found **79** across 160.
-
-The index carries no training fields at all. But every record has a
-`scheduling_url` pointing at `/physician/<slug>/`, and *those* pages publish
-**Board Certification, Medical School, Residency and Fellowship** — to a plain
-`curl`, no browser. Round 1 never opened one.
-
-**Open the profile.** A search index exists to help you find the page; it is
-not the page. Read 1,342 profiles this way across five systems and the
-subspecialty question stopped being unanswerable.
-
-### The honest answer to the pediatric question
-
-76 in-radius providers carry a published pediatric signal. But in **anaesthesia
-specifically the ring contains exactly one**: Michelle D. Lee, MD — now
-evidenced as *"Board Certification: Anesthesiology; Pediatric Anesthesiology,
-Residency 2007 Children's Hospital Colorado"*, not merely a specialty string. A
-facet count over the full 805-record index returns exactly 1.
-
-Report both numbers. "76 pediatric providers" and "1 pediatric
-anesthesiologist" are answers to different questions and a recruiter needs the
-second.
-
-### Silence is not absence — and it marks your best calls
-
-A `NONE_FOUND` must be explained structurally or it misleads. Measured:
-
-- **Tidelands publishes no training block for any of its 12 anesthesiologists**
-  — while publishing one for other specialties. Verified, not assumed.
-- **Grand Strand publishes no board-certification row at all** (0 of 299).
-- **Conway has no board-certification field.**
-
-Those `NONE_FOUND`s mean *the directory cannot show a fellowship*, not that the
-person lacks one. Which inverts the usual reading: **those 12 Tidelands
-anesthesiologists are the highest-value calls in the set**, precisely because
-the record is silent. Everyone else's absence has been checked; theirs has not.
-
-Say which kind of `NONE_FOUND` you are reporting — checked-and-absent, or
-unpublishable.
-
-### Strip page chrome before matching
-
-Page chrome matches exactly like content. Measured: OrthoSC's navigation string
-*"Pediatric Orthopedic Care"* graded **all 33** of its providers pediatric until
-it was stripped, and 18 Conway hits for "children" were personal-life mentions
-in bios ("father of three").
-
-**Match inside the record**, never across the whole page. Scope to the profile
-block, drop nav, footer and sidebars first, and require the term in a training,
-certification or specialty field rather than anywhere in the HTML.
-
-### Department phone directories do exist
-
-Amending twice-corrected guidance once more: Conway publishes a full
-`/phone-directory/` HTML table including **Anesthesia 843-347-8288 and
-843-347-8352**, plus PACU and OR-scheduling lines. McLeod publishes anesthesia
-practice lines; Tidelands publishes 843-652-1190.
-
-Department phones went 0 → 12/16 → **33 of 160**. Look for a phone-directory
-page by name; it is a different artifact from a provider profile.
-
-### Email: still zero, now from 1,342 pages
-
-**Not one clinician address across 1,342 profiles.** Combined with the academic
-sweep — 69 of 72 with no publication anywhere — the email ceiling on a
-community clinical roster is real and it is low. Phone is the deliverable.
-
-
-## Round 2B was wrong — three negatives falsified by a fuller sweep
-
-This file confidently asserted three zeros. A larger sweep (1,708 profile
-records against the earlier 1,342) falsified **all three**:
-
-| Claimed here | Measured on a fuller sweep |
-|---|---|
-| "Tidelands publishes NO training block for ANY of its 12 anesthesiologists" | Publishes training for **11 of 12**. Only one is genuinely unpublishable. |
-| "Conway has no board-certification field" | Publishes board certification on **258 of 303** profiles. |
-| "Zero clinician addresses across 1,342 profiles" | McLeod publishes **15 first-party clinician emails**. |
-
-### State the denominator with every negative
-
-That is the lesson, and it is the most important rule in this file.
-
-Round 2B read **262 of McLeod's 805** records and 443 Tidelands profiles, then
-reported its zeros as properties of the world. They were properties of the
-sample. **Never write "zero" without the denominator you actually searched** —
-"0 emails" is a claim about reality; "0 emails across 262 of 805 records" is a
-claim about your sweep, and only the second one is true.
-
-A negative from a partial sweep is a hypothesis, not a finding. Report it as
-`checked N of M`, and treat any zero where `N < M` as provisional.
-
-### A partition can itself truncate — recursively truncated caps
-
-The documented workaround for a pagination cap is itself capped. Partitioning
-McLeod's index by specialty returned **785 of 805**, because two facets —
-Family Medicine (161) and Primary Care (132) — each silently hit the same
-100-record limit. A practice partition got 804. Only a gender + a–z sweep
-reached **805 of 805**.
-
-**Verify the partition sums to the reported total.** If it does not, the
-partition is truncating too, and you need a finer key. The cap does not
-announce itself at any level.
-
-### Verify payload keys before trusting a zero
-
-Grand Strand's embedded payload returned **zero** pediatric signals until it was
-keyed on `providerSpecialties` / `providerLocations` instead of `specialties` /
-`practiceLocations`. Reading the wrong key returns an empty list that is
-indistinguishable from a genuine absence.
-
-Before recording a zero from a structured payload, dump one full record and
-confirm the schema — that the field name you are reading actually exists.
-A wrong key returns empty and silently reads as absence.
-
-### What still holds
-
-- Exactly **one** pediatric anesthesiologist in the ring, reproduced
-  independently by both skills from the record itself.
-- The email pattern discipline held even as coverage improved: McLeod's 15
-  observed addresses establish `first.last@mcleodhealth.org` on 15 samples, and
-  it was applied to **zero** people — every McLeod anesthesiologist has
-  `mcLeod_physician_associates: false`, a contracted group on a different mail
-  domain. A 15-observation pattern is still the wrong pattern for a contractor.
-- A previously derived address was **withdrawn** on better evidence: efetch
-  showed the source paper publishes a different author's address entirely.
-
-
-## Round 3: the certifying body, and three dead ends named
-
-### The ABA Diplomate Directory is the best source in this benchmark
-
-The American Board of Anesthesiology runs an **open, un-captcha'd JSON API**.
-It was reached by climbing the ladder into the React bundle: `theaba.org/directory`
-→ `directoryreact.theaba.org` → `main.js` → the API base and endpoint shapes,
-shipped in the client code.
-
-```
-GET  directoryreactapi.theaba.org/lookups/getCertifications
-GET  directoryreactapi.theaba.org/searchResults/basic?FirstName=&LastName=
-POST directoryreactapi.theaba.org/searchResults/advanced
-       {FirstName, LastName, City, StateId, ABAId, ProgramType}
-GET  directoryreactapi.theaba.org/doctorRecord/getDoctorRecords?ABAId=<digits>
-```
-
-**`ProgramType 519` is Pediatric Anesthesiology** — the exact subspecialty field
-rounds 1 and 2 could not reach. It filled **46 board-certification blocks** on
-people no hospital directory publishes, including one Tidelands anesthesiologist
-sourced entirely from outside Tidelands, which still 403s.
-
-Strip the dash from the ABA ID; the dashed form 400s. The advanced search
-returned exactly **1000** for one query — the same silent ceiling as NPI
-`skip=1000`, so treat parent-specialty counts as floors.
-
-For any regulated profession, **go to the body that grants the credential.**
-It is the only source that can turn an unpublishable blank into a checked fact.
-
-### A mailing address is not a practice location
-
-The sharpest rejection so far. ABA publishes the diplomate's **mailing
-address**, and it produced two brand-new, entirely plausible pediatric
-anesthesiologists 1.5 miles from the ring centre. NPI and Doximity
-independently placed them in **Tucson AZ** and **Macon GA**.
-
-Both withheld. The ring still holds exactly one.
-
-An address field is a practice location only when the source says so. Registry
-addresses, certifying-body addresses and directory addresses answer different
-questions, and a certifying body has no reason to know where you work today.
-
-### Three source classes are structurally closed
-
-Closed by structure, not difficulty — **a browser does not rescue any of them**,
-so do not spend a rung-4 budget here:
-
-- **State medical boards** (SC LLR, NC Medical Board) are reCAPTCHA v2 gated.
-  This skill does not defeat a CAPTCHA, so the zero survives into the open
-  condition unchanged. NCMB's bulk roster is a $150 product; SC's bulk
-  verification is a login wall.
-- **ASA and SPA publish no member directory at all** — not gated, absent. The
-  only member-data product is paid mailing-list rental.
-- **Residency and fellowship pages are circular for discovery.** They are
-  indexed *by program*, and the program is the field you are trying to fill. 0
-  of 77 roster names appeared on the MUSC anesthesia residency page.
-
-**Doximity is inverted:** it publishes training exactly where place fails to
-corroborate, and gates it behind "Join to view" precisely where place does
-corroborate. Useful for rejection, not for filling.
-
-### What a dry round looks like
-
-Round 3 added **0 new people, 0 emails, 0 pediatric hits, 0 department phones**.
-The gain was entirely evidential: 48 `NONE_FOUND`s moved from *unpublishable*
-to *checked-and-absent at the body that grants the certificate*.
-
-That is a real result. The remaining 29 unmatched are structurally explained —
-12 are NPI trainees (not board-eligible), 1 PA-C and 1 CRNA (not ABA-eligible),
-and 15 are genuine unknowns. **Those 15 are now the highest-value calls**,
-replacing round 2's Tidelands twelve.
-
-
-## Round 3 clamped: the source nobody listed
-
-### CMS Doctors and Clinicians National Downloadable File
-
-The highest-yield source in the entire benchmark, and it was on no list. Medicare
-**PECOS enrollment** — an official filing, 3.39M rows, no key, no CAPTCHA.
-
-```
-POST https://data.cms.gov/data-api/v1/dataset/mj5m-pzi6/data
-     (filter by NPI, facility_name, or city+state+pri_spec)
-```
-
-Every enrolled clinician carries `med_sch`, `grd_yr`, `pri_spec`,
-`sec_spec_1..4`, `facility_name` and a practice phone.
-
-One geography query added **52 net-new in-ring providers** (68 → 120), filled
-**99 training blocks from zero**, resolved NPIs for all 6 previously NPI-less
-rows, and took department lines 16 → 37.
-
-**It named all 12 Tidelands anesthesiologists — with medical school and
-graduation year — while tidelandshealth.org was still returning 403.** Three
-rounds of blocked-directory workarounds were beaten by going to a different
-filing entirely.
-
-The general rule: **when a directory blocks you, look for the regulator's
-filing.** Anyone who bills Medicare is enrolled, and enrollment is public. It
-outranks a marketing page on provenance and cannot 403 you.
-
-### Prove absence with a positive control
-
-Healthgrades was recorded as *checked-and-absent* for 12 people only after a
-**control profile** (`dr-edward-gologorsky-2fywb`) returned a 1994 UPMC
-`FELLOW` row — proving the field exists, renders to a plain fetch, and is
-genuinely empty for the twelve.
-
-Without a control, "the field was blank" and "I parsed it wrong" are
-indistinguishable. That is precisely how round 2B produced three false
-negatives.
-
-**Before recording a structural zero, find one record where the field is
-populated.** If you cannot, you have not established absence — you have
-established that you did not find it.
-
-### Peds confirmed at exactly 1 by three independent structures
-
-Not a sampling result. Three sources agree for different reasons:
-
-- CMS DAC has **no Pediatric Anesthesiology value at all** in its specialty
-  vocabulary
-- SC LLR's dropdown carries 27 pediatric codes with **no anesthesia
-  intersection**
-- An NPI `207LP2900X` taxonomy sweep returns **0 across all five target cities**
-
-When independent vocabularies agree a category is empty, the answer is the
-category, not the search.
-
-### Email is dry for the fourth consecutive round
-
-0 marginal, 4 total. Four rounds, twelve source classes, two skills, ~1,700
-profiles and a 3.39M-row federal file. **The ceiling is real: phone is the
-deliverable channel for a community clinical roster.**
-
-
-## Round 3 open: two runs disagreed, and both were wrong
-
-### Settle a location on the registry practice address
-
-Two runs made **opposite** errors about the same two people, and only a direct
-registry check settled it.
-
-| Person | Run A claimed | Run B claimed | NPI PRACTICE address |
-|---|---|---|---|
-| Desiree Aird MD | Tucson AZ (out of scope) | inside the Myrtle Beach ring | **Greenville SC** |
-| John Gantomasso DO | Macon GA (out of scope) | inside the Myrtle Beach ring | **New Orleans / Lafayette LA** |
-
-Neither was right about either. Aird is a genuine South Carolina pediatric
-anesthesiologist — in the *other* territory. Gantomasso is in Louisiana.
-
-**A location claim is settled only by the authoritative registry's PRACTICE
-address.** Not a mailing address, not a certifying body's address, and never
-another run's assertion. When two sources disagree about where someone works,
-go to the registry and adjudicate it rather than averaging or picking.
+Compact rules, each one learned by getting it wrong first.
 
 ### Enumerate every territory the ask names
 
-A scope error that survived three rounds and twelve runs.
+If the request names two places, enumerate both. Twelve consecutive runs
+reported "0" for a second named territory that nobody had ever searched. A
+territory you did not search returns zero and looks exactly like a territory
+with nobody in it.
 
-The brief said *"identify whether they should map to Myrtle Beach **or
-Greenville**"*. Every run enumerated only the Myrtle Beach 50-mile ring and
-then reported **"0 → Greenville"** — a zero produced entirely by never
-searching there. Aird is the proof it was wrong: a verified Greenville
-pediatric anesthesiologist, invisible to twelve consecutive runs.
+### Settle a location on the registry practice address
 
-**If the ask names two places, enumerate both.** A territory you did not search
-returns zero and looks exactly like a territory with nobody in it. This is the
-denominator lesson again, one level up: the missing denominator was not the
-number of records read, it was the number of *places* looked at.
+Two runs made opposite errors about the same two people; only a direct registry
+check settled it. Neither was right, and each had published its assertion
+confidently.
 
-### What the browser is actually worth, measured
+A location claim is settled by the authoritative registry's **practice
+address** — not a mailing address, not a credentialing body's address, and never
+another run's assertion.
 
-The cleanest answer in the benchmark. Of 108 certification blocks filled:
+### Full forenames — initials collide
 
-- **101** by both ABA (plain fetch) and ABMS (browser)
-- **6** by ABA only — plain fetch
-- **1** by ABMS only — browser
+A record matching on surname, initial, employer and city was still a different
+person. Many indexes store authors and members by initial, so **the initial
+discriminates nothing**. Require the full first name to match; where a source
+gives only an initial, treat the match as unconfirmed and discard it.
 
-**Browser-alone marginal: 0 people, 0 emails, 0 pediatric hits, 0 phones, 1
-certification block.**
+A near-miss that survives every other check is more dangerous than an obvious
+mismatch, because it looks verified. One such match rejected 147 of 151
+candidates in a single pass, including one that would have produced a false
+positive on the exact trait being searched for.
 
-ABMS genuinely is browser-only — 403 to curl, 200 to Playwright, with no
-challenge presented and none solved. It is real, and it was worth one record.
+### Employment status gates pattern inference
 
-### The ABA contradiction, resolved against our own run
+Three agreeing addresses at a domain would have confirmed a format for five more
+people — until their own records showed them as contractors, not employees. Five
+plausible addresses were **withheld**.
 
-Our clamped run reported "theaba.org has no public diplomate lookup at all."
-That was **wrong**. `directoryreactapi.theaba.org` answers a plain `curl` with
-HTTP 200 and a JSON diplomate array. The clamped run probed guessable hostnames
-(`verify.theaba.org`, `/verify/`), got 404s, and published a rung-2 negative as
-a property of the world — never climbing to rung 3, where the API base ships in
-the React bundle's `main.js`.
+A confirmed pattern belongs to an employer's mail domain, not to everyone in its
+building. Where employment status is unknown, the pattern **does not apply** to
+that person.
 
-**It cost three of the four pediatric anesthesiologists.** The denominator
-lesson, recurring on itself one round later.
+### Hosted search indexes cap pagination silently
 
-Two fixes to the endpoint notes: `lookups/getProgramTypes` 404s — use
-`getCertifications`. And `StateId` is a **GUID, not an integer**: `StateId:"41"`
-returns `[]` silently, a wrong-key zero of exactly the kind described above.
+An index reported `nbHits: 805` but `nbPages: 1` at `hitsPerPage=100`. A blind
+browse returns 100 of 805, **looks complete**, and tells you the true total in a
+field you did not read.
 
-### Another silent-truncation shape
+Always compare the reported total against what you received.
 
-ABMS returns a **non-zero row count with empty row text** for common surnames
-(`Michelle Lee`: 3 rows, all `""`). A `len(rows)` check reads that as presence;
-reading the text reads it as absence. A state-scoped retry over the 27
-unmatched recovered 9 — including Michelle Lee's pediatric subspecialty.
+### A partition can itself truncate — recursively
 
+The documented fix for a cap is not immune to the cap. Partitioning by one facet
+returned 785 of 805, because two facets each silently hit the same limit.
+Another key reached 805 of 805.
 
-## Round 3 final: the ceiling was the population, not the data
-
-### Academic vs community changes everything
-
-Four rounds concluded *"work email tops out near 4% — phone is the
-deliverable"*. That was true of a **community** roster and **false as a general
-claim**.
-
-Same specialty, same state, a 50-mile ring around an academic centre instead of
-a resort town:
-
-| | Myrtle Beach | Greenville |
-|---|---|---|
-| In-ring providers | 120 | **476** |
-| NPI pediatric taxonomy | 0 | **20** |
-| Evidenced pediatric anesthesiologists | 1 | **25** |
-| **First-party published emails** | **4** | **78** |
-
-The email ceiling broke through a **medical-school faculty directory** — not
-the literature, which was falsified again with a stated denominator (0 emails
-from 81 of 426 checked; 1 of 21 candidates survived both the affiliation and
-full-forename locks).
-
-**Classify the population before predicting the ceiling.** Academic medicine
-publishes faculty; community practice does not. Look for a medical school,
-residency program or teaching hospital in the ring — if one exists, the faculty
-directory is the highest-yield email source available and it is free.
-
-### Registry addresses go stale — check current enrollment
-
-The exact inverse of the mailing-address trap, and neither case is solvable
-with one source.
-
-**Sara Lathem Walls, MD** is ABA pediatric-certified and practises at Prisma
-Greenville. Her NPPES **LOCATION** still reads *Nashville TN* on a record
-untouched since **2018**, so the registry places her outside the ring. Her
-in-ring NPPES address is **mailing only** — forbidden as a locator. The
-hospital's own directory omits her from pediatrics entirely.
-
-She was found **only** through current CMS Medicare enrollment and qualified
-**only** by the certifying body.
-
-Compare the rejection that looks identical in reverse: Blomeley had an in-ring
-*mailing* address and an out-of-ring *practice*, and was thrown out.
-
-A registry practice address is authoritative but **not fresh**. Before
-excluding someone on location, check a current filing.
+**Verify the partition sums to the reported total.** If it does not, partition
+finer.
 
 ### An empty string is not an absent filter
 
-A second silent wrong-key zero, one level past the GUID trap — and the GUID fix
-alone is necessary but not sufficient.
+With the correct key, a search still returned `[]` at HTTP 200 — the API treated
+an empty string as a **literal filter value**. The real client sent JSON `null`;
+with nulls the identical query returned 860 results.
 
-With the **correct** state GUID, the ABA advanced search still returned `[]` at
-HTTP 200, because the API treats an empty string as a **literal filter value**.
-The client in `main.js` sends JSON `null`. With nulls, the identical query
-returned **860**.
+Read what the site's own client sends before trusting a zero. `""` and `null`
+are different queries.
 
-Read what the real client sends before trusting a zero. `""` and `null` are
-different queries, and only one of them means "no filter".
+### Prove absence with a positive control
 
-### Namespace files in a shared working directory
+Before recording that a field is structurally empty, find one record where it is
+populated — proving **the field exists and renders**. A control profile
+returning a filled row is what turned "we found nothing" into "this source is
+genuinely absent for these twelve".
 
-A process defect worth avoiding: two agents both wrote `build.py` into the same
-work directory and one silently replaced the other. It was caught only because
-a rebuild printed 23 rows where 476 were expected.
+Without a control, "the field was blank" and "I parsed it wrong" are
+indistinguishable.
 
-No delivered row was affected, but the failure is silent by construction. Use
-namespaced filenames when more than one process writes to shared scratch.
+### Department lines: rarely published on pages, often in payloads
 
-### One judgement call, recorded rather than hidden
+Fetching organisation pages yielded **no department numbers** at all — they
+publish a switchboard and nothing else. The same organisations carried the
+department line inside their directory **payloads**. Do not conclude a number
+does not exist from the rendered page.
 
-Four pediatric-certified anesthesiologists practise at Mission Health
-**Asheville — 53.5 miles**, which is 3.5 miles outside a hard 50-mile ring.
-Classified `PRACTICE_ELSEWHERE`. If the radius is soft, the in-ring count goes
-**12 → 16**.
+## Vertical packs
 
-State the boundary rule you applied and show what moves if it changes. A radius
-is a business decision, not a fact.
+Load the matching pack when one exists — it carries the concrete sources,
+endpoints and traps for that population:
 
-
-## The domain-unlock hunt — spend fetches to open a domain
-
-A rival run produced **22 emails to our 4** on the same roster. It did one thing
-we did not: it propagated an employer's email format across everyone listed at
-that employer. We already had that logic. What we never did was spend the
-fetches to **unlock the domain in the first place**.
-
-**One published address unlocks an entire employer.** Budget **3–5 targeted
-fetches per employer domain** before writing that domain off:
-
-| Where to look | Why it works |
+| Pack | When |
 |---|---|
-| `/contact`, `/contact-us`, `/press`, `/media`, `/newsroom` | Named staff with addresses |
-| Press releases and PDFs (press kits, annual reports) | Leak `firstname.lastname@` constantly |
-| Job postings — "send your CV to…" | A recruiter's real address |
-| Staff and leadership bios | Occasionally a direct address |
-| Provider-directory payloads | Sometimes carry an email field the page hides |
-
-Rank the domains by how many roster members sit on them and unlock the biggest
-first. A domain with 20 people is worth five fetches; a domain with one is not.
-
-### Both guards stay on — the rival got ~12 of its 22 wrong
-
-Its errors are instructive, and all three are avoidable:
-
-**1. It guessed the format instead of observing it.** Measured against addresses
-we actually observed:
-
-| Domain | It emitted | Observed | |
-|---|---|---|---|
-| `cmc-sc.com` | `first.last@` | `sandy.moore@` | correct |
-| `crhealthcare.org` | `flast@` | `hhawthorne@` | correct |
-| `mcleodhealth.org` | `flast@` | **`logan.doriety@`** | **wrong** |
-| `novanthealth.org` | `first.last@` | **`jsmoreb@`, `mssaylor@`** | **wrong** |
-
-Roughly half its addresses were built on the wrong shape. **The pattern must
-come from an address observed on that domain** — never from a house style, a
-sibling org, or a plausible default.
-
-**2. It emitted employer addresses for contractors.** Its own notes said
-*"anesthesia contracted to American Anesthesiology of SC / NAPA"* — and it still
-wrote `@mcleodhealth.org` for those people. It applied the contractor rule
-correctly at one hospital and not at another. Check employment before applying
-a pattern, every time.
-
-**3. It truncated a compound surname.** One of its rows carries the note
-*"surname is 'Van Vliet'; auto-inference truncated it to 'vliet'"* — the same
-particle bug documented above.
-
-### The honest trade
-
-Its 22 addresses are roughly **10 real and 12 fabricated**, all presented at the
-same confidence. At a 2% provider bounce ceiling, sending that list burns the
-domain on the first campaign.
-
-Unlock aggressively; infer conservatively. The volume comes from spending
-fetches on discovery, not from lowering the bar on evidence.
-
-
-## Round 4: a domain can run two email formats at once
-
-This corrects an analysis given with more confidence than the evidence
-supported — mine.
-
-I told a user that a rival run's `flast@mcleodhealth.org` addresses were
-**wrong**, on the strength of **one** observed address (`logan.doriety@`,
-first.last). A complete sweep found **9 personal addresses on that domain: 3
-name-confirmed `first.last` AND 2 name-confirmed `flast`**, with flast-shaped
-addresses the ~6-of-9 majority.
-
-The rival's shape was the **majority** and **still unsafe** — because the domain
-runs both. My "wrong" was a partial-sweep negative: exactly the failure this
-file warns about, committed while explaining that failure to someone else.
-
-**No propagation from a mixed-format domain beats roughly 2/3 accuracy**, which
-is far under any usable bounce ceiling. So the correct output for
-`mcleodhealth.org` — 14 roster members — is **zero addresses**, not a
-majority-vote guess.
-
-`leadkit emails` now detects this: when 2+ distinct patterns have support it
-downgrades to `pattern_likely`, reports `mixed_format_domain: true`, and names
-the competing pattern. Before this it returned `pattern_confirmed` while
-silently discarding the rival observation.
-
-**Check for a second format before propagating.** One address unlocks a domain;
-it does not characterise it. Two agreeing addresses are the floor, and a
-disagreeing third is a stop sign.
-
-### Also false: a round-2 claim in this file
-
-Round 2 recorded that *"every McLeod anesthesiologist has
-`mcLeod_physician_associates: false`"*. The complete anesthesiology slice —
-**29 of 29, no truncation** — is **8 TRUE, 21 FALSE**.
-
-So the contractor guard alone would **not** have blocked emission for two roster
-members. Only the mixed-format finding does. Two guards that look redundant
-were not: one of them was wrong.
-
-### The bottleneck is discovery, not propagation
-
-**72 of 120 roster members sit on five private anesthesia groups** — Atlantic
-Coast (24), Tidelands (13), MedStream (13), Southeast (11), Providence (11) —
-whose mail domains were never found. 32 candidate hostnames were DNS-probed:
-all NXDOMAIN or parked, with every search transport dead under the clamp.
-
-**A live MX is not proof of identity.** Two Providence candidates had working
-mail and served a critic blog; `beachanesthesia.com` has a working mail server
-and a 404 web root. Confirm the domain belongs to the employer — from the
-employer's own site or a filing — before treating an address there as theirs.
-
-Result: 5 emails, up from 4, with **zero wrong-format addresses**. The single
-gain came from unlocking `orthosc.org`, whose mail domain is `.org` while its
-website is `.com` — a guess would have missed it.
-
-
-## Round 4B: contracting is the whole shape, not an edge case
-
-The decisive finding. CMS PECOS `facility_name`, queried by **street address**,
-proved all four hospital employers contract anesthesia out — to four *different*
-groups:
-
-| Facility | Who actually bills |
-|---|---|
-| Grand Strand | **Atlantic Coast Anesthesia Services PC** — 71 of 71 |
-| Conway Medical Center | MedStream Anesthesia PLLC |
-| Columbus Regional | Southeast Anesthesiology Consultants PLLC |
-| Novant Brunswick | Providence Anesthesiology Associates PA |
-
-**56 observed addresses harvested. 4 of 6 domains unlocked. 3 patterns
-confirmed. ZERO patterns applied.** Fifty plausible addresses withheld, because
-none of those people are on the domain they appear to work at.
-
-And the contractor domains themselves have **no A record and no MX at all** —
-they are not reachable, not merely undiscovered.
-
-**Determine who bills before propagating any employer pattern.** In hospital
-anesthesia the facility is almost never the employer, so a facility domain is
-almost always the wrong domain. This single fact explains the email ceiling
-better than anything else the benchmark found.
-
-### A directory listing is not employment
-
-A careful sub-hunt built a strong, well-sourced case from a hospital's own
-website that three physicians were its employees. **CMS enrollment overrode
-it** — and one of the three turned out to be delisted from that hospital
-entirely.
-
-A hospital listing a physician means they have privileges, not payroll. An
-employer claim needs a filing, not a page.
-
-### Two more corrections to my own analysis
-
-**Novant is unsettled, not "compact".** I characterised `novanthealth.org` as a
-compact no-dot format from two samples (`jsmoreb@`, `mssaylor@`). Across **19
-observed addresses spanning 17 people**, two live conventions coexist and the
-split is **geographic, not chronological** — Bolivia sits in the Wilmington
-orbit where the **dotted** form dominates, the opposite of the two samples I
-generalised from. Two samples characterised nothing.
-
-**McLeod is confirmed mixed from a second source path.** `mrose@` and
-`dallison@` (flast) against `logan.doriety@` (first.last). Unguessable, and
-correctly zero emitted.
-
-### The pediatric count rises to at least 3
-
-The GME faculty page paid — not in email (8 named faculty, **0** addresses) but
-in evidence. Two Grand Strand residency faculty carry published pediatric
-anesthesia credentials:
-
-- **Desiree Aird** — Children's Hospital of Michigan pediatric anesthesia
-  fellowship
-- **Andrew Criser** — board certified in Pediatric Anesthesiology
-
-Both are placed at 809 82nd Pkwy, Myrtle Beach by **current CMS enrollment**,
-which also settles the earlier location dispute: Aird's NPPES record pointed
-elsewhere, and NPPES was stale. Current enrollment beats a self-reported
-registry address.
-
-**Ring count: 1 → at least 3 pediatric anesthesiologists.** The first answer was
-wrong because it trusted a registry taxonomy; the second because it trusted a
-registry address. Both were fixed by the same source — a current federal filing.
+| `vertical-healthcare.md` | Physicians, nurses, allied health, practices |

@@ -1,0 +1,352 @@
+[
+  {
+    "dir": "",
+    "skill": "ours",
+    "condition": "clamped",
+    "raw": {
+      "in_radius": 60,
+      "reachable": 59,
+      "peds": 0,
+      "provenance": 1.0,
+      "rows": 59,
+      "subagents": 3,
+      "wall_clock_s": 640,
+      "blocked": 11
+    },
+    "parts": {
+      "in_radius": 0.8,
+      "reachable": 0.983,
+      "peds_signal": 0.0,
+      "provenance": 1.0,
+      "honest_gaps": 1.0,
+      "cost": 0.573
+    },
+    "score": 0.7245,
+    "disqualified": []
+  },
+  {
+    "dir": "",
+    "skill": "ours",
+    "condition": "open",
+    "raw": {
+      "in_radius": 84,
+      "reachable": 84,
+      "peds": 2,
+      "provenance": 1.0,
+      "rows": 84,
+      "subagents": 1,
+      "wall_clock_s": 1179,
+      "blocked": 9
+    },
+    "parts": {
+      "in_radius": 1.0,
+      "reachable": 1.0,
+      "peds_signal": 0.167,
+      "provenance": 1.0,
+      "honest_gaps": 1.0,
+      "cost": 0.214
+    },
+    "score": 0.794,
+    "disqualified": []
+  },
+  {
+    "dir": "",
+    "skill": "skillit",
+    "condition": "clamped",
+    "raw": {
+      "in_radius": 72,
+      "reachable": 72,
+      "peds": 0,
+      "provenance": 1.0,
+      "rows": 72,
+      "subagents": 0,
+      "wall_clock_s": 526,
+      "blocked": 5
+    },
+    "parts": {
+      "in_radius": 0.96,
+      "reachable": 1.0,
+      "peds_signal": 0.0,
+      "provenance": 1.0,
+      "honest_gaps": 1.0,
+      "cost": 0.649
+    },
+    "score": 0.7725,
+    "disqualified": []
+  },
+  {
+    "dir": "",
+    "skill": "skillit",
+    "condition": "open",
+    "raw": {
+      "in_radius": 72,
+      "reachable": 72,
+      "peds": 0,
+      "provenance": 1.0,
+      "rows": 72,
+      "subagents": 0,
+      "wall_clock_s": 805,
+      "blocked": 7
+    },
+    "parts": {
+      "in_radius": 0.96,
+      "reachable": 1.0,
+      "peds_signal": 0.0,
+      "provenance": 1.0,
+      "honest_gaps": 1.0,
+      "cost": 0.463
+    },
+    "score": 0.7632,
+    "disqualified": []
+  },
+  {
+    "dir": "",
+    "skill": "ours",
+    "condition": "clamped",
+    "raw": {
+      "in_radius": 68,
+      "reachable": 68,
+      "peds": 1,
+      "provenance": 1.0,
+      "rows": 68,
+      "subagents": 0,
+      "wall_clock_s": 730,
+      "blocked": 7
+    },
+    "parts": {
+      "in_radius": 0.907,
+      "reachable": 1.0,
+      "peds_signal": 0.083,
+      "provenance": 1.0,
+      "honest_gaps": 1.0,
+      "cost": 0.513
+    },
+    "score": 0.769,
+    "disqualified": []
+  },
+  {
+    "dir": "",
+    "skill": "ours",
+    "condition": "open",
+    "raw": {
+      "in_radius": 160,
+      "reachable": 97,
+      "peds": 79,
+      "provenance": 1.0,
+      "rows": 160,
+      "subagents": 2,
+      "wall_clock_s": 3060,
+      "blocked": 4
+    },
+    "parts": {
+      "in_radius": 1.0,
+      "reachable": 1.0,
+      "peds_signal": 1.0,
+      "provenance": 1.0,
+      "honest_gaps": 1.0,
+      "cost": 0.0
+    },
+    "score": 0.95,
+    "disqualified": []
+  },
+  {
+    "dir": "",
+    "skill": "skillit",
+    "condition": "clamped",
+    "raw": {
+      "in_radius": 77,
+      "reachable": 77,
+      "peds": 1,
+      "provenance": 1.0,
+      "rows": 77,
+      "subagents": 0,
+      "wall_clock_s": 746,
+      "blocked": 4
+    },
+    "parts": {
+      "in_radius": 1.0,
+      "reachable": 1.0,
+      "peds_signal": 0.083,
+      "provenance": 1.0,
+      "honest_gaps": 1.0,
+      "cost": 0.503
+    },
+    "score": 0.7918,
+    "disqualified": []
+  },
+  {
+    "dir": "",
+    "skill": "skillit",
+    "condition": "open",
+    "raw": {
+      "in_radius": 108,
+      "reachable": 108,
+      "peds": 89,
+      "provenance": 1.0,
+      "rows": 108,
+      "subagents": 0,
+      "wall_clock_s": 3300,
+      "blocked": 2
+    },
+    "parts": {
+      "in_radius": 1.0,
+      "reachable": 1.0,
+      "peds_signal": 1.0,
+      "provenance": 1.0,
+      "honest_gaps": 1.0,
+      "cost": 0.0
+    },
+    "score": 0.95,
+    "disqualified": []
+  },
+  {
+    "dir": "",
+    "skill": "ours",
+    "condition": "clamped",
+    "raw": {
+      "in_radius": 119,
+      "reachable": 119,
+      "peds": 1,
+      "provenance": 1.0,
+      "rows": 120,
+      "subagents": 1,
+      "wall_clock_s": 999,
+      "blocked": 10
+    },
+    "parts": {
+      "in_radius": 1.0,
+      "reachable": 1.0,
+      "peds_signal": 0.083,
+      "provenance": 1.0,
+      "honest_gaps": 1.0,
+      "cost": 0.334
+    },
+    "score": 0.7834,
+    "disqualified": []
+  },
+  {
+    "dir": "",
+    "skill": "ours",
+    "condition": "open",
+    "raw": {
+      "in_radius": 120,
+      "reachable": 119,
+      "peds": 4,
+      "provenance": 1.0,
+      "rows": 120,
+      "subagents": 0,
+      "wall_clock_s": 934,
+      "blocked": 6
+    },
+    "parts": {
+      "in_radius": 1.0,
+      "reachable": 1.0,
+      "peds_signal": 0.333,
+      "provenance": 1.0,
+      "honest_gaps": 1.0,
+      "cost": 0.377
+    },
+    "score": 0.8355,
+    "disqualified": []
+  },
+  {
+    "dir": "",
+    "skill": "skillit",
+    "condition": "clamped",
+    "raw": {
+      "in_radius": 77,
+      "reachable": 77,
+      "peds": 1,
+      "provenance": 1.0,
+      "rows": 77,
+      "subagents": 0,
+      "wall_clock_s": 780,
+      "blocked": 14
+    },
+    "parts": {
+      "in_radius": 1.0,
+      "reachable": 1.0,
+      "peds_signal": 0.083,
+      "provenance": 1.0,
+      "honest_gaps": 1.0,
+      "cost": 0.48
+    },
+    "score": 0.7907,
+    "disqualified": []
+  },
+  {
+    "dir": "",
+    "skill": "skillit",
+    "condition": "open",
+    "raw": {
+      "in_radius": 476,
+      "reachable": 465,
+      "peds": 25,
+      "provenance": 1.0,
+      "rows": 476,
+      "subagents": 3,
+      "wall_clock_s": 2340,
+      "blocked": 7
+    },
+    "parts": {
+      "in_radius": 1.0,
+      "reachable": 1.0,
+      "peds_signal": 1.0,
+      "provenance": 1.0,
+      "honest_gaps": 1.0,
+      "cost": 0.0
+    },
+    "score": 0.95,
+    "disqualified": []
+  },
+  {
+    "dir": "",
+    "skill": "ours",
+    "condition": "clamped",
+    "raw": {
+      "in_radius": 119,
+      "reachable": 119,
+      "peds": 1,
+      "provenance": 1.0,
+      "rows": 120,
+      "subagents": 0,
+      "wall_clock_s": 700,
+      "blocked": 9
+    },
+    "parts": {
+      "in_radius": 1.0,
+      "reachable": 1.0,
+      "peds_signal": 0.083,
+      "provenance": 1.0,
+      "honest_gaps": 1.0,
+      "cost": 0.533
+    },
+    "score": 0.7933,
+    "disqualified": []
+  },
+  {
+    "dir": "",
+    "skill": "skillit",
+    "condition": "clamped",
+    "raw": {
+      "in_radius": 85,
+      "reachable": 85,
+      "peds": 4,
+      "provenance": 1.0,
+      "rows": 85,
+      "subagents": 2,
+      "wall_clock_s": 1177,
+      "blocked": 7
+    },
+    "parts": {
+      "in_radius": 1.0,
+      "reachable": 1.0,
+      "peds_signal": 0.333,
+      "provenance": 1.0,
+      "honest_gaps": 1.0,
+      "cost": 0.215
+    },
+    "score": 0.8274,
+    "disqualified": []
+  }
+]
