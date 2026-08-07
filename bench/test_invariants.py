@@ -660,7 +660,29 @@ def port_empty_string_vs_null_filters(skill, cfg):
     return check(skill, "PORT: empty string is not an absent filter", has)
 
 
-PORT_TESTS = [port_academic_vs_community_ceiling,
+
+
+def port_domain_unlock_hunt(skill, cfg):
+    """Both. The one strategy a rival run genuinely beat us on. It produced ~22
+    emails to our 4 by propagating an org pattern across everyone at that
+    employer. We had the propagation logic all along and never spent the fetches
+    to UNLOCK a domain — one published address is all it takes.
+
+    Budget 3-5 targeted fetches per employer domain (contact, press, staff bios,
+    PDFs, job postings) hunting for a single real address. But keep both guards:
+    the rival got ~12 of its 22 wrong because it guessed the FORMAT instead of
+    observing it (flast at a first.last domain, dotted at a compact domain), and
+    emitted employer addresses for contractors its own notes said were employed
+    elsewhere."""
+    t = _all_md(cfg)
+    has = ("unlock" in t) and ("one published address" in t
+                               or "one real address" in t) and \
+          ("per domain" in t or "per employer" in t)
+    return check(skill, "PORT: hunt one address to unlock each domain", has)
+
+
+PORT_TESTS = [port_domain_unlock_hunt,
+              port_academic_vs_community_ceiling,
               port_registry_addresses_go_stale,
               port_empty_string_vs_null_filters,
               port_verify_location_against_practice_address,

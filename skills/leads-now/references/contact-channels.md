@@ -694,3 +694,62 @@ Classified `PRACTICE_ELSEWHERE`. If the radius is soft, the in-ring count goes
 
 State the boundary rule you applied and show what moves if it changes. A radius
 is a business decision, not a fact.
+
+
+## The domain-unlock hunt — spend fetches to open a domain
+
+A rival run produced **22 emails to our 4** on the same roster. It did one thing
+we did not: it propagated an employer's email format across everyone listed at
+that employer. We already had that logic. What we never did was spend the
+fetches to **unlock the domain in the first place**.
+
+**One published address unlocks an entire employer.** Budget **3–5 targeted
+fetches per employer domain** before writing that domain off:
+
+| Where to look | Why it works |
+|---|---|
+| `/contact`, `/contact-us`, `/press`, `/media`, `/newsroom` | Named staff with addresses |
+| Press releases and PDFs (press kits, annual reports) | Leak `firstname.lastname@` constantly |
+| Job postings — "send your CV to…" | A recruiter's real address |
+| Staff and leadership bios | Occasionally a direct address |
+| Provider-directory payloads | Sometimes carry an email field the page hides |
+
+Rank the domains by how many roster members sit on them and unlock the biggest
+first. A domain with 20 people is worth five fetches; a domain with one is not.
+
+### Both guards stay on — the rival got ~12 of its 22 wrong
+
+Its errors are instructive, and all three are avoidable:
+
+**1. It guessed the format instead of observing it.** Measured against addresses
+we actually observed:
+
+| Domain | It emitted | Observed | |
+|---|---|---|---|
+| `cmc-sc.com` | `first.last@` | `sandy.moore@` | correct |
+| `crhealthcare.org` | `flast@` | `hhawthorne@` | correct |
+| `mcleodhealth.org` | `flast@` | **`logan.doriety@`** | **wrong** |
+| `novanthealth.org` | `first.last@` | **`jsmoreb@`, `mssaylor@`** | **wrong** |
+
+Roughly half its addresses were built on the wrong shape. **The pattern must
+come from an address observed on that domain** — never from a house style, a
+sibling org, or a plausible default.
+
+**2. It emitted employer addresses for contractors.** Its own notes said
+*"anesthesia contracted to American Anesthesiology of SC / NAPA"* — and it still
+wrote `@mcleodhealth.org` for those people. It applied the contractor rule
+correctly at one hospital and not at another. Check employment before applying
+a pattern, every time.
+
+**3. It truncated a compound surname.** One of its rows carries the note
+*"surname is 'Van Vliet'; auto-inference truncated it to 'vliet'"* — the same
+particle bug documented above.
+
+### The honest trade
+
+Its 22 addresses are roughly **10 real and 12 fabricated**, all presented at the
+same confidence. At a 2% provider bounce ceiling, sending that list burns the
+domain on the first campaign.
+
+Unlock aggressively; infer conservatively. The volume comes from spending
+fetches on discovery, not from lowering the bar on evidence.
