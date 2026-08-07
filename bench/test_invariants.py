@@ -701,7 +701,43 @@ def port_mixed_format_domains(skill, cfg):
     return check(skill, "PORT: a domain can run two email formats at once", has)
 
 
-PORT_TESTS = [port_mixed_format_domains,
+
+
+def port_hospital_anesthesia_is_contracted(skill, cfg):
+    """Both. THE structural finding, and it is why the email ceiling exists.
+
+    Contracting is not an edge case in this vertical — it is the whole shape.
+    CMS PECOS facility_name, queried by street address, proved all four hospital
+    employers contract anesthesia to four DIFFERENT groups: Grand Strand ->
+    Atlantic Coast Anesthesia Services PC (71 of 71 billing there), Conway ->
+    MedStream Anesthesia PLLC, Columbus Regional -> Southeast Anesthesiology
+    Consultants PLLC, Novant -> Providence Anesthesiology Associates PA.
+
+    56 addresses were harvested and 3 patterns confirmed, and ZERO were applied.
+    The contractor domains have no A record and no MX at all. Determine WHO
+    BILLS before propagating any employer pattern."""
+    t = _all_md(cfg)
+    has = ("71 of 71" in t) or ("zero were applied" in t
+                                 and "who bills" in t)
+    return check(skill, "PORT: hospital anesthesia is contracted — check who bills", has)
+
+
+def port_listing_is_not_employment(skill, cfg):
+    """Both. A website directory listing a physician is NOT evidence they are
+    employed there. A careful sub-hunt built a strong directory-based case that
+    three physicians were the hospital's own; CMS enrollment overrode it — and
+    one of them turned out to be delisted from that hospital entirely.
+
+    An employer claim needs a filing, not a page."""
+    t = _all_md(cfg)
+    has = ("listing" in t or "listed" in t) and ("not employment" in t
+                                                 or "is not proof of employ" in t)
+    return check(skill, "PORT: a directory listing is not employment", has)
+
+
+PORT_TESTS = [port_hospital_anesthesia_is_contracted,
+              port_listing_is_not_employment,
+              port_mixed_format_domains,
               port_domain_unlock_hunt,
               port_academic_vs_community_ceiling,
               port_registry_addresses_go_stale,

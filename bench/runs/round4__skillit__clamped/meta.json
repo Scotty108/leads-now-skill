@@ -1,0 +1,120 @@
+{
+  "skill": "skillit",
+  "condition": "clamped",
+  "subagents": 2,
+  "tool_calls": 71,
+  "wall_clock_s": 1177,
+  "people_found": 85,
+  "in_radius": 85,
+  "reachable": 85,
+  "peds_signal_strong": 3,
+  "peds_signal_moderate": 1,
+  "blocked_sources": [
+    {
+      "host": "tidelandshealth.org",
+      "reason": "HTTP 403 Akamai edge deny on 6 of 6 URLs, to curl and to WebFetch; host-level, browser required"
+    },
+    {
+      "host": "www.sosnc.gov",
+      "reason": "HTTP 403 Cloudflare JS interstitial (NC Secretary of State business search)"
+    },
+    {
+      "host": "atlanticcoastanesthesia.com / atlanticcoastanesthesiaservices.com / acasanesthesia.com",
+      "reason": "no A record, no MX - contractor publishes no reachable domain"
+    },
+    {
+      "host": "medstreamanesthesia.com / medstream.com",
+      "reason": "no A record, no MX"
+    },
+    {
+      "host": "southeastanesthesia.com",
+      "reason": "HugeDomains parking page, HTTP 200 but no content"
+    },
+    {
+      "host": "www.grandstrandmed.com/physicians",
+      "reason": "Sitecore/Next.js payload no longer exposes the hcaEmployee flag used in round 2; CMS enrollment substituted"
+    },
+    {
+      "host": "eutils.ncbi.nlm.nih.gov",
+      "reason": "HTTP 429 on 1 of 6 esearch queries (Tidelands affiliation); other 5 served"
+    }
+  ],
+  "truncation_detected": true,
+  "notes": "esearch db=pmc reported count=168 for Grand Strand Medical Center[Affiliation] and served 100 (retmax cap) - a stated partial sweep, denominator 100 of 168. Novant PMC sweep read 20 of 54. Every negative in report.md carries its denominator. The round's structural finding: all four hospital employers in the ring contract anesthesia out (Atlantic Coast Anesthesia Services PC, MedStream Anesthesia PLLC, Southeast Anesthesiology Consultants PLLC, Providence Anesthesiology Associates PA), proven from CMS PECOS facility_name by street address - so every confirmed facility pattern was correctly refused. Zero inferred addresses shipped; one round-3 inferred address (derek.horstemeyer@hcahealthcare.com) was withdrawn on that evidence. Two published-pediatric anesthesiologists new to the benchmark (Desiree Aird, Andrew Criser) surfaced from the HCA GME faculty page and were placed in-ring by current CMS enrollment, raising the ring's evidenced pediatric anesthesiologist count from 1 to at least 3.",
+  "channel_yield": {
+    "domains_attempted": 6,
+    "domains_unlocked": 4,
+    "emails_pattern_confirmed": 0,
+    "emails_pattern_likely": 0,
+    "emails_withheld_contractor": 50,
+    "gme_faculty_emails": 0
+  },
+  "domain_ledger": [
+    {
+      "domain": "hcahealthcare.com",
+      "roster_members": 31,
+      "fetches_spent": 18,
+      "observed_address": "Jon.Halling@ (roster, PMC11249181); David.Kingery@ (roster, PMC10324711); Yajiara.Wright@ (GME program administrator, mailto); +23 more from PMC and the GME site payload = 26 total",
+      "pattern": "first.last - pattern_confirmed on 26 observations; hazards: numeric collision suffix (andrew.baird3, anthony.shadiack2, courtney.stewart3, Susan.Smith7) and name-change accounts (Kaitlyn Phelps -> Kaitlyn_murray@, Adina McNair -> adina.gaughran@)",
+      "emitted": 2,
+      "withheld_reason": "29 withheld. CMS PECOS at 809 82ND PKWY MYRTLE BEACH: 71 of 71 anesthesia clinicians bill under ATLANTIC COAST ANESTHESIA SERVICES PC (pac 3971887167); zero anesthesia under any HCA entity. Contractor sits on a different mail domain. The 2 emitted are first-party published by the people themselves, so employment does not gate them. One round-3 inferred address withdrawn."
+    },
+    {
+      "domain": "mcleodhealth.org",
+      "roster_members": 10,
+      "fetches_spent": 2,
+      "observed_address": "mrose@mcleodhealth.org (Michael Rose, PMC); dallison@mcleodhealth.org (Denise Allison, PMC); logan.doriety@ (supplied)",
+      "pattern": "CONTRADICTORY - flast and first.last both live on the domain. No pattern exists to propagate.",
+      "emitted": 0,
+      "withheld_reason": "Two independent refusals: (1) observed addresses disagree, so email-tradecraft says stop guessing; (2) CMS shows anesthesia at 3655 Mitchell St billing under MCLEOD PHYSICIAN ASSOCIATES II, and round 2B measured mcLeod_physician_associates:false on the anesthesiologists. This is exactly where the rival emitted flast@ and was wrong."
+    },
+    {
+      "domain": "cmc-sc.com",
+      "roster_members": 7,
+      "fetches_spent": 4,
+      "observed_address": "farayi.mbuvah@ (roster); ihor.melnytskyy@ (roster); frederick.bellamy@ (roster); sandy.moore@; Sydney.Causey@ (supplied) + thomas.powell@, dody.martin@, Hannah.Gier@ (new, PMC) = 8",
+      "pattern": "first.last - pattern_confirmed on 8 unanimous observations",
+      "emitted": 3,
+      "withheld_reason": "4 withheld. CMS PECOS at 300 SINGLETON RIDGE RD CONWAY: 52 of 52 anesthesia clinicians bill under MEDSTREAM ANESTHESIA PLLC; zero anesthesia under CONWAY HOSPITAL INC. CMC's own find-a-provider and contact-us pages publish no anesthesia roster (checked 3 of 3 reachable pages). The 3 emitted are first-party published."
+    },
+    {
+      "domain": "crhealthcare.org",
+      "roster_members": 4,
+      "fetches_spent": 35,
+      "observed_address": "smiller@crhealthcare.org (Stephanie Miller, Physician Outreach Coordinator); styler@crhealthcare.org (Sharon Tyler, Compliance Officer); hhawthorne@ (supplied); plus rdunbar@, kgore@, teichert@ unnamed but shape-consistent",
+      "pattern": "flast - pattern_confirmed on 3 named observations",
+      "emitted": 0,
+      "withheld_reason": "CMS PECOS at 500 JEFFERSON ST WHITEVILLE: JABARI, OBRECHT, SCHULTZ and WINGFIELD all bill under SOUTHEAST ANESTHESIOLOGY CONSULTANTS PLLC (pac 7719959873); the 22 anesthesia clinicians under COLUMBUS REGIONAL HEALTHCARE SYSTEM are all CRNAs. This OVERRODE our own sub-hunt, which had built a strong case from CRH's website directory that the three were CRH providers - a website listing is not employment. Separately, Robin Zaki Dimitrious is delisted from CRH entirely (slug recycled to another physician)."
+    },
+    {
+      "domain": "novanthealth.org",
+      "roster_members": 6,
+      "fetches_spent": 13,
+      "observed_address": "19 addresses across 17 named people from PMC, e.g. pkropf@ (Patricia L. Kropf), dhpriest@ (David H. Priest), grreeves@ (Gordon R. Reeves), sfreeman-muhammad@ (Steven Freeman-Muhammad), william.hope@ (William Hope), kathleen.young@ (Kathleen M. Young)",
+      "pattern": "UNSETTLED - two conventions coexist, split by legacy org and not by date: compact finitial[+middle]lastname on legacy Novant (Charlotte / Winston-Salem) and first.last on legacy New Hanover RMC (Wilmington), both appearing in 2025-2026 papers. Rebekah B. DeCamillis -> rjdecamillis proves the 2nd character is not reliably the published middle initial.",
+      "emitted": 0,
+      "withheld_reason": "Two independent refusals: (1) the rule is not settled even on 19 observations, and Bolivia NC sits in the Wilmington orbit where the DOTTED form dominates - the opposite of what the 2 supplied compact samples implied; (2) CMS PECOS at 240 HOSPITAL DR NE BOLIVIA: all 11 MD/DO anesthesiologists bill under PROVIDENCE ANESTHESIOLOGY ASSOCIATES PA; NOVANT HEALTH MEDICAL GROUP LLC has zero anesthesia at that address (it employs the CRNAs). This is where the rival emitted first.last@ and was wrong."
+    },
+    {
+      "domain": "tidelandshealth.org",
+      "roster_members": 6,
+      "fetches_spent": 7,
+      "observed_address": "NONE - 0 observed across 6 of 6 URLs attempted (all 403) plus PMC esearch Count=0 for the domain",
+      "pattern": "none - domain never unlocked",
+      "emitted": 0,
+      "withheld_reason": "HTTP 403 Akamai edge deny on every URL, to curl and to WebFetch; host-level, browser required. Tidelands Anesthesia Group LLC has no own domain (tidelandsanesthesia.com and tidelandsanesthesiagroup.com: no A, no MX). A domain tried and not unlocked."
+    },
+    {
+      "domain": "(contractor domains - the correct target once employment was known)",
+      "roster_members": 56,
+      "fetches_spent": 11,
+      "observed_address": "NONE",
+      "pattern": "n/a",
+      "emitted": 0,
+      "withheld_reason": "atlanticcoastanesthesia.com, atlanticcoastanesthesiaservices.com, acasanesthesia.com, medstreamanesthesia.com, medstream.com: no A record and no MX on 5 of 5. southeastanesthesia.com is a HugeDomains parking page. providenceanesthesia.com resolves but serves an unrelated page with no corporate addresses. These groups employ 123 anesthesia clinicians across the ring's two largest facilities and publish no reachable mail domain - this is the structural ceiling on this roster."
+    }
+  ],
+  "marginal_vs_round3": {
+    "emails": 2
+  }
+}

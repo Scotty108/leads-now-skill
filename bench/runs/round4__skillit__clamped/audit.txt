@@ -1,0 +1,11 @@
+=== COVERAGE ===
+retrieved from source:   777  (searched area, wider than the target)
+matched the target:      85  <- THIS is the denominator for the brief
+delivered rows:          85
+with an email:           5 (6%)
+with a phone:            85 (100%)
+confidence:              unconfirmed=71, probable=11, confirmed=3
+email_status:            withheld_contractor=50, none_no_observed_address=30, observed=5
+unreadable sources:      Tidelands Health: 403 Akamai (6 URLs); NC Secretary of State: 403 Cloudflare; Atlantic Coast Anesthesia Services PC: no domain resolves; MedStream Anesthesia PLLC: no domain resolves
+
+PASS: every row is sourced, tiered, and unique.

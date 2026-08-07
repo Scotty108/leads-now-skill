@@ -851,3 +851,71 @@ employer's own site or a filing — before treating an address there as theirs.
 Result: 5 emails, up from 4, with **zero wrong-format addresses**. The single
 gain came from unlocking `orthosc.org`, whose mail domain is `.org` while its
 website is `.com` — a guess would have missed it.
+
+
+## Round 4B: contracting is the whole shape, not an edge case
+
+The decisive finding. CMS PECOS `facility_name`, queried by **street address**,
+proved all four hospital employers contract anesthesia out — to four *different*
+groups:
+
+| Facility | Who actually bills |
+|---|---|
+| Grand Strand | **Atlantic Coast Anesthesia Services PC** — 71 of 71 |
+| Conway Medical Center | MedStream Anesthesia PLLC |
+| Columbus Regional | Southeast Anesthesiology Consultants PLLC |
+| Novant Brunswick | Providence Anesthesiology Associates PA |
+
+**56 observed addresses harvested. 4 of 6 domains unlocked. 3 patterns
+confirmed. ZERO patterns applied.** Fifty plausible addresses withheld, because
+none of those people are on the domain they appear to work at.
+
+And the contractor domains themselves have **no A record and no MX at all** —
+they are not reachable, not merely undiscovered.
+
+**Determine who bills before propagating any employer pattern.** In hospital
+anesthesia the facility is almost never the employer, so a facility domain is
+almost always the wrong domain. This single fact explains the email ceiling
+better than anything else the benchmark found.
+
+### A directory listing is not employment
+
+A careful sub-hunt built a strong, well-sourced case from a hospital's own
+website that three physicians were its employees. **CMS enrollment overrode
+it** — and one of the three turned out to be delisted from that hospital
+entirely.
+
+A hospital listing a physician means they have privileges, not payroll. An
+employer claim needs a filing, not a page.
+
+### Two more corrections to my own analysis
+
+**Novant is unsettled, not "compact".** I characterised `novanthealth.org` as a
+compact no-dot format from two samples (`jsmoreb@`, `mssaylor@`). Across **19
+observed addresses spanning 17 people**, two live conventions coexist and the
+split is **geographic, not chronological** — Bolivia sits in the Wilmington
+orbit where the **dotted** form dominates, the opposite of the two samples I
+generalised from. Two samples characterised nothing.
+
+**McLeod is confirmed mixed from a second source path.** `mrose@` and
+`dallison@` (flast) against `logan.doriety@` (first.last). Unguessable, and
+correctly zero emitted.
+
+### The pediatric count rises to at least 3
+
+The GME faculty page paid — not in email (8 named faculty, **0** addresses) but
+in evidence. Two Grand Strand residency faculty carry published pediatric
+anesthesia credentials:
+
+- **Desiree Aird** — Children's Hospital of Michigan pediatric anesthesia
+  fellowship
+- **Andrew Criser** — board certified in Pediatric Anesthesiology
+
+Both are placed at 809 82nd Pkwy, Myrtle Beach by **current CMS enrollment**,
+which also settles the earlier location dispute: Aird's NPPES record pointed
+elsewhere, and NPPES was stale. Current enrollment beats a self-reported
+registry address.
+
+**Ring count: 1 → at least 3 pediatric anesthesiologists.** The first answer was
+wrong because it trusted a registry taxonomy; the second because it trusted a
+registry address. Both were fixed by the same source — a current federal filing.

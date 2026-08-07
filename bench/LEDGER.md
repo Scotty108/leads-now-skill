@@ -435,3 +435,48 @@ web root.
 
 Net: **5 emails, zero wrong-format** (vs the rival's ~10 real / ~12 fabricated).
 The one gain came from `orthosc.org` — mail domain `.org`, website `.com`.
+
+| 4A | 2026-08-07T02:20Z | clamped | skillit | 85 | 85 | 4 | 1.00 | 2 | 1177 | **0.8274** | 5 emails ALL first-party observed, 0 inferred; 50 withheld as contractor |
+
+### Round 4B: contracting is the whole shape
+
+**CMS PECOS `facility_name` queried by street address settled it.** All four
+hospital employers contract anesthesia to four DIFFERENT groups:
+
+| Facility | Who actually bills |
+|---|---|
+| Grand Strand | **Atlantic Coast Anesthesia Services PC — 71 of 71** |
+| Conway | MedStream Anesthesia PLLC |
+| Columbus Regional | Southeast Anesthesiology Consultants PLLC |
+| Novant Brunswick | Providence Anesthesiology Associates PA |
+
+**56 addresses harvested. 4 of 6 domains unlocked. 3 patterns confirmed. ZERO
+applied.** 50 plausible addresses withheld. The contractor domains have no A
+record and no MX — unreachable, not merely undiscovered. This explains the
+email ceiling better than anything else in the benchmark.
+
+It also WITHDREW round 3's inferred `derek.horstemeyer@hcahealthcare.com`.
+Final: **5 emails, every one first-party observed, zero inferred.**
+
+### TWO MORE CORRECTIONS TO MY OWN ANALYSIS
+
+**Novant is UNSETTLED, not "compact".** I characterised it from 2 samples
+(`jsmoreb@`, `mssaylor@`). Across **19 addresses / 17 people** two conventions
+coexist and the split is **GEOGRAPHIC** — Bolivia sits in the Wilmington orbit
+where the **dotted** form dominates, the opposite of my samples. Two samples
+characterised nothing.
+
+**A directory listing is not employment.** A well-sourced website case that 3
+physicians were CRH employees was overridden by CMS — and one turned out to be
+delisted from CRH entirely.
+
+### PEDIATRIC COUNT: 1 -> at least 3
+
+The GME faculty page paid in evidence, not email (8 faculty, 0 addresses):
+**Desiree Aird** (Children's Hospital of Michigan peds fellowship) and **Andrew
+Criser** (board certified Pediatric Anesthesiology), both placed at 809 82nd
+Pkwy Myrtle Beach by CURRENT CMS enrollment — which also settles the round-3
+Aird dispute: her NPPES address was stale.
+
+The first answer (1) trusted a registry TAXONOMY. The second trusted a registry
+ADDRESS. Both were fixed by the same source: a current federal filing.
