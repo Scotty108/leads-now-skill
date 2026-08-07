@@ -1,0 +1,90 @@
+{
+ "skill": "skillit",
+ "condition": "open",
+ "subagents": 3,
+ "tool_calls": 52,
+ "wall_clock_s": 2340,
+ "people_found": 476,
+ "in_radius": 476,
+ "reachable": 465,
+ "peds_signal_strong": 14,
+ "peds_signal_moderate": 11,
+ "blocked_sources": [
+  {
+   "host": "prismahealth.org / doctors.prismahealth.org",
+   "reason": "HTTP 200 with a 1155-byte Imperva/Incapsula interstitial to plain curl; read with the browser, no CAPTCHA presented or defeated"
+  },
+  {
+   "host": "greenvilleanesthesiology.com",
+   "reason": "NXDOMAIN - the group employing ~190 of the ring has no website"
+  },
+  {
+   "host": "www.ghs.org",
+   "reason": "NXDOMAIN, rebranded to Prisma"
+  },
+  {
+   "host": "api.openalex.org",
+   "reason": "HTTP 429 Insufficient budget, unchanged from round 1B"
+  },
+  {
+   "host": "SC LLR / NC Medical Board",
+   "reason": "reCAPTCHA; out of scope, a browser does not change that"
+  },
+  {
+   "host": "data.cms.gov/data-api/v1/dataset/mj5m-pzi6/data",
+   "reason": "404 - the URL in the brief is a DKAN id on the wrong API; working path is /provider-data/api/1/datastore/query/mj5m-pzi6/0"
+  },
+  {
+   "host": "shrinerschildrens.org Greenville",
+   "reason": "loads (478KB) but publishes 0 clinician emails"
+  }
+ ],
+ "truncation_detected": true,
+ "notes": "Three silent-truncation events caught and reconciled. (1) NPI ZIP3 296 returned exactly 200 = the page limit; paged to skip=200 for 154 more, parse then reported COMPLETE; no query approached the skip=1000 repeat ceiling. (2) Prisma/Kyruus reported 14 peds providers but a text-based scrape of page 1 returned 11 - a provider-link scrape returned 12, plus 2 on page 2 = 14 reconciled; the text scrape merged two cards and silently dropped one person (Crystal Cmeyla). (3) CMS DAC rejects limit>=5000 with a JSON-schema error, so the 840MB bulk distribution was parsed instead: 3,387,942 local rows = the API-reported count exactly, with 4 live-API shard cross-checks agreeing. THREE REJECTIONS a looser run ships: Blomeley (peds taxonomy, Mill Spring NC ZIP put her 36.9mi INSIDE the ring, but her only NPI LOCATION is LRMC Landstuhl GERMANY - Mill Spring is MAILING); Zauk (Prisma lists her under peds anesthesiology WITH ABA board cert and a Baylor peds fellowship, but publishes no location - NPI LOCATION is Columbia SC, ~100mi, and she is an NPI trainee); Cmeyla (Prisma lists her under Pediatric Anesthesiology, in-ring at 701 Grove Rd, but she is an FNP - retained and downgraded, not delivered as a physician). Zero emails were derived and zero email patterns were applied - all 78 are printed on a page. ABA sweep landed after the first report cut and is merged: 18 peds-certified of 274 ring diplomates, 12 practice-confirmed in ring, 9 rejected as practising elsewhere (including an independent reproduction of this run's own Blomeley rejection), 2 unresolved for different reasons and labelled separately (Samoya is flagged CERTIFIED - NOT CLINICALLY ACTIVE by the ABA itself; Stone's NPPES record is 19 years stale). ABA added a fourth truncation event - the NC and GA parent-certificate (513) sweeps each returned exactly 1000 and were never used as denominators, while all three peds (519) sweeps came in under the cap so peds enumeration is complete. It also exposed a SECOND silent wrong-key zero beyond the GUID trap in the brief: with the correct SC GUID the advanced search still returned [] at HTTP 200 because the API treats an empty string as a literal filter; main.js shows the client sends JSON null, and with nulls the identical query returned 860. PROCESS DEFECT: the ABA subagent and this agent both wrote build.py into the shared work directory and the subagent's file silently replaced this run's roster builder - caught only because a rebuild printed 23 rows instead of 476; rebuilt as build_roster.py, no delivered row affected.",
+ "territory": "greenville",
+ "channel_yield": {
+  "npi_providers": 426,
+  "cms_dac_records": 281,
+  "aba_peds_anesthesiologists": 12,
+  "emails": 78,
+  "department_phones": 10
+ },
+ "greenville_vs_myrtle_beach": {
+  "peds_anesth_greenville": 25,
+  "peds_anesth_myrtle_beach": 1,
+  "emails_greenville": 78,
+  "emails_myrtle_beach": 4
+ },
+ "marginal": "Closes the scope gap: three rounds reported '0 -> Greenville' without ever querying Greenville, and Greenville is not a tail of the Myrtle Beach market, it is a different market. NPI 207LP3000X returns 20 in-ring providers here against 0 across all nine Myrtle Beach prefixes, so the Myrtle Beach pediatric zero is a property of that market and not of the method - which only the second territory could establish. The commercially decisive finding is that the four-round email ceiling (4 addresses from ~1,700 profile pages and a 3.39M-row federal file) broke at 78 first-party published addresses from ONE ungated HTML page - and NOT through the academic channel the hypothesis predicted. Literature was falsified with a stated denominator: 0 emails from 81 of 426 checked, 1 of 21 peds surviving affiliation AND full-forename locks, statistically identical to the community baseline. The lever is the MEDICAL SCHOOL FACULTY DIRECTORY (USC SOM Greenville, 1,457 rows, 1,432 mailto, 88 anesthesiology), which works precisely because the dominant employer - Greenville Anesthesiology PA - has no website at all, so the school page is its de-facto public directory. Generalizable rule the Myrtle Beach ring could never have produced: in an academic market, find the affiliated medical school's faculty directory before touching PubMed. Also proves the pediatric-signal channel is directory-dependent, not registry-dependent: Prisma's own directory carries 3 peds anesthesiologists (Bracale, Vana, Gonzalez) whose NPI taxonomy says only 'Anesthesiology', and 156 of 476 rows now carry a NAMED anaesthesia department line rather than a switchboard. The ABA merge then produced the single best catch of the run: Sara Lathem Walls MD (NPI 1669764742), ABA peds-certified 2017 and practising at Prisma Greenville, whose NPPES LOCATION still says Nashville TN on a record untouched since 2018 - so the NPI registry places her outside the ring, her NPPES Greenville address is MAILING only and forbidden by the mailing rule, and Prisma's public directory does not list her under pediatrics at all. She entered this roster solely through CMS DAC current Medicare enrollment and was only qualified by the certifying body. She is the exact inverse of the Blomeley rejection - the same rule that throws out an in-ring mailing address with an out-of-ring practice also rescues an out-of-ring stale practice address with a current in-ring filing - and neither case is reachable without both the federal filing and the credentialing body. Net effect of the certifying body: 7 rows upgraded from self-report or directory-quote to body-verified, peds strong signal 7 -> 14.",
+ "denominators": {
+  "npi_retrieved": 833,
+  "npi_location_rows": 1331,
+  "npi_in_ring": 426,
+  "cms_rows_parsed": 3387942,
+  "cms_zip3_union_npis": 680,
+  "cms_in_ring": 281,
+  "cms_net_new": 50,
+  "union": 476,
+  "literature_checked": "81 of 426",
+  "peds_taxonomy_in_ring_before_rejection": 21,
+  "peds_taxonomy_after_mailing_rejection": 20,
+  "prisma_peds_listed": 14,
+  "prisma_peds_in_ring_physicians": 12,
+  "faculty_dir_rows": 1457,
+  "faculty_dir_anesthesiology_rows": 88,
+  "emails_matched_to_roster": 78,
+  "aba_diplomates_with_ring_mailing_address": 274,
+  "aba_parent_certificate_holders_in_ring": 257,
+  "aba_peds_certified_with_ring_mailing_address": 18,
+  "aba_peds_practice_confirmed_in_ring": 12,
+  "aba_peds_rejected_practice_elsewhere": 9,
+  "aba_peds_practice_unresolved": 2,
+  "aba_peds_certified_by_state": {
+   "SC": 53,
+   "NC": 117,
+   "GA": 115
+  }
+ },
+ "audit": "PASS - audit_list.py result.csv --retrieved 833 --in-scope 476; confirmed=14, probable=11, unconfirmed=451, first_party_published=78, phone 465/476",
+ "open_question": "4 more peds-certified anesthesiologists sit at Mission Health, Asheville NC, 53.5 mi out - 3.5 mi outside a hard 50-mile ring. Classified PRACTICE_ELSEWHERE per the stated radius. If the radius is soft the in-ring peds-certified count goes 12 -> 16. Business decision, not a data one."
+}

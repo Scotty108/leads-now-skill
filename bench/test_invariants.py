@@ -610,7 +610,60 @@ def port_search_every_named_territory(skill, cfg):
     return check(skill, "PORT: enumerate every territory the ask names", has)
 
 
-PORT_TESTS = [port_verify_location_against_practice_address,
+
+
+def port_academic_vs_community_ceiling(skill, cfg):
+    """Both. OVERTURNS the benchmark's headline conclusion. Four rounds
+    concluded 'work email tops out near 4% — phone is the deliverable'. That was
+    true of a COMMUNITY roster and false as a general claim.
+
+    Same specialty, same state, 50-mile ring around an academic centre:
+    78 first-party published emails vs 4, and 25 evidenced pediatric
+    anesthesiologists vs 1. The ceiling was a property of the POPULATION, not
+    of clinical data — and it broke through a medical-school faculty directory,
+    not the literature."""
+    t = _all_md(cfg)
+    has = ("academic" in t and "community" in t) and \
+          ("faculty directory" in t) and \
+          ("ceiling" in t)
+    return check(skill, "PORT: academic vs community changes the email ceiling", has)
+
+
+def port_registry_addresses_go_stale(skill, cfg):
+    """Both. The inverse of the mailing-address trap, and it needs BOTH sources.
+    Sara Lathem Walls MD is ABA peds-certified and practises at Prisma
+    Greenville, but her NPPES LOCATION still reads Nashville TN on a record
+    untouched since 2018 — so the registry puts her OUTSIDE the ring, her
+    in-ring NPPES address is mailing-only, and the hospital directory omits her
+    from pediatrics entirely. She was found ONLY via current CMS Medicare
+    enrollment and qualified ONLY by the certifying body.
+
+    A registry practice address is authoritative but not fresh. Cross-check it
+    against a current filing before excluding anyone."""
+    t = _all_md(cfg)
+    has = ("stale" in t) and ("enrollment" in t or "cms" in t) and \
+          ("exclud" in t or "outside the ring" in t)
+    return check(skill, "PORT: registry addresses go stale; check enrollment", has)
+
+
+def port_empty_string_vs_null_filters(skill, cfg):
+    """Both. A second silent wrong-key zero, one level past the GUID trap. With
+    the CORRECT state GUID the ABA advanced search still returned [] at HTTP
+    200, because the API treats an empty string as a LITERAL filter value. The
+    client ships JSON null; with nulls the identical query returned 860.
+
+    An empty filter and an absent filter are different queries. Read what the
+    real client sends before trusting a zero."""
+    t = _all_md(cfg)
+    has = ("empty string" in t) and ("null" in t) and \
+          ("literal" in t or "filter" in t)
+    return check(skill, "PORT: empty string is not an absent filter", has)
+
+
+PORT_TESTS = [port_academic_vs_community_ceiling,
+              port_registry_addresses_go_stale,
+              port_empty_string_vs_null_filters,
+              port_verify_location_against_practice_address,
               port_search_every_named_territory,
               port_cms_doctors_and_clinicians,
               port_positive_control_for_absence,

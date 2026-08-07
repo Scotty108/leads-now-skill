@@ -1,0 +1,11 @@
+=== COVERAGE ===
+retrieved from source:   833  (searched area, wider than the target)
+matched the target:      476  <- THIS is the denominator for the brief
+delivered rows:          476
+with an email:           78 (16%)
+with a phone:            465 (98%)
+confidence:              unconfirmed=451, confirmed=14, probable=11
+email_status:            none_found=398, first_party_published=78
+unreadable sources:      prismahealth.org: Imperva/Incapsula interstitial to plain curl (read via browser; rung 4); greenvilleanesthesiology.com: NXDOMAIN (group has no website); www.ghs.org: NXDOMAIN; api.openalex.org: HTTP 429 insufficient budget; SC LLR / NC Medical Board: reCAPTCHA; out of scope
+
+PASS: every row is sourced, tiered, and unique.

@@ -1,19 +1,27 @@
 # Website clones stay local. They contain here.now's verbatim copy and design —
 # fine as local reference, not something to republish under our name.
-herenow-clone/
-leads-now/
-leads-now-skill/
-dist/
-pages/
+/herenow-clone/
+/leads-now/
+/leads-now-skill/
+/dist/
+/pages/
 
 node_modules/
 .next/
 out/
 __pycache__/
 *.pyc
-*.png
+/*.png
 .DS_Store
 .playwright-mcp/
 
 # Fetched registry payloads and run artifacts are reproducible, not source.
 bench/runs/*/raw/
+
+# Run scratch: fetched payloads and bulk downloads are reproducible, not source.
+# (A CMS national file is 801MB and blew past GitHub's 100MB limit.)
+bench/runs/*/work/
+bench/runs/*/raw*/
+bench/runs/*/records/
+bench/runs/*/pages/
+DAC_NationalDownloadableFile.csv

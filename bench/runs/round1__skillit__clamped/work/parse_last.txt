@@ -1,9 +1,0 @@
-SHARED ADDRESS: 125 individuals list 171 ASHLEY AVE, Charleston — treat as an employer or billing address, not a reachable practice site.
-SHARED ADDRESS: 79 individuals list 2095 HENRY TECKLENBURG DR, Charleston — treat as an employer or billing address, not a reachable practice site.
-SHARED ADDRESS: 54 individuals list 169 ASHLEY AVE, Charleston — treat as an employer or billing address, not a reachable practice site.
-SHARED ADDRESS: 52 individuals list 169 ASHLEY AVE RM 202, Charleston — treat as an employer or billing address, not a reachable practice site.
-files_read: 10   distinct_providers: 777   location_rows: 1188
-wrote /Users/scotty/leads.now/bench/runs/round1__skillit__clamped/work/roster.csv
-empty_responses: 2 (npi__pediatric-anesthesiology__any__283__s0.json, npi__pediatric-anesthesiology__any__295__s0.json)
-
-COMPLETE: no query returned a full page, so every matching record was retrieved.

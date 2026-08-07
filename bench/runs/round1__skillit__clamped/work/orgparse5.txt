@@ -1,4 +1,0 @@
-files_read: 25   distinct_providers: 2961   location_rows: 4186
-wrote /Users/scotty/leads.now/bench/runs/round1__skillit__clamped/work/orgroster5.csv
-
-COMPLETE: no query returned a full page, so every matching record was retrieved.

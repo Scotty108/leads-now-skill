@@ -331,3 +331,54 @@ only**, **1 by ABMS (browser) only**.
 
 ABMS is genuinely browser-only (403 curl / 200 Playwright, no challenge shown
 or solved) — real, and worth exactly one record.
+
+| 3B | 2026-08-07T01:15Z | open | skillit | 476 | 465 | 25 | 1.00 | 1 | 1637 | **0.9500** | GREENVILLE swept: overturns the headline conclusion |
+
+**ROUND 3 COMPLETE — 4/4 runs.** skillit/open 0.9500 > ours/open 0.8355 >
+skillit/clamped 0.7907 > ours/clamped 0.7834.
+
+## THE HEADLINE CONCLUSION WAS WRONG — corrected
+
+Four rounds concluded "work email tops out near 4%; phone is the deliverable."
+That was true of a COMMUNITY roster and false as a general claim. Same
+specialty, same state, a ring around an academic centre instead of a resort:
+
+| | Myrtle Beach | Greenville |
+|---|---|---|
+| In-ring providers | 120 | **476** |
+| NPI peds taxonomy | 0 | **20** |
+| Evidenced peds anesthesiologists | 1 | **25** |
+| **First-party published emails** | **4** | **78** |
+
+The ceiling was a property of the **population**, not of clinical data. It broke
+through a **medical-school faculty directory** — not the literature, which was
+falsified again with a stated denominator (0 emails from 81 of 426 checked).
+
+**Classify the population before predicting the ceiling.**
+
+## The case that needs BOTH new sources
+
+**Sara Lathem Walls MD** — ABA peds-certified, practises at Prisma Greenville.
+Her NPPES LOCATION still says *Nashville TN* on a record untouched since 2018,
+so the registry puts her OUTSIDE the ring; her in-ring NPPES address is MAILING
+only; and Prisma's own directory omits her from pediatrics. Found ONLY via
+current CMS Medicare enrollment, qualified ONLY by the ABA.
+
+The exact inverse of the Blomeley rejection (in-ring mailing, out-of-ring
+practice). **Neither case is reachable without both the federal filing and the
+credentialing body.**
+
+## A second silent wrong-key zero
+The GUID fix is necessary but NOT sufficient: with the CORRECT state GUID the
+ABA advanced search still returned `[]` at HTTP 200, because the API treats an
+empty string as a LITERAL filter value. `main.js` shows the client sends JSON
+`null` — with nulls the identical query returned **860**. Fourth truncation
+event also caught (NC and GA parent sweeps each exactly 1000; all three peds
+sweeps under the cap, so peds enumeration is complete and two paths agree).
+
+## Recorded, not hidden
+- 4 peds-certified anesthesiologists at Mission Health Asheville, **53.5 mi** —
+  3.5 outside a hard ring. Soft radius takes in-ring 12 -> 16. Stated, not decided.
+- Process defect: two agents both wrote `build.py` to shared scratch and one
+  silently replaced the other, caught only when a rebuild printed 23 rows
+  instead of 476. Namespace files in shared working directories.
