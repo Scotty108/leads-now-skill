@@ -82,6 +82,47 @@ def test_frontmatter(skill, cfg):
     return ok
 
 
+def test_official_spec(skill, cfg):
+    """Validate against the OFFICIAL Agent Skills spec, not our reading of it.
+
+    Every frontmatter rule in this suite was inferred from trial and error
+    before the spec was published at agentskills.io/specification. The reference
+    validator (`skills-ref`, github.com/agentskills/agentskills) is the
+    authority, so run it when it is installed rather than trusting our guess.
+
+    It needs Python 3.11+, so it cannot be a hard gate on every machine —
+    absent, this SKIPS rather than failing, and the hand-rolled frontmatter
+    checks below still run.
+    """
+    import shutil
+    exe = shutil.which("skills-ref") or os.path.expanduser("~/.local/bin/skills-ref")
+    if not os.path.exists(exe):
+        return check(skill, "official spec validator", True,
+                     "skills-ref not installed — skipped")
+    rc, out = run([exe, "validate", cfg["dir"]])
+    ok = rc == 0 and "valid skill" in out.lower()
+    return check(skill, "official spec validator", ok,
+                 "passed" if ok else out.strip()[:160])
+
+
+def test_spec_soft_limits(skill, cfg):
+    """The spec's SOFT guidance, which the validator does not enforce.
+
+    `SKILL.md` is loaded in full the moment the skill activates, so its size is
+    a tax on every single run. The spec recommends under 500 lines and under
+    ~5000 tokens. Advisory here, because our embedded stdlib fallback is a
+    deliberate ~1,700-token spend: some install paths carry only SKILL.md and
+    drop scripts/ entirely, and without it the skill is inert there.
+    """
+    body = open(os.path.join(cfg["dir"], "SKILL.md"), errors="ignore").read()
+    body = re.sub(r"^---\n.*?\n---\n", "", body, flags=re.S)
+    lines, toks = len(body.splitlines()), len(body) // 4
+    note = f"{lines} lines, ~{toks} tokens"
+    if lines > 500 or toks > 6500:
+        return check(skill, "SKILL.md within spec size guidance", False, note)
+    return check(skill, "SKILL.md within spec size guidance", True, note)
+
+
 def test_portability(skill, cfg):
     """Scripts must be stdlib-only and must not reach the network themselves:
     the Claude apps sandbox has no outbound access, so a script that fetches is
@@ -1243,6 +1284,7 @@ TESTS = [test_core_files_stay_general,
          test_profile_match_needs_corroboration,
          test_bulk_data_traps,
          test_postcode_places_precisely,
+         test_official_spec, test_spec_soft_limits,
          test_frontmatter, test_portability, test_refusal,
          test_surname_particles, test_docs_claims]
 
