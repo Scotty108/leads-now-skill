@@ -23,6 +23,35 @@ The full NUCC provider taxonomy code set ships at
 `assets/nucc_individual_taxonomy.csv` — use it to resolve a specialty name to
 its code and, critically, to find a code's **parent** before querying.
 
+## More free CMS datasets, resolved from the catalog
+
+Anthropic's own healthcare plugin wires ~32 public CMS tables. These are the
+ones that matter for building a roster rather than auditing claims. **Resolve
+each by title from `data.cms.gov/data.json` — never hardcode the URL** (see
+`bulk-sources.md`); all were confirmed present in the live catalog.
+
+| Dataset title | Why it helps | Cadence |
+|---|---|---|
+| `Order and Referring` | Providers currently eligible to order/refer — a **weekly** liveness signal, far fresher than NPPES | weekly |
+| `Medicare Physician & Other Practitioners - by Provider` | Volume and specialty per provider; separates a busy practice from a lapsed one | annual |
+| `<Facility> All Owners` (6 variants) | Names the **owners** behind a facility — the one public route into who actually controls a contracted group | monthly |
+| `Revoked Medicare Providers and Suppliers` | Exclude the revoked before you call them | monthly |
+| `Opt Out Affidavits` | Providers who opted out of Medicare — a different practice model, often a different employer | quarterly |
+
+`Order and Referring` deserves emphasis: it refreshes **weekly**, where an NPPES
+record can sit stale for years. Where the two disagree about whether someone is
+still practising, the weekly file is the better evidence.
+
+## Read the registry status — a deactivated NPI is a dead lead
+
+NPPES publishes `basic.status`: `A` active, `D` deactivated. `leadkit ingest`
+now records it as `registry_status`, and it is **recorded, never silently
+dropped** — the caller decides whether a deactivated provider belongs on the
+list.
+
+Also: **a 9-prefix NPI is reserved and never issued.** It cannot resolve, so
+treat it as a data-entry error rather than a lookup failure.
+
 ## Query the parent taxonomy, never the subspecialty
 
 Measured, 50 miles around one metro:

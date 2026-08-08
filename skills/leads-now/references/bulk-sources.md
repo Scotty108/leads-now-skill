@@ -11,6 +11,30 @@ independently confirmed** — check them before promising a client anything.
 design: the Claude apps sandbox has no outbound access, so a script that fetches
 is a script that silently fails there.
 
+## Resolve from the catalog — never hardcode a download URL
+
+**The most important rule on this page.** Government portals rotate their
+download paths on every release. Verified live on `data.cms.gov`: 158 datasets,
+and each CSV sits behind a dated folder *and* a GUID —
+
+```
+https://data.cms.gov/sites/default/files/2026-08/303a44ff-27bb-…/Order_and_Referring.csv
+                                          ^^^^^^^ ^^^^^^^^-rotates every release
+```
+
+A URL written down today 404s after the next release, and **the failure looks
+exactly like the dataset being withdrawn** rather than moved. Every portal has a
+machine-readable catalog that carries the current path:
+
+| Portal | Catalog | Resolve by |
+|---|---|---|
+| **data.cms.gov** | `https://data.cms.gov/data.json` (DCAT) | `dataset[].title` regex → newest CSV `distribution[].downloadURL` |
+| **Socrata** (state/city) | `https://api.us.socrata.com/api/catalog/v1?q=…` | `resource.id` + `columns_field_name[]` |
+| **data.medicaid.gov** | `https://data.medicaid.gov/api/1/…` (DKAN) | same resolve-by-title, different JSON shape |
+
+So: **search the catalog by title, take the distribution, then fetch.** When a
+fetch 404s the fix is to re-resolve, not to hunt for a new URL by hand.
+
 ## The traps that apply to all of them
 
 Both are in `sources.md` and both cost real coverage:

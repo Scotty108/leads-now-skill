@@ -1,5 +1,31 @@
 # When a source refuses you
 
+## Government sites resist in about seven distinct ways
+
+Adapted from Anthropic's healthcare fraud-detection plugin, which catalogues all
+51 state Medicaid sites. The lesson generalises to any state or municipal
+portal: **the architecture predicts the fix**, so identify which one you are
+looking at before spending a single retry.
+
+| Architecture | What you see | What works |
+|---|---|---|
+| Direct file, curl-friendly | PDF/CSV downloads at stable paths | Plain fetch. Most states. |
+| Monolithic single document | One huge PDF, chapters as `#page=` anchors | Plain fetch, then locate by anchor |
+| DOCX rather than PDF | `.docx` links | Fetch, then convert |
+| **Postback portal** (ASP.NET/DNN) | Document IDs hidden behind `__doPostBack`, a dropdown, no real URLs | **Browser only** — form select + click. Curl cannot construct the request, and the doc IDs rotate. |
+| HTML-only rules | Chapters as web pages, no downloadable file | Save the rendered text; stop looking for a PDF |
+| **WAF / bot manager** | curl gets 403 forever, browser is fine | Browser with a real UA. **Do not retry curl** — it will never work. |
+| Licence click-through gate | Index gated behind an agreement | The index is gated; the chapter files underneath often are not |
+
+**The domain outlives the path.** When an index URL dies, the agency's *domain*
+is almost always still right — paths move, hosts do not. Re-discover within the
+domain rather than starting over.
+
+**Record which architecture a source was**, with the date. That note is what
+stops the next run paying the same discovery cost, and it is the difference
+between "this source is blocked" and "this source needs rung 4".
+
+
 Measured across four hospital systems in one target geography: one served
 clean HTML, two returned a JavaScript shell with zero names, and one returned
 **403 Forbidden**. Expect roughly half of org directories to resist. This is

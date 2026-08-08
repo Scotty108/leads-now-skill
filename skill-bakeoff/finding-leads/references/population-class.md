@@ -55,6 +55,20 @@ For **Licensed**, the register exists and the only work is finding it:
    thousand queries, and the forms are where the CAPTCHAs are.
 5. A national register where one exists and supersedes the states
 
+### Resolve from the catalog — never hardcode a download URL
+
+Government portals rotate download paths on every release. Verified on
+`data.cms.gov`: each CSV sits behind a dated folder *and* a GUID
+(`.../2026-08/303a44ff-27bb-.../Order_and_Referring.csv`), so a URL written down
+today 404s after the next release — and **the failure looks exactly like the
+dataset being withdrawn** rather than moved.
+
+Every portal publishes a machine-readable catalog carrying the current path:
+`data.cms.gov/data.json` (DCAT, resolve by `dataset[].title` regex → newest CSV
+`distribution`), Socrata's `api.us.socrata.com/api/catalog/v1`, and
+`data.medicaid.gov/api/1/…` (DKAN). Search by title, take the distribution, then
+fetch. When a fetch 404s, re-resolve — do not hunt for a new URL by hand.
+
 ### Two ways a bulk dataset lies about what it holds
 
 **A sample row is not the schema.** Querying the federal carrier census with

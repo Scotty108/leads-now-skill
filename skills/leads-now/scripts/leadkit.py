@@ -53,7 +53,7 @@ DERIVED_FIELDS = ["dist_mi", "dist_basis"]
 # repair knows what to retry, and because the rung IS a quality signal: a
 # registry row (rung 1) and a browser-scraped row (rung 4) are not equally
 # trustworthy even when both are populated.
-PROV_FIELDS = ["source_rung"]
+PROV_FIELDS = ["source_rung", "registry_status"]
 
 # Honorifics and post-nominals. Clinical directories are full of "Jane Doe, MD,
 # FAAP" and "Dr. Ann Lee", which would otherwise poison both the inferred email
@@ -523,8 +523,15 @@ def cmd_ingest(args) -> int:
             alt = mail.get("telephone_number")
             if alt and alt == addr.get("telephone_number"):
                 alt = None
+            # A register says whether the record is still live. NPPES publishes
+            # basic.status — A active, D deactivated — and a deactivated provider
+            # is a dead lead that looks identical to a live one on every other
+            # field. Recorded, never silently dropped: the caller decides.
+            _st = (basic.get("status") or "").strip().upper()
             rows.append({
                 "record_type": "person" if person else "organization",
+                "registry_status": {"A": "active", "D": "deactivated"}.get(_st)
+                                   or ("unknown" if not _st else _st.lower()),
                 "full_name": (" ".join(x for x in [basic.get("first_name"),
                                                    basic.get("last_name")] if x).title()
                               if person else (basic.get("organization_name") or "").title()),
@@ -790,6 +797,7 @@ def cmd_csv(args) -> int:
     for f in FIELDS:
         header += [f, f"{f}_source"]
     header += LOC_FIELDS + ["dist_mi", "dist_basis", "source_rung",
+                            "registry_status",
                             "confidence", "source_count", "all_sources"]
 
     # Nearest first: a territory gets worked outward from its centre, so that is
@@ -810,6 +818,7 @@ def cmd_csv(args) -> int:
             row += [r.get(f) or "" for f in LOC_FIELDS]
             row += [r.get("dist_mi") if r.get("dist_mi") is not None else "",
                     r.get("dist_basis") or "", r.get("source_rung") or "",
+                    r.get("registry_status") or "",
                     r.get("_confidence", ""), r.get("_source_count", ""),
                     " | ".join(r.get("_sources") or [])]
             w.writerow(row)

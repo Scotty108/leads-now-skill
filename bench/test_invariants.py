@@ -1203,6 +1203,71 @@ def test_profile_match_needs_corroboration(skill, cfg):
                  f"rule={has_rule} corr={needs_corr} noauto={never_auto}")
 
 
+def test_resolve_from_catalog_not_url(skill, cfg):
+    """Resolve a bulk dataset from its CATALOG, never from a hardcoded URL.
+
+    Verified live on data.cms.gov: 158 datasets, and every download URL carries
+    a rotating date folder and GUID — `.../2026-08/303a44ff-27bb-.../Order...`.
+    A URL written down today 404s after the next release, and the failure looks
+    like the dataset being gone rather than moved.
+
+    Anthropic's own healthcare plugin states the rule for CMS; it generalises to
+    every portal we use — Socrata has the same shape via its Discovery API.
+    """
+    t = _all_md(cfg)
+    has_rule = ("never hardcode" in t or "not hardcode" in t
+                or "resolve from" in t or "resolve by title" in t)
+    has_catalog = "data.json" in t or "catalog" in t
+    return check(skill, "resolves datasets from a catalog", has_rule and has_catalog,
+                 f"rule={has_rule} catalog={has_catalog}")
+
+
+def test_registry_status_gate(skill, cfg):
+    """A register says whether a record is still ACTIVE. Read it.
+
+    NPPES publishes `basic.status` — `A` active, `D` deactivated — and our
+    ingest never looked at it. A deactivated provider is a dead lead that looks
+    identical to a live one on every other field.
+
+    Sampling 40 of the benchmark roster returned 40 active, so this has not bitten
+    us yet; that is a property of the sample, not a guarantee. The field is free.
+    """
+    script = os.path.join(cfg["dir"], "scripts", "leadkit.py")
+    if not os.path.exists(script):
+        return check(skill, "registry status is read and recorded", True, "n/a")
+    import tempfile, json as _j
+    payload = {"results": [
+        {"number": "1111111111", "basic": {"first_name": "Live", "last_name": "One",
+                                           "status": "A"},
+         "taxonomies": [{"desc": "Anesthesiology", "primary": True}],
+         "addresses": [{"address_purpose": "LOCATION", "city": "X", "state": "SC",
+                        "telephone_number": "111-111-1111"}]},
+        {"number": "2222222222", "basic": {"first_name": "Dead", "last_name": "Two",
+                                           "status": "D"},
+         "taxonomies": [{"desc": "Anesthesiology", "primary": True}],
+         "addresses": [{"address_purpose": "LOCATION", "city": "X", "state": "SC",
+                        "telephone_number": "222-222-2222"}]}]}
+    with tempfile.TemporaryDirectory() as td:
+        indir = os.path.join(td, "in")
+        os.makedirs(indir)
+        out = os.path.join(td, "r.json")
+        _j.dump(payload, open(os.path.join(indir, "npi.json"), "w"))
+        rc, _ = run([sys.executable, script, "ingest", indir, "-o", out])
+        if not os.path.exists(out):
+            return check(skill, "registry status is read and recorded", False,
+                         f"ingest rc={rc}")
+        recs = _j.load(open(out))
+    by = {r.get("full_name", ""): r for r in recs}
+    live, dead = by.get("Live One"), by.get("Dead Two")
+    bad = []
+    if not live or (live.get("registry_status") or "").lower() != "active":
+        bad.append("active record not labelled active")
+    if not dead or (dead.get("registry_status") or "").lower() != "deactivated":
+        bad.append("deactivated record not labelled deactivated")
+    return check(skill, "registry status is read and recorded", not bad,
+                 "; ".join(bad))
+
+
 def test_bulk_data_traps(skill, cfg):
     """Two ways a bulk dataset lies about what it contains. Both measured.
 
@@ -1283,6 +1348,8 @@ TESTS = [test_core_files_stay_general,
          test_search_name_differs_from_registry_name,
          test_profile_match_needs_corroboration,
          test_bulk_data_traps,
+         test_resolve_from_catalog_not_url,
+         test_registry_status_gate,
          test_postcode_places_precisely,
          test_official_spec, test_spec_soft_limits,
          test_frontmatter, test_portability, test_refusal,
