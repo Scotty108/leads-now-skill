@@ -61,7 +61,7 @@ addresses is worth less than a small verified one.
 | Metric | Weight | Definition |
 |---|---|---|
 | Verified people in radius | 25% | Distinct, address inside 50mi, sourced |
-| Reachable | 25% | Has a phone OR an email above `pattern_likely` |
+| Reachable | 25% | **Weighted by channel**: direct 1.0, department 0.6, registry_mailing 0.5, switchboard 0.25, answering service 0.1. A front desk is not a person. |
 | Qualifier signal | 20% | The asked-for trait, graded with a citation |
 | Provenance completeness | 15% | % of populated fields carrying a source |
 | Honest gaps | 10% | Blocked orgs named; truncation declared |

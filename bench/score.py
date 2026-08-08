@@ -107,6 +107,76 @@ def _provenance_ratio(rows):
     return (sourced / populated) if populated else 0.0
 
 
+# A phone is not a phone. Measured across 14 rounds: of 680 people with a
+# number, ZERO were direct dials — 458 were main switchboards and 222 were
+# department lines. Counting all three as "reachable" scored a front desk the
+# same as reaching the person, which flattered every run in this benchmark
+# including our own. Weight by what the number actually gets you.
+PHONE_WEIGHT = {
+    "direct": 1.00,           # rings the person
+    "mobile": 1.00,
+    "department": 0.60,       # their unit — a real, gated channel
+    "registry_mailing": 0.50, # a second filed number, not proven to ring them
+    "practice": 0.25,         # front desk; a gatekeeper stands between
+    "switchboard": 0.25,
+    "answering_service": 0.10,
+    "": 0.25,                 # unlabelled defaults to the pessimistic case
+}
+
+# An address only counts if it clears the bounce ceiling. Inferred addresses at
+# 91% accuracy are 9 bounces per 100 — 4x over the ~2% providers throttle at.
+EMAIL_OK = ("first_party_published", "official_filing", "previously_delivered",
+            "public_professional_profile", "corroborated", "observed",
+            "smtp_accepted")
+
+
+def _reachability(rows, meta):
+    """Weighted reachable-people count, from the rows when they carry labels.
+
+    Falls back to the run's self-reported integer only when no row-level phone
+    data exists, so older runs stay comparable rather than silently scoring 0.
+    """
+    if not rows:
+        return float(meta.get("reachable") or 0), "meta"
+    total, labelled = 0.0, False
+    for r in rows:
+        best = 0.0
+        for col, val in r.items():
+            cl = col.lower()
+            if "phone" not in cl or "source" in cl or "type" in cl or "label" in cl:
+                continue
+            if not (val or "").strip():
+                continue
+            # Find this column's own type column: phone -> phone_type,
+            # phone2 -> phone2_type, department_phone -> ..._label.
+            t = ""
+            for suffix in ("_type", "_label"):
+                t = (r.get(col + suffix) or "").strip().lower()
+                if t:
+                    break
+            if "department" in cl and not t:
+                t = "department"
+            if t:
+                labelled = True
+            best = max(best, PHONE_WEIGHT.get(t, PHONE_WEIGHT[""]))
+        em = (r.get("email") or "").strip()
+        if em and "@" in em:
+            st = ""
+            for c in ("email_status", "email_confidence", "confidence"):
+                st = (r.get(c) or "").strip().lower()
+                if st:
+                    break
+            if any(k in st for k in EMAIL_OK):
+                best = 1.0
+        total += best
+    # NO fallback to the self-reported count once rows exist. An earlier cut
+    # fell back when a run carried no phone_type column, which meant a run that
+    # labelled its numbers honestly was scored down while one that omitted the
+    # labels kept its raw total — rewarding exactly the omission this benchmark
+    # exists to punish. Unlabelled numbers take the pessimistic weight instead.
+    return total, ("weighted" if labelled else "weighted_unlabelled")
+
+
 def _disqualifiers(meta, rows):
     """Hard failures. Any one of these invalidates the run regardless of score.
 
@@ -152,7 +222,7 @@ def score_run(d):
     rows = _read_rows(d)
 
     n_radius = int(meta.get("in_radius") or 0)
-    n_reach = int(meta.get("reachable") or 0)
+    n_reach, reach_note = _reachability(rows, meta)
     n_qual = sum(int(meta.get(k) or 0) for k in QUALIFIER_KEYS)
     prov = _provenance_ratio(rows)
 
@@ -188,7 +258,8 @@ def score_run(d):
         "dir": os.path.basename(d),
         "skill": meta.get("skill"),
         "condition": meta.get("condition"),
-        "raw": {"in_radius": n_radius, "reachable": n_reach,
+        "raw": {"in_radius": n_radius, "reachable": round(n_reach, 1),
+                "reach_basis": reach_note,
                 "qualifier": n_qual, "provenance": round(prov, 3),
                 "rows": len(rows), "subagents": meta.get("subagents"),
                 "wall_clock_s": meta.get("wall_clock_s"),
