@@ -643,10 +643,27 @@ def cmd_emails(args) -> int:
     # same treatment an ambiguous surname already gets.
     rivals = {p: v for p, v in votes.items() if p != top and v >= 1}
     mixed = bool(rivals)
-    if mixed and conf == "pattern_confirmed":
-        conf = "pattern_likely"
+    # A mixed domain resolves NOBODY. Thin evidence is uncertainty and a label
+    # handles it; competing evidence is a coin flip — measured at roughly 2/3
+    # accuracy, 33 bounces per 100 against a ~2% ceiling. Name the conflict and
+    # resolve no one.
+    if mixed:
+        conf = "mixed_format_domain"
 
     resolved, unresolved = [], []
+    if mixed:
+        # Competing conventions on one domain: resolve nobody, name the
+        # conflict, and hand back every requested name unresolved.
+        print(json.dumps({
+            "domain": args.domain, "pattern": None,
+            "confidence": "mixed_format_domain",
+            "reason": (f"domain runs more than one convention "
+                       f"({top} and {', '.join(rivals)}); no propagation from a "
+                       f"mixed domain beats ~2/3 accuracy, so nothing is emitted"),
+            "candidates_considered": dict(votes),
+            "mixed_format_domain": True, "competing_patterns": rivals,
+            "resolved": [], "unresolved": list(names)}, indent=2))
+        return 0
     for full in names:
         parts = split_name(full)
         if not parts:

@@ -204,12 +204,17 @@ def cmd_learn(args):
     for dom, pats in sorted(per.items()):
         ranked = sorted(pats.items(), key=lambda kv: (-len(kv[1]), kv[0]))
         best, sup = ranked[0][0], len(ranked[0][1])
-        rivals = [p for p, s in ranked[1:] if len(s) == sup]
+        # ANY rival is evidence of a second convention on the domain. Requiring
+        # equal support let a 3-vs-1 split pass as confirmed, which is exactly
+        # the coin flip a mixed domain represents.
+        rivals = [p for p, s in ranked[1:] if len(s) >= 1]
         n = len(people[dom])
         if sup >= 2 and not rivals:
             tier = "pattern_confirmed"
-        elif sup >= 2 and rivals:
-            tier = "pattern_single"   # two formats fit equally; treat as unproven
+        elif rivals:
+            # Mixed domain: never sendable, whatever the support. Correct output
+            # for a mixed domain is zero addresses.
+            tier = "mixed_format_domain"
         else:
             tier = "pattern_single"
         out.append({"domain": dom, "pattern": best, "support_people": sup,

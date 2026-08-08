@@ -323,7 +323,11 @@ def emails(a):
     # A domain can run TWO formats at once (measured: 3 first.last AND 2 flast
     # on the same host). Majority-reporting hides a coin flip, so downgrade.
     rivals={p:c for p,c in v.items() if p!=top and c>=1}
-    if rivals and conf=="pattern_confirmed": conf="pattern_likely"
+    if rivals:   # competing conventions on one domain -> resolve NOBODY
+        print(json.dumps({"domain":a.domain,"pattern":None,"confidence":"mixed_format_domain",
+            "reason":"domain runs more than one convention (%s and %s); no propagation from a mixed domain beats ~2/3 accuracy"%(top,", ".join(rivals)),
+            "mixed_format_domain":True,"competing_patterns":rivals,
+            "resolved":[],"unresolved":a.name},indent=2));return 0
     r,u=[],[]
     for full in a.name:
         p=SN(full)

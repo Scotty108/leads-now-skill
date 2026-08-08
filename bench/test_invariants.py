@@ -1368,6 +1368,51 @@ def test_unmodelled_pattern_refuses(skill, cfg):
                  not bad, "; ".join(bad))
 
 
+def test_mixed_domain_emits_nothing(skill, cfg):
+    """A domain with competing conventions must emit ZERO addresses.
+
+    The docs said so from the start — "correct output for a mixed domain is
+    zero addresses" — and the code merely DOWNGRADED to pattern_likely and
+    emitted anyway. Doc and implementation disagreed for the whole project and
+    the doc was right.
+
+    The distinction that matters: thin evidence (one sample, one convention) is
+    uncertainty, and a confidence label handles it. Competing evidence (two
+    samples, two conventions) is a coin flip -- measured at roughly 2/3 accuracy,
+    which is 33 bounces per 100 against a ~2% ceiling. Naming the competing
+    patterns and resolving nobody is the honest output.
+    """
+    kit = cfg["kit"]
+    if not os.path.exists(kit):
+        return check(skill, "mixed-format domain emits nothing", False)
+    # Two samples, two irreconcilable conventions: first.last AND flast.
+    rc, out = run(cfg["emails"](kit, [
+        "--domain", "acme.com",
+        "--known", "Jane Doe:jane.doe@acme.com",
+        "--known", "Bob Ray:bray@acme.com",
+        "--name", "Ann Lee"]))
+    low = out.lower()
+    emitted = bool(re.search(r"[a-z.]+@acme\.com", low.replace("jane.doe@acme.com", "")
+                                                      .replace("bray@acme.com", "")))
+    bad = []
+    if emitted:
+        bad.append("emitted an address from a mixed-format domain")
+    # Skills expose different CLIs, and a usage error is an interface mismatch
+    # rather than a defect. Where the tool cannot be driven, hold the skill to
+    # the rule as its documentation states it instead of scoring the mismatch.
+    drivable = "usage:" not in low and "invalid choice" not in low
+    if drivable:
+        if not ("mixed" in low or "competing" in low or "rival" in low):
+            bad.append("did not name the conflict")
+    else:
+        t = _all_md(cfg)
+        if not (("mixed" in t or "rival" in t or "competing" in t)
+                and ("zero addresses" in t or "unproven" in t or "not sendable" in t
+                     or "emits nothing" in t)):
+            bad.append("tool not drivable and docs do not state the mixed rule")
+    return check(skill, "mixed-format domain emits nothing", not bad, "; ".join(bad))
+
+
 def test_bulk_data_traps(skill, cfg):
     """Two ways a bulk dataset lies about what it contains. Both measured.
 
@@ -1453,6 +1498,7 @@ TESTS = [test_core_files_stay_general,
          test_roster_and_employer_are_different_filings,
          test_no_infra_fingerprint_propagation,
          test_unmodelled_pattern_refuses,
+         test_mixed_domain_emits_nothing,
          test_postcode_places_precisely,
          test_official_spec, test_spec_soft_limits,
          test_frontmatter, test_portability, test_refusal,
