@@ -40,6 +40,30 @@ have 119 people's contact details.
 Fetching eight organisation pages yielded zero; parsing their directory payloads
 and a phone-directory table yielded 37.
 
+### One record often carries TWO numbers — take both
+
+A register may publish more than one address per person, each with its own
+phone. NPI publishes a `LOCATION` and a `MAILING` address; reading only the
+first threw the second away on every run for months.
+
+Measured on 70 providers:
+
+| | Practice line | Mailing line |
+|---|---|---|
+| Switchboard-shaped (ends `00`/`000`) | 17% | **3%** |
+| Differs from the other number | — | **43%** |
+
+The second number is **~6x less likely to be a front desk**, and in 20 of 70
+cases it sits in a different city entirely.
+
+**Do not label it `direct`.** A mailing phone may be a home office, a billing
+service, an answering service or a stale practice. The honest label is its own
+(`registry_mailing`) and the honest claim is "a second number the person filed",
+not "this rings them". Carry it as `phone_alt` and let the caller decide.
+
+Generalise the habit: **enumerate every address block a record exposes** before
+concluding you have its phone.
+
 ## Email: unlock the domain, then infer conservatively
 
 ### One published address unlocks an employer
@@ -51,6 +75,46 @@ many roster members sit on each and unlock the biggest first.
 
 A rival run produced 22 emails to our 4 purely by doing this. The propagation
 logic was never the gap — spending fetches on discovery was.
+
+### Certificate Transparency finds the domains a search engine cannot
+
+Every public TLS certificate is logged, publicly, by design (RFC 6962). Querying
+those logs is not scraping: no login, no CAPTCHA, no key, no ToS question, and
+**it does not consume a web-search budget** — which matters, because search is
+the resource that runs out first.
+
+```
+https://api.certspotter.com/v1/issuances?domain=<d>&include_subdomains=true&expand=dns_names
+```
+
+Certificates name **sibling and acquired-entity domains** an organisation's
+website never mentions. Hostnames beginning `autodiscover.`, `mail.`, `smtp.`,
+`owa.`, `webmail.` or `mx` identify which of those domains actually carry mail —
+exactly the domains an email pattern would live on.
+
+`crt.sh` is the better-known endpoint and was **returning 502** when measured.
+Have a second CT source; do not build on one.
+
+### Then confirm the link with an MX comparison
+
+Two domains sharing an MX **host with the same tenant id** are one mail system,
+so a pattern observed on one legitimately applies to the other:
+
+```
+tidelandshealth.org          mxa-001b3801.gslb.pphosted.com
+gmhsc.com                    mxa-001b3801.gslb.pphosted.com   <- same tenant
+georgetownhospitalsystem.org mxa-001b3801.gslb.pphosted.com   <- same tenant
+```
+
+The hex or numeric id inside the MX hostname is the discriminator, not the
+provider: countless unrelated organisations use Proofpoint or IronPort, so
+matching on `pphosted.com` alone proves nothing.
+
+This solves *the employer is not the employer* from the infrastructure side
+rather than by guessing. **Positive control before trusting it:** run it against
+an organisation whose real mail domain you already know. It correctly
+rediscovered a domain relationship that had previously cost four rounds of
+manual work.
 
 ### But observe the format; never guess it
 

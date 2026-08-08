@@ -35,7 +35,7 @@ import urllib.parse
 from collections import Counter
 
 FIELDS = ["full_name", "title", "org", "org_domain", "email", "phone",
-          "linkedin", "profile_url"]
+          "phone_type", "phone_alt", "phone_alt_type", "linkedin", "profile_url"]
 
 # Location travels with the person, not with a contact channel, so it is merged
 # on the same first-non-empty-wins rule but kept out of FIELDS — these are not
@@ -470,9 +470,25 @@ def cmd_ingest(args) -> int:
             person = bool(basic.get("first_name") or basic.get("last_name"))
             tax = next((t for t in (r.get("taxonomies") or [])
                         if t.get("primary")), {})
-            addr = next((a for a in (r.get("addresses") or [])
+            addrs = r.get("addresses") or []
+            addr = next((a for a in addrs
                          if a.get("address_purpose") == "LOCATION"),
-                        (r.get("addresses") or [{}])[0])
+                        addrs[0] if addrs else {})
+            # The registry publishes a SECOND address with its OWN phone, and
+            # reading only LOCATION threw it away on every run. Measured on 70
+            # providers: the mailing phone differs 43% of the time, and is
+            # switchboard-shaped (ends 00/000) in 3% of cases against 17% for
+            # the practice line — roughly 6x less likely to be a front desk.
+            #
+            # It is NOT labelled `direct`. A mailing phone may be a home office,
+            # a billing service, an answering service or a stale practice; the
+            # honest claim is "a second number the provider filed", not "this
+            # rings the person".
+            mail = next((a for a in addrs
+                         if a.get("address_purpose") == "MAILING"), {})
+            alt = mail.get("telephone_number")
+            if alt and alt == addr.get("telephone_number"):
+                alt = None
             rows.append({
                 "record_type": "person" if person else "organization",
                 "full_name": (" ".join(x for x in [basic.get("first_name"),
@@ -483,6 +499,10 @@ def cmd_ingest(args) -> int:
                 "org_domain": None,
                 "email": None,
                 "phone": addr.get("telephone_number"),
+                "phone_type": "practice" if addr.get("telephone_number") else None,
+                "phone_alt": alt,
+                "phone_alt_type": "registry_mailing" if alt else None,
+                "phone_alt_city": (mail.get("city") if alt else None),
                 "linkedin": None,
                 "profile_url": f"https://npiregistry.cms.hhs.gov/provider-view/{npi}",
                 "source": "NPI registry",

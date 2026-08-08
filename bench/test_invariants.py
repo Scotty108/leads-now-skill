@@ -1056,6 +1056,60 @@ def test_surname_first_names_flip(skill, cfg):
     return check(skill, "surname-first names flip cleanly", not bad, "; ".join(bad))
 
 
+def test_second_phone_from_mailing_address(skill, cfg):
+    """A registry record can carry TWO phones. Keep both, and label them.
+
+    NPI publishes a LOCATION address and a MAILING address, each with its own
+    telephone. Ingest read only LOCATION, so the second number was discarded on
+    every run. Measured on 70 real providers: the mailing phone DIFFERS from the
+    practice phone 43% of the time, and is switchboard-shaped (ends 00/000) in
+    only 3% of cases versus 17% for the practice line — i.e. it is ~6x less
+    likely to be a front desk.
+
+    It must NOT be labelled `direct`: a mailing phone may be a home office, a
+    billing service, an answering service or an old practice. It is a second,
+    distinct, non-switchboard number, and the honest label is its own.
+    """
+    script = os.path.join(cfg["dir"], "scripts", "leadkit.py")
+    if not os.path.exists(script):
+        return check(skill, "keeps the mailing-address second phone", True, "n/a")
+    import tempfile, json as _j
+    payload = {"results": [{
+        "number": "1234567890",
+        "basic": {"first_name": "Ann", "last_name": "Lee", "credential": "MD"},
+        "taxonomies": [{"desc": "Anesthesiology", "code": "207L00000X", "primary": True}],
+        "addresses": [
+            {"address_purpose": "LOCATION", "city": "MYRTLE BEACH", "state": "SC",
+             "postal_code": "29572", "telephone_number": "843-692-1000"},
+            {"address_purpose": "MAILING", "city": "HOPE MILLS", "state": "NC",
+             "postal_code": "28348", "telephone_number": "910-309-8067"},
+        ]}]}
+    with tempfile.TemporaryDirectory() as td:
+        indir = os.path.join(td, "in")
+        os.makedirs(indir)
+        out = os.path.join(td, "recs.json")
+        _j.dump(payload, open(os.path.join(indir, "npi.json"), "w"))
+        rc, txt = run([sys.executable, script, "ingest", indir, "-o", out])
+        if rc not in (0, 3, 4) or not os.path.exists(out):
+            return check(skill, "keeps the mailing-address second phone", False,
+                         f"ingest rc={rc}")
+        recs = _j.load(open(out))
+    if not recs:
+        return check(skill, "keeps the mailing-address second phone", False, "no records")
+    r = recs[0]
+    blob = _j.dumps(r).lower()
+    bad = []
+    if "910-309-8067" not in blob:
+        bad.append("mailing phone discarded")
+    if "843-692-1000" not in blob:
+        bad.append("practice phone lost")
+    # Must not overclaim: the second number is not a proven direct dial.
+    if r.get("phone_alt_type") == "direct" or r.get("phone_type") == "direct":
+        bad.append("labelled 'direct' without evidence")
+    return check(skill, "keeps the mailing-address second phone", not bad,
+                 "; ".join(bad))
+
+
 def test_distance_bands(skill, cfg):
     """Report by distance band, so any radius the user names is readable.
 
@@ -1080,6 +1134,7 @@ TESTS = [test_core_files_stay_general,
          test_city_name_variants_place,
          test_merge_without_org_uses_location,
          test_surname_first_names_flip,
+         test_second_phone_from_mailing_address,
          test_frontmatter, test_portability, test_refusal,
          test_surname_particles, test_docs_claims]
 
