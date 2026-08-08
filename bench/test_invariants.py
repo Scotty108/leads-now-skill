@@ -1110,6 +1110,58 @@ def test_second_phone_from_mailing_address(skill, cfg):
                  "; ".join(bad))
 
 
+def test_search_name_differs_from_registry_name(skill, cfg):
+    """Search the name a person USES, not the name a register filed.
+
+    Registers carry full legal names. Searching one verbatim returns zero and
+    looks exactly like the person having no profile. Measured live:
+    `"Alexandra Anatolievna Armstrong"` -> 0 results;
+    `"Alexandra Armstrong"` -> 16. The middle name was the bug, and a positive
+    control was the only thing that told absence from a bad query.
+    """
+    script = os.path.join(cfg["dir"], "scripts", "leadkit.py")
+    if not os.path.exists(script):
+        return check(skill, "searches the used name, not the filed name", True, "n/a")
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("_lk_s", script)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    if not hasattr(mod, "search_name"):
+        return check(skill, "searches the used name, not the filed name", False,
+                     "no search_name")
+    CASES = [("Alexandra Anatolievna Armstrong", "alexandra armstrong"),
+             ("Andrew Lee Criser", "andrew criser"),
+             ("Sarah Kim, MD", "sarah kim"),
+             ("Dr. Ann Lee", "ann lee")]
+    bad = [f"{i!r}->{mod.search_name(i)!r} want {w!r}"
+           for i, w in CASES if mod.search_name(i).lower() != w]
+    return check(skill, "searches the used name, not the filed name", not bad,
+                 "; ".join(bad))
+
+
+def test_profile_match_needs_corroboration(skill, cfg):
+    """A name match alone is a namesake, not a person.
+
+    Live test on our own roster: `Ahmed Elhaimer` resolved to a profile at
+    MedStar St. Mary's when the record said McLeod Health, and
+    `Alexander Varzari` to one in Charlottesville when the record said NC. Both
+    scored top marks on name-in-title plus name-in-slug — an unrelated person
+    wearing every signal a name-only scorer checks.
+
+    Accepting requires employer OR geography to corroborate. This mirrors the
+    rule the skill already holds for records: the full forename must match and
+    a near-miss that survives every other check is the dangerous one.
+    """
+    t = _all_md(cfg)
+    has_rule = ("namesake" in t or "same name" in t or "name alone" in t)
+    needs_corr = (("corrobor" in t or "employer" in t) and
+                  ("snippet" in t or "profile" in t))
+    never_auto = ("never automate linkedin" in t or "do not automate linkedin" in t)
+    ok = has_rule and needs_corr and never_auto
+    return check(skill, "profile match needs corroboration", ok,
+                 f"rule={has_rule} corr={needs_corr} noauto={never_auto}")
+
+
 def test_distance_bands(skill, cfg):
     """Report by distance band, so any radius the user names is readable.
 
@@ -1135,6 +1187,8 @@ TESTS = [test_core_files_stay_general,
          test_merge_without_org_uses_location,
          test_surname_first_names_flip,
          test_second_phone_from_mailing_address,
+         test_search_name_differs_from_registry_name,
+         test_profile_match_needs_corroboration,
          test_frontmatter, test_portability, test_refusal,
          test_surname_particles, test_docs_claims]
 

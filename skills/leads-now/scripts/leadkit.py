@@ -156,6 +156,20 @@ def flip_name(raw):
     return out + (", " + " ".join(_suf(s) for s in suf) if suf else "")
 
 
+def search_name(full):
+    """The name a person USES, for searching — not the name a register filed.
+
+    Registers carry full legal names; public profiles carry the used name.
+    Searching the filed string verbatim returns nothing and looks exactly like
+    the person having no profile. Measured live: "Alexandra Anatolievna
+    Armstrong" returned 0 results, "Alexandra Armstrong" returned 16. The
+    middle name was the whole bug, and only a positive control distinguished
+    the empty result from a real absence.
+    """
+    t = _tokens(full)          # already strips honorifics and post-nominals
+    return f"{t[0]} {t[-1]}".title() if len(t) >= 2 else (full or "").strip()
+
+
 # ---------------------------------------------------------------- geo ------
 # Radius resolution. The NPI API takes state and postal code, never a radius,
 # so a "within 50 miles" ask has to become a set of states and ZIP prefixes

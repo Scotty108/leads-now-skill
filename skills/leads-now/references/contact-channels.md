@@ -200,6 +200,53 @@ Match on name *plus* role *plus* region before accepting — and refuse when you
 cannot. A comparison run using exactly this method recorded ~13 profiles and
 correctly declined ~5 it could not confirm.
 
+### Search the used name, not the filed name
+
+A register publishes a full legal name; a public profile carries the name the
+person actually uses. Searching the filed string verbatim returns nothing and
+**looks exactly like the person having no profile**.
+
+Measured: `"Alexandra Anatolievna Armstrong"` → 0 results.
+`"Alexandra Armstrong"` → 16. The middle name was the entire bug.
+
+Query first + last (`leadkit`'s `search_name`), and **run a positive control**
+before recording any zero — a query that should return hits. Search engines
+also suspend on rate limit and return an empty list that is indistinguishable
+from absence.
+
+### A name match alone is a namesake, not a person
+
+The dangerous failure here is a *near-miss wearing every signal*. Measured on
+our own roster:
+
+| Record says | Profile found | Verdict |
+|---|---|---|
+| McLeod Health | "MD — MedStar St. Mary's Hospital" | **not our person** |
+| EmergeOrtho, NC | "Charlottesville, Virginia" | **not our person** |
+
+Both matched the name in the title *and* in the URL slug — full marks on every
+name-based check, and both wrong.
+
+**Accepting requires the employer or the geography to corroborate.** Name plus
+slug is a `review` at best. This is the same rule the skill already applies to
+records: the near-miss that survives every other check is the one that gets
+published as fact.
+
+### Keep the search capability off the critical path
+
+The whole channel returned zero for fourteen consecutive rounds for one reason:
+**the web-search budget ran out.** A self-hosted metasearch instance (SearXNG)
+gives a keyless, free, local JSON search API and removes that dependency.
+
+Two constraints from measuring it: free scraper backends rate-limit to roughly
+**3 queries per minute** — fine for enrichment, useless for bulk — and its
+optional CAPTCHA-solving integrations (FlareSolverr / Byparr) must stay
+**off**, because defeating a challenge is the line this skill does not cross.
+
+Do not fetch the profile page itself, through a render proxy or otherwise.
+Routing through a third party does not change that it is automated collection;
+it only moves who does the fetching. Snippet in, URL out.
+
 Where no profile can be confirmed, emit a `linkedin_search_url` the user clicks:
 
 ```
