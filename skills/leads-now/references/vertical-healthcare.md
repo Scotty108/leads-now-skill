@@ -19,6 +19,10 @@ the concrete instance of them.
 bills and where. Between them you get a roster with 100% phone coverage before
 touching a single hospital website.
 
+The full NUCC provider taxonomy code set ships at
+`assets/nucc_individual_taxonomy.csv` — use it to resolve a specialty name to
+its code and, critically, to find a code's **parent** before querying.
+
 ## Query the parent taxonomy, never the subspecialty
 
 Measured, 50 miles around one metro:

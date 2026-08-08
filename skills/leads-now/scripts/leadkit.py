@@ -49,6 +49,12 @@ LOC_FIELDS = ["city", "state", "postal_code"]
 # rather than as a step run out of order.
 DERIVED_FIELDS = ["dist_mi", "dist_basis"]
 
+# Which rung of the escalation ladder produced this row. Carried so a later
+# repair knows what to retry, and because the rung IS a quality signal: a
+# registry row (rung 1) and a browser-scraped row (rung 4) are not equally
+# trustworthy even when both are populated.
+PROV_FIELDS = ["source_rung"]
+
 # Honorifics and post-nominals. Clinical directories are full of "Jane Doe, MD,
 # FAAP" and "Dr. Ann Lee", which would otherwise poison both the inferred email
 # pattern and the dedupe key.
@@ -190,10 +196,16 @@ def _haversine(a1, o1, a2, o2) -> float:
 
 
 def _load_geo():
-    zip3, places = [], []
+    """Returns (zip3, places, zip5).
+
+    Three record types, each doing a different job: P places for city matching,
+    Z5 postcodes for precise placement, Z3 prefixes (with per-prefix extent)
+    for planning registry queries that take a prefix rather than a radius.
+    """
+    zip3, places, zip5 = [], [], {}
     path = os.path.normpath(GEO_PATH)
     if not os.path.exists(path):
-        return None, None
+        return None, None, None
     with gzip.open(path, "rt") as fh:
         for line in fh:
             if line.startswith("#"):
@@ -206,13 +218,15 @@ def _load_geo():
                 # inside it. Capped: a few prefixes have pathological extents.
                 zip3.append((f[1], float(f[2]), float(f[3]),
                              min(float(f[4]), 100.0)))
+            elif f[0] == "Z5" and len(f) >= 4:
+                zip5[f[1]] = (float(f[2]), float(f[3]))
             elif f[0] == "P" and len(f) >= 5:
                 places.append((f[1], f[2], float(f[3]), float(f[4])))
-    return zip3, places
+    return zip3, places, zip5
 
 
 def cmd_geo(args) -> int:
-    zip3, places = _load_geo()
+    zip3, places, _z5 = _load_geo()
     if zip3 is None:
         print("error: assets/us_geo.csv.gz missing — cannot resolve a radius",
               file=sys.stderr)
@@ -312,7 +326,7 @@ def _match_place(city, st, places, _cache={}):
     return None
 
 
-def _locate(rec, places, zip3):
+def _locate(rec, places, zip3, zip5=None):
     """Best available centroid for a record, with how good it is.
 
     City beats postal prefix by a wide margin. A 3-digit prefix has a ~38 mile
@@ -326,16 +340,22 @@ def _locate(rec, places, zip3):
         pt = _match_place(city, st, places)
         if pt:
             return pt[0], pt[1], "city_centroid"
-    pc = re.sub(r"[^0-9]", "", str(rec.get("postal_code") or ""))[:3]
-    if len(pc) == 3:
+    digits = re.sub(r"[^0-9]", "", str(rec.get("postal_code") or ""))
+    # ZIP5 before ZIP3: a 3-digit prefix has a ~38 mile median extent, which is
+    # noise at a 15-mile ring. Every row our city matcher missed — military
+    # installations, boroughs, CDPs — has a ZIP5 in the gazetteer.
+    if zip5 and len(digits) >= 5 and digits[:5] in zip5:
+        la, lo = zip5[digits[:5]]
+        return la, lo, "zip5_centroid"
+    if len(digits) >= 3:
         for z, la, lo, _ext in zip3:
-            if z == pc:
+            if z == digits[:3]:
                 return la, lo, "zip3_centroid"
     return None, None, None
 
 
 def cmd_bands(args) -> int:
-    zip3, places = _load_geo()
+    zip3, places, zip5 = _load_geo()
     if zip3 is None:
         print("error: assets/us_geo.csv.gz missing — cannot measure distance",
               file=sys.stderr)
@@ -363,7 +383,7 @@ def cmd_bands(args) -> int:
 
     unplaced = 0
     for r in rows:
-        la, lo, basis = _locate(r, places, zip3)
+        la, lo, basis = _locate(r, places, zip3, zip5)
         if la is None:
             r["dist_mi"], r["dist_basis"] = None, None
             unplaced += 1
@@ -711,14 +731,14 @@ def cmd_merge(args) -> int:
             # field gets its source recorded. Seeding here left the first
             # source's fields with values but no provenance — which silently
             # hollowed out the per-field audit trail this tool exists for.
-            e = {f: None for f in FIELDS + LOC_FIELDS + DERIVED_FIELDS}
+            e = {f: None for f in FIELDS + LOC_FIELDS + DERIVED_FIELDS + PROV_FIELDS}
             e["_sources"], e["_field_sources"] = [], {}
             merged[key] = e
         e = merged[key]
         src = r.get("source") or r.get("profile_url") or "unknown"
         if src not in e["_sources"]:
             e["_sources"].append(src)
-        for f in FIELDS + LOC_FIELDS + DERIVED_FIELDS:
+        for f in FIELDS + LOC_FIELDS + DERIVED_FIELDS + PROV_FIELDS:
             v = r.get(f)
             # First non-empty value wins, so input order encodes trust: put the
             # registry before the marketing page and the registry's title survives.
@@ -769,7 +789,7 @@ def cmd_csv(args) -> int:
     header = []
     for f in FIELDS:
         header += [f, f"{f}_source"]
-    header += LOC_FIELDS + ["dist_mi", "dist_basis",
+    header += LOC_FIELDS + ["dist_mi", "dist_basis", "source_rung",
                             "confidence", "source_count", "all_sources"]
 
     # Nearest first: a territory gets worked outward from its centre, so that is
@@ -789,7 +809,7 @@ def cmd_csv(args) -> int:
                 row += [r.get(f) or "", fs.get(f, "")]
             row += [r.get(f) or "" for f in LOC_FIELDS]
             row += [r.get("dist_mi") if r.get("dist_mi") is not None else "",
-                    r.get("dist_basis") or "",
+                    r.get("dist_basis") or "", r.get("source_rung") or "",
                     r.get("_confidence", ""), r.get("_source_count", ""),
                     " | ".join(r.get("_sources") or [])]
             w.writerow(row)

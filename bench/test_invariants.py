@@ -961,7 +961,7 @@ def test_city_name_variants_place(skill, cfg):
     spec.loader.exec_module(mod)
     if not hasattr(mod, "_locate"):
         return check(skill, "city name variants place precisely", False, "no _locate")
-    z3, places = mod._load_geo()
+    z3, places, _z5 = mod._load_geo()
     if z3 is None:
         return check(skill, "city name variants place precisely", False, "no gazetteer")
 
@@ -1186,6 +1186,34 @@ def test_bulk_data_traps(skill, cfg):
                  f"schema={schema} sentinel={sentinel}")
 
 
+def test_postcode_places_precisely(skill, cfg):
+    """A postcode must place to ZIP5 precision, not a 3-digit prefix.
+
+    City matching covers ~96% of a real roster. The remainder are places the
+    Census does not incorporate — military installations, boroughs, CDPs — and
+    those fell back to a 3-digit prefix centroid with a ~38 mile median extent.
+    That is noise at a 15-mile ring, which is the ring a real territory used.
+
+    Measured: all 30 rows our city matcher could not place have a ZIP5 in the
+    gazetteer. Precision goes 96% -> 100% for the cost of a larger asset.
+    """
+    script = os.path.join(cfg["dir"], "scripts", "leadkit.py")
+    if not os.path.exists(script):
+        return check(skill, "postcode places to ZIP5 precision", True, "n/a")
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("_lk_z", script)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    z, places, z5 = mod._load_geo()
+    if z is None:
+        return check(skill, "postcode places to ZIP5 precision", False, "no gazetteer")
+    # Fort Bragg is not an incorporated place; only its postcode can place it.
+    _, _, basis = mod._locate({"city": "FORT BRAGG", "state": "NC",
+                               "postal_code": "28310"}, places, z, z5)
+    ok = basis == "zip5_centroid"
+    return check(skill, "postcode places to ZIP5 precision", ok, f"basis={basis}")
+
+
 def test_distance_bands(skill, cfg):
     """Report by distance band, so any radius the user names is readable.
 
@@ -1214,6 +1242,7 @@ TESTS = [test_core_files_stay_general,
          test_search_name_differs_from_registry_name,
          test_profile_match_needs_corroboration,
          test_bulk_data_traps,
+         test_postcode_places_precisely,
          test_frontmatter, test_portability, test_refusal,
          test_surname_particles, test_docs_claims]
 
