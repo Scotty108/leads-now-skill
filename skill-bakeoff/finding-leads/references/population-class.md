@@ -55,6 +55,22 @@ For **Licensed**, the register exists and the only work is finding it:
    thousand queries, and the forms are where the CAPTCHAs are.
 5. A national register where one exists and supersedes the states
 
+### Two ways a bulk dataset lies about what it holds
+
+**A sample row is not the schema.** Querying the federal carrier census with
+`$limit=1` returns **34 fields, and `cell_phone` is not one of them** — yet an
+explicit `$select=cell_phone` returns **1,874,212 populated values**. Reading one
+row and concluding "no phone column" writes off the largest free source of real
+mobile numbers in the country. Enumerate columns from the dataset's **metadata**
+(Socrata's Discovery API exposes `resource.columns_field_name[]`), then `$select`
+them explicitly.
+
+**`NOT NULL` is not populated.** An Illinois licence file reports 1,522 rows
+where `home_phone IS NOT NULL` — and **77** once you exclude the literal string
+`'NA'`. 95% of that column is a sentinel wearing data's clothes. Test against
+`NA`, `N/A`, `NONE`, `UNKNOWN`, `0000000000`, `-`, `XXX` before counting
+anything as coverage.
+
 **Public payroll** — transparency portals, agency and district staff
 directories, published org charts, board minutes and budget documents naming
 post-holders.

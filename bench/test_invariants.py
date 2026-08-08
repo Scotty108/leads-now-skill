@@ -1162,6 +1162,30 @@ def test_profile_match_needs_corroboration(skill, cfg):
                  f"rule={has_rule} corr={needs_corr} noauto={never_auto}")
 
 
+def test_bulk_data_traps(skill, cfg):
+    """Two ways a bulk dataset lies about what it contains. Both measured.
+
+    1. A SAMPLE ROW IS NOT THE SCHEMA. Querying the federal carrier census with
+       `$limit=1` returns 34 fields and `cell_phone` is not among them —
+       yet `$select=cell_phone` returns 1,874,212 populated values. Reading one
+       row and concluding "no phone column" is wrong on the single highest-value
+       free phone source in the country.
+
+    2. NOT NULL IS NOT POPULATED. An Illinois licence file reports 1,522 rows
+       where `home_phone IS NOT NULL`, and 77 once you exclude the literal
+       string 'NA'. 95% of the column is a sentinel wearing data's clothes.
+
+    Both generalise: enumerate columns from the metadata, and test the value
+    against sentinels before counting it as coverage.
+    """
+    t = _all_md(cfg)
+    schema = ("sample row" in t or "naive query" in t or "hidden column" in t
+              or "not the schema" in t)
+    sentinel = "sentinel" in t or "'na'" in t or '"na"' in t
+    return check(skill, "knows the bulk-data traps", schema and sentinel,
+                 f"schema={schema} sentinel={sentinel}")
+
+
 def test_distance_bands(skill, cfg):
     """Report by distance band, so any radius the user names is readable.
 
@@ -1189,6 +1213,7 @@ TESTS = [test_core_files_stay_general,
          test_second_phone_from_mailing_address,
          test_search_name_differs_from_registry_name,
          test_profile_match_needs_corroboration,
+         test_bulk_data_traps,
          test_frontmatter, test_portability, test_refusal,
          test_surname_particles, test_docs_claims]
 

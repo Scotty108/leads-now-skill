@@ -62,6 +62,26 @@ For **Licensed**, the register exists; the only work is locating it. In order:
 5. **The state open-data portal** — `data.<state>.gov`, searching the profession
 6. National register, where one exists and supersedes the states
 
+### Two ways a bulk dataset lies about what it holds
+
+**A sample row is not the schema.** Querying the federal carrier census with
+`$limit=1` returns **34 fields, and `cell_phone` is not one of them** — yet an
+explicit `$select=cell_phone` returns **1,874,212 populated values**. Reading one
+row and concluding "no phone column" writes off the largest free source of real
+mobile numbers in the country.
+
+**Enumerate columns from the dataset's metadata**, never from a sample row.
+Socrata's Discovery API exposes `resource.columns_field_name[]`; most portals
+have an equivalent. Then `$select` the ones you want explicitly.
+
+**`NOT NULL` is not populated.** An Illinois licence file reports 1,522 rows
+where `home_phone IS NOT NULL` — and **77** once you exclude the literal string
+`'NA'`. 95% of that column is a sentinel wearing data's clothes.
+
+Test against sentinels — `NA`, `N/A`, `NONE`, `UNKNOWN`, `0000000000`, `-`,
+`XXX` — before counting anything as coverage. This is the same failure as an
+empty string being read as an absent filter, seen from the other side.
+
 **Bulk file before lookup form, always.** One download beats ten thousand
 queries, forms are where the CAPTCHAs are, and a form cannot tell you the
 denominator. Rung 1 is listed first because **web search is a budget that runs
