@@ -1268,6 +1268,34 @@ def test_registry_status_gate(skill, cfg):
                  "; ".join(bad))
 
 
+def test_roster_and_employer_are_different_filings(skill, cfg):
+    """The file that enumerates people rarely names their employer.
+
+    Measured: our 786-person registry roster had employer on ZERO of them —
+    NPPES does not publish one for an individual. A *separate* federal filing,
+    the CMS reassignment list, attributed 582 of 786 (74%) to a named group,
+    and revealed the three contractor groups that had blocked four rounds:
+    Atlantic Coast Anesthesia (258 members), Southeast Anesthesiology (243),
+    Tidelands Anesthesia Group (64).
+
+    The generalisation is what matters: a LICENCE register lists individuals,
+    and a different document — billing reassignment, corporate officer list,
+    permit qualifying-party — links them to organisations. Enumerate from one,
+    attribute from the other, and never conclude "no employer is published"
+    from the roster file alone.
+
+    It also proved, from a new direction, that AN EMPLOYER IS NOT ONE VALUE:
+    384 of the 582 reassign to more than one group.
+    """
+    t = _all_md(cfg)
+    two_filings = ("different filing" in t or "separate filing" in t
+                   or "reassign" in t or "second filing" in t)
+    multi = ("more than one employer" in t or "multiple employers" in t
+             or "not one value" in t or "multi-employer" in t)
+    return check(skill, "roster and employer are different filings",
+                 two_filings and multi, f"filings={two_filings} multi={multi}")
+
+
 def test_bulk_data_traps(skill, cfg):
     """Two ways a bulk dataset lies about what it contains. Both measured.
 
@@ -1350,6 +1378,7 @@ TESTS = [test_core_files_stay_general,
          test_bulk_data_traps,
          test_resolve_from_catalog_not_url,
          test_registry_status_gate,
+         test_roster_and_employer_are_different_filings,
          test_postcode_places_precisely,
          test_official_spec, test_spec_soft_limits,
          test_frontmatter, test_portability, test_refusal,

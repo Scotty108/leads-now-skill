@@ -69,6 +69,21 @@ Every portal publishes a machine-readable catalog carrying the current path:
 `data.medicaid.gov/api/1/…` (DKAN). Search by title, take the distribution, then
 fetch. When a fetch 404s, re-resolve — do not hunt for a new URL by hand.
 
+### The roster and the employer are different filings
+
+The file that enumerates people rarely names who they work for. Measured: a
+786-person registry roster had an employer on **zero** of them; a *separate*
+federal filing (billing reassignment) attributed **582 of 786 — 74%** to a named
+organisation and enumerated three contractor groups outright.
+
+Never conclude "no employer is published" from the roster file alone — look for
+the second filing: billing reassignment, corporate officer lists, permit
+qualifying-party records.
+
+**And an employer is not one value.** Of the 582, **384 reassigned to more than
+one group** — contractors, locums and part-timers bill through several at once,
+so picking one silently asserts a relationship that is only partly true.
+
 ### Two ways a bulk dataset lies about what it holds
 
 **A sample row is not the schema.** Querying the federal carrier census with

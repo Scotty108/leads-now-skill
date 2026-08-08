@@ -74,6 +74,46 @@ produces duplicates and a total that looks complete.
 Shard by city, then by taxonomy variant, then by first-initial. Track seen NPIs
 and stop a shard when a page adds nothing new.
 
+## The reassignment file names the employer NPPES will not
+
+**The most valuable file in this vertical.** `Revalidation Clinic Group Practice
+Reassignment` (resolve by title from `data.cms.gov/data.json`, ~537MB, refreshed
+within days) links every individual to the group they reassigned Medicare
+billing rights to:
+
+```
+Group Legal Business Name · Group State Code · Individual NPI ·
+Individual Name · Individual Specialty Description · Individual Total Employer Associations
+```
+
+Measured on 3,373,759 rows against a 786-person roster:
+
+| | Before | After |
+|---|---|---|
+| People with a known employer | **0** | **582 (74%)** |
+| Reassigning to >1 group | — | **384** |
+
+It also enumerates a contracted group outright — the thing four earlier rounds
+failed to do:
+
+| Group | Members | Composition |
+|---|---|---|
+| Atlantic Coast Anesthesia Services PC | **258** | 160 CRNA · 73 anesthesiology · 23 AA |
+| Southeast Anesthesiology Consultants PLLC | **243** | 224 anesthesiology |
+| Tidelands Anesthesia Group LLC | **64** | 43 CRNA · 21 anesthesiology |
+
+**And it surfaces the non-physician anesthesia workforce**, which a physician
+taxonomy query never returns. Cross-referencing those three groups against the
+NPI roster found **453 people the sweep had missed** — and inside a 15-mile
+ring, **35 more, every one a CRNA or Anesthesiologist Assistant**. Zero new
+physicians in-ring, which is a good sign: the taxonomy sweep had already found
+every doctor.
+
+Decide deliberately whether CRNAs and AAs belong on the list. They are anesthesia
+providers and are actively recruited; they are also a different credential, and
+a user who asked for physicians should be told what they are looking at rather
+than handed a blended list.
+
 ## Hospital anesthesia is contracted out — check who bills
 
 The single most important fact for this vertical. CMS `facility_name`, queried

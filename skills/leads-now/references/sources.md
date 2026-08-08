@@ -100,6 +100,38 @@ For **Credentialed** and **Association**: the body's own verification or
 directory. Where the full directory is members-only, the **officer and committee
 list is public** and is a small, high-quality, current sample.
 
+## Step 3b — the roster and the employer are different filings
+
+**The file that enumerates people rarely names who they work for.** This is the
+single highest-value thing to check after you have a roster, and it is easy to
+miss because the roster file looks complete.
+
+Measured: a 786-person registry roster had an employer on **zero** of them. A
+*separate* federal filing — the billing-reassignment list — attributed **582 of
+786 (74%)** to a named organisation, and named three contractor groups that had
+blocked four earlier rounds entirely.
+
+So look for the second filing:
+
+| Class | Enumerates people | Names the employer |
+|---|---|---|
+| Licensed | The licence register | Billing reassignment, provider-group filings |
+| Entity principal | Business registrations | The filing itself names the principal |
+| Public payroll | Staff directory | Salary disclosure names the department |
+| Credentialed | The certifying body | Rarely — try the employer's own directory |
+
+**Never conclude "no employer is published" from the roster file alone.**
+
+### An employer is not one value
+
+Of the 582 attributed, **384 reassigned to more than one group.** A contractor,
+locum or part-timer bills through several organisations at once, and picking one
+silently is how a record ends up asserting a relationship that is only a third
+true.
+
+Carry them all, or carry the one you can date — and never propagate an email
+pattern from a multi-employer person's *first* listed org.
+
 ## Step 4 — where the emails actually are, by class
 
 Yield differs by more than an order of magnitude, and it is the class that
