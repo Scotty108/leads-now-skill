@@ -410,5 +410,6 @@ relevant one loads.
 | `references/contact-channels.md` | Resolving emails, phones or LinkedIn for anyone |
 | `references/blocked.md` | A source returns 403, a CAPTCHA, or an empty shell |
 | `references/sources.md` | **Any population with no pack below** — derives its register |
+| `references/bulk-sources.md` | Verified free endpoints — FMCSA, NPI, SEC Form D, Socrata |
 | `references/vertical-healthcare.md` | Physicians, nurses, allied health, practices |
 | `references/record-format.md` | Writing records, or deciding merge order |
