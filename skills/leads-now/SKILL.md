@@ -278,7 +278,7 @@ F=["full_name","title","org","org_domain","email","phone","linkedin","profile_ur
 L=["city","state","postal_code"]   # location must survive the merge, or a radius cannot be measured
 N={"dr","mr","mrs","ms","prof","md","do","rn","np","pa","phd","dds","dmd","jr","sr","ii","iii","iv","faap","facs"}
 P={"first.last":lambda f,l:f+"."+l,"firstlast":lambda f,l:f+l,"flast":lambda f,l:f[0]+l,
-   "f.last":lambda f,l:f[0]+"."+l,"firstl":lambda f,l:f+l[0],"first_last":lambda f,l:f+"_"+l,
+   "f.last":lambda f,l:f[0]+"."+l,"firstl":lambda f,l:f+l[0],"f2last":lambda f,l:f[:2]+l,"first_last":lambda f,l:f+"_"+l,
    "last.first":lambda f,l:l+"."+f,"lastf":lambda f,l:l+f[0],"first":lambda f,l:f,"last":lambda f,l:l}
 def A(s):
     s=unicodedata.normalize("NFKD",s or "");s="".join(c for c in s if not unicodedata.combining(c))

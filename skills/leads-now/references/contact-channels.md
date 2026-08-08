@@ -95,26 +95,37 @@ exactly the domains an email pattern would live on.
 `crt.sh` is the better-known endpoint and was **returning 502** when measured.
 Have a second CT source; do not build on one.
 
-### Then confirm the link with an MX comparison
+### An MX match is a HINT, not proof — this rule was wrong once
 
-Two domains sharing an MX **host with the same tenant id** are one mail system,
-so a pattern observed on one legitimately applies to the other:
+An earlier version of this file claimed that two domains sharing an MX host with
+the same tenant id are one mail system, so a pattern observed on one applies to
+the other. **That is false, and it would fabricate addresses.**
+
+Measured:
 
 ```
-tidelandshealth.org          mxa-001b3801.gslb.pphosted.com
-gmhsc.com                    mxa-001b3801.gslb.pphosted.com   <- same tenant
-georgetownhospitalsystem.org mxa-001b3801.gslb.pphosted.com   <- same tenant
+tidelandshealth.org   mxa-001b3801.gslb.pphosted.com
+gmhsc.com             mxa-001b3801.gslb.pphosted.com
+musc.edu              mxa-001b3801.gslb.pphosted.com   <- a SEPARATE institution
 ```
 
-The hex or numeric id inside the MX hostname is the discriminator, not the
-provider: countless unrelated organisations use Proofpoint or IronPort, so
-matching on `pphosted.com` alone proves nothing.
+The hex string is a Proofpoint **pod**, not a customer. Unrelated organisations
+land on the same one. (It is not a constant either — Harvard sits on `00171101`,
+Stanford on `00000d07` — which is exactly what made it look discriminating on a
+two-domain sample.)
 
-This solves *the employer is not the employer* from the infrastructure side
-rather than by guessing. **Positive control before trusting it:** run it against
-an organisation whose real mail domain you already know. It correctly
-rediscovered a domain relationship that had previously cost four rounds of
-manual work.
+**What a shared MX is good for:** ranking which domain to *investigate* next. It
+is a cheap signal that two names may belong to one organisation, and a reason to
+go look.
+
+**What it is never good for:** propagating an email pattern. The only thing that
+licenses an address on a domain is **an address observed on that domain**. No
+infrastructure fingerprint substitutes for that, and none ever will — a shared
+gateway says two organisations bought the same product, not that they share a
+username convention.
+
+Certificate Transparency remains the right way to *discover* candidate sibling
+domains; treat everything it returns as a lead to verify, not a conclusion.
 
 ### But observe the format; never guess it
 

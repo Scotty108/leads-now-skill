@@ -1296,6 +1296,78 @@ def test_roster_and_employer_are_different_filings(skill, cfg):
                  two_filings and multi, f"filings={two_filings} multi={multi}")
 
 
+def test_no_infra_fingerprint_propagation(skill, cfg):
+    """Shared mail infrastructure must never license an email pattern.
+
+    This guards a rule this project got WRONG and shipped. It claimed two
+    domains sharing an MX host with the same tenant id were one mail system, so
+    a pattern observed on one applied to the other. Measured against a third
+    domain, the claim collapsed:
+
+        tidelandshealth.org   mxa-001b3801.gslb.pphosted.com
+        gmhsc.com             mxa-001b3801.gslb.pphosted.com
+        musc.edu              mxa-001b3801.gslb.pphosted.com  <- separate institution
+
+    The hex string is a Proofpoint POD, not a customer. It looked discriminating
+    only because the first sample had two domains that genuinely were related —
+    the same two-sample error this file warns about everywhere else.
+
+    An infrastructure fingerprint is a reason to INVESTIGATE a domain. Only an
+    address observed ON that domain licenses an address on it.
+    """
+    t = _all_md(cfg)
+    if "pphosted" not in t and "mx" not in t:
+        return check(skill, "no pattern propagation from shared infra", True, "n/a")
+    warns = ("hint" in t or "not proof" in t or "was wrong" in t
+             or "never good for" in t)
+    # The discredited equivalence may be DESCRIBED (documenting the retraction
+    # is valuable) but must never be ASSERTED. Distinguish the two by looking
+    # for a retraction marker in the window around each occurrence, rather than
+    # banning the phrase outright — which would push the fix toward deleting the
+    # history instead of correcting the claim.
+    asserts_bad = False
+    for m in re.finditer(r"same tenant id (are|means) one mail system", t):
+        window = t[max(0, m.start() - 260):m.end() + 260]
+        if not re.search(r"that is false|claimed|was wrong|incorrect|retract", window):
+            asserts_bad = True
+    ok = warns and not asserts_bad
+    return check(skill, "no pattern propagation from shared infra", ok,
+                 f"warns={warns} still_asserts={asserts_bad}")
+
+
+def test_unmodelled_pattern_refuses(skill, cfg):
+    """An address the tool cannot EXPLAIN must produce refusal, not a near fit.
+
+    Found live: Tidelands' media contact is `kanevin@tidelandshealth.org` for
+    Kaley Nevin — first TWO letters plus surname. With that convention absent
+    from the pattern set the tool refused outright rather than forcing the
+    address to the nearest neighbour (`knevin`, `kaleyn`, …), which is the
+    behaviour that keeps a fabricated address off the list.
+
+    Refusing forever on a real convention is its own bug, though, so the
+    convention is now modelled — and one observation still only ever earns
+    `pattern_likely`, never `pattern_confirmed`.
+    """
+    kit = cfg["kit"]
+    if not os.path.exists(kit):
+        return check(skill, "unmodelled pattern refuses, modelled one is likely", False)
+    rc, out = run(cfg["emails"](kit, [
+        "--domain", "acme.com",
+        "--known", "Kaley Nevin:kanevin@acme.com",
+        "--name", "Albert Jackson"]))
+    low = out.lower()
+    bad = []
+    # One sample must never reach top confidence.
+    if "pattern_confirmed" in low:
+        bad.append("single observation reached pattern_confirmed")
+    # And it must never emit a form it did not derive from the sample.
+    for wrong in ("knevin@acme.com", "kaleyn@acme.com", "kaley.nevin@acme.com"):
+        if wrong in low:
+            bad.append(f"emitted near-fit {wrong}")
+    return check(skill, "unmodelled pattern refuses, modelled one is likely",
+                 not bad, "; ".join(bad))
+
+
 def test_bulk_data_traps(skill, cfg):
     """Two ways a bulk dataset lies about what it contains. Both measured.
 
@@ -1379,6 +1451,8 @@ TESTS = [test_core_files_stay_general,
          test_resolve_from_catalog_not_url,
          test_registry_status_gate,
          test_roster_and_employer_are_different_filings,
+         test_no_infra_fingerprint_propagation,
+         test_unmodelled_pattern_refuses,
          test_postcode_places_precisely,
          test_official_spec, test_spec_soft_limits,
          test_frontmatter, test_portability, test_refusal,

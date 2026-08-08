@@ -67,6 +67,9 @@ PATTERNS = {
     "flast": lambda f, l: f"{f[0]}{l}",
     "f.last": lambda f, l: f"{f[0]}.{l}",
     "firstl": lambda f, l: f"{f}{l[0]}",
+    # Observed live: Kaley Nevin -> kanevin@. Without this the tool refuses
+    # forever on any domain using it — a false negative no evidence can fix.
+    "f2last": lambda f, l: f"{f[:2]}{l}",
     "first_last": lambda f, l: f"{f}_{l}",
     "last.first": lambda f, l: f"{l}.{f}",
     "lastf": lambda f, l: f"{l}{f[0]}",
